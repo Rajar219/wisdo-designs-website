@@ -36,32 +36,34 @@ export default function Navbar() {
           ? 'bg-white/80 backdrop-blur-lg py-2 sm:py-3 border-b border-slate-200 shadow-sm'
           : 'bg-white/40 backdrop-blur-md py-3 sm:py-4 border-b border-slate-200/50'
         }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* ===== MOBILE NAVBAR (< lg) ===== */}
-          <div className="relative flex items-center h-16 lg:hidden">
-            {/* Hamburger — left side */}
+          {/* Sits OUTSIDE the padded container so left-1/2 = true screen center */}
+          <div className="relative flex items-center justify-center h-16 lg:hidden">
+            {/* Hamburger — absolute left with manual padding */}
             <button
-              className="p-2 text-slate-900 hover:text-indigo-600 transition-colors active:scale-95 z-[110]"
+              className="absolute left-4 p-2 text-slate-900 hover:text-indigo-600 transition-colors active:scale-95 z-[110]"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Open menu"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
 
-            {/* Logo — absolutely centered on the full navbar width */}
+            {/* Logo — true viewport center */}
             <Link
               href="/"
-              className="absolute left-1/2 -translate-x-1/2 flex items-center group cursor-pointer"
+              className="flex items-center group cursor-pointer"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               <img
                 src="/logo.png"
                 alt="WISDO Designs Logo"
-                className="h-12 sm:h-14 object-contain drop-shadow-md mix-blend-multiply transition-transform duration-500 group-hover:scale-[1.05]"
+                className="h-14 sm:h-16 object-contain drop-shadow-md mix-blend-multiply transition-transform duration-500 group-hover:scale-[1.05]"
               />
             </Link>
           </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* ===== DESKTOP NAVBAR (>= lg) ===== */}
           <div className="hidden lg:flex items-center justify-between">
