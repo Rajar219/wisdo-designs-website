@@ -38,32 +38,44 @@ export default function Navbar() {
         }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          {/* Mobile Layout: ☰ | LOGO | (spacer) */}
-          {/* Desktop Layout: LOGO | NAV LINKS | CTA BUTTON */}
-          <div className="flex items-center justify-between h-14 sm:h-auto">
-
-            {/* Mobile Hamburger (left side, visible < lg) */}
+          {/* ===== MOBILE NAVBAR (< lg) ===== */}
+          <div className="relative flex items-center h-16 lg:hidden">
+            {/* Hamburger — left side */}
             <button
-              className="lg:hidden p-2 -ml-2 text-slate-900 hover:text-indigo-600 transition-colors active:scale-95 relative z-[110]"
+              className="p-2 text-slate-900 hover:text-indigo-600 transition-colors active:scale-95 z-[110]"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle navigation menu"
+              aria-label="Open menu"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
 
-            {/* Logo — centered on mobile, left-aligned on desktop */}
-            <div className="flex-1 flex justify-center lg:justify-start lg:flex-none">
-              <Link href="/" className="flex items-center gap-2 group cursor-pointer" onClick={() => setIsMobileMenuOpen(false)}>
-                <img
-                  src="/logo.png"
-                  alt="WISDO Designs Logo"
-                  className="h-20 sm:h-20 md:h-28 lg:h-28 xl:h-32 object-contain drop-shadow-md mix-blend-multiply transition-transform duration-500 group-hover:scale-[1.05] lg:scale-110 lg:origin-left lg:group-hover:scale-[1.15]"
-                />
-              </Link>
-            </div>
+            {/* Logo — absolutely centered on the full navbar width */}
+            <Link
+              href="/"
+              className="absolute left-1/2 -translate-x-1/2 flex items-center group cursor-pointer"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <img
+                src="/logo.png"
+                alt="WISDO Designs Logo"
+                className="h-12 sm:h-14 object-contain drop-shadow-md mix-blend-multiply transition-transform duration-500 group-hover:scale-[1.05]"
+              />
+            </Link>
+          </div>
 
-            {/* Desktop Nav Links (visible >= lg) */}
-            <div className="hidden lg:flex items-center gap-6 xl:gap-8 font-medium text-slate-500">
+          {/* ===== DESKTOP NAVBAR (>= lg) ===== */}
+          <div className="hidden lg:flex items-center justify-between">
+            {/* Logo */}
+            <Link href="/" className="flex items-center group cursor-pointer" onClick={() => setIsMobileMenuOpen(false)}>
+              <img
+                src="/logo.png"
+                alt="WISDO Designs Logo"
+                className="h-28 xl:h-32 object-contain drop-shadow-md mix-blend-multiply transition-transform duration-500 scale-110 origin-left group-hover:scale-[1.15]"
+              />
+            </Link>
+
+            {/* Nav Links */}
+            <div className="flex items-center gap-6 xl:gap-8 font-medium text-slate-500">
               <Link href="/" className={`relative transition-colors duration-300 group py-2 ${pathname === '/' ? 'text-indigo-600 font-bold' : 'hover:text-indigo-600'}`}>
                 Home
                 <span className={`absolute bottom-0 left-0 h-[2px] bg-indigo-600 rounded-full transition-all duration-300 ${pathname === '/' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
@@ -82,17 +94,12 @@ export default function Navbar() {
               </Link>
             </div>
 
-            {/* Desktop CTA Button (visible >= lg) */}
-            <div className="hidden lg:block">
-              <a href="/contact" className="group relative bg-slate-900 border border-slate-700/50 text-white px-7 py-2.5 rounded-full overflow-hidden transition-all duration-300 shadow-md shadow-slate-900/10 hover:shadow-indigo-500/30 hover:scale-105 font-medium block text-center">
-                <span className="relative z-10 transition-colors group-hover:text-white">Get Free Consultation</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/80 to-purple-600/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute inset-0 bg-white/20 blur-md opacity-0 group-hover:animate-pulse transition-opacity" />
-              </a>
-            </div>
-
-            {/* Invisible spacer on mobile to balance the hamburger on left and keep logo centered */}
-            <div className="w-10 lg:hidden" aria-hidden="true" />
+            {/* CTA Button */}
+            <a href="/contact" className="group relative bg-slate-900 border border-slate-700/50 text-white px-7 py-2.5 rounded-full overflow-hidden transition-all duration-300 shadow-md shadow-slate-900/10 hover:shadow-indigo-500/30 hover:scale-105 font-medium text-center">
+              <span className="relative z-10 transition-colors group-hover:text-white">Get Free Consultation</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/80 to-purple-600/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-white/20 blur-md opacity-0 group-hover:animate-pulse transition-opacity" />
+            </a>
           </div>
 
         </div>
