@@ -38,27 +38,26 @@ export default function Navbar() {
         }`}>
 
           {/* ===== MOBILE NAVBAR (< lg) ===== */}
-          {/* Sits OUTSIDE the padded container so left-1/2 = true screen center */}
-          <div className="relative flex items-center justify-center h-16 lg:hidden">
-            {/* Hamburger — absolute left with manual padding */}
+          <div className="relative h-20 lg:hidden">
+            {/* Hamburger — absolute left */}
             <button
-              className="absolute left-4 p-2 text-slate-900 hover:text-indigo-600 transition-colors active:scale-95 z-[110]"
+              className="absolute left-4 top-1/2 -translate-y-1/2 p-2 text-slate-900 hover:text-indigo-600 transition-colors active:scale-95 z-[110]"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Open menu"
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
             </button>
 
-            {/* Logo — true viewport center */}
+            {/* Logo — absolute center of screen */}
             <Link
               href="/"
-              className="flex items-center group cursor-pointer"
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center group cursor-pointer"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               <img
                 src="/logo.png"
                 alt="WISDO Designs Logo"
-                className="h-14 sm:h-16 object-contain drop-shadow-md mix-blend-multiply transition-transform duration-500 group-hover:scale-[1.05]"
+                className="h-20 sm:h-24 object-contain drop-shadow-md mix-blend-multiply"
               />
             </Link>
           </div>
