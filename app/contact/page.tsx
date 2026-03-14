@@ -65,7 +65,7 @@ export default function ContactPage() {
   return (
     <div className="bg-slate-50 min-h-screen">
       {/* Page Header */}
-      <section className="relative pt-40 pb-16 lg:pt-52 lg:pb-24 px-6 overflow-hidden">
+      <section className="relative pt-28 pb-12 sm:pt-36 sm:pb-16 lg:pt-52 lg:pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute top-0 inset-x-0 h-full bg-gradient-to-b from-indigo-50/50 to-transparent -z-10" />
         <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
           <h2 className="text-sm font-bold tracking-widest text-indigo-500 uppercase mb-4">
@@ -81,7 +81,7 @@ export default function ContactPage() {
       </section>
 
       {/* Two-Column Contact Section */}
-      <section className="pb-24 sm:pb-32 lg:pb-48 px-6 relative z-10">
+      <section className="pb-16 sm:pb-24 lg:pb-48 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-5 gap-10 sm:gap-12 lg:gap-16 items-start">
 
           {/* Left Column: Contact Info */}

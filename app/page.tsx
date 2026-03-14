@@ -9,15 +9,15 @@ import { ArrowRight, Sparkles, CheckCircle2, Zap, Shield, Rocket, Bot, Layers, M
 export default function Home() {
   return (
     <div className="w-full flex flex-col">
-      <section className="relative pt-40 pb-24 lg:pt-56 lg:pb-40 overflow-hidden w-full">
+      <section className="relative pt-28 pb-16 sm:pt-36 sm:pb-20 lg:pt-56 lg:pb-40 overflow-hidden w-full">
         {/* Subtle Hero Gradient Background for Depth */}
         <div className="absolute inset-0 bg-gradient-to-b from-indigo-50/50 via-white to-slate-50/50 -z-20" />
         
         {/* Subtle Hero Gradient Orbs */}
-        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-indigo-200/30 blur-[140px] rounded-full mix-blend-multiply -z-10" />
-        <div className="absolute bottom-10 right-1/4 w-[700px] h-[700px] bg-purple-200/30 blur-[160px] rounded-full mix-blend-multiply -z-10" />
+        <div className="absolute top-0 left-1/4 w-[300px] h-[300px] sm:w-[450px] sm:h-[450px] lg:w-[600px] lg:h-[600px] bg-indigo-200/30 blur-[140px] rounded-full mix-blend-multiply -z-10" />
+        <div className="absolute bottom-10 right-1/4 w-[350px] h-[350px] sm:w-[500px] sm:h-[500px] lg:w-[700px] lg:h-[700px] bg-purple-200/30 blur-[160px] rounded-full mix-blend-multiply -z-10" />
 
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 lg:gap-24 items-center relative z-10">
 
           <div className="max-w-2xl mx-auto text-center lg:text-left pt-2 lg:pt-0 animate-fade-in-up w-full flex flex-col items-center lg:items-start">
             <div className="inline-flex items-center justify-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/60 backdrop-blur-md shadow-sm border border-indigo-100/50 mb-6 sm:mb-8 transition-transform hover:scale-105">
@@ -25,12 +25,12 @@ export default function Home() {
               <span className="text-xs sm:text-sm font-semibold tracking-wide text-slate-700">Empowering Modern Businesses</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-[5.5rem] font-extrabold leading-[1.2] lg:leading-[1.1] tracking-tight text-slate-900 mb-5 sm:mb-8 drop-shadow-sm w-full px-4 sm:px-0">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[5.5rem] font-extrabold leading-[1.2] lg:leading-[1.1] tracking-tight text-slate-900 mb-5 sm:mb-8 drop-shadow-sm w-full">
               Smart <span className="text-gradient">Software</span> <br className="hidden lg:block" />
               & Digital Solutions
             </h1>
 
-            <p className="text-base sm:text-lg lg:text-2xl text-slate-500 leading-relaxed font-light max-w-xl mb-6 sm:mb-8 w-full text-center lg:text-left px-4 sm:px-0 break-words">
+            <p className="text-base sm:text-lg lg:text-2xl text-slate-500 leading-relaxed font-light max-w-xl mb-6 sm:mb-8 w-full text-center lg:text-left break-words">
               We design scalable websites, business applications, and automation systems that help startups and agencies grow faster and work smarter.
             </p>
 
@@ -50,10 +50,10 @@ export default function Home() {
               </span>
             </div>
 
-            <div className="mt-2 flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center lg:justify-start w-full px-6 sm:px-0">
+            <div className="mt-2 flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center lg:justify-start w-full">
               <a
                 href="/contact"
-                className="group w-full relative flex items-center justify-center gap-2 bg-slate-900 text-white px-8 py-4 sm:py-4 rounded-xl sm:rounded-full overflow-hidden transition-all duration-300 shadow-xl shadow-slate-900/10 hover:-translate-y-1 hover:shadow-indigo-500/30"
+                className="group w-full sm:w-auto relative flex items-center justify-center gap-2 bg-slate-900 text-white px-8 py-4 rounded-xl sm:rounded-full overflow-hidden transition-all duration-300 shadow-xl shadow-slate-900/10 hover:-translate-y-1 hover:shadow-indigo-500/30"
               >
                 <span className="relative z-10 font-bold tracking-wide text-base">Start Your Project</span>
                 <ArrowRight className="w-5 h-5 sm:w-4 sm:h-4 relative z-10 group-hover:translate-x-1 transition-transform" />
@@ -62,7 +62,7 @@ export default function Home() {
 
               <a
                 href="/services"
-                className="flex w-full items-center justify-center px-8 py-4 rounded-xl sm:rounded-full bg-white/80 backdrop-blur-sm border border-slate-200/60 font-medium text-slate-700 text-base shadow-sm hover:bg-white hover:border-slate-300 transition-all duration-300 hover:-translate-y-1"
+                className="flex w-full sm:w-auto items-center justify-center px-8 py-4 rounded-xl sm:rounded-full bg-white/80 backdrop-blur-sm border border-slate-200/60 font-medium text-slate-700 text-base shadow-sm hover:bg-white hover:border-slate-300 transition-all duration-300 hover:-translate-y-1"
               >
                 View Services
               </a>

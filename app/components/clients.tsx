@@ -86,25 +86,25 @@ export default function ClientsSection() {
   }, [selectedProject]);
 
   return (
-    <section className="relative py-32 lg:py-40 overflow-hidden bg-slate-50/50">
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+    <section className="relative py-16 sm:py-24 lg:py-40 overflow-hidden bg-slate-50/50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <div className="text-center max-w-3xl mx-auto mb-20 lg:mb-28 animate-fade-in-up">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 lg:mb-28 animate-fade-in-up">
           <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-white shadow-[0_4px_12px_rgba(0,0,0,0.03)] border border-slate-200/60 mb-8">
             <Sparkles className="w-4 h-4 text-indigo-500" />
             <span className="text-sm font-bold tracking-wide text-slate-700 uppercase">Concept Projects</span>
           </div>
           
-          <h3 className="text-4xl md:text-5xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-8">
+          <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6 sm:mb-8">
             Featured <span className="text-gradient">Case Studies</span>
           </h3>
 
-          <p className="text-lg lg:text-xl text-slate-500 leading-relaxed font-light">
+          <p className="text-base sm:text-lg lg:text-xl text-slate-500 leading-relaxed font-light">
             Explore our high-performance product prototypes designed to showcase our engineering capabilities and technological expertise.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 pb-12 px-2 md:px-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 pb-12">
           {featuredProjects.map((project, i) => {
             const Icon = project.icon;
             const delay = `delay-[${i * 150}ms]`;

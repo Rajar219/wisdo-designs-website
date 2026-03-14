@@ -2,16 +2,16 @@ import { MessageCircle, ArrowRight } from "lucide-react";
 
 export default function Trust() {
   return (
-    <section className="relative py-32 lg:py-40 text-center px-6 overflow-hidden bg-slate-900">
+    <section className="relative py-16 sm:py-24 lg:py-40 text-center px-4 sm:px-6 lg:px-8 overflow-hidden bg-slate-900">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[500px] bg-indigo-500/20 blur-[130px] rounded-full -z-10" />
       <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-purple-500/20 blur-[120px] rounded-full -z-10" />
       
-      <div className="max-w-5xl mx-auto bg-white/5 backdrop-blur-3xl rounded-[2.5rem] md:rounded-[3.5rem] p-8 sm:p-12 md:p-16 lg:p-24 border border-white/10 relative z-10 shadow-2xl animate-fade-in-up">
-        <h3 className="text-4xl sm:text-5xl lg:text-[4.5rem] font-extrabold mb-6 sm:mb-8 text-white tracking-tight leading-[1.1] lg:leading-[1.05]">
+      <div className="max-w-5xl mx-auto bg-white/5 backdrop-blur-3xl rounded-[2rem] sm:rounded-[2.5rem] md:rounded-[3.5rem] p-6 sm:p-10 md:p-16 lg:p-24 border border-white/10 relative z-10 shadow-2xl animate-fade-in-up">
+        <h3 className="text-3xl sm:text-4xl lg:text-[4.5rem] font-extrabold mb-6 sm:mb-8 text-white tracking-tight leading-[1.1] lg:leading-[1.05]">
           Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Scale</span> Your Vision?
         </h3>
 
-        <p className="max-w-3xl mx-auto text-lg sm:text-xl lg:text-2xl text-slate-300 leading-relaxed font-light mb-10 sm:mb-14">
+        <p className="max-w-3xl mx-auto text-base sm:text-lg lg:text-2xl text-slate-300 leading-relaxed font-light mb-8 sm:mb-14">
           Let's build something extraordinary together. Partner with WISDO Designs to create powerful, modern software that drives real growth.
         </p>
 

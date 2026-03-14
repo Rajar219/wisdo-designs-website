@@ -10,7 +10,6 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
-
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -34,21 +33,37 @@ export default function Navbar() {
   return (
     <>
       <nav className={`fixed top-0 w-full z-[100] transition-all duration-300 ${scrolled
-          ? 'bg-white/80 backdrop-blur-lg py-3 border-b border-slate-200 shadow-sm'
-          : 'bg-white/40 backdrop-blur-md py-4 border-b border-slate-200/50'
+          ? 'bg-white/80 backdrop-blur-lg py-2 sm:py-3 border-b border-slate-200 shadow-sm'
+          : 'bg-white/40 backdrop-blur-md py-3 sm:py-4 border-b border-slate-200/50'
         }`}>
-        <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          <div className="flex items-center gap-8 lg:gap-10 border-none relative z-[110] flex-1 lg:flex-none">
-            <Link href="/" className="lg:static absolute left-1/2 -translate-x-1/2 lg:transform-none flex items-center gap-2 group cursor-pointer block" onClick={() => setIsMobileMenuOpen(false)}>
-              <img
-                src="/logo.png"
-                alt="WISDO Designs Logo"
-                className="h-24 sm:h-32 md:h-32 md:scale-125 md:origin-left object-contain drop-shadow-md mix-blend-multiply transition-transform duration-500 group-hover:scale-[1.05] md:group-hover:scale-[1.35]"
-              />
-            </Link>
+          {/* Mobile Layout: ☰ | LOGO | (spacer) */}
+          {/* Desktop Layout: LOGO | NAV LINKS | CTA BUTTON */}
+          <div className="flex items-center justify-between h-14 sm:h-auto">
 
-            <div className="hidden md:flex space-x-6 lg:space-x-8 font-medium text-slate-500">
+            {/* Mobile Hamburger (left side, visible < lg) */}
+            <button
+              className="lg:hidden p-2 -ml-2 text-slate-900 hover:text-indigo-600 transition-colors active:scale-95 relative z-[110]"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle navigation menu"
+            >
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+
+            {/* Logo — centered on mobile, left-aligned on desktop */}
+            <div className="flex-1 flex justify-center lg:justify-start lg:flex-none">
+              <Link href="/" className="flex items-center gap-2 group cursor-pointer" onClick={() => setIsMobileMenuOpen(false)}>
+                <img
+                  src="/logo.png"
+                  alt="WISDO Designs Logo"
+                  className="h-20 sm:h-20 md:h-28 lg:h-28 xl:h-32 object-contain drop-shadow-md mix-blend-multiply transition-transform duration-500 group-hover:scale-[1.05] lg:scale-110 lg:origin-left lg:group-hover:scale-[1.15]"
+                />
+              </Link>
+            </div>
+
+            {/* Desktop Nav Links (visible >= lg) */}
+            <div className="hidden lg:flex items-center gap-6 xl:gap-8 font-medium text-slate-500">
               <Link href="/" className={`relative transition-colors duration-300 group py-2 ${pathname === '/' ? 'text-indigo-600 font-bold' : 'hover:text-indigo-600'}`}>
                 Home
                 <span className={`absolute bottom-0 left-0 h-[2px] bg-indigo-600 rounded-full transition-all duration-300 ${pathname === '/' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
@@ -66,81 +81,86 @@ export default function Navbar() {
                 <span className={`absolute bottom-0 left-0 h-[2px] bg-indigo-600 rounded-full transition-all duration-300 ${pathname === '/contact' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
               </Link>
             </div>
+
+            {/* Desktop CTA Button (visible >= lg) */}
+            <div className="hidden lg:block">
+              <a href="/contact" className="group relative bg-slate-900 border border-slate-700/50 text-white px-7 py-2.5 rounded-full overflow-hidden transition-all duration-300 shadow-md shadow-slate-900/10 hover:shadow-indigo-500/30 hover:scale-105 font-medium block text-center">
+                <span className="relative z-10 transition-colors group-hover:text-white">Get Free Consultation</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/80 to-purple-600/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-white/20 blur-md opacity-0 group-hover:animate-pulse transition-opacity" />
+              </a>
+            </div>
+
+            {/* Invisible spacer on mobile to balance the hamburger on left and keep logo centered */}
+            <div className="w-10 lg:hidden" aria-hidden="true" />
           </div>
 
-          <div className="hidden md:block">
-            <a href="/contact" className="group relative bg-slate-900 border border-slate-700/50 text-white px-7 py-2.5 rounded-full overflow-hidden transition-all duration-300 shadow-md shadow-slate-900/10 hover:shadow-indigo-500/30 hover:scale-105 font-medium block text-center">
-              <span className="relative z-10 transition-colors group-hover:text-white">Get Free Consultation</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/80 to-purple-600/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute inset-0 bg-white/20 blur-md opacity-0 group-hover:animate-pulse transition-opacity" />
-            </a>
-          </div>
-
-          {/* Mobile Hamburger Toggle */}
-          <button
-            className="md:hidden p-2 text-slate-900 hover:text-indigo-600 transition-colors active:scale-95 relative z-[110]"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle navigation menu"
-          >
-            {isMobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
-          </button>
         </div>
       </nav>
 
       {/* Full Screen Mobile Menu Overlay */}
       <div 
-        className={`fixed inset-0 bg-white z-[105] md:hidden transition-all duration-500 ease-in-out ${
+        className={`fixed inset-0 bg-white z-[105] lg:hidden transition-all duration-500 ease-in-out ${
           isMobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-[20%] pointer-events-none'
         }`}
       >
-  <div className="flex flex-col h-full pt-32 pb-8 px-6 overflow-y-auto">
-    <div className="flex flex-col gap-6 text-center text-2xl font-bold text-slate-800 tracking-tight flex-grow justify-center">
+        <div className="flex flex-col h-full pt-28 sm:pt-32 pb-8 px-6 overflow-y-auto">
+          {/* Close Button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="absolute top-6 right-6 w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-600 hover:text-slate-900 transition-colors z-[110]"
+            aria-label="Close menu"
+          >
+            <X className="w-5 h-5" />
+          </button>
 
-      <Link
-        href="/"
-        className={`pb-4 border-b border-slate-100 transition-colors ${pathname === '/' ? 'text-indigo-600' : 'hover:text-indigo-600'}`}
-        onClick={() => setIsMobileMenuOpen(false)}
-      >
-        Home
-      </Link>
+          <div className="flex flex-col gap-6 text-center text-2xl font-bold text-slate-800 tracking-tight flex-grow justify-center">
 
-      <Link
-        href="/services"
-        className={`pb-4 border-b border-slate-100 transition-colors ${pathname === '/services' ? 'text-indigo-600' : 'hover:text-indigo-600'}`}
-        onClick={() => setIsMobileMenuOpen(false)}
-      >
-        Services
-      </Link>
+            <Link
+              href="/"
+              className={`pb-4 border-b border-slate-100 transition-colors ${pathname === '/' ? 'text-indigo-600' : 'hover:text-indigo-600'}`}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Home
+            </Link>
 
-      <Link
-        href="/about"
-        className={`pb-4 border-b border-slate-100 transition-colors ${pathname === '/about' ? 'text-indigo-600' : 'hover:text-indigo-600'}`}
-        onClick={() => setIsMobileMenuOpen(false)}
-      >
-        About
-      </Link>
+            <Link
+              href="/services"
+              className={`pb-4 border-b border-slate-100 transition-colors ${pathname === '/services' ? 'text-indigo-600' : 'hover:text-indigo-600'}`}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Services
+            </Link>
 
-      <Link
-        href="/contact"
-        className={`pb-4 border-b border-slate-100 transition-colors ${pathname === '/contact' ? 'text-indigo-600' : 'hover:text-indigo-600'}`}
-        onClick={() => setIsMobileMenuOpen(false)}
-      >
-        Contact
-      </Link>
+            <Link
+              href="/about"
+              className={`pb-4 border-b border-slate-100 transition-colors ${pathname === '/about' ? 'text-indigo-600' : 'hover:text-indigo-600'}`}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              About
+            </Link>
 
-    </div>
+            <Link
+              href="/contact"
+              className={`pb-4 border-b border-slate-100 transition-colors ${pathname === '/contact' ? 'text-indigo-600' : 'hover:text-indigo-600'}`}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Contact
+            </Link>
 
-    <div className="mt-auto pt-10">
-      <a
-        href="/contact"
-        onClick={() => setIsMobileMenuOpen(false)}
-        className="w-full bg-slate-900 text-white py-4 rounded-xl text-center font-semibold text-lg hover:bg-indigo-600 transition-colors shadow-lg shadow-slate-900/10 block"
-      >
-        Get Free Consultation
-      </a>
-    </div>
-  </div>
-      </div >
+          </div>
+
+          <div className="mt-auto pt-10">
+            <a
+              href="/contact"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="w-full bg-slate-900 text-white py-4 rounded-xl text-center font-semibold text-lg hover:bg-indigo-600 transition-colors shadow-lg shadow-slate-900/10 block"
+            >
+              Get Free Consultation
+            </a>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

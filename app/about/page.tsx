@@ -6,7 +6,7 @@ export default function AboutPage() {
   return (
     <div className="bg-slate-50 min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-40 pb-20 lg:pt-52 lg:pb-32 px-6 overflow-hidden">
+      <section className="relative pt-28 pb-12 sm:pt-36 sm:pb-16 lg:pt-52 lg:pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute top-0 inset-x-0 h-full bg-gradient-to-b from-purple-50/50 to-transparent -z-10" />
         <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-indigo-200/40 blur-[130px] rounded-full mix-blend-multiply -z-10" />
         <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-purple-200/40 blur-[120px] rounded-full mix-blend-multiply -z-10" />
@@ -17,19 +17,19 @@ export default function AboutPage() {
             <span className="text-sm font-semibold tracking-wide text-slate-700">The Agency Behind the Magic</span>
           </div>
           
-          <h1 className="text-5xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6 drop-shadow-sm">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6 drop-shadow-sm">
             Building the <span className="text-gradient">Future</span> <br/> of Digital Experiences
           </h1>
           
-          <p className="text-lg lg:text-2xl text-slate-500 leading-relaxed font-light max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-2xl text-slate-500 leading-relaxed font-light max-w-3xl mx-auto">
             WISDO Designs supports startups and modern enterprises by engineering sophisticated digital products that rapidly accelerate growth.
           </p>
         </div>
       </section>
 
       {/* Mission & Vision Section */}
-      <section className="py-24 lg:py-32 px-6 bg-white relative z-10 border-y border-slate-100/60 shadow-inner overflow-hidden">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
+      <section className="py-16 sm:py-20 lg:py-32 px-4 sm:px-6 lg:px-8 bg-white relative z-10 border-y border-slate-100/60 shadow-inner overflow-hidden">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-16 lg:gap-24 items-center">
           
           <div className="order-2 md:order-1 relative">
             <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500/5 to-purple-500/5 rounded-[2.5rem] blur-2xl transform scale-105 pointer-events-none" />
@@ -77,10 +77,10 @@ export default function AboutPage() {
             <h2 className="text-sm font-bold tracking-widest text-indigo-500 uppercase mb-4">
               The Big Picture
             </h2>
-            <h3 className="text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6">
+            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6">
               Empowering Small Teams with Massive Tech
             </h3>
-            <p className="text-lg text-slate-500 leading-relaxed font-light mb-8">
+            <p className="text-base sm:text-lg text-slate-500 leading-relaxed font-light mb-8">
               WISDO Designs was founded with a singular vision: to bridge the technical gap for startups. 
               Too often, best-in-class UI/UX and scalable microservices are reserved for massive corporations.
               <br/><br/>

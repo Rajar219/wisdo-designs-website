@@ -3,8 +3,8 @@ import { ExternalLink, Mail, MapPin, Phone } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="relative bg-white border-t border-slate-100">
-      <div className="max-w-7xl mx-auto px-6 py-20 lg:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-10 mb-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16 lg:py-24">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 lg:gap-10 mb-14 sm:mb-16 lg:mb-20">
           
           {/* Brand & Contact */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6 lg:pr-8">

@@ -2,17 +2,17 @@ import { Search, PenTool, Hammer, Rocket } from "lucide-react";
 
 export default function Process() {
   return (
-    <section className="py-24 lg:py-40 relative bg-white border-y border-slate-100 shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.02)] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+    <section className="py-16 sm:py-20 lg:py-40 relative bg-white border-y border-slate-100 shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.02)] overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <div className="text-center max-w-3xl mx-auto mb-20 lg:mb-32 animate-fade-in-up">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 lg:mb-32 animate-fade-in-up">
           <h2 className="text-sm font-bold tracking-widest text-indigo-500 uppercase mb-4">
             How We Work
           </h2>
-          <h3 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1]">
+          <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1]">
             A Proven <span className="text-gradient">Process</span>
           </h3>
-          <p className="mt-6 text-lg lg:text-xl text-slate-500 font-light leading-relaxed">
+          <p className="mt-6 text-base sm:text-lg lg:text-xl text-slate-500 font-light leading-relaxed">
             We follow a streamlined, transparent methodology to ensure we deliver high-quality digital products on time without the agency bloat.
           </p>
         </div>

@@ -11,17 +11,17 @@ const advantages = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-24 lg:py-40 relative bg-white border-y border-slate-100 shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.02)]">
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 lg:gap-24 items-center">
+    <section className="py-16 sm:py-20 lg:py-40 relative bg-white border-y border-slate-100 shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.02)]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-24 items-center">
         
         <div className="animate-fade-in-up flex flex-col items-center lg:items-start text-center lg:text-left w-full">
           <h2 className="text-sm font-bold tracking-widest text-indigo-500 uppercase mb-4">
             Why Choose Us
           </h2>
-          <h3 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6 sm:mb-8">
+          <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6 sm:mb-8">
             Built for <span className="text-gradient">Growth</span> & <br className="hidden md:block"/> Performance
           </h3>
-          <p className="text-lg lg:text-xl text-slate-500 font-light leading-relaxed mb-10 sm:mb-12 max-w-xl mx-auto lg:mx-0">
+          <p className="text-base sm:text-lg lg:text-xl text-slate-500 font-light leading-relaxed mb-8 sm:mb-12 max-w-xl mx-auto lg:mx-0">
             We partner with startups and ambitious businesses to build scalable digital solutions. Our agile approach means you get high-quality software without the usual agency overhead.
           </p>
 

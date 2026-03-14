@@ -85,25 +85,25 @@ const serviceCategories = [
 
 export default function ServicesPreview() {
   return (
-    <section className="py-24 lg:py-32 relative z-10 bg-slate-50/50 border-t border-slate-100 shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.02)] overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-32 relative z-10 bg-slate-50/50 border-t border-slate-100 shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.02)] overflow-hidden">
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-indigo-50/30 rounded-full blur-3xl -z-10" />
       
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center max-w-3xl mx-auto mb-20 lg:mb-28 animate-fade-in-up">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 lg:mb-28 animate-fade-in-up">
           <h2 className="text-sm font-bold tracking-widest text-indigo-500 uppercase mb-4">
             What We Do
           </h2>
-          <h3 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6">
+          <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6">
             Our Core <span className="text-gradient">Services</span>
           </h3>
-          <p className="text-lg text-slate-500 leading-relaxed font-light">
+          <p className="text-base sm:text-lg text-slate-500 leading-relaxed font-light">
             We provide specialized, high-performance digital services segmented to scale your business operations from end-to-end.
           </p>
         </div>
 
-        <div className="flex flex-col gap-16 lg:gap-24">
+        <div className="flex flex-col gap-10 sm:gap-12 lg:gap-24">
           {serviceCategories.map((group, groupIdx) => {
             const GroupIcon = group.icon;
             return (

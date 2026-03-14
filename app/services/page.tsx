@@ -74,7 +74,7 @@ export default function ServicesPage() {
   return (
     <div className="bg-slate-50 min-h-screen">
       {/* Page Header */}
-      <section className="relative pt-40 pb-20 lg:pt-52 lg:pb-32 px-6 overflow-hidden">
+      <section className="relative pt-28 pb-12 sm:pt-36 sm:pb-16 lg:pt-52 lg:pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute top-0 inset-x-0 h-full bg-gradient-to-b from-indigo-50/50 to-transparent -z-10" />
         <div className="absolute top-0 right-1/3 w-[500px] h-[500px] bg-indigo-200/40 blur-[120px] rounded-full mix-blend-multiply -z-10" />
 
@@ -82,18 +82,18 @@ export default function ServicesPage() {
           <h2 className="text-sm font-bold tracking-widest text-indigo-500 uppercase mb-4">
             Our Capabilities
           </h2>
-          <h1 className="text-5xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6 drop-shadow-sm">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6 drop-shadow-sm">
             Scalable <span className="text-gradient">Solutions</span> <br/> for Modern Teams
           </h1>
-          <p className="text-lg lg:text-2xl text-slate-500 leading-relaxed font-light max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-2xl text-slate-500 leading-relaxed font-light max-w-3xl mx-auto">
             From intuitive digital products to intelligent backend automation, we engineer the systems that power your growth.
           </p>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="pb-32 lg:pb-48 px-6">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className="pb-16 sm:pb-24 lg:pb-48 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {services.map((service, i) => {
             const Icon = service.icon;
             const delay = `delay-[${i * 100}ms]`;
@@ -121,22 +121,22 @@ export default function ServicesPage() {
       </section>
 
       {/* Industries We Serve */}
-      <section className="py-24 lg:py-32 px-6 bg-white border-t border-slate-100/60 overflow-hidden relative">
+      <section className="py-16 sm:py-20 lg:py-32 px-4 sm:px-6 lg:px-8 bg-white border-t border-slate-100/60 overflow-hidden relative">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-50/50 rounded-bl-full -z-10" />
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20 animate-fade-in-up">
             <h2 className="text-sm font-bold tracking-widest text-indigo-500 uppercase mb-4">
               Local & Global Impact
             </h2>
-            <h3 className="text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6">
+            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6">
               Industries We <span className="text-gradient">Serve</span>
             </h3>
-            <p className="text-lg text-slate-500 leading-relaxed font-light">
+            <p className="text-base sm:text-lg text-slate-500 leading-relaxed font-light">
               We design specialized digital solutions tailored specifically to the operational workflows of these key industries.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {industries.map((ind, i) => {
               const IndIcon = ind.icon;
               return (

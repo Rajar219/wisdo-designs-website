@@ -52,24 +52,24 @@ import { Palette } from "lucide-react";
 
 export default function Technologies() {
   return (
-    <section className="py-24 lg:py-32 relative z-10 bg-slate-50 border-y border-slate-100/60 shadow-inner overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-32 relative z-10 bg-slate-50 border-y border-slate-100/60 shadow-inner overflow-hidden">
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-indigo-100/40 blur-[120px] rounded-full mix-blend-multiply pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-100/40 blur-[100px] rounded-full mix-blend-multiply pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-24 animate-fade-in-up">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 lg:mb-24 animate-fade-in-up">
           <h2 className="text-sm font-bold tracking-widest text-indigo-500 uppercase mb-4">
             Our Stack
           </h2>
-          <h3 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6">
+          <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6">
             Technologies & <span className="text-gradient">Tools</span> We Use
           </h3>
-          <p className="text-lg lg:text-xl text-slate-500 font-light leading-relaxed">
+          <p className="text-base sm:text-lg lg:text-xl text-slate-500 font-light leading-relaxed">
             We use modern technologies and AI-powered tools to build scalable digital products.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
           {techGroups.map((group, i) => {
             const MainIcon = group.icon;
             const delay = `delay-[${i * 150}ms]`;
