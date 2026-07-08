@@ -1,4 +1,24 @@
 import { MonitorPlay, Smartphone, Database, PenTool, TrendingUp, Bot, Receipt, AppWindow, Building2, Coffee, Hotel, Utensils, ShoppingBag, Rocket, Plane, Store } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Website Development & Mobile App Development Services",
+  description: "Explore our range of premium services: Website Development, Mobile App Development, Web Design, Web Hosting, Digital Marketing, and custom Business Software.",
+  alternates: {
+    canonical: "https://wisdodesigns.com/services",
+  },
+  openGraph: {
+    title: "Website Development & Mobile App Development Services | WISDO Designs",
+    description: "Explore our range of premium services: Website Development, Mobile App Development, Web Design, Web Hosting, Digital Marketing, and custom Business Software.",
+    url: "https://wisdodesigns.com/services",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Website Development & Mobile App Development Services | WISDO Designs",
+    description: "Explore our range of premium services: Website Development, Mobile App Development, Web Design, Web Hosting, Digital Marketing, and custom Business Software.",
+  },
+};
 
 const services = [
   {
@@ -79,9 +99,9 @@ export default function ServicesPage() {
         <div className="absolute top-0 right-1/3 w-[500px] h-[500px] bg-indigo-200/40 blur-[120px] rounded-full mix-blend-multiply -z-10" />
 
         <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
-          <h2 className="text-sm font-bold tracking-widest text-indigo-500 uppercase mb-4">
+          <p className="text-sm font-bold tracking-widest text-indigo-500 uppercase mb-4">
             Our Capabilities
-          </h2>
+          </p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6 drop-shadow-sm">
             Scalable <span className="text-gradient">Solutions</span> <br/> for Modern Teams
           </h1>
@@ -108,9 +128,9 @@ export default function ServicesPage() {
                     <Icon className="w-5 h-5" />
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-4 tracking-tight group-hover:text-indigo-600 transition-colors">
+                <h2 className="text-2xl font-bold text-slate-900 mb-4 tracking-tight group-hover:text-indigo-600 transition-colors">
                   {service.title}
-                </h3>
+                </h2>
                 <p className="text-slate-500 leading-relaxed font-medium max-w-sm mx-auto sm:mx-0">
                   {service.desc}
                 </p>

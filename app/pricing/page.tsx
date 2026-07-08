@@ -1,5 +1,26 @@
 import { Check, Sparkles } from "lucide-react";
 import Trust from "../components/trust";
+import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Affordable Web Design & Web Hosting Packages",
+  description: "Get transparent, value-driven pricing for Website Development, Mobile App Development, and Business Software automation packages tailored to your startup.",
+  alternates: {
+    canonical: "https://wisdodesigns.com/pricing",
+  },
+  openGraph: {
+    title: "Affordable Web Design & Web Hosting Packages | WISDO Designs",
+    description: "Get transparent, value-driven pricing for Website Development, Mobile App Development, and Business Software automation packages tailored to your startup.",
+    url: "https://wisdodesigns.com/pricing",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Affordable Web Design & Web Hosting Packages | WISDO Designs",
+    description: "Get transparent, value-driven pricing for Website Development, Mobile App Development, and Business Software automation packages tailored to your startup.",
+  },
+};
 
 const tiers = [
   {
@@ -55,11 +76,6 @@ const tiers = [
   }
 ];
 
-export const metadata = {
-  title: "Pricing & Packages",
-  description: "Flexible, value-driven pricing plans for startups and enterprises seeking premium software development and automation solutions.",
-};
-
 export default function PricingPage() {
   return (
     <div className="bg-slate-50 min-h-screen">
@@ -103,7 +119,7 @@ export default function PricingPage() {
               )}
 
               <div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-2">{tier.name}</h3>
+                <h2 className="text-2xl font-bold text-slate-900 mb-2">{tier.name}</h2>
                 <p className="text-sm text-slate-500 min-h-[40px] leading-relaxed font-medium mb-6">
                   {tier.desc}
                 </p>
@@ -125,7 +141,7 @@ export default function PricingPage() {
                 </div>
               </div>
 
-              <a
+              <Link
                 href={`/contact?package=${encodeURIComponent(tier.name)}`}
                 className={`w-full py-4 rounded-xl text-sm font-bold uppercase tracking-wide text-center transition-all duration-300 ${
                   tier.popular
@@ -134,7 +150,7 @@ export default function PricingPage() {
                 }`}
               >
                 {tier.cta}
-              </a>
+              </Link>
             </div>
           ))}
         </div>

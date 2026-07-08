@@ -1,4 +1,5 @@
 import { MonitorPlay, Smartphone, Database, PenTool, TrendingUp, Bot, AppWindow, Receipt, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const serviceCategories = [
   {
@@ -154,10 +155,14 @@ export default function ServicesPreview() {
                            <p className="text-sm text-slate-500 leading-relaxed font-light mb-6 flex-grow max-w-sm mx-auto sm:mx-0">
                              {service.desc}
                            </p>
-                           <div className={`mt-auto inline-flex items-center justify-center sm:justify-start gap-2 text-sm font-bold uppercase tracking-wide opacity-100 sm:opacity-0 group-hover:opacity-100 sm:translate-y-2 group-hover:translate-y-0 transition-all duration-300 ${group.accent}`}>
-                             <span>Learn More</span>
-                             <ArrowRight className="w-4 h-4" />
-                           </div>
+                            <Link 
+                              href="/services"
+                              aria-label={`Learn more about ${service.title}`}
+                              className={`mt-auto inline-flex items-center justify-center sm:justify-start gap-2 text-sm font-bold uppercase tracking-wide opacity-100 sm:opacity-0 group-hover:opacity-100 sm:translate-y-2 group-hover:translate-y-0 transition-all duration-300 ${group.accent}`}
+                            >
+                              <span>Learn More</span>
+                              <ArrowRight className="w-4 h-4" />
+                            </Link>
                          </div>
                        );
                      })}

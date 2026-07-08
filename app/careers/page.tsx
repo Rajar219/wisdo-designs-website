@@ -22,9 +22,25 @@ const positions = [
   }
 ];
 
-export const metadata = {
-  title: "Careers",
-  description: "Join WISDO Designs to build high-performance software, custom applications, and workflow automation systems for global clients.",
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Careers at WISDO Designs - Join Our Software Team",
+  description: "Join WISDO Designs to build high-performance software, custom business applications, and workflow automation systems for global clients. Remote roles available.",
+  alternates: {
+    canonical: "https://wisdodesigns.com/careers",
+  },
+  openGraph: {
+    title: "Careers at WISDO Designs - Join Our Software Team",
+    description: "Join WISDO Designs to build high-performance software, custom business applications, and workflow automation systems for global clients. Remote roles available.",
+    url: "https://wisdodesigns.com/careers",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Careers at WISDO Designs - Join Our Software Team",
+    description: "Join WISDO Designs to build high-performance software, custom business applications, and workflow automation systems for global clients. Remote roles available.",
+  },
 };
 
 export default function CareersPage() {
@@ -51,33 +67,36 @@ export default function CareersPage() {
 
       {/* Perks Section */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white border-y border-slate-100/60 shadow-inner relative z-10 overflow-hidden">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 flex flex-col gap-4 text-center items-center">
-            <div className="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center">
-              <Laptop className="w-6 h-6" />
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight text-center mb-12">Perks of Joining Our Team</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 flex flex-col gap-4 text-center items-center">
+              <div className="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center">
+                <Laptop className="w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900">100% Remote Workflow</h3>
+              <p className="text-sm text-slate-500 leading-relaxed font-medium">
+                Work from anywhere in the world. We focus on results, clean code delivery, and client satisfaction over fixed office hours.
+              </p>
             </div>
-            <h3 className="text-lg font-bold text-slate-900">100% Remote Workflow</h3>
-            <p className="text-sm text-slate-500 leading-relaxed font-medium">
-              Work from anywhere in the world. We focus on results, clean code delivery, and client satisfaction over fixed office hours.
-            </p>
-          </div>
-          <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 flex flex-col gap-4 text-center items-center">
-            <div className="w-12 h-12 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center">
-              <Globe className="w-6 h-6" />
+            <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 flex flex-col gap-4 text-center items-center">
+              <div className="w-12 h-12 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center">
+                <Globe className="w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900">Modern Architecture Stack</h3>
+              <p className="text-sm text-slate-500 leading-relaxed font-medium">
+                We leverage clean React patterns, Next.js page routers, serverless structures, and advanced AI automation nodes.
+              </p>
             </div>
-            <h3 className="text-lg font-bold text-slate-900">Modern Architecture Stack</h3>
-            <p className="text-sm text-slate-500 leading-relaxed font-medium">
-              We leverage clean React patterns, Next.js page routers, serverless structures, and advanced AI automation nodes.
-            </p>
-          </div>
-          <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 flex flex-col gap-4 text-center items-center">
-            <div className="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center">
-              <Users className="w-6 h-6" />
+            <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 flex flex-col gap-4 text-center items-center">
+              <div className="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center">
+                <Users className="w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900">Collaborative Engineering</h3>
+              <p className="text-sm text-slate-500 leading-relaxed font-medium">
+                Work alongside senior developers who prioritize clean lint rules, code formatting consistency, and modularity.
+              </p>
             </div>
-            <h3 className="text-lg font-bold text-slate-900">Collaborative Engineering</h3>
-            <p className="text-sm text-slate-500 leading-relaxed font-medium">
-              Work alongside senior developers who prioritize clean lint rules, code formatting consistency, and modularity.
-            </p>
           </div>
         </div>
       </section>

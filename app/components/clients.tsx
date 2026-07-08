@@ -2,6 +2,7 @@
 
 import { useState, useEffect, ComponentType } from "react";
 import { Sparkles, MonitorSmartphone, ShoppingCart, Rocket, CheckCircle, X, ExternalLink } from "lucide-react";
+import Link from "next/link";
 
 // The full project type to govern the modal state
 interface Project {
@@ -95,9 +96,9 @@ export default function ClientsSection() {
             <span className="text-sm font-bold tracking-wide text-slate-700 uppercase">Concept Projects</span>
           </div>
           
-          <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6 sm:mb-8">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6 sm:mb-8">
             Featured <span className="text-gradient">Case Studies</span>
-          </h3>
+          </h2>
 
           <p className="text-base sm:text-lg lg:text-xl text-slate-500 leading-relaxed font-light">
             Explore our high-performance product prototypes designed to showcase our engineering capabilities and technological expertise.
@@ -126,9 +127,9 @@ export default function ClientsSection() {
                 
                 <div className="mb-4">
                   <div className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Concept Project</div>
-                  <h4 className="text-xl sm:text-2xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors tracking-tight line-clamp-2">
+                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors tracking-tight line-clamp-2">
                     {project.title}
-                  </h4>
+                  </h3>
                 </div>
 
                 <p className="text-sm lg:text-base text-slate-500 font-medium leading-relaxed mb-8 flex-grow line-clamp-3">
@@ -241,13 +242,13 @@ export default function ClientsSection() {
               {/* Footer */}
               <div className="p-6 sm:p-8 border-t border-slate-100 bg-slate-50/50 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <p className="text-sm font-bold text-slate-500">Interested in a bespoke solution like this?</p>
-                <a 
+                <Link 
                   href="/contact"
                   className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-xl bg-slate-900 text-white text-sm font-bold uppercase tracking-wide hover:bg-indigo-600 transition-all shadow-md hover:shadow-indigo-500/25 gap-2"
                 >
                   Start Similar Project
                   <ExternalLink className="w-4 h-4" />
-                </a>
+                </Link>
               </div>
               
             </div>

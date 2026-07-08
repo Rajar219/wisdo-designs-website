@@ -5,6 +5,27 @@ import WhyChooseUs from "./components/whyChooseUs";
 import ClientsSection from "./components/clients";
 import Trust from "./components/trust";
 import { ArrowRight, Sparkles, Zap, Shield, Rocket, Bot, Layers, MonitorPlay } from "lucide-react";
+import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Website Development & Web Design Agency in India",
+  description: "WISDO Designs is a premium software agency in India offering custom Web Design, Website Development, Web Hosting, Mobile App Development, Digital Marketing, and scalable Business Software.",
+  alternates: {
+    canonical: "https://wisdodesigns.com",
+  },
+  openGraph: {
+    title: "Website Development & Web Design Agency in India | WISDO Designs",
+    description: "WISDO Designs is a premium software agency in India offering custom Web Design, Website Development, Web Hosting, Mobile App Development, Digital Marketing, and scalable Business Software.",
+    url: "https://wisdodesigns.com",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Website Development & Web Design Agency in India | WISDO Designs",
+    description: "WISDO Designs is a premium software agency in India offering custom Web Design, Website Development, Web Hosting, Mobile App Development, Digital Marketing, and scalable Business Software.",
+  },
+};
 
 export default function Home() {
   return (
@@ -31,41 +52,41 @@ export default function Home() {
             </h1>
 
             <p className="text-base sm:text-lg lg:text-2xl text-slate-500 leading-relaxed font-light max-w-xl mb-6 sm:mb-8 w-full text-center lg:text-left break-words">
-              We design scalable websites, business applications, and automation systems that help startups and agencies grow faster and work smarter.
+              We engineer custom <strong className="font-semibold text-slate-700">Website Development</strong>, creative <strong className="font-semibold text-slate-700">Web Design</strong>, scalable <strong className="font-semibold text-slate-700">Business Software</strong>, and <strong className="font-semibold text-slate-700">Mobile App Development</strong> solutions that help modern startups in <strong className="font-semibold text-slate-700">India</strong> grow faster.
             </p>
 
             {/* Small Service Highlight Tags */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 sm:gap-3 mb-8 sm:mb-10 w-full max-w-lg">
               <span className="px-3 py-1.5 rounded-lg bg-indigo-50/80 border border-indigo-100 text-indigo-600 text-[11px] sm:text-xs font-bold tracking-wide whitespace-nowrap">
-                Business Websites
+                Website Development
               </span>
               <span className="px-3 py-1.5 rounded-lg bg-pink-50/80 border border-pink-100 text-pink-600 text-[11px] sm:text-xs font-bold tracking-wide whitespace-nowrap">
-                Mobile Applications
+                Mobile App Development
               </span>
               <span className="px-3 py-1.5 rounded-lg bg-emerald-50/80 border border-emerald-100 text-emerald-600 text-[11px] sm:text-xs font-bold tracking-wide whitespace-nowrap">
-                Business Automation
+                Web Hosting
               </span>
               <span className="px-3 py-1.5 rounded-lg bg-purple-50/80 border border-purple-100 text-purple-600 text-[11px] sm:text-xs font-bold tracking-wide whitespace-nowrap">
-                AI Chatbots
+                Digital Marketing
               </span>
             </div>
 
             <div className="mt-2 flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center lg:justify-start w-full">
-              <a
+              <Link
                 href="/contact"
                 className="group w-full sm:w-auto relative flex items-center justify-center gap-2 bg-slate-900 text-white px-8 py-4 rounded-xl sm:rounded-full overflow-hidden transition-all duration-300 shadow-xl shadow-slate-900/10 hover:-translate-y-1 hover:shadow-indigo-500/30"
               >
                 <span className="relative z-10 font-bold tracking-wide text-base">Start Your Project</span>
                 <ArrowRight className="w-5 h-5 sm:w-4 sm:h-4 relative z-10 group-hover:translate-x-1 transition-transform" />
                 <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="/services"
                 className="flex w-full sm:w-auto items-center justify-center px-8 py-4 rounded-xl sm:rounded-full bg-white/80 backdrop-blur-sm border border-slate-200/60 font-medium text-slate-700 text-base shadow-sm hover:bg-white hover:border-slate-300 transition-all duration-300 hover:-translate-y-1"
               >
                 View Services
-              </a>
+              </Link>
             </div>
 
             {/* Trust Line & Indicators */}

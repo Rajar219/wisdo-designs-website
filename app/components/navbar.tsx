@@ -163,7 +163,7 @@ export default function Navbar() {
             </div>
 
             {/* CTA Button */}
-            <a
+            <Link
               href="/contact"
               className="group relative bg-slate-900 border border-slate-700/50 text-white px-7 py-2.5 rounded-full overflow-hidden transition-all duration-300 shadow-md shadow-slate-900/10 hover:shadow-indigo-500/30 hover:scale-105 font-medium text-center"
             >
@@ -174,7 +174,7 @@ export default function Navbar() {
               <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/80 to-purple-600/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
               <div className="absolute inset-0 bg-white/20 blur-md opacity-0 group-hover:animate-pulse transition-opacity" />
-            </a>
+            </Link>
 
           </div>
         </div>
@@ -219,13 +219,13 @@ export default function Navbar() {
           </div>
 
           <div className="mt-auto pt-10">
-            <a
+            <Link
               href="/contact"
               onClick={() => setIsMobileMenuOpen(false)}
               className="w-full bg-slate-900 text-white py-4 rounded-xl text-center font-semibold text-lg hover:bg-indigo-600 transition-colors shadow-lg block"
             >
               Get Free Consultation
-            </a>
+            </Link>
           </div>
 
         </div>

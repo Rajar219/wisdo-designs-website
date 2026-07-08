@@ -1,6 +1,26 @@
 import WhyChooseUs from "../components/whyChooseUs";
 import Technologies from "../components/technologies";
 import { Sparkles, Target, Users, Zap } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Our Web Design & Software Agency",
+  description: "Learn how WISDO Designs supports startups and modern enterprises across India with expert Website Development, Web Design, and custom Business Software.",
+  alternates: {
+    canonical: "https://wisdodesigns.com/about",
+  },
+  openGraph: {
+    title: "About Our Web Design & Software Agency | WISDO Designs",
+    description: "Learn how WISDO Designs supports startups and modern enterprises across India with expert Website Development, Web Design, and custom Business Software.",
+    url: "https://wisdodesigns.com/about",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Our Web Design & Software Agency | WISDO Designs",
+    description: "Learn how WISDO Designs supports startups and modern enterprises across India with expert Website Development, Web Design, and custom Business Software.",
+  },
+};
 
 export default function AboutPage() {
   return (
@@ -34,7 +54,7 @@ export default function AboutPage() {
           <div className="order-2 md:order-1 relative">
             <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500/5 to-purple-500/5 rounded-[2.5rem] blur-2xl transform scale-105 pointer-events-none" />
             <div className="bg-slate-50 border border-slate-100 p-10 lg:p-14 rounded-[2.5rem] shadow-xl relative z-10 text-center md:text-left">
-              <h3 className="text-3xl font-bold text-slate-900 mb-6">Our Mission</h3>
+              <h2 className="text-3xl font-bold text-slate-900 mb-6">Our Mission</h2>
               <p className="text-lg text-slate-600 leading-relaxed mb-8 mx-auto md:mx-0 max-w-lg">
                 To democratize enterprise-grade technology for startups and growing businesses. We believe every ambitious team deserves scalable, highly-performant software architecture without the massive agency overhead.
               </p>
@@ -45,7 +65,7 @@ export default function AboutPage() {
                     <Target className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-bold text-slate-900">Precision Engineering</h4>
+                    <h3 className="text-lg font-bold text-slate-900">Precision Engineering</h3>
                     <p className="text-slate-500 mt-1">Building architectures that don&apos;t just work today, but scale seamlessly tomorrow.</p>
                   </div>
                 </div>
@@ -55,7 +75,7 @@ export default function AboutPage() {
                     <Users className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-bold text-slate-900">Partnership Mindset</h4>
+                    <h3 className="text-lg font-bold text-slate-900">Partnership Mindset</h3>
                     <p className="text-slate-500 mt-1 max-w-sm mx-auto md:mx-0">We don&apos;t just write code. We operate as your dedicated technical partners.</p>
                   </div>
                 </div>
@@ -65,7 +85,7 @@ export default function AboutPage() {
                     <Zap className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-bold text-slate-900">Radical Efficiency</h4>
+                    <h3 className="text-lg font-bold text-slate-900">Radical Efficiency</h3>
                     <p className="text-slate-500 mt-1 max-w-sm mx-auto md:mx-0">Deploying automation and AI integrations to massively reduce your operational drag.</p>
                   </div>
                 </div>

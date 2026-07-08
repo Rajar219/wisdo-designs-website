@@ -1,5 +1,6 @@
 import { ExternalLink, Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -32,27 +33,27 @@ export default function Footer() {
           {/* Services */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left gap-4 md:gap-5">
             <p className="font-bold text-slate-900 mb-1 md:mb-2 font-sans tracking-wide text-lg">Services</p>
-            <a href="/services" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium flex items-center justify-center md:justify-start gap-2 group">
+            <Link href="/services" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium flex items-center justify-center md:justify-start gap-2 group">
               Business Websites <ExternalLink className="w-3.5 h-3.5 hidden md:block opacity-0 group-hover:opacity-100 transition-opacity" />
-            </a>
-            <a href="/services" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium flex items-center justify-center md:justify-start gap-2 group">
+            </Link>
+            <Link href="/services" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium flex items-center justify-center md:justify-start gap-2 group">
               Mobile Applications <ExternalLink className="w-3.5 h-3.5 hidden md:block opacity-0 group-hover:opacity-100 transition-opacity" />
-            </a>
-            <a href="/services" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium flex items-center justify-center md:justify-start gap-2 group">
+            </Link>
+            <Link href="/services" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium flex items-center justify-center md:justify-start gap-2 group">
               Business Software <ExternalLink className="w-3.5 h-3.5 hidden md:block opacity-0 group-hover:opacity-100 transition-opacity" />
-            </a>
-            <a href="/services" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium flex items-center justify-center md:justify-start gap-2 group">
+            </Link>
+            <Link href="/services" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium flex items-center justify-center md:justify-start gap-2 group">
               UI/UX Design <ExternalLink className="w-3.5 h-3.5 hidden md:block opacity-0 group-hover:opacity-100 transition-opacity" />
-            </a>
+            </Link>
           </div>
 
           {/* Quick Links */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left gap-4 md:gap-5">
             <p className="font-bold text-slate-900 mb-1 md:mb-2 font-sans tracking-wide text-lg">Company</p>
-            <a href="/about" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium">About Us</a>
-            <a href="/contact" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium">Contact</a>
-            <a href="/pricing" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium">Pricing / Packages</a>
-            <a href="/careers" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium">Careers</a>
+            <Link href="/about" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium">About Us</Link>
+            <Link href="/contact" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium">Contact</Link>
+            <Link href="/pricing" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium">Pricing / Packages</Link>
+            <Link href="/careers" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium">Careers</Link>
           </div>
 
           {/* Social Links */}
@@ -71,8 +72,8 @@ export default function Footer() {
             © {new Date().getFullYear()} WISDO Designs. All rights reserved.
           </p>
           <div className="flex gap-8 text-sm text-slate-500 font-medium">
-            <a href="/privacy" className="hover:text-indigo-600 transition-colors">Privacy Policy</a>
-            <a href="/terms" className="hover:text-indigo-600 transition-colors">Terms of Service</a>
+            <Link href="/privacy" className="hover:text-indigo-600 transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-indigo-600 transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

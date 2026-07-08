@@ -1,8 +1,23 @@
 import { FileText } from "lucide-react";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Terms of Service",
   description: "Terms of Service for WISDO Designs detailing development contracts, project terms, and ownership guidelines.",
+  alternates: {
+    canonical: "https://wisdodesigns.com/terms",
+  },
+  openGraph: {
+    title: "Terms of Service | WISDO Designs",
+    description: "Terms of Service for WISDO Designs detailing development contracts, project terms, and ownership guidelines.",
+    url: "https://wisdodesigns.com/terms",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms of Service | WISDO Designs",
+    description: "Terms of Service for WISDO Designs detailing development contracts, project terms, and ownership guidelines.",
+  },
 };
 
 export default function TermsPage() {
