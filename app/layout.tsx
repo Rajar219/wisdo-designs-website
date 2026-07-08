@@ -65,6 +65,9 @@ export const metadata: Metadata = {
     description: "Scale your business with high-performance web development, custom mobile apps, and intelligent AI chatbots.",
     images: ["/logo new.png"],
   },
+  verification: {
+    google: "cYW51Yz324qyEHlgyr92fYI9WIaFToxBNnnwXSlI8rg",
+  },
 };
 
 export default function RootLayout({
