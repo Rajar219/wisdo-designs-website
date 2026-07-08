@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
@@ -45,7 +46,7 @@ export default function Navbar() {
           <button
             className="justify-self-start p-2 text-slate-900 hover:text-indigo-600 active:scale-95 z-[110]"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Open menu"
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
           >
             {isMobileMenuOpen ? (
               <X className="w-7 h-7" />
@@ -60,10 +61,13 @@ export default function Navbar() {
             className="justify-self-center flex items-center"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            <img
-              src="/logo.png"
+            <Image
+              src="/logo-transparent.png"
               alt="WISDO Designs Logo"
-              className="h-14 sm:h-16 w-auto object-contain drop-shadow-md mix-blend-multiply -translate-x-1"
+              width={105}
+              height={70}
+              priority
+              className="h-14 sm:h-16 w-auto object-contain drop-shadow-md -translate-x-1"
             />
           </Link>
 
@@ -81,10 +85,13 @@ export default function Navbar() {
               className="flex items-center group cursor-pointer"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              <img
-                src="/logo.png"
+              <Image
+                src="/logo-transparent.png"
                 alt="WISDO Designs Logo"
-                className="h-24 xl:h-28 object-contain drop-shadow-md mix-blend-multiply transition-transform duration-500 scale-110 origin-left group-hover:scale-[1.15]"
+                width={150}
+                height={100}
+                priority
+                className="h-24 xl:h-28 w-auto object-contain drop-shadow-md transition-transform duration-500 scale-110 origin-left group-hover:scale-[1.15]"
               />
             </Link>
 
@@ -185,6 +192,7 @@ export default function Navbar() {
           {/* Close Button */}
           <button
             onClick={() => setIsMobileMenuOpen(false)}
+            aria-label="Close menu"
             className="absolute top-6 right-6 w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-600 hover:text-slate-900 transition-colors"
           >
             <X className="w-5 h-5" />

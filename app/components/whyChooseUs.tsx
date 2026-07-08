@@ -37,7 +37,10 @@ export default function WhyChooseUs() {
           </div>
         </div>
 
-        <div className="relative w-full max-w-lg lg:max-w-none mx-auto lg:ml-auto animate-fade-in-up delay-200 lg:pl-10">
+        <div 
+          style={{ animationDelay: '200ms', animationFillMode: 'both' }}
+          className="relative w-full max-w-lg lg:max-w-none mx-auto lg:ml-auto animate-fade-in-up lg:pl-10"
+        >
           
           {/* Vertical Connecting Line (Timeline) */}
           <div className="absolute left-[2.25rem] lg:left-[4.75rem] top-12 bottom-12 w-[2px] bg-slate-100 hidden sm:block" />

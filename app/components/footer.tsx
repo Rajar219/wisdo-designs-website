@@ -1,4 +1,5 @@
 import { ExternalLink, Mail, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
           
           {/* Brand & Contact */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6 lg:pr-8">
-            <img src="/logo.png" alt="WISDO Designs Logo" className="h-16 md:h-24 w-auto object-contain mix-blend-multiply md:origin-left md:scale-125" />
+            <Image src="/logo-transparent.png" alt="WISDO Designs Logo" width={150} height={100} className="h-16 md:h-24 w-auto object-contain md:origin-left md:scale-125" />
             <p className="text-slate-500 text-sm md:text-base leading-relaxed max-w-sm font-light">
               A premium software agency crafting intelligent digital experiences for modern startups and enterprises.
             </p>
@@ -17,9 +18,9 @@ export default function Footer() {
                 <MapPin className="w-5 h-5 text-indigo-500 shrink-0" />
                 <span>Chennai, India</span>
               </div>
-              <a href="mailto:wisdoindtech@gmail.com" className="flex items-center gap-3 text-slate-600 text-sm font-medium hover:text-indigo-600 transition-colors">
+              <a href="mailto:wisdodesigns@gmail.com" className="flex items-center gap-3 text-slate-600 text-sm font-medium hover:text-indigo-600 transition-colors">
                 <Mail className="w-5 h-5 text-indigo-500 shrink-0" />
-                wisdoindtech@gmail.com
+                wisdodesigns@gmail.com
               </a>
               <a href="tel:+919787362199" className="flex items-center gap-3 text-slate-600 text-sm font-medium hover:text-indigo-600 transition-colors">
                 <Phone className="w-5 h-5 text-indigo-500 shrink-0" />

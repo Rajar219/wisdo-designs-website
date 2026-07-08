@@ -110,7 +110,7 @@ export default function ServicesPreview() {
               <div 
                 key={groupIdx} 
                 className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start relative animate-fade-in-up"
-                style={{ animationDelay: `${groupIdx * 150}ms` }}
+                style={{ animationDelay: `${groupIdx * 150}ms`, animationFillMode: 'both' }}
               >
                 
                 {/* Visual Connector Line (Desktop) */}

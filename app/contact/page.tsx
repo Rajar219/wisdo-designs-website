@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, MessageCircle, MapPin, Send, CheckCircle2, Loader2, User, Building2 } from "lucide-react";
+import { Mail, MessageCircle, MapPin, Send, CheckCircle2, Loader2 } from "lucide-react";
 import emailjs from '@emailjs/browser';
 
 export default function ContactPage() {
@@ -34,7 +34,7 @@ export default function ContactPage() {
         phone: formData.phone,
         projectType: formData.projectType,
         message: formData.message,
-        to_email: "wisdoindtech@gmail.com", // Or set this in the template itself
+        to_email: "wisdodesigns@gmail.com", // Or set this in the template itself
       };
 
       // Ensure EmailJS tries to send. We will simulate success if placeholders are default.
@@ -72,7 +72,7 @@ export default function ContactPage() {
             Get in Touch
           </h2>
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-4 sm:mb-6 drop-shadow-sm">
-            Let's Build Something <br className="hidden md:block" /> <span className="text-gradient">Incredible</span>
+            Let&apos;s Build Something <br className="hidden md:block" /> <span className="text-gradient">Incredible</span>
           </h1>
           <p className="text-base sm:text-lg lg:text-2xl text-slate-500 leading-relaxed font-light max-w-2xl mx-auto">
             Ready to scale your business? Drop us a message and our technical team will get back to you immediately.
@@ -85,7 +85,10 @@ export default function ContactPage() {
         <div className="max-w-6xl mx-auto grid lg:grid-cols-5 gap-10 sm:gap-12 lg:gap-16 items-start">
 
           {/* Left Column: Contact Info */}
-          <div className="lg:col-span-2 space-y-6 sm:space-y-8 animate-fade-in-up delay-100">
+          <div 
+            style={{ animationDelay: '100ms', animationFillMode: 'both' }}
+            className="lg:col-span-2 space-y-6 sm:space-y-8 animate-fade-in-up"
+          >
             <div className="bg-white rounded-[2rem] p-6 sm:p-8 lg:p-10 border border-slate-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.03)] space-y-8 sm:space-y-10 text-center lg:text-left">
 
               <div>
@@ -94,13 +97,13 @@ export default function ContactPage() {
               </div>
 
               <div className="space-y-8 lg:space-y-6">
-                <a href="mailto:wisdoindtech@gmail.com" className="flex flex-col lg:flex-row items-center lg:items-start gap-4 group">
+                <a href="mailto:wisdodesigns@gmail.com" className="flex flex-col lg:flex-row items-center lg:items-start gap-4 group">
                   <div className="w-14 h-14 lg:w-12 lg:h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
                     <Mail className="w-6 h-6 lg:w-5 lg:h-5" />
                   </div>
                   <div>
                     <h4 className="text-sm font-bold text-slate-900 text-opacity-60 uppercase tracking-widest mb-1">Email Us</h4>
-                    <p className="text-lg font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">wisdoindtech@gmail.com</p>
+                    <p className="text-lg font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">wisdodesigns@gmail.com</p>
                   </div>
                 </a>
 
@@ -129,7 +132,10 @@ export default function ContactPage() {
           </div>
 
           {/* Right Column: Contact Form */}
-          <div className="lg:col-span-3 animate-fade-in-up delay-200">
+          <div 
+            style={{ animationDelay: '200ms', animationFillMode: 'both' }}
+            className="lg:col-span-3 animate-fade-in-up"
+          >
             <div className="bg-white rounded-[2rem] p-6 sm:p-8 md:p-12 border border-slate-100 shadow-[0_20px_60px_-15px_rgba(49,46,129,0.05)] relative overflow-hidden">
               <div className="absolute top-0 right-0 w-48 h-48 sm:w-64 sm:h-64 bg-indigo-50/50 rounded-bl-full -z-10" />
 
@@ -150,9 +156,10 @@ export default function ContactPage() {
                   <form className="space-y-6" onSubmit={handleSubmit}>
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label className="text-sm font-bold text-slate-700">Full Name</label>
+                        <label htmlFor="name" className="text-sm font-bold text-slate-700">Full Name</label>
                         <input
                           required
+                          id="name"
                           type="text"
                           name="name"
                           value={formData.name}
@@ -162,9 +169,10 @@ export default function ContactPage() {
                         />
                       </div>
                       <div className="space-y-2">
-                        <label className="text-sm font-bold text-slate-700">Email Address</label>
+                        <label htmlFor="email" className="text-sm font-bold text-slate-700">Email Address</label>
                         <input
                           required
+                          id="email"
                           type="email"
                           name="email"
                           value={formData.email}
@@ -177,9 +185,10 @@ export default function ContactPage() {
 
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label className="text-sm font-bold text-slate-700">Phone Number</label>
+                        <label htmlFor="phone" className="text-sm font-bold text-slate-700">Phone Number</label>
                         <input
                           required
+                          id="phone"
                           type="tel"
                           name="phone"
                           value={formData.phone}
@@ -189,8 +198,9 @@ export default function ContactPage() {
                         />
                       </div>
                       <div className="space-y-2">
-                        <label className="text-sm font-bold text-slate-700">Business / Project Type</label>
+                        <label htmlFor="projectType" className="text-sm font-bold text-slate-700">Business / Project Type</label>
                         <select 
+                          id="projectType"
                           name="projectType"
                           value={formData.projectType}
                           onChange={handleChange}
@@ -207,9 +217,10 @@ export default function ContactPage() {
                     </div>
 
                     <div className="space-y-2">
-                      <label className="text-sm font-bold text-slate-700">Project Details</label>
+                      <label htmlFor="message" className="text-sm font-bold text-slate-700">Project Details</label>
                       <textarea
                         required
+                        id="message"
                         rows={4}
                         name="message"
                         value={formData.message}

@@ -70,15 +70,15 @@ export default function Technologies() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
-          {techGroups.map((group, i) => {
+           {techGroups.map((group, i) => {
             const MainIcon = group.icon;
-            const delay = `delay-[${i * 150}ms]`;
             const isHighlight = group.highlight;
 
             return (
               <div
                 key={i}
-                className={`relative group rounded-[1.5rem] p-8 lg:p-10 border ${group.border} ${group.bg} ${group.shadow} transition-all duration-500 hover:-translate-y-4 animate-fade-in-up ${delay} flex flex-col`}
+                style={{ animationDelay: `${i * 150}ms`, animationFillMode: 'both' }}
+                className={`relative group rounded-[1.5rem] p-8 lg:p-10 border ${group.border} ${group.bg} ${group.shadow} transition-all duration-500 hover:-translate-y-4 animate-fade-in-up flex flex-col`}
               >
                 {/* Subtle gradient border effect for highlight card */}
                 {isHighlight && (

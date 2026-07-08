@@ -28,7 +28,10 @@ export default function Process() {
           <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-8">
             
             {/* Step 1: Discover */}
-            <div className="flex flex-col items-center gap-5 lg:gap-8 group text-center w-full animate-fade-in-up">
+            <div 
+              style={{ animationDelay: '0ms', animationFillMode: 'both' }}
+              className="flex flex-col items-center gap-5 lg:gap-8 group text-center w-full animate-fade-in-up"
+            >
               <div className="relative shrink-0">
                 <div className="absolute inset-0 bg-indigo-100 rounded-full scale-0 group-hover:scale-150 opacity-0 group-hover:opacity-100 transition-all duration-700 -z-10" />
                 <div className="w-20 h-20 lg:w-28 lg:h-28 rounded-full bg-white border-4 border-indigo-50/50 shadow-xl shadow-slate-200/50 flex flex-col items-center justify-center group-hover:border-indigo-500 group-hover:-translate-y-2 group-hover:shadow-indigo-500/20 transition-all duration-500">
@@ -43,7 +46,10 @@ export default function Process() {
             </div>
 
             {/* Step 2: Design */}
-            <div className="flex flex-col items-center gap-5 lg:gap-8 group text-center w-full animate-fade-in-up delay-[150ms]">
+            <div 
+              style={{ animationDelay: '150ms', animationFillMode: 'both' }}
+              className="flex flex-col items-center gap-5 lg:gap-8 group text-center w-full animate-fade-in-up"
+            >
               <div className="relative shrink-0">
                 <div className="absolute inset-0 bg-fuchsia-100 rounded-full scale-0 group-hover:scale-150 opacity-0 group-hover:opacity-100 transition-all duration-700 -z-10" />
                 <div className="w-20 h-20 lg:w-28 lg:h-28 rounded-full bg-white border-4 border-fuchsia-50/50 shadow-xl shadow-slate-200/50 flex flex-col items-center justify-center group-hover:border-fuchsia-500 group-hover:-translate-y-2 group-hover:shadow-fuchsia-500/20 transition-all duration-500">
@@ -58,7 +64,10 @@ export default function Process() {
             </div>
 
             {/* Step 3: Build */}
-            <div className="flex flex-col items-center gap-5 lg:gap-8 group text-center w-full animate-fade-in-up delay-[300ms]">
+            <div 
+              style={{ animationDelay: '300ms', animationFillMode: 'both' }}
+              className="flex flex-col items-center gap-5 lg:gap-8 group text-center w-full animate-fade-in-up"
+            >
               <div className="relative shrink-0">
                 <div className="absolute inset-0 bg-sky-100 rounded-full scale-0 group-hover:scale-150 opacity-0 group-hover:opacity-100 transition-all duration-700 -z-10" />
                 <div className="w-20 h-20 lg:w-28 lg:h-28 rounded-full bg-white border-4 border-sky-50/50 shadow-xl shadow-slate-200/50 flex flex-col items-center justify-center group-hover:border-sky-500 group-hover:-translate-y-2 group-hover:shadow-sky-500/20 transition-all duration-500">
@@ -73,7 +82,10 @@ export default function Process() {
             </div>
 
             {/* Step 4: Launch */}
-            <div className="flex flex-col items-center gap-5 lg:gap-8 group text-center w-full animate-fade-in-up delay-[450ms]">
+            <div 
+              style={{ animationDelay: '450ms', animationFillMode: 'both' }}
+              className="flex flex-col items-center gap-5 lg:gap-8 group text-center w-full animate-fade-in-up"
+            >
               <div className="relative shrink-0">
                 <div className="absolute inset-0 bg-emerald-100 rounded-full scale-0 group-hover:scale-150 opacity-0 group-hover:opacity-100 transition-all duration-700 -z-10" />
                 <div className="w-20 h-20 lg:w-28 lg:h-28 rounded-full bg-white border-4 border-emerald-50/50 shadow-xl shadow-slate-200/50 flex flex-col items-center justify-center group-hover:border-emerald-500 group-hover:-translate-y-2 group-hover:shadow-emerald-500/20 transition-all duration-500">

@@ -46,7 +46,7 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h4 className="text-lg font-bold text-slate-900">Precision Engineering</h4>
-                    <p className="text-slate-500 mt-1">Building architectures that don't just work today, but scale seamlessly tomorrow.</p>
+                    <p className="text-slate-500 mt-1">Building architectures that don&apos;t just work today, but scale seamlessly tomorrow.</p>
                   </div>
                 </div>
 
@@ -56,7 +56,7 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h4 className="text-lg font-bold text-slate-900">Partnership Mindset</h4>
-                    <p className="text-slate-500 mt-1 max-w-sm mx-auto md:mx-0">We don't just write code. We operate as your dedicated technical partners.</p>
+                    <p className="text-slate-500 mt-1 max-w-sm mx-auto md:mx-0">We don&apos;t just write code. We operate as your dedicated technical partners.</p>
                   </div>
                 </div>
 

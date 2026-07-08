@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { Sparkles, ArrowRight, MonitorSmartphone, ShoppingCart, Rocket, CheckCircle, X, ExternalLink } from "lucide-react";
+import { useState, useEffect, ComponentType } from "react";
+import { Sparkles, MonitorSmartphone, ShoppingCart, Rocket, CheckCircle, X, ExternalLink } from "lucide-react";
 
 // The full project type to govern the modal state
 interface Project {
@@ -9,7 +9,7 @@ interface Project {
   industry: string;
   desc: string;
   features: string[];
-  icon: any;
+  icon: ComponentType<{ className?: string }>;
   color: string;
   bg: string;
   badgeColor: string;
@@ -107,11 +107,11 @@ export default function ClientsSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 pb-12">
           {featuredProjects.map((project, i) => {
             const Icon = project.icon;
-            const delay = `delay-[${i * 150}ms]`;
             return (
               <div 
                 key={i} 
-                className={`w-full relative group bg-white rounded-[2rem] p-8 lg:p-10 border border-slate-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.03)] transition-all duration-500 hover:-translate-y-4 hover:shadow-[0_40px_80px_-20px_rgba(79,70,229,0.15)] animate-fade-in-up flex flex-col items-center sm:items-start text-center sm:text-left h-full ${delay}`}
+                style={{ animationDelay: `${i * 150}ms`, animationFillMode: 'both' }}
+                className="w-full relative group bg-white rounded-[2rem] p-8 lg:p-10 border border-slate-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.03)] transition-all duration-500 hover:-translate-y-4 hover:shadow-[0_40px_80px_-20px_rgba(79,70,229,0.15)] animate-fade-in-up flex flex-col items-center sm:items-start text-center sm:text-left h-full"
               >
                 {/* Industry Tag */}
                 <div className={`absolute top-6 right-6 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider rounded-md border ${project.badgeColor}`}>

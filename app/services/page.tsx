@@ -96,12 +96,12 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {services.map((service, i) => {
             const Icon = service.icon;
-            const delay = `delay-[${i * 100}ms]`;
             
             return (
               <div 
                 key={i} 
-                className={`group bg-white rounded-[2rem] p-10 border border-slate-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.03)] transition-all duration-500 hover:-translate-y-4 hover:shadow-[0_30px_60px_-15px_rgba(79,70,229,0.12)] animate-fade-in-up ${delay} flex flex-col items-center sm:items-start text-center sm:text-left`}
+                style={{ animationDelay: `${i * 100}ms`, animationFillMode: 'both' }}
+                className="group bg-white rounded-[2rem] p-10 border border-slate-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.03)] transition-all duration-500 hover:-translate-y-4 hover:shadow-[0_30px_60px_-15px_rgba(79,70,229,0.12)] animate-fade-in-up flex flex-col items-center sm:items-start text-center sm:text-left"
               >
                 <div className={`w-16 h-16 rounded-2xl ${service.bg} flex items-center justify-center mb-6 sm:mb-8 group-hover:scale-110 transition-transform duration-500`}>
                   <div className={`bg-gradient-to-br ${service.color} w-10 h-10 rounded-xl flex items-center justify-center text-white shadow-md`}>

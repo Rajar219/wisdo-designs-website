@@ -4,7 +4,7 @@ import Process from "./components/process";
 import WhyChooseUs from "./components/whyChooseUs";
 import ClientsSection from "./components/clients";
 import Trust from "./components/trust";
-import { ArrowRight, Sparkles, CheckCircle2, Zap, Shield, Rocket, Bot, Layers, MonitorPlay } from "lucide-react";
+import { ArrowRight, Sparkles, Zap, Shield, Rocket, Bot, Layers, MonitorPlay } from "lucide-react";
 
 export default function Home() {
   return (
