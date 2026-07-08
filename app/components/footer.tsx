@@ -60,7 +60,7 @@ export default function Footer() {
             <p className="font-bold text-slate-900 mb-1 md:mb-2 font-sans tracking-wide text-lg">Social</p>
             <a href="#" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium">Twitter / X</a>
             <a href="#" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium">LinkedIn</a>
-            <a href="#" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium">Instagram</a>
+            <a href="https://instagram.com/wisdo_designs" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium">Instagram</a>
             <a href="#" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium">GitHub</a>
           </div>
 
