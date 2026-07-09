@@ -3,27 +3,28 @@ import Technologies from "./components/technologies";
 import Process from "./components/process";
 import WhyChooseUs from "./components/whyChooseUs";
 import ClientsSection from "./components/clients";
+import Faq from "./components/faq";
 import Trust from "./components/trust";
-import { ArrowRight, Sparkles, Zap, Shield, Rocket, Bot, Layers, MonitorPlay } from "lucide-react";
+import { ArrowRight, Sparkles, Zap, Shield, Rocket, Bot, Layers, MonitorPlay, MessageCircle, Mail } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Website Development & Web Design Agency in India",
-  description: "WISDO Designs is a premium software agency in India offering custom Web Design, Website Development, Web Hosting, Mobile App Development, Digital Marketing, and scalable Business Software.",
+  title: "Website Development & Custom Software Solutions | WISDO Designs",
+  description: "WISDO Designs is a growing technology and digital solutions brand. We design and build clean websites, custom software solutions, and business applications based on client requirements.",
   alternates: {
     canonical: "https://wisdodesigns.com",
   },
   openGraph: {
-    title: "Website Development & Web Design Agency in India | WISDO Designs",
-    description: "WISDO Designs is a premium software agency in India offering custom Web Design, Website Development, Web Hosting, Mobile App Development, Digital Marketing, and scalable Business Software.",
+    title: "Website Development & Custom Software Solutions | WISDO Designs",
+    description: "WISDO Designs is a growing technology and digital solutions brand. We design and build clean websites, custom software solutions, and business applications based on client requirements.",
     url: "https://wisdodesigns.com",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Development & Web Design Agency in India | WISDO Designs",
-    description: "WISDO Designs is a premium software agency in India offering custom Web Design, Website Development, Web Hosting, Mobile App Development, Digital Marketing, and scalable Business Software.",
+    title: "Website Development & Custom Software Solutions | WISDO Designs",
+    description: "WISDO Designs is a growing technology and digital solutions brand. We design and build clean websites, custom software solutions, and business applications based on client requirements.",
   },
 };
 
@@ -41,33 +42,35 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 lg:gap-24 items-center relative z-10">
 
           <div className="max-w-2xl mx-auto text-center lg:text-left pt-2 lg:pt-0 animate-fade-in-up w-full flex flex-col items-center lg:items-start">
-            <div className="inline-flex items-center justify-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/60 backdrop-blur-md shadow-sm border border-indigo-100/50 mb-6 sm:mb-8 transition-transform hover:scale-105">
-              <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-indigo-500" />
-              <span className="text-xs sm:text-sm font-semibold tracking-wide text-slate-700">Empowering Modern Businesses</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-[0_4px_12px_rgba(0,0,0,0.03)] border border-slate-200/60 mb-8 hover:scale-105 transition-transform duration-300">
+              <Sparkles className="w-4 h-4 text-indigo-500" />
+              <span className="text-sm font-bold tracking-wide text-slate-700 uppercase">A Growing Technology Brand</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[5.5rem] font-extrabold leading-[1.2] lg:leading-[1.1] tracking-tight text-slate-900 mb-5 sm:mb-8 drop-shadow-sm w-full">
-              Smart <span className="text-gradient">Software</span> <br className="hidden lg:block" />
-              & Digital Solutions
+              Smart Software <br/> & <span className="text-gradient">Digital Solutions</span>
             </h1>
 
             <p className="text-base sm:text-lg lg:text-2xl text-slate-500 leading-relaxed font-light max-w-xl mb-6 sm:mb-8 w-full text-center lg:text-left break-words">
-              We engineer custom <strong className="font-semibold text-slate-700">Website Development</strong>, creative <strong className="font-semibold text-slate-700">Web Design</strong>, scalable <strong className="font-semibold text-slate-700">Business Software</strong>, and <strong className="font-semibold text-slate-700">Mobile App Development</strong> solutions that help modern startups in <strong className="font-semibold text-slate-700">India</strong> grow faster.
+              At <strong className="font-semibold text-slate-700">WISDO Designs</strong>, we engineer custom <strong className="font-semibold text-slate-700">Website Development</strong>, creative <strong className="font-semibold text-slate-700">Web Design</strong>, scalable <strong className="font-semibold text-slate-700">Business Software</strong>, and <strong className="font-semibold text-slate-700">Mobile App Development</strong> solutions that help modern startups in <strong className="font-semibold text-slate-700">India</strong> grow faster.
             </p>
 
             {/* Small Service Highlight Tags */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 sm:gap-3 mb-8 sm:mb-10 w-full max-w-lg">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-2 mb-8 max-w-xl">
               <span className="px-3 py-1.5 rounded-lg bg-indigo-50/80 border border-indigo-100 text-indigo-600 text-[11px] sm:text-xs font-bold tracking-wide whitespace-nowrap">
                 Website Development
               </span>
-              <span className="px-3 py-1.5 rounded-lg bg-pink-50/80 border border-pink-100 text-pink-600 text-[11px] sm:text-xs font-bold tracking-wide whitespace-nowrap">
-                Mobile App Development
-              </span>
               <span className="px-3 py-1.5 rounded-lg bg-emerald-50/80 border border-emerald-100 text-emerald-600 text-[11px] sm:text-xs font-bold tracking-wide whitespace-nowrap">
-                Web Hosting
+                Custom Software Solutions
               </span>
               <span className="px-3 py-1.5 rounded-lg bg-purple-50/80 border border-purple-100 text-purple-600 text-[11px] sm:text-xs font-bold tracking-wide whitespace-nowrap">
-                Digital Marketing
+                POS & Billing Solutions
+              </span>
+              <span className="px-3 py-1.5 rounded-lg bg-rose-50/80 border border-rose-100 text-rose-600 text-[11px] sm:text-xs font-bold tracking-wide whitespace-nowrap">
+                Mobile App Development
+              </span>
+              <span className="px-3 py-1.5 rounded-lg bg-amber-50/80 border border-amber-100 text-amber-600 text-[11px] sm:text-xs font-bold tracking-wide whitespace-nowrap">
+                AI Integrations
               </span>
             </div>
 
@@ -76,17 +79,38 @@ export default function Home() {
                 href="/contact"
                 className="group w-full sm:w-auto relative flex items-center justify-center gap-2 bg-slate-900 text-white px-8 py-4 rounded-xl sm:rounded-full overflow-hidden transition-all duration-300 shadow-xl shadow-slate-900/10 hover:-translate-y-1 hover:shadow-indigo-500/30"
               >
-                <span className="relative z-10 font-bold tracking-wide text-base">Start Your Project</span>
+                <span className="relative z-10 font-bold tracking-wide text-base">Get Free Consultation</span>
                 <ArrowRight className="w-5 h-5 sm:w-4 sm:h-4 relative z-10 group-hover:translate-x-1 transition-transform" />
                 <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </Link>
 
               <Link
-                href="/services"
+                href="/portfolio"
                 className="flex w-full sm:w-auto items-center justify-center px-8 py-4 rounded-xl sm:rounded-full bg-white/80 backdrop-blur-sm border border-slate-200/60 font-medium text-slate-700 text-base shadow-sm hover:bg-white hover:border-slate-300 transition-all duration-300 hover:-translate-y-1"
               >
-                View Services
+                View Portfolio
               </Link>
+            </div>
+
+            {/* Quick Contact Triggers */}
+            <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 items-center justify-center lg:justify-start text-sm font-semibold text-slate-500">
+              <a
+                href="https://wa.me/919787362199"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-emerald-600 hover:text-emerald-700 transition-colors"
+              >
+                <MessageCircle className="w-4 h-4 text-emerald-500 shrink-0" />
+                <span>Chat on WhatsApp</span>
+              </a>
+              <span className="text-slate-200 hidden sm:inline">|</span>
+              <a
+                href="mailto:wisdodesigns@gmail.com"
+                className="flex items-center gap-1.5 hover:text-indigo-600 transition-colors"
+              >
+                <Mail className="w-4 h-4 text-indigo-500 shrink-0" />
+                <span>Email: wisdodesigns@gmail.com</span>
+              </a>
             </div>
 
             {/* Trust Line & Indicators */}
@@ -194,6 +218,7 @@ export default function Home() {
       <Process />
       <WhyChooseUs />
       <ClientsSection />
+      <Faq />
       <Trust />
     </div>
   );

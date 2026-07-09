@@ -1,4 +1,5 @@
-import { CheckCircle2, Zap, Bot, Layers } from "lucide-react";
+import { CheckCircle2, Zap, Bot, Layers, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 
 const advantages = [
@@ -15,14 +16,14 @@ export default function WhyChooseUs() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-24 items-center">
         
         <div className="animate-fade-in-up flex flex-col items-center lg:items-start text-center lg:text-left w-full">
-          <h2 className="text-sm font-bold tracking-widest text-indigo-500 uppercase mb-4">
+          <span className="text-sm font-bold tracking-widest text-indigo-500 uppercase mb-4 block">
             Why Choose Us
+          </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6 sm:mb-8">
+            Why Choose <span className="text-gradient">WISDO Designs</span>?
           </h2>
-          <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6 sm:mb-8">
-            Built for <span className="text-gradient">Growth</span> & <br className="hidden md:block"/> Performance
-          </h3>
           <p className="text-base sm:text-lg lg:text-xl text-slate-500 font-light leading-relaxed mb-8 sm:mb-12 max-w-xl mx-auto lg:mx-0">
-            We partner with startups and ambitious businesses to build scalable digital solutions. Our agile approach means you get high-quality software without the usual agency overhead.
+            We partner with startups and ambitious businesses to build high-performance Web Design and Website Development solutions. Our agile approach means you get scalable software without the usual agency overhead.
           </p>
 
           <div className="grid sm:grid-cols-2 gap-y-8 gap-x-6">
@@ -34,6 +35,23 @@ export default function WhyChooseUs() {
                 <span className="font-bold text-slate-800 text-base tracking-tight">{adv}</span>
               </div>
             ))}
+          </div>
+
+          <div className="mt-12 flex flex-wrap gap-4 items-center justify-center lg:justify-start">
+            <Link
+              href="/pricing"
+              className="inline-flex items-center gap-2 text-indigo-600 font-bold hover:text-indigo-800 transition-colors group text-sm sm:text-base"
+            >
+              <span>Explore Our Pricing Plans</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <span className="text-slate-300 hidden sm:inline">|</span>
+            <Link
+              href="/about"
+              className="inline-flex items-center gap-2 text-slate-600 font-semibold hover:text-slate-900 transition-colors text-sm sm:text-base"
+            >
+              <span>About Our Agency</span>
+            </Link>
           </div>
         </div>
 
@@ -57,7 +75,7 @@ export default function WhyChooseUs() {
                 </div>
               </div>
               <div className="pt-2">
-                <h4 className="text-2xl lg:text-3xl font-bold text-slate-900 tracking-tight mb-2 group-hover:text-indigo-600 transition-colors">Fast Development</h4>
+                <h3 className="text-2xl lg:text-3xl font-bold text-slate-900 tracking-tight mb-2 group-hover:text-indigo-600 transition-colors">Fast Development</h3>
                 <p className="text-slate-500 font-medium leading-relaxed lg:text-lg max-w-sm mx-auto sm:mx-0">Quick delivery using modern technologies and efficient workflows.</p>
               </div>
             </div>
@@ -72,7 +90,7 @@ export default function WhyChooseUs() {
                 </div>
               </div>
               <div className="pt-2">
-                <h4 className="text-2xl lg:text-3xl font-bold text-slate-900 tracking-tight mb-2 group-hover:text-fuchsia-600 transition-colors">Smart Automation</h4>
+                <h3 className="text-2xl lg:text-3xl font-bold text-slate-900 tracking-tight mb-2 group-hover:text-fuchsia-600 transition-colors">Smart Automation</h3>
                 <p className="text-slate-500 font-medium leading-relaxed lg:text-lg max-w-sm mx-auto sm:mx-0">Automate repetitive business operations with custom systems.</p>
               </div>
             </div>
@@ -87,7 +105,7 @@ export default function WhyChooseUs() {
                 </div>
               </div>
               <div className="pt-2">
-                <h4 className="text-2xl lg:text-3xl font-bold text-slate-900 tracking-tight mb-2 group-hover:text-emerald-600 transition-colors">Scalable Systems</h4>
+                <h3 className="text-2xl lg:text-3xl font-bold text-slate-900 tracking-tight mb-2 group-hover:text-emerald-600 transition-colors">Scalable Systems</h3>
                 <p className="text-slate-500 font-medium leading-relaxed lg:text-lg max-w-sm mx-auto sm:mx-0">Digital solutions designed to grow with your business.</p>
               </div>
             </div>

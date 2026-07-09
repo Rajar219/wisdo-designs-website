@@ -129,6 +129,22 @@ export default function Navbar() {
               </Link>
 
               <Link
+                href="/portfolio"
+                className={`relative transition-colors duration-300 group py-2 ${pathname === "/portfolio"
+                    ? "text-indigo-600 font-bold"
+                    : "hover:text-indigo-600"
+                  }`}
+              >
+                Portfolio
+                <span
+                  className={`absolute bottom-0 left-0 h-[2px] bg-indigo-600 rounded-full transition-all duration-300 ${pathname === "/portfolio"
+                      ? "w-full"
+                      : "w-0 group-hover:w-full"
+                    }`}
+                ></span>
+              </Link>
+
+              <Link
                 href="/about"
                 className={`relative transition-colors duration-300 group py-2 ${pathname === "/about"
                     ? "text-indigo-600 font-bold"
@@ -138,6 +154,22 @@ export default function Navbar() {
                 About
                 <span
                   className={`absolute bottom-0 left-0 h-[2px] bg-indigo-600 rounded-full transition-all duration-300 ${pathname === "/about"
+                      ? "w-full"
+                      : "w-0 group-hover:w-full"
+                    }`}
+                ></span>
+              </Link>
+
+              <Link
+                href="/blog"
+                className={`relative transition-colors duration-300 group py-2 ${pathname.startsWith("/blog")
+                    ? "text-indigo-600 font-bold"
+                    : "hover:text-indigo-600"
+                  }`}
+              >
+                Blog
+                <span
+                  className={`absolute bottom-0 left-0 h-[2px] bg-indigo-600 rounded-full transition-all duration-300 ${pathname.startsWith("/blog")
                       ? "w-full"
                       : "w-0 group-hover:w-full"
                     }`}
@@ -208,8 +240,16 @@ export default function Navbar() {
               Services
             </Link>
 
+            <Link href="/portfolio" onClick={() => setIsMobileMenuOpen(false)}>
+              Portfolio
+            </Link>
+
             <Link href="/about" onClick={() => setIsMobileMenuOpen(false)}>
               About
+            </Link>
+
+            <Link href="/blog" onClick={() => setIsMobileMenuOpen(false)}>
+              Blog
             </Link>
 
             <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>

@@ -38,11 +38,11 @@ export default function AboutPage() {
           </div>
           
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6 drop-shadow-sm">
-            Building the <span className="text-gradient">Future</span> <br/> of Digital Experiences
+            Building Clean and <span className="text-gradient">Practical</span> <br/> Website Solutions
           </h1>
           
           <p className="text-base sm:text-lg lg:text-2xl text-slate-500 leading-relaxed font-light max-w-3xl mx-auto">
-            WISDO Designs supports startups and modern enterprises by engineering sophisticated digital products that rapidly accelerate growth.
+            WISDO Designs supports startups and modern businesses by engineering reliable website developments and software systems customized to client specifications.
           </p>
         </div>
       </section>
@@ -56,7 +56,7 @@ export default function AboutPage() {
             <div className="bg-slate-50 border border-slate-100 p-10 lg:p-14 rounded-[2.5rem] shadow-xl relative z-10 text-center md:text-left">
               <h2 className="text-3xl font-bold text-slate-900 mb-6">Our Mission</h2>
               <p className="text-lg text-slate-600 leading-relaxed mb-8 mx-auto md:mx-0 max-w-lg">
-                To democratize enterprise-grade technology for startups and growing businesses. We believe every ambitious team deserves scalable, highly-performant software architecture without the massive agency overhead.
+                To build reliable website and custom software solutions for startups and growing businesses. We believe every ambitious team deserves high-performance, clean software tailored to their exact requirements without complex agency overhead.
               </p>
               
               <div className="space-y-8 md:space-y-6">
@@ -98,13 +98,12 @@ export default function AboutPage() {
               The Big Picture
             </h2>
             <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6">
-              Empowering Small Teams with Massive Tech
+              Empowering Growing Brands with Clean Tech
             </h3>
             <p className="text-base sm:text-lg text-slate-500 leading-relaxed font-light mb-8">
-              WISDO Designs was founded with a singular vision: to bridge the technical gap for startups. 
-              Too often, best-in-class UI/UX and scalable microservices are reserved for massive corporations.
+              WISDO Designs is a growing technology and digital solutions brand. We started with a clear goal: to build practical software and website solutions that solve real business requirements.
               <br/><br/>
-              We bring that exact same high-end execution to agile, modern businesses. From crafting beautiful interfaces in Figma to deploying AI-powered automated backends, we are your comprehensive tech laboratory.
+              We work closely with clients to understand their needs—whether it is a responsive business website, a custom POS system, or database configuration. We focus on providing modern design and clean, scalable code without unnecessary complexity.
             </p>
           </div>
 

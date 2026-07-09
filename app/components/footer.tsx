@@ -52,8 +52,10 @@ export default function Footer() {
             <p className="font-bold text-slate-900 mb-1 md:mb-2 font-sans tracking-wide text-lg">Company</p>
             <Link href="/about" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium">About Us</Link>
             <Link href="/contact" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium">Contact</Link>
+            <Link href="/portfolio" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium">Portfolio</Link>
             <Link href="/pricing" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium">Pricing / Packages</Link>
             <Link href="/careers" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium">Careers</Link>
+            <Link href="/blog" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium">Blog</Link>
           </div>
 
           {/* Social Links */}

@@ -1,84 +1,94 @@
-import { MonitorPlay, Smartphone, Database, PenTool, TrendingUp, Bot, AppWindow, Receipt, ArrowRight } from "lucide-react";
+import { MonitorPlay, Smartphone, Database, Bot, AppWindow, Receipt, ArrowRight, Cpu, Package, Server, Wrench } from "lucide-react";
 import Link from "next/link";
 
 const serviceCategories = [
   {
-    category: "Development Solutions",
-    desc: "Scalable engineering for modern web and mobile platforms.",
+    category: "Web & Mobile Development",
+    desc: "Clean, responsive, and performance-optimized digital storefronts and apps.",
     icon: AppWindow,
     accent: "text-indigo-600",
     bg: "bg-indigo-50",
     border: "border-indigo-100/50",
     services: [
       {
-        title: "Business Website Development",
-        desc: "Professional websites for real estate businesses, boutiques, cafes, restaurants, tourist services, and local companies.",
+        title: "Website Development",
+        desc: "Clean, search-optimized websites designed for local boutiques, cafes, startups, and service brands.",
         icon: MonitorPlay,
       },
       {
         title: "Mobile App Development",
-        desc: "Custom mobile iOS & Android applications for seamless orders, bookings, and business management.",
+        desc: "Sleek iOS and Android applications developed to handle mobile orders, user accounts, and direct client interactions.",
         icon: Smartphone,
-      },
-      {
-        title: "Custom Website & Application Development",
-        desc: "Fully customizable modern websites and business applications tailored perfectly to your specific workflows.",
-        icon: AppWindow,
       }
     ]
   },
   {
-    category: "Business Systems",
-    desc: "Robust internal tools designed to streamline daily operations.",
+    category: "Custom Business Software",
+    desc: "Bespoke tools built to streamline your custom workflows.",
     icon: Database,
     accent: "text-emerald-600",
     bg: "bg-emerald-50",
     border: "border-emerald-100/50",
     services: [
       {
-        title: "Retail Billing & POS Software",
-        desc: "Smart billing systems for shops equipped with precise product management and sales tracking capabilities.",
-        icon: Receipt,
+        title: "Custom Software Solutions",
+        desc: "Bespoke software systems engineered from scratch to resolve your specific operational problems and workflows.",
+        icon: Cpu,
       },
       {
-        title: "Business Automation Systems",
-        desc: "Automate heavy manual workflows such as reservations, customer relationships, and core daily operations.",
+        title: "Business Applications",
+        desc: "Practical internal systems and client portal applications constructed to streamline daily operations.",
+        icon: AppWindow,
+      },
+      {
+        title: "Database Solutions",
+        desc: "Reliable database architecture setups, migrations, and performance optimizations to store your data safely.",
         icon: Database,
       }
     ]
   },
   {
-    category: "Growth & Marketing",
-    desc: "Data-driven creative strategies to scale your revenue.",
-    icon: TrendingUp,
+    category: "Retail & Inventory Systems",
+    desc: "Lightweight, robust tooling for transactions and logistics.",
+    icon: Receipt,
     accent: "text-orange-600",
     bg: "bg-orange-50",
     border: "border-orange-100/50",
     services: [
       {
-        title: "Digital Marketing",
-        desc: "Advanced SEO, tactical social media marketing, and exponential growth strategies to conquer online visibility.",
-        icon: TrendingUp,
+        title: "POS & Billing Solutions",
+        desc: "Easy-to-use billing software designed for shops and retail outlets to handle checkouts and transactions.",
+        icon: Receipt,
       },
       {
-        title: "Brand Design & Marketing Creatives",
-        desc: "Professional banner styling, flyer creation, poster design, and premium social media creatives.",
-        icon: PenTool,
+        title: "Inventory Management",
+        desc: "Structured stock tracking dashboards to check raw materials, catalog items, and stock alerts.",
+        icon: Package,
       }
     ]
   },
   {
-    category: "AI Solutions",
-    desc: "Intelligent automated tools for the next-generation enterprise.",
+    category: "Cloud, Maintenance & AI",
+    desc: "Next-generation infrastructure and automated tools.",
     icon: Bot,
     accent: "text-fuchsia-600",
     bg: "bg-fuchsia-50",
     border: "border-fuchsia-100/50",
     services: [
       {
-        title: "AI Chatbot Development",
-        desc: "Deploy intelligent AI chatbots across websites and WhatsApp to instantly handle customer queries and support automatically.",
+        title: "AI Integrations",
+        desc: "Practical integrations of artificial intelligence, such as automated WhatsApp replies or helpdesk tools.",
         icon: Bot,
+      },
+      {
+        title: "Web Hosting & Deployment",
+        desc: "Secure hosting, VPS allocations, custom server setups, and automated deployment configurations.",
+        icon: Server,
+      },
+      {
+        title: "Website Maintenance",
+        desc: "Regular checkups, speed optimizations, script updates, security audits, and backups.",
+        icon: Wrench,
       }
     ]
   }
@@ -93,12 +103,12 @@ export default function ServicesPreview() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 lg:mb-28 animate-fade-in-up">
-          <h2 className="text-sm font-bold tracking-widest text-indigo-500 uppercase mb-4">
+          <span className="text-sm font-bold tracking-widest text-indigo-500 uppercase mb-4 block">
             What We Do
+          </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6">
+            Professional Web Design & Custom Software Services by <span className="text-gradient">WISDO Designs</span>
           </h2>
-          <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6">
-            Our Core <span className="text-gradient">Services</span>
-          </h3>
           <p className="text-base sm:text-lg text-slate-500 leading-relaxed font-light">
             We provide specialized, high-performance digital services segmented to scale your business operations from end-to-end.
           </p>
@@ -126,9 +136,9 @@ export default function ServicesPreview() {
                       <GroupIcon className="w-7 h-7 sm:w-8 sm:h-8" />
                     </div>
                     <div className="pt-1 w-full text-center sm:text-left">
-                      <h4 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight mb-2 sm:mb-2">
+                      <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight mb-2 sm:mb-2">
                         {group.category}
-                      </h4>
+                      </h3>
                       <p className="text-sm sm:text-base text-slate-500 font-medium leading-relaxed max-w-sm mx-auto sm:mx-0">
                         {group.desc}
                       </p>
@@ -149,9 +159,9 @@ export default function ServicesPreview() {
                            <div className={`w-14 h-14 sm:w-12 sm:h-12 rounded-xl bg-slate-50 flex items-center justify-center mb-6 text-slate-600 group-hover:${group.bg} group-hover:${group.accent} transition-colors duration-500 border border-slate-100`}>
                              <ServiceIcon className="w-6 h-6 sm:w-5 sm:h-5" />
                            </div>
-                           <h5 className="text-xl font-bold text-slate-900 mb-3 tracking-tight group-hover:text-slate-800 transition-colors">
+                           <h4 className="text-xl font-bold text-slate-900 mb-3 tracking-tight group-hover:text-slate-800 transition-colors">
                              {service.title}
-                           </h5>
+                           </h4>
                            <p className="text-sm text-slate-500 leading-relaxed font-light mb-6 flex-grow max-w-sm mx-auto sm:mx-0">
                              {service.desc}
                            </p>

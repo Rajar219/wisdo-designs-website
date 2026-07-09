@@ -6,14 +6,14 @@ export default function Process() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 lg:mb-32 animate-fade-in-up">
-          <h2 className="text-sm font-bold tracking-widest text-indigo-500 uppercase mb-4">
+          <span className="text-sm font-bold tracking-widest text-indigo-500 uppercase mb-4 block">
             How We Work
+          </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1]">
+            Our Agile Web Development & Design Process
           </h2>
-          <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1]">
-            A Proven <span className="text-gradient">Process</span>
-          </h3>
           <p className="mt-6 text-base sm:text-lg lg:text-xl text-slate-500 font-light leading-relaxed">
-            We follow a streamlined, transparent methodology to ensure we deliver high-quality digital products on time without the agency bloat.
+            We follow a streamlined, transparent methodology to ensure we deliver high-quality web applications and custom software on time.
           </p>
         </div>
 
@@ -40,7 +40,7 @@ export default function Process() {
                 </div>
               </div>
               <div className="flex flex-col items-center sm:items-start text-center sm:text-left w-full">
-                <h4 className="text-xl lg:text-2xl font-bold text-slate-900 mb-2 lg:mb-3 group-hover:text-indigo-600 transition-colors tracking-tight">Discover</h4>
+                <h3 className="text-xl lg:text-2xl font-bold text-slate-900 mb-2 lg:mb-3 group-hover:text-indigo-600 transition-colors tracking-tight">Discover</h3>
                 <p className="text-sm lg:text-base text-slate-500 font-light leading-relaxed max-w-[16rem] mx-auto sm:mx-0">We analyze your goals, audience, and challenges to lay the perfect digital foundation.</p>
               </div>
             </div>
@@ -58,7 +58,7 @@ export default function Process() {
                 </div>
               </div>
               <div className="flex flex-col items-center sm:items-start text-center sm:text-left w-full">
-                <h4 className="text-xl lg:text-2xl font-bold text-slate-900 mb-2 lg:mb-3 group-hover:text-fuchsia-600 transition-colors tracking-tight">Design</h4>
+                <h3 className="text-xl lg:text-2xl font-bold text-slate-900 mb-2 lg:mb-3 group-hover:text-fuchsia-600 transition-colors tracking-tight">Design</h3>
                 <p className="text-sm lg:text-base text-slate-500 font-light leading-relaxed max-w-[16rem] mx-auto sm:mx-0">Our designers craft wireframes and beautiful UI/UX systems to bring the vision to life.</p>
               </div>
             </div>
@@ -76,7 +76,7 @@ export default function Process() {
                 </div>
               </div>
               <div className="flex flex-col items-center sm:items-start text-center sm:text-left w-full">
-                <h4 className="text-xl lg:text-2xl font-bold text-slate-900 mb-2 lg:mb-3 group-hover:text-sky-600 transition-colors tracking-tight">Build</h4>
+                <h3 className="text-xl lg:text-2xl font-bold text-slate-900 mb-2 lg:mb-3 group-hover:text-sky-600 transition-colors tracking-tight">Build</h3>
                 <p className="text-sm lg:text-base text-slate-500 font-light leading-relaxed max-w-[16rem] mx-auto sm:mx-0">We engineer scalable backend architecture and rigorously test across platforms.</p>
               </div>
             </div>
@@ -94,7 +94,7 @@ export default function Process() {
                 </div>
               </div>
               <div className="flex flex-col items-center sm:items-start text-center sm:text-left w-full">
-                <h4 className="text-xl lg:text-2xl font-bold text-slate-900 mb-2 lg:mb-3 group-hover:text-emerald-600 transition-colors tracking-tight">Launch</h4>
+                <h3 className="text-xl lg:text-2xl font-bold text-slate-900 mb-2 lg:mb-3 group-hover:text-emerald-600 transition-colors tracking-tight">Launch</h3>
                 <p className="text-sm lg:text-base text-slate-500 font-light leading-relaxed max-w-[16rem] mx-auto sm:mx-0">A seamless deployment to production followed by continuous structural support.</p>
               </div>
             </div>

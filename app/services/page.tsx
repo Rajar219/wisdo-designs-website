@@ -1,81 +1,95 @@
-import { MonitorPlay, Smartphone, Database, PenTool, TrendingUp, Bot, Receipt, AppWindow, Building2, Coffee, Hotel, Utensils, ShoppingBag, Rocket, Plane, Store } from "lucide-react";
+import { MonitorPlay, Smartphone, Database, Bot, Receipt, AppWindow, Cpu, Package, Server, Wrench, Building2, Coffee, Hotel, Utensils, ShoppingBag, Rocket, Plane, Store } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Website Development & Mobile App Development Services",
-  description: "Explore our range of premium services: Website Development, Mobile App Development, Web Design, Web Hosting, Digital Marketing, and custom Business Software.",
+  title: "Website Development & Custom Software Services | WISDO Designs",
+  description: "Explore our range of practical services: Website Development, Custom Software, POS, Databases, AI Integrations, Web Hosting, and Maintenance based on your requirements.",
   alternates: {
     canonical: "https://wisdodesigns.com/services",
   },
   openGraph: {
-    title: "Website Development & Mobile App Development Services | WISDO Designs",
-    description: "Explore our range of premium services: Website Development, Mobile App Development, Web Design, Web Hosting, Digital Marketing, and custom Business Software.",
+    title: "Website Development & Custom Software Services | WISDO Designs",
+    description: "Explore our range of practical services: Website Development, Custom Software, POS, Databases, AI Integrations, Web Hosting, and Maintenance based on your requirements.",
     url: "https://wisdodesigns.com/services",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Development & Mobile App Development Services | WISDO Designs",
-    description: "Explore our range of premium services: Website Development, Mobile App Development, Web Design, Web Hosting, Digital Marketing, and custom Business Software.",
+    title: "Website Development & Custom Software Services | WISDO Designs",
+    description: "Explore our range of practical services: Website Development, Custom Software, POS, Databases, AI Integrations, Web Hosting, and Maintenance based on your requirements.",
   },
 };
 
 const services = [
   {
-    title: "Business Website Development",
-    desc: "Professional websites for real estate businesses, boutiques, cafes, restaurants, tourist services, and local companies.",
+    title: "Website Development",
+    desc: "We build clean, fast, and search-optimized websites that represent your brand and explain your services. Designed for local businesses, cafes, boutiques, and startups.",
     icon: MonitorPlay,
     color: "from-blue-500 to-indigo-500",
     bg: "bg-blue-50"
   },
   {
-    title: "Mobile App Development",
-    desc: "Custom mobile applications for orders, bookings, and business management.",
-    icon: Smartphone,
-    color: "from-purple-500 to-fuchsia-500",
+    title: "Custom Software Solutions",
+    desc: "Bespoke software systems engineered from scratch to resolve your specific operational problems and workflows.",
+    icon: Cpu,
+    color: "from-purple-500 to-indigo-500",
     bg: "bg-purple-50"
   },
   {
-    title: "Custom Website & Application Development",
-    desc: "Fully customizable websites and business applications tailored to specific business workflows and requirements.",
+    title: "Business Applications",
+    desc: "Practical internal systems and client portal applications constructed to streamline daily operations, bookings, and customer workflows.",
     icon: AppWindow,
     color: "from-sky-500 to-blue-500",
     bg: "bg-sky-50"
   },
   {
-    title: "Retail Billing & POS Software",
-    desc: "Smart billing systems for shops with product management, sales tracking, and inventory control.",
+    title: "POS & Billing Solutions",
+    desc: "Lightweight, easy-to-use billing software designed for shops and local retail outlets to handle checkouts and transactions.",
     icon: Receipt,
     color: "from-emerald-500 to-teal-500",
     bg: "bg-emerald-50"
   },
   {
-    title: "Business Automation Systems",
-    desc: "Automate business workflows such as bookings, customer management, and daily operations.",
-    icon: Database,
+    title: "Inventory Management",
+    desc: "Structured stock tracking dashboards to check raw materials, catalog items, sales metrics, and automatic low stock alerts.",
+    icon: Package,
     color: "from-indigo-600 to-violet-600",
     bg: "bg-indigo-50"
   },
   {
-    title: "AI Chatbot Development",
-    desc: "AI chatbots for websites and WhatsApp to handle customer queries and support automatically.",
-    icon: Bot,
+    title: "Mobile App Development",
+    desc: "Sleek iOS and Android applications developed to handle mobile orders, user accounts, and direct client interactions.",
+    icon: Smartphone,
     color: "from-fuchsia-500 to-pink-500",
     bg: "bg-fuchsia-50"
   },
   {
-    title: "Digital Marketing",
-    desc: "SEO, social media marketing, and growth strategies to increase online visibility.",
-    icon: TrendingUp,
+    title: "Database Solutions",
+    desc: "Reliable database architecture setups, configurations, migrations, and performance optimizations to store your critical business data safely.",
+    icon: Database,
+    color: "from-blue-600 to-cyan-500",
+    bg: "bg-blue-50"
+  },
+  {
+    title: "AI Integrations",
+    desc: "Practical integrations of artificial intelligence, such as automated WhatsApp replies or helpdesk tools, based on your business requirements.",
+    icon: Bot,
     color: "from-orange-500 to-red-500",
     bg: "bg-orange-50"
   },
   {
-    title: "Brand Design & Marketing Creatives",
-    desc: "Banner design, flyer design, poster design, and social media creatives for business promotion.",
-    icon: PenTool,
+    title: "Web Hosting & Deployment",
+    desc: "Secure hosting, VPS allocations, custom server setups, and automated deployment configurations to keep your site online 24/7.",
+    icon: Server,
     color: "from-rose-500 to-pink-600",
     bg: "bg-rose-50"
+  },
+  {
+    title: "Website Maintenance",
+    desc: "Regular checkups, speed optimizations, script updates, security audits, and backups to ensure your web presence runs smoothly without interruption.",
+    icon: Wrench,
+    color: "from-teal-500 to-emerald-600",
+    bg: "bg-teal-50"
   }
 ];
 
