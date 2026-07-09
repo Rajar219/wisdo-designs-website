@@ -2,7 +2,7 @@ import { FileText } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service",
+  title: "Terms of Service | WISDO Designs",
   description: "Terms of Service for WISDO Designs detailing development contracts, project terms, and ownership guidelines.",
   alternates: {
     canonical: "https://wisdodesigns.com/terms",

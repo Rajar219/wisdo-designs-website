@@ -2,7 +2,7 @@ import { Shield } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
+  title: "Privacy Policy | WISDO Designs",
   description: "Privacy policy for WISDO Designs detailing how we collect, protect, and handle client data and project details.",
   alternates: {
     canonical: "https://wisdodesigns.com/privacy",
