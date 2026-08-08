@@ -13,7 +13,7 @@ export default function Trust() {
         </h2>
 
         <p className="max-w-3xl mx-auto text-base sm:text-lg lg:text-2xl text-slate-300 leading-relaxed font-light mb-8 sm:mb-14">
-          Let&apos;s build something extraordinary together. Partner with WISDO Designs to create powerful, modern software that drives real growth.
+          Let&apos;s build something extraordinary together. Partner with WISDO TECH to create powerful, modern software that drives real growth.
         </p>
 
         {/* Primary and Secondary CTA Buttons */}

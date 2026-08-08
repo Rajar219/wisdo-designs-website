@@ -97,7 +97,7 @@ export default function ClientsSection() {
           </div>
           
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6 sm:mb-8">
-            Custom Web Development Case Studies by <span className="text-gradient">WISDO Designs</span>
+            Custom Web Development Case Studies by <span className="text-gradient">WISDO TECH</span>
           </h2>
 
           <p className="text-base sm:text-lg lg:text-xl text-slate-500 leading-relaxed font-light">

@@ -10,14 +10,14 @@ export const metadata: Metadata = {
     canonical: "https://wisdodesigns.com/pricing",
   },
   openGraph: {
-    title: "Affordable Web Design & Web Hosting Packages | WISDO Designs",
+    title: "Affordable Web Design & Web Hosting Packages | WISDO TECH",
     description: "Get transparent, value-driven pricing for Website Development, Mobile App Development, and Business Software automation packages tailored to your startup.",
     url: "https://wisdodesigns.com/pricing",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Affordable Web Design & Web Hosting Packages | WISDO Designs",
+    title: "Affordable Web Design & Web Hosting Packages | WISDO TECH",
     description: "Get transparent, value-driven pricing for Website Development, Mobile App Development, and Business Software automation packages tailored to your startup.",
   },
 };

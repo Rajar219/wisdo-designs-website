@@ -10,9 +10,9 @@ export default function Footer() {
           
           {/* Brand & Contact */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6 lg:pr-8">
-            <Image src="/logo-transparent.png" alt="WISDO Designs Logo" width={150} height={100} className="h-16 md:h-24 w-auto object-contain md:origin-left md:scale-125" />
+            <Image src="/logo-transparent.png" alt="WISDO TECH Logo" width={150} height={100} className="h-16 md:h-24 w-auto object-contain md:origin-left md:scale-125" />
             <p className="text-slate-500 text-sm md:text-base leading-relaxed max-w-sm font-light">
-              A premium software agency crafting intelligent digital experiences for modern startups and enterprises.
+              We build software, websites and digital experiences that help businesses operate, connect with customers and grow.
             </p>
             <div className="space-y-4 mt-2 md:mt-4 w-full flex flex-col items-center md:items-start">
               <div className="flex items-center md:items-start gap-3 text-slate-600 text-sm font-medium">
@@ -34,16 +34,16 @@ export default function Footer() {
           <div className="flex flex-col items-center md:items-start text-center md:text-left gap-4 md:gap-5">
             <p className="font-bold text-slate-900 mb-1 md:mb-2 font-sans tracking-wide text-lg">Services</p>
             <Link href="/services" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium flex items-center justify-center md:justify-start gap-2 group">
-              Business Websites <ExternalLink className="w-3.5 h-3.5 hidden md:block opacity-0 group-hover:opacity-100 transition-opacity" />
+              Software Development <ExternalLink className="w-3.5 h-3.5 hidden md:block opacity-0 group-hover:opacity-100 transition-opacity" />
             </Link>
             <Link href="/services" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium flex items-center justify-center md:justify-start gap-2 group">
-              Mobile Applications <ExternalLink className="w-3.5 h-3.5 hidden md:block opacity-0 group-hover:opacity-100 transition-opacity" />
+              Website Development <ExternalLink className="w-3.5 h-3.5 hidden md:block opacity-0 group-hover:opacity-100 transition-opacity" />
             </Link>
             <Link href="/services" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium flex items-center justify-center md:justify-start gap-2 group">
-              Business Software <ExternalLink className="w-3.5 h-3.5 hidden md:block opacity-0 group-hover:opacity-100 transition-opacity" />
+              Designing <ExternalLink className="w-3.5 h-3.5 hidden md:block opacity-0 group-hover:opacity-100 transition-opacity" />
             </Link>
             <Link href="/services" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium flex items-center justify-center md:justify-start gap-2 group">
-              UI/UX Design <ExternalLink className="w-3.5 h-3.5 hidden md:block opacity-0 group-hover:opacity-100 transition-opacity" />
+              Digital Marketing <ExternalLink className="w-3.5 h-3.5 hidden md:block opacity-0 group-hover:opacity-100 transition-opacity" />
             </Link>
           </div>
 
@@ -71,7 +71,7 @@ export default function Footer() {
 
         <div className="border-t border-slate-200 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-slate-500 text-sm font-medium">
-            © {new Date().getFullYear()} WISDO Designs. All rights reserved.
+            © {new Date().getFullYear()} WISDO TECH. All rights reserved.
           </p>
           <div className="flex gap-8 text-sm text-slate-500 font-medium">
             <Link href="/privacy" className="hover:text-indigo-600 transition-colors">Privacy Policy</Link>

@@ -17,13 +17,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!post) {
     return {
-      title: "Post Not Found | WISDO Designs",
+      title: "Post Not Found | WISDO TECH",
       description: "The requested blog article could not be found.",
     };
   }
 
   return {
-    title: `${post.title} | WISDO Designs Blog`,
+    title: `${post.title} | WISDO TECH Blog`,
     description: post.description,
     keywords: post.keywords,
     alternates: {
@@ -82,7 +82,7 @@ export default async function BlogPostReaderPage({ params }: PageProps) {
       },
       "publisher": {
         "@type": "Organization",
-        "name": "WISDO Designs",
+        "name": "WISDO TECH",
         "logo": {
           "@type": "ImageObject",
           "url": "https://wisdodesigns.com/logo-transparent.png",
@@ -254,7 +254,7 @@ export default async function BlogPostReaderPage({ params }: PageProps) {
                 Need a Custom Solution?
               </h4>
               <p className="text-slate-500 font-light text-sm leading-relaxed mb-6">
-                Our engineering team at WISDO Designs builds high-performance website developments, bespoke business systems, and mobile applications customized exactly to your workspace operations.
+                Our engineering team at WISDO TECH builds high-performance website developments, bespoke business systems, and mobile applications customized exactly to your workspace operations.
               </p>
               <Link
                 href="/contact"

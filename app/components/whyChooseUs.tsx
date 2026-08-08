@@ -20,7 +20,7 @@ export default function WhyChooseUs() {
             Why Choose Us
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6 sm:mb-8">
-            Why Choose <span className="text-gradient">WISDO Designs</span>?
+            Why Choose <span className="text-gradient">WISDO TECH</span>?
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-slate-500 font-light leading-relaxed mb-8 sm:mb-12 max-w-xl mx-auto lg:mx-0">
             We partner with startups and ambitious businesses to build high-performance Web Design and Website Development solutions. Our agile approach means you get scalable software without the usual agency overhead.

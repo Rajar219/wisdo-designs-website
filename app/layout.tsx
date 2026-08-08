@@ -13,10 +13,10 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: {
-    default: "WISDO Designs | Premium Software Agency & Digital Solutions",
-    template: "%s | WISDO Designs",
+    default: "WISDO TECH | Digital Solutions for Growing Businesses",
+    template: "%s | WISDO TECH",
   },
-  description: "WISDO Designs is a premium software agency in India engineering scalable websites, mobile applications, business software, and digital marketing solutions.",
+  description: "WISDO TECH — Digital Solutions for Growing Businesses. We build software, websites and digital experiences that help businesses operate, connect with customers and grow.",
   keywords: [
     "Website Development",
     "Web Design",
@@ -24,14 +24,14 @@ export const metadata: Metadata = {
     "Mobile App Development",
     "Digital Marketing",
     "Business Software",
-    "India",
-    "Software Agency",
-    "AI Chatbots",
-    "Retail POS Billing",
-    "WISDO Designs"
+    "Software Development",
+    "Digital Marketing",
+    "Designing",
+    "WISDO TECH"
   ],
-  authors: [{ name: "WISDO Designs", url: "https://wisdodesigns.com" }],
-  creator: "WISDO Designs",
+  authors: [{ name: "WISDO TECH", url: "https://wisdodesigns.com" }],
+  creator: "WISDO TECH",
+  publisher: "WISDO TECH",
   metadataBase: new URL("https://wisdodesigns.com"),
   icons: {
     icon: [
@@ -44,16 +44,16 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "WISDO Designs | Premium Software Agency & Digital Solutions",
-    description: "Scale your business with high-performance web development, custom mobile apps, retail POS software, and intelligent AI chatbot integrations.",
+    title: "WISDO TECH | Digital Solutions for Growing Businesses",
+    description: "WISDO TECH — Digital Solutions for Growing Businesses. We build software, websites and digital experiences that help businesses operate, connect with customers and grow.",
     url: "https://wisdodesigns.com",
-    siteName: "WISDO Designs",
+    siteName: "WISDO TECH",
     images: [
       {
         url: "/logo-transparent.png",
         width: 1200,
         height: 630,
-        alt: "WISDO Designs - Premium Digital Solutions",
+        alt: "WISDO TECH - Digital Solutions for Growing Businesses",
       },
     ],
     locale: "en_US",
@@ -61,8 +61,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "WISDO Designs | Premium Software & Digital Solutions",
-    description: "Scale your business with high-performance web development, custom mobile apps, and intelligent AI chatbots.",
+    title: "WISDO TECH | Digital Solutions for Growing Businesses",
+    description: "WISDO TECH — Digital Solutions for Growing Businesses. We build software, websites and digital experiences that help businesses operate, connect with customers and grow.",
     images: ["/logo-transparent.png"],
   },
   verification: {
@@ -85,7 +85,7 @@ export default function RootLayout({
               {
                 "@context": "https://schema.org",
                 "@type": "Organization",
-                "name": "WISDO Designs",
+                "name": "WISDO TECH",
                 "url": "https://wisdodesigns.com",
                 "logo": "https://wisdodesigns.com/logo-transparent.png",
                 "sameAs": [
@@ -103,7 +103,7 @@ export default function RootLayout({
               {
                 "@context": "https://schema.org",
                 "@type": "WebSite",
-                "name": "WISDO Designs",
+                "name": "WISDO TECH",
                 "url": "https://wisdodesigns.com",
                 "potentialAction": {
                   "@type": "SearchAction",
@@ -114,7 +114,7 @@ export default function RootLayout({
               {
                 "@context": "https://schema.org",
                 "@type": "LocalBusiness",
-                "name": "WISDO Designs",
+                "name": "WISDO TECH",
                 "image": "https://wisdodesigns.com/logo-transparent.png",
                 "@id": "https://wisdodesigns.com/#localbusiness",
                 "url": "https://wisdodesigns.com",

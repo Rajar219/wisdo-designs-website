@@ -10,21 +10,21 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Website Development & Custom Software Solutions | WISDO Designs",
-  description: "WISDO Designs is a growing technology and digital solutions brand. We design and build clean websites, custom software solutions, and business applications based on client requirements.",
+  title: "Website Development & Custom Software Solutions | WISDO TECH",
+  description: "WISDO TECH — Digital Solutions for Growing Businesses. We build software, websites and digital experiences that help businesses operate, connect with customers and grow.",
   alternates: {
     canonical: "https://wisdodesigns.com",
   },
   openGraph: {
-    title: "Website Development & Custom Software Solutions | WISDO Designs",
-    description: "WISDO Designs is a growing technology and digital solutions brand. We design and build clean websites, custom software solutions, and business applications based on client requirements.",
+    title: "Website Development & Custom Software Solutions | WISDO TECH",
+    description: "WISDO TECH — Digital Solutions for Growing Businesses. We build software, websites and digital experiences that help businesses operate, connect with customers and grow.",
     url: "https://wisdodesigns.com",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Development & Custom Software Solutions | WISDO Designs",
-    description: "WISDO Designs is a growing technology and digital solutions brand. We design and build clean websites, custom software solutions, and business applications based on client requirements.",
+    title: "Website Development & Custom Software Solutions | WISDO TECH",
+    description: "WISDO TECH — Digital Solutions for Growing Businesses. We build software, websites and digital experiences that help businesses operate, connect with customers and grow.",
   },
 };
 
@@ -44,33 +44,30 @@ export default function Home() {
           <div className="max-w-2xl mx-auto text-center lg:text-left pt-2 lg:pt-0 animate-fade-in-up w-full flex flex-col items-center lg:items-start">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-[0_4px_12px_rgba(0,0,0,0.03)] border border-slate-200/60 mb-8 hover:scale-105 transition-transform duration-300">
               <Sparkles className="w-4 h-4 text-indigo-500" />
-              <span className="text-sm font-bold tracking-wide text-slate-700 uppercase">A Growing Technology Brand</span>
+              <span className="text-sm font-bold tracking-wide text-slate-700 uppercase">WISDO TECH</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[5.5rem] font-extrabold leading-[1.2] lg:leading-[1.1] tracking-tight text-slate-900 mb-5 sm:mb-8 drop-shadow-sm w-full">
-              Smart Software <br/> & <span className="text-gradient">Digital Solutions</span>
+              Digital Solutions <br/> for <span className="text-gradient">Growing Businesses</span>
             </h1>
 
             <p className="text-base sm:text-lg lg:text-2xl text-slate-500 leading-relaxed font-light max-w-xl mb-6 sm:mb-8 w-full text-center lg:text-left break-words">
-              At <strong className="font-semibold text-slate-700">WISDO Designs</strong>, we engineer custom <strong className="font-semibold text-slate-700">Website Development</strong>, creative <strong className="font-semibold text-slate-700">Web Design</strong>, scalable <strong className="font-semibold text-slate-700">Business Software</strong>, and <strong className="font-semibold text-slate-700">Mobile App Development</strong> solutions that help modern startups in <strong className="font-semibold text-slate-700">India</strong> grow faster.
+              We build <strong className="font-semibold text-slate-700">software, websites</strong> and <strong className="font-semibold text-slate-700">digital experiences</strong> that help businesses operate, connect with customers and grow.
             </p>
 
             {/* Small Service Highlight Tags */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-2 mb-8 max-w-xl">
               <span className="px-3 py-1.5 rounded-lg bg-indigo-50/80 border border-indigo-100 text-indigo-600 text-[11px] sm:text-xs font-bold tracking-wide whitespace-nowrap">
-                Website Development
+                Software Development
               </span>
               <span className="px-3 py-1.5 rounded-lg bg-emerald-50/80 border border-emerald-100 text-emerald-600 text-[11px] sm:text-xs font-bold tracking-wide whitespace-nowrap">
-                Custom Software Solutions
+                Website Development
               </span>
               <span className="px-3 py-1.5 rounded-lg bg-purple-50/80 border border-purple-100 text-purple-600 text-[11px] sm:text-xs font-bold tracking-wide whitespace-nowrap">
-                POS & Billing Solutions
+                Designing
               </span>
               <span className="px-3 py-1.5 rounded-lg bg-rose-50/80 border border-rose-100 text-rose-600 text-[11px] sm:text-xs font-bold tracking-wide whitespace-nowrap">
-                Mobile App Development
-              </span>
-              <span className="px-3 py-1.5 rounded-lg bg-amber-50/80 border border-amber-100 text-amber-600 text-[11px] sm:text-xs font-bold tracking-wide whitespace-nowrap">
-                AI Integrations
+                Digital Marketing
               </span>
             </div>
 

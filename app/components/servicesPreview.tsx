@@ -1,19 +1,19 @@
-import { MonitorPlay, Smartphone, Database, Bot, AppWindow, Receipt, ArrowRight, Cpu, Package, Server, Wrench } from "lucide-react";
+import { MonitorPlay, Smartphone, Database, AppWindow, ArrowRight, Cpu, Server, Palette, Layout, Megaphone, Search, TrendingUp } from "lucide-react";
 import Link from "next/link";
 
 const serviceCategories = [
   {
-    category: "Web & Mobile Development",
-    desc: "Clean, responsive, and performance-optimized digital storefronts and apps.",
-    icon: AppWindow,
+    category: "Software Development",
+    desc: "Bespoke tools and systems built to streamline your custom workflows.",
+    icon: Cpu,
     accent: "text-indigo-600",
     bg: "bg-indigo-50",
     border: "border-indigo-100/50",
     services: [
       {
-        title: "Website Development",
-        desc: "Clean, search-optimized websites designed for local boutiques, cafes, startups, and service brands.",
-        icon: MonitorPlay,
+        title: "Custom Software Solutions",
+        desc: "Bespoke software systems engineered from scratch to resolve your specific operational problems and workflows.",
+        icon: Database,
       },
       {
         title: "Mobile App Development",
@@ -23,72 +23,62 @@ const serviceCategories = [
     ]
   },
   {
-    category: "Custom Business Software",
-    desc: "Bespoke tools built to streamline your custom workflows.",
-    icon: Database,
+    category: "Website Development",
+    desc: "Clean, responsive, and performance-optimized digital storefronts and web apps.",
+    icon: AppWindow,
     accent: "text-emerald-600",
     bg: "bg-emerald-50",
     border: "border-emerald-100/50",
     services: [
       {
-        title: "Custom Software Solutions",
-        desc: "Bespoke software systems engineered from scratch to resolve your specific operational problems and workflows.",
-        icon: Cpu,
+        title: "Business Websites",
+        desc: "Clean, search-optimized websites designed for local boutiques, cafes, startups, and service brands.",
+        icon: MonitorPlay,
       },
       {
-        title: "Business Applications",
-        desc: "Practical internal systems and client portal applications constructed to streamline daily operations.",
-        icon: AppWindow,
-      },
-      {
-        title: "Database Solutions",
-        desc: "Reliable database architecture setups, migrations, and performance optimizations to store your data safely.",
-        icon: Database,
+        title: "Web Applications",
+        desc: "Powerful web-based platforms that provide full-scale functionality directly within the browser.",
+        icon: Server,
       }
     ]
   },
   {
-    category: "Retail & Inventory Systems",
-    desc: "Lightweight, robust tooling for transactions and logistics.",
-    icon: Receipt,
+    category: "Designing",
+    desc: "Creative visual solutions that establish strong brand identities and user experiences.",
+    icon: Palette,
     accent: "text-orange-600",
     bg: "bg-orange-50",
     border: "border-orange-100/50",
     services: [
       {
-        title: "POS & Billing Solutions",
-        desc: "Easy-to-use billing software designed for shops and retail outlets to handle checkouts and transactions.",
-        icon: Receipt,
+        title: "UI/UX Design",
+        desc: "Intuitive, user-centered interfaces designed for websites and mobile applications that prioritize usability.",
+        icon: Layout,
       },
       {
-        title: "Inventory Management",
-        desc: "Structured stock tracking dashboards to check raw materials, catalog items, and stock alerts.",
-        icon: Package,
+        title: "Graphic & Brand Design",
+        desc: "Logos, marketing materials, and cohesive visual identities crafted to distinguish your business.",
+        icon: Palette,
       }
     ]
   },
   {
-    category: "Cloud, Maintenance & AI",
-    desc: "Next-generation infrastructure and automated tools.",
-    icon: Bot,
+    category: "Digital Marketing",
+    desc: "Data-driven marketing strategies to increase reach and conversions.",
+    icon: Megaphone,
     accent: "text-fuchsia-600",
     bg: "bg-fuchsia-50",
     border: "border-fuchsia-100/50",
     services: [
       {
-        title: "AI Integrations",
-        desc: "Practical integrations of artificial intelligence, such as automated WhatsApp replies or helpdesk tools.",
-        icon: Bot,
+        title: "Search Engine Optimization",
+        desc: "Technical SEO and content optimizations to improve your visibility on Google search results.",
+        icon: Search,
       },
       {
-        title: "Web Hosting & Deployment",
-        desc: "Secure hosting, VPS allocations, custom server setups, and automated deployment configurations.",
-        icon: Server,
-      },
-      {
-        title: "Website Maintenance",
-        desc: "Regular checkups, speed optimizations, script updates, security audits, and backups.",
-        icon: Wrench,
+        title: "Social Media & Performance",
+        desc: "Targeted campaigns and social media management designed to drive engagement and sales.",
+        icon: TrendingUp,
       }
     ]
   }
@@ -107,7 +97,7 @@ export default function ServicesPreview() {
             What We Do
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6">
-            Professional Web Design & Custom Software Services by <span className="text-gradient">WISDO Designs</span>
+            Professional Web Design & Custom Software Services by <span className="text-gradient">WISDO TECH</span>
           </h2>
           <p className="text-base sm:text-lg text-slate-500 leading-relaxed font-light">
             We provide specialized, high-performance digital services segmented to scale your business operations from end-to-end.

@@ -2,20 +2,20 @@ import { MonitorPlay, Smartphone, Database, Bot, Receipt, AppWindow, Cpu, Packag
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Website Development & Custom Software Services | WISDO Designs",
+  title: "Website Development & Custom Software Services | WISDO TECH",
   description: "Explore our range of practical services: Website Development, Custom Software, POS, Databases, AI Integrations, Web Hosting, and Maintenance based on your requirements.",
   alternates: {
     canonical: "https://wisdodesigns.com/services",
   },
   openGraph: {
-    title: "Website Development & Custom Software Services | WISDO Designs",
+    title: "Website Development & Custom Software Services | WISDO TECH",
     description: "Explore our range of practical services: Website Development, Custom Software, POS, Databases, AI Integrations, Web Hosting, and Maintenance based on your requirements.",
     url: "https://wisdodesigns.com/services",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Development & Custom Software Services | WISDO Designs",
+    title: "Website Development & Custom Software Services | WISDO TECH",
     description: "Explore our range of practical services: Website Development, Custom Software, POS, Databases, AI Integrations, Web Hosting, and Maintenance based on your requirements.",
   },
 };

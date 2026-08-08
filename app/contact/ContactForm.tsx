@@ -141,7 +141,7 @@ export default function ContactForm() {
                   </div>
                   <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight mb-4">Request Sent!</h2>
                   <p className="text-slate-500 font-medium max-w-md mx-auto">
-                    Thank you for reaching out to WISDO Designs. Core team has been instantly notified and will respond within 24 hours.
+                    Thank you for reaching out to WISDO TECH. Core team has been instantly notified and will respond within 24 hours.
                   </p>
                 </div>
               ) : (

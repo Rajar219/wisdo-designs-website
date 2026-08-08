@@ -63,7 +63,7 @@ export default function Navbar() {
           >
             <Image
               src="/logo-transparent.png"
-              alt="WISDO Designs Logo"
+              alt="WISDO TECH Logo"
               width={105}
               height={70}
               priority
@@ -87,7 +87,7 @@ export default function Navbar() {
             >
               <Image
                 src="/logo-transparent.png"
-                alt="WISDO Designs Logo"
+                alt="WISDO TECH Logo"
                 width={150}
                 height={100}
                 priority

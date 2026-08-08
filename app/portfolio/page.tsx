@@ -4,21 +4,21 @@ import Link from "next/link";
 import { ExternalLink, CheckCircle2, AlertCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Our Portfolio - Web Design & Custom Software | WISDO Designs",
-  description: "Explore real project case studies engineered by WISDO Designs, including custom web design, responsive e-commerce portals, and Point of Sale (POS) business software.",
+  title: "Our Portfolio - Web Design & Custom Software | WISDO TECH",
+  description: "Explore real project case studies engineered by WISDO TECH, including custom web design, responsive e-commerce portals, and Point of Sale (POS) business software.",
   alternates: {
     canonical: "https://wisdodesigns.com/portfolio",
   },
   openGraph: {
-    title: "Our Portfolio - Web Design & Custom Software | WISDO Designs",
-    description: "Explore real project case studies engineered by WISDO Designs, including custom web design, responsive e-commerce portals, and Point of Sale (POS) business software.",
+    title: "Our Portfolio - Web Design & Custom Software | WISDO TECH",
+    description: "Explore real project case studies engineered by WISDO TECH, including custom web design, responsive e-commerce portals, and Point of Sale (POS) business software.",
     url: "https://wisdodesigns.com/portfolio",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Our Portfolio - Web Design & Custom Software | WISDO Designs",
-    description: "Explore real project case studies engineered by WISDO Designs, including custom web design, responsive e-commerce portals, and Point of Sale (POS) business software.",
+    title: "Our Portfolio - Web Design & Custom Software | WISDO TECH",
+    description: "Explore real project case studies engineered by WISDO TECH, including custom web design, responsive e-commerce portals, and Point of Sale (POS) business software.",
   },
 };
 

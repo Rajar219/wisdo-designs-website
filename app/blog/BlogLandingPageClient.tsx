@@ -47,7 +47,7 @@ export default function BlogLandingPageClient({ posts }: BlogLandingPageClientPr
         {/* Minimalist Hero Header */}
         <div className="max-w-3xl mb-16 sm:mb-20 text-left border-l-4 border-indigo-600 pl-6 sm:pl-8">
           <span className="text-xs font-bold tracking-widest text-indigo-600 uppercase block mb-3">
-            WISDO Designs Journal
+            WISDO TECH Journal
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-none mb-6">
             The Engineering Journal

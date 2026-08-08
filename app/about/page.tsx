@@ -5,20 +5,20 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About Our Web Design & Software Agency",
-  description: "Learn how WISDO Designs supports startups and modern enterprises across India with expert Website Development, Web Design, and custom Business Software.",
+  description: "Learn how WISDO TECH supports startups and modern enterprises across India with expert Website Development, Web Design, and custom Business Software.",
   alternates: {
     canonical: "https://wisdodesigns.com/about",
   },
   openGraph: {
-    title: "About Our Web Design & Software Agency | WISDO Designs",
-    description: "Learn how WISDO Designs supports startups and modern enterprises across India with expert Website Development, Web Design, and custom Business Software.",
+    title: "About Our Web Design & Software Agency | WISDO TECH",
+    description: "Learn how WISDO TECH supports startups and modern enterprises across India with expert Website Development, Web Design, and custom Business Software.",
     url: "https://wisdodesigns.com/about",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Our Web Design & Software Agency | WISDO Designs",
-    description: "Learn how WISDO Designs supports startups and modern enterprises across India with expert Website Development, Web Design, and custom Business Software.",
+    title: "About Our Web Design & Software Agency | WISDO TECH",
+    description: "Learn how WISDO TECH supports startups and modern enterprises across India with expert Website Development, Web Design, and custom Business Software.",
   },
 };
 
@@ -42,7 +42,7 @@ export default function AboutPage() {
           </h1>
           
           <p className="text-base sm:text-lg lg:text-2xl text-slate-500 leading-relaxed font-light max-w-3xl mx-auto">
-            WISDO Designs supports startups and modern businesses by engineering reliable website developments and software systems customized to client specifications.
+            WISDO TECH supports startups and modern businesses by engineering reliable website developments and software systems customized to client specifications.
           </p>
         </div>
       </section>
@@ -101,7 +101,7 @@ export default function AboutPage() {
               Empowering Growing Brands with Clean Tech
             </h3>
             <p className="text-base sm:text-lg text-slate-500 leading-relaxed font-light mb-8">
-              WISDO Designs is a growing technology and digital solutions brand. We started with a clear goal: to build practical software and website solutions that solve real business requirements.
+              WISDO TECH is a growing technology and digital solutions brand. We started with a clear goal: to build practical software and website solutions that solve real business requirements.
               <br/><br/>
               We work closely with clients to understand their needs—whether it is a responsive business website, a custom POS system, or database configuration. We focus on providing modern design and clean, scalable code without unnecessary complexity.
             </p>
