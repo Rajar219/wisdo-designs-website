@@ -34,13 +34,7 @@ async function generateFavicons() {
       .resize(32, 32)
       .toFile(path.join(PUBLIC_DIR, "favicon.ico"));
 
-    console.log("Generating logo-optimized.png...");
-    await sharp(SOURCE_IMAGE)
-      .trim()
-      .resize(400) // 400px width, auto-height to preserve aspect ratio
-      .toFile(path.join(PUBLIC_DIR, "logo-optimized.png"));
-
-    console.log("Favicons and optimized logo generated successfully!");
+    console.log("Favicons generated successfully!");
   } catch (error) {
     console.error("Error generating favicons:", error);
     process.exit(1);
