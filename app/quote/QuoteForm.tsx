@@ -244,7 +244,7 @@ function QuoteFormContent() {
                   name="budgetRange"
                   value={formData.budgetRange}
                   onChange={handleChange}
-                  placeholder="e.g. ₹20,000 - ₹50,000"
+                  placeholder="e.g. price starts from ₹2,000"
                   className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all"
                 />
               </div>
