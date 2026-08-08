@@ -102,3 +102,15 @@ body {
   animation: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
   will-change: transform, opacity;
 }
+
+@keyframes scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-scroll {
+  display: inline-block;
+  min-width: 100%;
+  animation: scroll 15s linear infinite;
+  will-change: transform;
+}
