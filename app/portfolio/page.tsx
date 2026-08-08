@@ -31,53 +31,7 @@ export const metadata: Metadata = {
   },
 };
 
-interface Project {
-  title: string;
-  status: "Live" | "In Development";
-  category: "Business Website" | "E-Commerce Website" | "Business Software";
-  description: string;
-  technologies: string[];
-  image: string;
-  url?: string;
-}
-
-const projects: Project[] = [
-  {
-    title: "INZFYER",
-    status: "Live",
-    category: "E-Commerce Website",
-    image: "/inzfyer.png",
-    url: "https://www.inzfyer.in/",
-    description: "A premium boutique e-commerce platform for luxury plushies, handcrafted toy gift sets, artisanal ceramics, and custom ribbon unboxing experiences.",
-    technologies: ["React", "Vite", "JavaScript", "Tailwind CSS"]
-  },
-  {
-    title: "NMS Dairy Farm",
-    status: "Live",
-    category: "Business Website",
-    image: "/nms-dairy-farm.png",
-    url: "https://nms-dairy-farm.vercel.app/",
-    description: "A modern dairy farm website showcasing premium dairy products, farm business operations, and customer-friendly navigation structured inside a highly responsive layout.",
-    technologies: ["React", "Next.js", "Tailwind CSS", "Lucide Icons", "Vercel Hosting"]
-  },
-  {
-    title: "Confusion Clothing",
-    status: "Live",
-    category: "E-Commerce Website",
-    image: "/confusion-clothing.png",
-    url: "https://confusionclothing.github.io/shop/",
-    description: "A modern fashion e-commerce storefront built for a boutique clothing brand featuring responsive layout grids, category sorting, product filters, and a premium shopping experience.",
-    technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "GitHub Pages"]
-  },
-  {
-    title: "WISDO POS System",
-    status: "In Development",
-    category: "Business Software",
-    image: "/wisdo-pos.png",
-    description: "A custom Point of Sale (POS) and inventory management platform developed for retail enterprises. Features live billing interfaces, stock tracking metrics, invoicing, role-based controls, and sales report diagnostics.",
-    technologies: ["React", "Next.js", "Tailwind CSS", "IndexedDB", "SQLite", "NodeJS"]
-  }
-];
+import { portfolioData } from "./data";
 
 export default function PortfolioPage() {
   return (
@@ -99,7 +53,7 @@ export default function PortfolioPage() {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
-          {projects.map((project, index) => (
+          {portfolioData.map((project, index) => (
             <article
               key={project.title}
               className="bg-white rounded-3xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden flex flex-col h-full group"
@@ -138,8 +92,10 @@ export default function PortfolioPage() {
                   {project.category}
                 </span>
 
-                <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3 tracking-tight">
-                  {project.title}
+                <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3 tracking-tight group-hover:text-indigo-600 transition-colors">
+                  <Link href={`/portfolio/${project.slug}`}>
+                    {project.title}
+                  </Link>
                 </h3>
                 
                 <p className="text-slate-500 font-light text-sm sm:text-base leading-relaxed mb-6 flex-grow">
@@ -160,16 +116,14 @@ export default function PortfolioPage() {
 
                 {/* Action button */}
                 <div className="pt-4 border-t border-slate-100 mt-auto">
-                  {project.status === "Live" && project.url ? (
-                    <a
-                      href={project.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm uppercase tracking-wider py-3.5 rounded-xl shadow-sm transition-all duration-300 active:scale-95"
+                  {project.status === "Live" ? (
+                    <Link
+                      href={`/portfolio/${project.slug}`}
+                      className="w-full inline-flex items-center justify-center gap-2 bg-indigo-50 hover:bg-indigo-600 text-indigo-700 hover:text-white font-bold text-sm uppercase tracking-wider py-3.5 rounded-xl shadow-sm transition-all duration-300 active:scale-95"
                     >
-                      <span>Visit Website</span>
+                      <span>Read Case Study</span>
                       <ExternalLink className="w-4 h-4" />
-                    </a>
+                    </Link>
                   ) : (
                     <button
                       disabled

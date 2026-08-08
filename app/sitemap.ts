@@ -1,5 +1,7 @@
 import { MetadataRoute } from "next";
 import { blogPosts } from "./blog/data";
+import { servicesData } from "./services/data";
+import { portfolioData } from "./portfolio/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://wisdodesigns.com";
@@ -8,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     { url: "", priority: 1.0, changeFrequency: "monthly" as const },
     { url: "/services", priority: 0.9, changeFrequency: "monthly" as const },
+    { url: "/solutions", priority: 0.9, changeFrequency: "monthly" as const },
     { url: "/portfolio", priority: 0.9, changeFrequency: "monthly" as const },
     { url: "/about", priority: 0.8, changeFrequency: "monthly" as const },
     { url: "/pricing", priority: 0.8, changeFrequency: "monthly" as const },
@@ -42,5 +45,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
-  return [...staticSitemap, ...dynamicBlogSitemap];
+  // Dynamic Service sitemap configurations
+  const dynamicServiceSitemap = servicesData.map((service) => ({
+    url: `${baseUrl}/services/${service.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.9,
+  }));
+
+  // Dynamic Portfolio sitemap configurations
+  const dynamicPortfolioSitemap = portfolioData.map((project) => ({
+    url: `${baseUrl}/portfolio/${project.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  return [...staticSitemap, ...dynamicBlogSitemap, ...dynamicServiceSitemap, ...dynamicPortfolioSitemap];
 }

@@ -1,9 +1,14 @@
 import Link from "next/link";
 import { CheckCircle2, ArrowRight } from "lucide-react";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Thank You | Wisdo Tech",
   description: "Thank you for reaching out to Wisdo Tech. We will get back to you shortly.",
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 export default function ThankYouPage() {

@@ -33,6 +33,7 @@ export const metadata: Metadata = {
 const services = [
   {
     title: "Website Development",
+    slug: "website-development",
     desc: "We build clean, fast, and search-optimized websites that represent your brand and explain your services. Designed for local businesses, cafes, boutiques, and startups.",
     icon: MonitorPlay,
     color: "from-blue-500 to-indigo-500",
@@ -40,17 +41,27 @@ const services = [
   },
   {
     title: "Custom Software Solutions",
+    slug: "software-development",
     desc: "Bespoke software systems engineered from scratch to resolve your specific operational problems and workflows.",
     icon: Cpu,
     color: "from-purple-500 to-indigo-500",
     bg: "bg-purple-50"
   },
   {
-    title: "Business Applications",
-    desc: "Practical internal systems and client portal applications constructed to streamline daily operations, bookings, and customer workflows.",
+    title: "UI/UX & Branding Design",
+    slug: "designing",
+    desc: "Premium UI/UX design, brand identity, and graphic design services that elevate your digital presence.",
     icon: AppWindow,
     color: "from-sky-500 to-blue-500",
     bg: "bg-sky-50"
+  },
+  {
+    title: "Digital Marketing",
+    slug: "digital-marketing",
+    desc: "Data-driven digital marketing, local SEO, and social media strategies designed to generate qualified leads.",
+    icon: Rocket,
+    color: "from-orange-500 to-red-500",
+    bg: "bg-orange-50"
   },
   {
     title: "POS & Billing Solutions",
@@ -177,21 +188,35 @@ export default function ServicesPage() {
                     <Icon className="w-5 h-5" />
                   </div>
                 </div>
-                <h2 className="text-2xl font-bold text-slate-900 mb-4 tracking-tight group-hover:text-indigo-600 transition-colors">
-                  {service.title}
-                </h2>
-                <p className="text-slate-500 leading-relaxed font-medium max-w-sm mx-auto sm:mx-0 mb-6">
+                {service.slug ? (
+                  <Link href={`/services/${service.slug}`} className="text-2xl font-bold text-slate-900 mb-4 tracking-tight hover:text-indigo-600 transition-colors">
+                    {service.title}
+                  </Link>
+                ) : (
+                  <h2 className="text-2xl font-bold text-slate-900 mb-4 tracking-tight group-hover:text-indigo-600 transition-colors">
+                    {service.title}
+                  </h2>
+                )}
+                <p className="text-slate-500 leading-relaxed font-medium max-w-sm mx-auto sm:mx-0 mb-6 flex-grow">
                   {service.desc}
                 </p>
-                <div className="mt-auto pt-2 w-full">
+                <div className="mt-auto pt-2 w-full flex flex-col gap-3">
+                  {service.slug && (
+                    <Link
+                      href={`/services/${service.slug}`}
+                      className="inline-flex items-center justify-center gap-2 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 px-6 py-3 rounded-xl font-bold text-sm transition-colors w-full group/btn"
+                    >
+                      <span>Read More</span>
+                    </Link>
+                  )}
                   <TrackedLink 
                     href={`/contact?service=${encodeURIComponent(service.title)}`}
                     eventName="service_cta_click"
                     eventPayload={{ service: service.title }}
-                    className="inline-flex items-center justify-center gap-2 bg-slate-50 hover:bg-indigo-600 text-indigo-600 hover:text-white px-6 py-3 rounded-xl font-bold text-sm transition-colors w-full group"
+                    className="inline-flex items-center justify-center gap-2 bg-slate-50 hover:bg-indigo-600 text-indigo-600 hover:text-white px-6 py-3 rounded-xl font-bold text-sm transition-colors w-full group/cta"
                   >
                     <span>Request a Quote</span>
-                    <span className="group-hover:translate-x-1 transition-transform">→</span>
+                    <span className="group-hover/cta:translate-x-1 transition-transform">→</span>
                   </TrackedLink>
                 </div>
               </div>

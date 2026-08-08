@@ -5,6 +5,7 @@ import Image from "next/image";
 import { ArrowLeft, Calendar, Clock, User, MessageSquare, Share2, Facebook, Twitter, Linkedin, Send, RefreshCw } from "lucide-react";
 import { Metadata } from "next";
 import ArticleFaq from "../../components/articleFaq";
+import TrackedLink from "../../components/TrackedLink";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -256,13 +257,15 @@ export default async function BlogPostReaderPage({ params }: PageProps) {
               <p className="text-slate-500 font-light text-sm leading-relaxed mb-6">
                 Our engineering team at Wisdo Tech builds high-performance website developments, bespoke business systems, and mobile applications customized exactly to your workspace operations.
               </p>
-              <Link
+              <TrackedLink
                 href="/contact"
+                eventName="service_cta_click"
+                eventPayload={{ location: "blog_sidebar", blog: post.title }}
                 className="w-full inline-flex items-center justify-center gap-2 bg-indigo-600 text-white py-3.5 rounded-xl font-bold text-sm uppercase tracking-wide hover:bg-indigo-700 transition-all shadow-md active:scale-95"
               >
                 <MessageSquare className="w-4 h-4" />
                 Get in Touch
-              </Link>
+              </TrackedLink>
             </div>
           </div>
         </div>

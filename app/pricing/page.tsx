@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Pricing & Packages | Wisdo Tech",
   description: "Transparent, flexible pricing for Website Development, Software Development, Designing, and Digital Marketing.",
   alternates: {
-    canonical: "https://wisdotech.in/pricing",
+    canonical: "https://wisdodesigns.com/pricing",
   },
 };
 
