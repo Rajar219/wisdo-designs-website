@@ -5,7 +5,7 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const SOURCE_IMAGE = path.join(__dirname, "../public/logo-transparent.png");
+const SOURCE_IMAGE = path.join(__dirname, "../public/favicon wisdo.png");
 const PUBLIC_DIR = path.join(__dirname, "../public");
 
 async function generateFavicons() {
