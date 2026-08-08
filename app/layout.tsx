@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     siteName: "WISDO Designs",
     images: [
       {
-        url: "/logo new.png",
+        url: "/logo-transparent.png",
         width: 1200,
         height: 630,
         alt: "WISDO Designs - Premium Digital Solutions",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "WISDO Designs | Premium Software & Digital Solutions",
     description: "Scale your business with high-performance web development, custom mobile apps, and intelligent AI chatbots.",
-    images: ["/logo new.png"],
+    images: ["/logo-transparent.png"],
   },
   verification: {
     google: "cYW51Yz324qyEHlgyr92fYI9WIaFToxBNnnwXSlI8rg",
