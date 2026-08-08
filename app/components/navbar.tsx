@@ -63,11 +63,11 @@ export default function Navbar() {
           >
             <Image
               src="/logo-transparent.png"
-              alt="WISDO TECH Logo"
+              alt="Wisdo Tech Logo"
               width={105}
               height={70}
               priority
-              className="h-14 sm:h-16 w-auto object-contain drop-shadow-md -translate-x-1"
+              className="h-12 sm:h-14 w-auto object-contain drop-shadow-md -translate-x-1"
             />
           </Link>
 
@@ -87,11 +87,11 @@ export default function Navbar() {
             >
               <Image
                 src="/logo-transparent.png"
-                alt="WISDO TECH Logo"
+                alt="Wisdo Tech Logo"
                 width={150}
                 height={100}
                 priority
-                className="h-24 xl:h-28 w-auto object-contain drop-shadow-md transition-transform duration-500 scale-110 origin-left group-hover:scale-[1.15]"
+                className="h-16 xl:h-20 w-auto object-contain drop-shadow-md transition-transform duration-500 scale-110 origin-left group-hover:scale-[1.15]"
               />
             </Link>
 
@@ -129,13 +129,29 @@ export default function Navbar() {
               </Link>
 
               <Link
+                href="/solutions"
+                className={`relative transition-colors duration-300 group py-2 ${pathname === "/solutions"
+                    ? "text-indigo-600 font-bold"
+                    : "hover:text-indigo-600"
+                  }`}
+              >
+                Solutions
+                <span
+                  className={`absolute bottom-0 left-0 h-[2px] bg-indigo-600 rounded-full transition-all duration-300 ${pathname === "/solutions"
+                      ? "w-full"
+                      : "w-0 group-hover:w-full"
+                    }`}
+                ></span>
+              </Link>
+
+              <Link
                 href="/portfolio"
                 className={`relative transition-colors duration-300 group py-2 ${pathname === "/portfolio"
                     ? "text-indigo-600 font-bold"
                     : "hover:text-indigo-600"
                   }`}
               >
-                Portfolio
+                Our Work
                 <span
                   className={`absolute bottom-0 left-0 h-[2px] bg-indigo-600 rounded-full transition-all duration-300 ${pathname === "/portfolio"
                       ? "w-full"
@@ -200,7 +216,7 @@ export default function Navbar() {
               className="group relative bg-slate-900 border border-slate-700/50 text-white px-7 py-2.5 rounded-full overflow-hidden transition-all duration-300 shadow-md shadow-slate-900/10 hover:shadow-indigo-500/30 hover:scale-105 font-medium text-center"
             >
               <span className="relative z-10 transition-colors group-hover:text-white">
-                Get Free Consultation
+                Start Your Project
               </span>
 
               <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/80 to-purple-600/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -240,8 +256,12 @@ export default function Navbar() {
               Services
             </Link>
 
+            <Link href="/solutions" onClick={() => setIsMobileMenuOpen(false)}>
+              Solutions
+            </Link>
+
             <Link href="/portfolio" onClick={() => setIsMobileMenuOpen(false)}>
-              Portfolio
+              Our Work
             </Link>
 
             <Link href="/about" onClick={() => setIsMobileMenuOpen(false)}>
@@ -264,7 +284,7 @@ export default function Navbar() {
               onClick={() => setIsMobileMenuOpen(false)}
               className="w-full bg-slate-900 text-white py-4 rounded-xl text-center font-semibold text-lg hover:bg-indigo-600 transition-colors shadow-lg block"
             >
-              Get Free Consultation
+              Start Your Project
             </Link>
           </div>
 

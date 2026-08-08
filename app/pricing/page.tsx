@@ -1,78 +1,72 @@
-import { Check, Sparkles } from "lucide-react";
+import { Check, Sparkles, AlertCircle, Tag } from "lucide-react";
 import Trust from "../components/trust";
 import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Affordable Web Design & Web Hosting Packages",
-  description: "Get transparent, value-driven pricing for Website Development, Mobile App Development, and Business Software automation packages tailored to your startup.",
+  title: "Pricing & Packages | Wisdo Tech",
+  description: "Transparent, flexible pricing for Website Development, Software Development, Designing, and Digital Marketing.",
   alternates: {
-    canonical: "https://wisdodesigns.com/pricing",
-  },
-  openGraph: {
-    title: "Affordable Web Design & Web Hosting Packages | WISDO TECH",
-    description: "Get transparent, value-driven pricing for Website Development, Mobile App Development, and Business Software automation packages tailored to your startup.",
-    url: "https://wisdodesigns.com/pricing",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Affordable Web Design & Web Hosting Packages | WISDO TECH",
-    description: "Get transparent, value-driven pricing for Website Development, Mobile App Development, and Business Software automation packages tailored to your startup.",
+    canonical: "https://wisdotech.in/pricing",
   },
 };
 
-const tiers = [
+const services = [
   {
-    name: "Starter Solution",
-    price: "Custom",
-    desc: "Perfect for local boutiques, cafes, restaurants, and startups needing a solid web presence.",
+    name: "Website Development",
+    price: "Starting From ₹ 2000",
+    desc: "Professional, responsive websites built to establish your digital presence and convert visitors.",
     features: [
-      "Custom 5-Page Responsive Website",
-      "Premium UI/UX Design Layout",
+      "Custom Responsive Design",
       "Essential SEO Optimization",
-      "Contact Form & WhatsApp Integration",
-      "Speed Optimized & Secure Hosting Ready",
-      "1 Month Post-Launch Support"
+      "Fast Load Times",
+      "Contact Forms & WhatsApp",
+      "Secure Hosting Setup"
     ],
-    cta: "Inquire Now",
-    popular: false,
-    color: "from-blue-500 to-indigo-500",
-    bg: "bg-blue-50/50"
-  },
-  {
-    name: "Growth Suite",
-    price: "Custom",
-    desc: "Designed for scaling startups and platforms requiring complex databases or custom apps.",
-    features: [
-      "Full Stack Custom Web or Mobile App",
-      "Interactive Dashboard & Database Setup",
-      "Advanced User Authentication",
-      "API Integrations & Payment Gateway",
-      "Enhanced SEO & Performance Auditing",
-      "3 Months Dedicated Support"
-    ],
-    cta: "Get Started",
+    cta: "Request a Quote",
     popular: true,
-    color: "from-indigo-600 to-purple-600",
-    bg: "bg-indigo-50/50"
   },
   {
-    name: "Enterprise Automation",
-    price: "Custom",
-    desc: "Bespoke solutions for retail billing, custom POS tools, and deep workflow AI integrations.",
+    name: "Software Development",
+    price: "Custom Quote",
+    desc: "Bespoke business software, POS systems, and internal tools to automate your operations.",
     features: [
-      "Retail POS Billing & Inventory Software",
-      "AI Customer Support Chatbot Setup",
-      "Custom Internal Workflow Automation",
-      "Multi-Platform sync (WhatsApp, Web)",
-      "Maximum Speed & Edge Caching",
-      "Dedicated Technical Account Partner"
+      "Custom Web Applications",
+      "Billing & POS Systems",
+      "Inventory Management",
+      "API Integrations",
+      "Scalable Architecture"
     ],
-    cta: "Partner With Us",
+    cta: "Request a Quote",
     popular: false,
-    color: "from-fuchsia-500 to-pink-500",
-    bg: "bg-fuchsia-50/50"
+  },
+  {
+    name: "Designing",
+    price: "Starting From ₹ 2000",
+    desc: "Premium brand identities, social media creatives, and beautiful UI/UX design.",
+    features: [
+      "Logo & Brand Identity",
+      "Social Media Creatives",
+      "Marketing Posters & Banners",
+      "UI/UX Application Design",
+      "Print Marketing Materials"
+    ],
+    cta: "Request a Quote",
+    popular: false,
+  },
+  {
+    name: "Digital Marketing",
+    price: "Custom Quote",
+    desc: "Data-driven marketing strategies to increase visibility, drive traffic, and grow your audience.",
+    features: [
+      "Search Engine Optimization (SEO)",
+      "Google Business Profile Setup",
+      "Social Media Management",
+      "Targeted Ad Campaigns",
+      "Analytics & Reporting"
+    ],
+    cta: "Request a Quote",
+    popular: false,
   }
 ];
 
@@ -87,72 +81,94 @@ export default function PricingPage() {
         <div className="max-w-4xl mx-auto animate-fade-in-up">
           <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-md shadow-sm border border-indigo-100/50 mb-8">
             <Sparkles className="w-4 h-4 text-indigo-500" />
-            <span className="text-sm font-semibold tracking-wide text-slate-700">Flexible Packages</span>
+            <span className="text-sm font-semibold tracking-wide text-slate-700">Flexible Pricing</span>
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6 drop-shadow-sm">
-            Invest in <span className="text-gradient">Scalability</span>
+            Invest in Your <span className="text-gradient">Growth</span>
           </h1>
 
-          <p className="text-base sm:text-lg lg:text-2xl text-slate-500 leading-relaxed font-light max-w-3xl mx-auto">
-            We deliver top-tier engineering without bloated agency margins. Contact us for custom quotes tailored precisely to your goals.
+          <p className="text-base sm:text-lg lg:text-2xl text-slate-500 leading-relaxed font-light max-w-3xl mx-auto mb-10">
+            We deliver top-tier engineering without bloated agency margins. We don't force fixed prices because every business is unique.
           </p>
+
+          {/* Special Offer Banner */}
+          <div className="inline-flex flex-col sm:flex-row items-center gap-3 bg-indigo-600 text-white px-6 py-4 rounded-2xl shadow-lg shadow-indigo-500/25">
+             <Tag className="w-5 h-5 shrink-0" />
+             <span className="font-bold tracking-wide">Special offers for new startups, new business persons and students!</span>
+          </div>
+
         </div>
       </section>
 
       {/* Pricing Cards Grid */}
-      <section className="pb-24 sm:pb-36 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-          {tiers.map((tier, i) => (
+      <section className="pb-16 sm:pb-24 px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 items-stretch">
+          {services.map((service, i) => (
             <div
               key={i}
-              className={`relative bg-white rounded-[2rem] p-8 lg:p-10 border transition-all duration-500 hover:-translate-y-3 flex flex-col justify-between ${
-                tier.popular
+              className={`relative bg-white rounded-[2rem] p-8 border transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between ${
+                service.popular
                   ? "border-indigo-500 shadow-[0_20px_50px_-10px_rgba(79,70,229,0.15)] ring-2 ring-indigo-500/10"
-                  : "border-slate-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.08)]"
+                  : "border-slate-200/60 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.08)]"
               }`}
             >
-              {tier.popular && (
-                <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-xs font-bold uppercase tracking-wider py-1.5 px-4 rounded-full shadow-md">
-                  Most Popular
+              {service.popular && (
+                <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-[10px] font-bold uppercase tracking-widest py-1.5 px-4 rounded-full shadow-md whitespace-nowrap">
+                  Most Requested
                 </span>
               )}
 
               <div>
-                <h2 className="text-2xl font-bold text-slate-900 mb-2">{tier.name}</h2>
-                <p className="text-sm text-slate-500 min-h-[40px] leading-relaxed font-medium mb-6">
-                  {tier.desc}
+                <h2 className="text-xl font-extrabold text-slate-900 mb-2">{service.name}</h2>
+                <p className="text-sm text-slate-500 min-h-[60px] leading-relaxed font-medium mb-6">
+                  {service.desc}
                 </p>
 
-                <div className="flex items-baseline gap-1 mb-8">
-                  <span className="text-4xl sm:text-5xl font-extrabold text-slate-900">{tier.price}</span>
-                  <span className="text-sm font-semibold text-slate-400">/ project rate</span>
+                <div className="flex flex-col gap-1 mb-8">
+                  <span className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">{service.price}</span>
+                  {service.price !== "Custom Quote" && (
+                     <span className="text-xs font-bold text-indigo-600 uppercase tracking-widest">* Base Price</span>
+                  )}
                 </div>
 
-                <div className="space-y-4 border-t border-slate-50 pt-8 mb-8">
-                  {tier.features.map((feature, idx) => (
+                <div className="space-y-3 border-t border-slate-100 pt-8 mb-8">
+                  {service.features.map((feature, idx) => (
                     <div key={idx} className="flex items-start gap-3">
                       <div className="w-5 h-5 rounded-full bg-indigo-50 flex items-center justify-center shrink-0 mt-0.5">
                         <Check className="w-3.5 h-3.5 text-indigo-600" />
                       </div>
-                      <span className="text-sm font-semibold text-slate-700">{feature}</span>
+                      <span className="text-sm font-semibold text-slate-700 leading-tight">{feature}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
               <Link
-                href={`/contact?package=${encodeURIComponent(tier.name)}`}
-                className={`w-full py-4 rounded-xl text-sm font-bold uppercase tracking-wide text-center transition-all duration-300 ${
-                  tier.popular
+                href={`/contact?service=${encodeURIComponent(service.name)}`}
+                className={`w-full py-4 rounded-xl text-sm font-bold uppercase tracking-wide text-center transition-all duration-300 mt-auto ${
+                  service.popular
                     ? "bg-slate-900 text-white hover:bg-indigo-600 shadow-md shadow-slate-900/10"
-                    : "bg-slate-50 text-slate-900 hover:bg-slate-100"
+                    : "bg-slate-50 text-slate-900 hover:bg-slate-200 border border-slate-200"
                 }`}
               >
-                {tier.cta}
+                {service.cta}
               </Link>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Disclaimer */}
+      <section className="pb-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6 flex items-start gap-4 shadow-sm">
+           <AlertCircle className="w-6 h-6 text-amber-600 shrink-0 mt-0.5" />
+           <div>
+             <h4 className="font-bold text-amber-900 mb-1">Pricing Disclaimer</h4>
+             <p className="text-sm font-medium text-amber-700 leading-relaxed">
+               <strong>Final pricing depends on project scope, features and requirements.</strong> Because we do not force fixed prices on highly variable projects, the exact quote for your project will be calculated during our free initial consultation.
+             </p>
+           </div>
         </div>
       </section>
 

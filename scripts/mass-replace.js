@@ -10,7 +10,7 @@ function replaceInDir(dir) {
     } else if (fullPath.endsWith('.tsx') || fullPath.endsWith('.ts')) {
       let content = fs.readFileSync(fullPath, 'utf8');
       if (content.includes('WISDO Designs')) {
-        content = content.replace(/WISDO Designs/g, 'WISDO TECH');
+        content = content.replace(/WISDO Designs/g, 'Wisdo Tech');
         fs.writeFileSync(fullPath, content, 'utf8');
         console.log(`Updated: ${fullPath}`);
       }

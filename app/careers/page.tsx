@@ -25,21 +25,21 @@ const positions = [
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Careers at WISDO TECH - Join Our Software Team",
-  description: "Join WISDO TECH to build high-performance software, custom business applications, and workflow automation systems for global clients. Remote roles available.",
+  title: "Careers at Wisdo Tech - Join Our Software Team",
+  description: "Join Wisdo Tech to build high-performance software, custom business applications, and workflow automation systems for global clients. Remote roles available.",
   alternates: {
     canonical: "https://wisdodesigns.com/careers",
   },
   openGraph: {
-    title: "Careers at WISDO TECH - Join Our Software Team",
-    description: "Join WISDO TECH to build high-performance software, custom business applications, and workflow automation systems for global clients. Remote roles available.",
+    title: "Careers at Wisdo Tech - Join Our Software Team",
+    description: "Join Wisdo Tech to build high-performance software, custom business applications, and workflow automation systems for global clients. Remote roles available.",
     url: "https://wisdodesigns.com/careers",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Careers at WISDO TECH - Join Our Software Team",
-    description: "Join WISDO TECH to build high-performance software, custom business applications, and workflow automation systems for global clients. Remote roles available.",
+    title: "Careers at Wisdo Tech - Join Our Software Team",
+    description: "Join Wisdo Tech to build high-performance software, custom business applications, and workflow automation systems for global clients. Remote roles available.",
   },
 };
 

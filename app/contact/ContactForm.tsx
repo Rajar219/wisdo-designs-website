@@ -7,9 +7,12 @@ import emailjs from "@emailjs/browser";
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
+    businessName: "",
     phone: "",
-    projectType: "Web Development",
+    email: "",
+    serviceRequired: "Software Development",
+    budgetRange: "",
+    preferredContact: "Email",
     message: ""
   });
   
@@ -28,9 +31,12 @@ export default function ContactForm() {
       
       const templateParams = {
         name: formData.name,
+        businessName: formData.businessName,
         email: formData.email,
         phone: formData.phone,
-        projectType: formData.projectType,
+        serviceRequired: formData.serviceRequired,
+        budgetRange: formData.budgetRange,
+        preferredContact: formData.preferredContact,
         message: formData.message,
         to_email: "wisdodesigns@gmail.com",
       };
@@ -43,7 +49,7 @@ export default function ContactForm() {
       }
 
       setSubmitStatus("success");
-      setFormData({ name: "", email: "", phone: "", projectType: "Web Development", message: "" });
+      setFormData({ name: "", businessName: "", phone: "", email: "", serviceRequired: "Software Development", budgetRange: "", preferredContact: "Email", message: "" });
     } catch (error) {
       console.error("Failed to send email:", error);
       setSubmitStatus("error");
@@ -141,17 +147,20 @@ export default function ContactForm() {
                   </div>
                   <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight mb-4">Request Sent!</h2>
                   <p className="text-slate-500 font-medium max-w-md mx-auto">
-                    Thank you for reaching out to WISDO TECH. Core team has been instantly notified and will respond within 24 hours.
+                    Thank you for reaching out to Wisdo Tech. Core team has been instantly notified and will respond within 24 hours.
                   </p>
                 </div>
               ) : (
                 <>
-                  <h2 className="text-2xl font-bold text-slate-900 tracking-tight mb-8 text-center sm:text-left">Send us a message</h2>
+                  <h2 className="text-2xl font-bold text-slate-900 tracking-tight mb-2 text-center sm:text-left">Send us a message</h2>
+                  <p className="text-slate-500 mb-8 text-center sm:text-left">Tell us what you're trying to build. We'll help you identify the right digital solution.</p>
 
                   <form className="space-y-6" onSubmit={handleSubmit}>
+                    
+                    {/* Row 1 */}
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label htmlFor="name" className="text-sm font-bold text-slate-700">Full Name</label>
+                        <label htmlFor="name" className="text-sm font-bold text-slate-700">Full Name *</label>
                         <input
                           required
                           id="name"
@@ -159,28 +168,29 @@ export default function ContactForm() {
                           name="name"
                           value={formData.name}
                           onChange={handleChange}
-                          placeholder="Aaradhana"
+                          placeholder="Your Name"
                           className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all"
                         />
                       </div>
                       <div className="space-y-2">
-                        <label htmlFor="email" className="text-sm font-bold text-slate-700">Email Address</label>
+                        <label htmlFor="businessName" className="text-sm font-bold text-slate-700">Business Name *</label>
                         <input
                           required
-                          id="email"
-                          type="email"
-                          name="email"
-                          value={formData.email}
+                          id="businessName"
+                          type="text"
+                          name="businessName"
+                          value={formData.businessName}
                           onChange={handleChange}
-                          placeholder="Aaradhana@gmail.com"
+                          placeholder="Company or Brand"
                           className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all"
                         />
                       </div>
                     </div>
 
+                    {/* Row 2 */}
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label htmlFor="phone" className="text-sm font-bold text-slate-700">Phone Number</label>
+                        <label htmlFor="phone" className="text-sm font-bold text-slate-700">Phone Number *</label>
                         <input
                           required
                           id="phone"
@@ -193,26 +203,71 @@ export default function ContactForm() {
                         />
                       </div>
                       <div className="space-y-2">
-                        <label htmlFor="projectType" className="text-sm font-bold text-slate-700">Business / Project Type</label>
+                        <label htmlFor="email" className="text-sm font-bold text-slate-700">Email Address *</label>
+                        <input
+                          required
+                          id="email"
+                          type="email"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleChange}
+                          placeholder="email@example.com"
+                          className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Row 3 */}
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <label htmlFor="serviceRequired" className="text-sm font-bold text-slate-700">Service Required *</label>
                         <select 
-                          id="projectType"
-                          name="projectType"
-                          value={formData.projectType}
+                          id="serviceRequired"
+                          name="serviceRequired"
+                          value={formData.serviceRequired}
                           onChange={handleChange}
                           className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all appearance-none cursor-pointer"
                         >
-                          <option>Web Development</option>
-                          <option>Mobile Application</option>
-                          <option>Retail POS Software</option>
-                          <option>Business Automation</option>
-                          <option>AI Chatbot Integration</option>
-                          <option>Other Solutions</option>
+                          <option>Software Development</option>
+                          <option>Website Development</option>
+                          <option>Designing</option>
+                          <option>Digital Marketing</option>
+                          <option>Other</option>
+                        </select>
+                      </div>
+                      <div className="space-y-2">
+                        <label htmlFor="preferredContact" className="text-sm font-bold text-slate-700">Preferred Contact Method *</label>
+                        <select 
+                          id="preferredContact"
+                          name="preferredContact"
+                          value={formData.preferredContact}
+                          onChange={handleChange}
+                          className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all appearance-none cursor-pointer"
+                        >
+                          <option>Email</option>
+                          <option>Phone</option>
+                          <option>WhatsApp</option>
                         </select>
                       </div>
                     </div>
 
+                    {/* Row 4 */}
                     <div className="space-y-2">
-                      <label htmlFor="message" className="text-sm font-bold text-slate-700">Project Details</label>
+                      <label htmlFor="budgetRange" className="text-sm font-bold text-slate-700">Budget Range <span className="text-slate-400 font-normal">(Optional)</span></label>
+                      <input
+                        id="budgetRange"
+                        type="text"
+                        name="budgetRange"
+                        value={formData.budgetRange}
+                        onChange={handleChange}
+                        placeholder="e.g. ₹20,000 - ₹50,000"
+                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all"
+                      />
+                    </div>
+
+                    {/* Row 5 */}
+                    <div className="space-y-2">
+                      <label htmlFor="message" className="text-sm font-bold text-slate-700">Project Description *</label>
                       <textarea
                         required
                         id="message"
@@ -243,7 +298,7 @@ export default function ContactForm() {
                           </>
                         ) : (
                           <>
-                            <span>Submit Request</span>
+                            <span>Request a Consultation</span>
                             <Send className="w-4 h-4" />
                           </>
                         )}

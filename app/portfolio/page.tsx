@@ -4,21 +4,29 @@ import Link from "next/link";
 import { ExternalLink, CheckCircle2, AlertCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Our Portfolio - Web Design & Custom Software | WISDO TECH",
-  description: "Explore real project case studies engineered by WISDO TECH, including custom web design, responsive e-commerce portals, and Point of Sale (POS) business software.",
+  title: "Our Work | Web Development Company Portfolio | Wisdo Tech",
+  description: "Explore the portfolio of Wisdo Tech, a leading Web Development Company. See our Custom Software Development and Business Website projects.",
   alternates: {
     canonical: "https://wisdodesigns.com/portfolio",
   },
   openGraph: {
-    title: "Our Portfolio - Web Design & Custom Software | WISDO TECH",
-    description: "Explore real project case studies engineered by WISDO TECH, including custom web design, responsive e-commerce portals, and Point of Sale (POS) business software.",
+    title: "Our Work | Web Development Company Portfolio | Wisdo Tech",
+    description: "Explore the portfolio of Wisdo Tech, a leading Web Development Company. See our Custom Software Development and Business Website projects.",
     url: "https://wisdodesigns.com/portfolio",
     type: "website",
+    images: [
+      {
+        url: "/logo-transparent.png",
+        width: 1200,
+        height: 630,
+        alt: "Wisdo Tech - Portfolio",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Our Portfolio - Web Design & Custom Software | WISDO TECH",
-    description: "Explore real project case studies engineered by WISDO TECH, including custom web design, responsive e-commerce portals, and Point of Sale (POS) business software.",
+    title: "Our Work | Web Development Company Portfolio | Wisdo Tech",
+    description: "Explore the portfolio of Wisdo Tech, a leading Web Development Company. See our Custom Software Development and Business Website projects.",
   },
 };
 
@@ -33,6 +41,15 @@ interface Project {
 }
 
 const projects: Project[] = [
+  {
+    title: "INZFYER",
+    status: "Live",
+    category: "E-Commerce Website",
+    image: "/inzfyer.png",
+    url: "https://www.inzfyer.in/",
+    description: "A premium boutique e-commerce platform for luxury plushies, handcrafted toy gift sets, artisanal ceramics, and custom ribbon unboxing experiences.",
+    technologies: ["React", "Vite", "JavaScript", "Tailwind CSS"]
+  },
   {
     title: "NMS Dairy Farm",
     status: "Live",
@@ -81,7 +98,7 @@ export default function PortfolioPage() {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <article
               key={project.title}
               className="bg-white rounded-3xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden flex flex-col h-full group"
@@ -94,6 +111,7 @@ export default function PortfolioPage() {
                   fill
                   className="object-cover group-hover:scale-103 transition-transform duration-500"
                   sizes="(max-w-768px) 100vw, 33vw"
+                  priority={index === 0}
                 />
                 
                 {/* Status Badge overlay */}

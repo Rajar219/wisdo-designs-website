@@ -15,7 +15,7 @@ export default function Faq() {
 
   const faqs: FAQItem[] = [
     {
-      question: "What services does WISDO TECH offer?",
+      question: "What services does Wisdo Tech offer?",
       answer: (
         <>
           We offer a full suite of specialized digital services, including premium{" "}
@@ -31,14 +31,14 @@ export default function Faq() {
       question: "How do you approach web design and website development?",
       answer: (
         <>
-          At WISDO TECH, we follow a structured, collaborative process starting from in-depth discovery, wireframing, and custom UI/UX design, to high-performance web engineering. Learn more about{" "}
+          At Wisdo Tech, we follow a structured, collaborative process starting from in-depth discovery, wireframing, and custom UI/UX design, to high-performance web engineering. Learn more about{" "}
           <Link href="/about" className="text-indigo-600 font-bold hover:underline">
             our agency philosophy
           </Link>{" "}
           or reach out to discuss your specific requirements.
         </>
       ),
-      plainTextAnswer: "At WISDO TECH, we follow a structured, collaborative process starting from in-depth discovery, wireframing, and custom UI/UX design, to high-performance web engineering. Learn more about our agency philosophy or reach out to discuss your specific requirements."
+      plainTextAnswer: "At Wisdo Tech, we follow a structured, collaborative process starting from in-depth discovery, wireframing, and custom UI/UX design, to high-performance web engineering. Learn more about our agency philosophy or reach out to discuss your specific requirements."
     },
     {
       question: "Can you build custom billing & POS software?",

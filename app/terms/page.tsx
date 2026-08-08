@@ -2,21 +2,21 @@ import { FileText } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | WISDO TECH",
-  description: "Terms of Service for WISDO TECH detailing development contracts, project terms, and ownership guidelines.",
+  title: "Terms of Service | Wisdo Tech",
+  description: "Terms of Service for Wisdo Tech detailing development contracts, project terms, and ownership guidelines.",
   alternates: {
     canonical: "https://wisdodesigns.com/terms",
   },
   openGraph: {
-    title: "Terms of Service | WISDO TECH",
-    description: "Terms of Service for WISDO TECH detailing development contracts, project terms, and ownership guidelines.",
+    title: "Terms of Service | Wisdo Tech",
+    description: "Terms of Service for Wisdo Tech detailing development contracts, project terms, and ownership guidelines.",
     url: "https://wisdodesigns.com/terms",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terms of Service | WISDO TECH",
-    description: "Terms of Service for WISDO TECH detailing development contracts, project terms, and ownership guidelines.",
+    title: "Terms of Service | Wisdo Tech",
+    description: "Terms of Service for Wisdo Tech detailing development contracts, project terms, and ownership guidelines.",
   },
 };
 
@@ -38,14 +38,14 @@ export default function TermsPage() {
           <section>
             <h2 className="text-xl font-bold text-slate-900 mb-3">1. Engagement of Services</h2>
             <p className="text-sm text-slate-500 font-light">
-              By engaging WISDO TECH, you contract our agency to design, build, and deploy custom software products, websites, applications, and chatbot services according to a mutually agreed Statement of Work (SOW) or project quotation.
+              By engaging Wisdo Tech, you contract our agency to design, build, and deploy custom software products, websites, applications, and chatbot services according to a mutually agreed Statement of Work (SOW) or project quotation.
             </p>
           </section>
 
           <section>
             <h2 className="text-xl font-bold text-slate-900 mb-3">2. Code & Asset Ownership</h2>
             <p className="text-sm text-slate-500 font-light">
-              Upon final project payment clearance, full ownership of the custom code repositories, UI designs, and related assets transfers directly to the client. WISDO TECH retains no permanent claims or distribution rights on custom-developed client intellectual property unless explicitly agreed upon.
+              Upon final project payment clearance, full ownership of the custom code repositories, UI designs, and related assets transfers directly to the client. Wisdo Tech retains no permanent claims or distribution rights on custom-developed client intellectual property unless explicitly agreed upon.
             </p>
           </section>
 

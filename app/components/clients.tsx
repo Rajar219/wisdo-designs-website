@@ -1,261 +1,253 @@
 "use client";
 
-import { useState, useEffect, ComponentType } from "react";
-import { Sparkles, MonitorSmartphone, ShoppingCart, Rocket, CheckCircle, X, ExternalLink } from "lucide-react";
-import Link from "next/link";
+import Image from "next/image";
+import { Sparkles, ExternalLink, CheckCircle2, Target, Lightbulb, CheckCircle, Code2, AlertCircle } from "lucide-react";
 
-// The full project type to govern the modal state
 interface Project {
-  title: string;
-  industry: string;
-  desc: string;
+  client: string;
+  type: string;
+  problem: string;
+  solution: string;
   features: string[];
-  icon: ComponentType<{ className?: string }>;
-  color: string;
-  bg: string;
-  badgeColor: string;
-  note: string;
+  technologies: string[];
+  image: string;
+  url?: string;
 }
 
-const featuredProjects: Project[] = [
+const completedProjects: Project[] = [
   {
-    title: "Retail POS Billing System",
-    industry: "Retail & E-commerce",
-    desc: "A lightweight billing and inventory management system designed for small retail shops and boutiques.",
+    client: "INZFYER",
+    type: "E-Commerce Website",
+    problem: "Needed an elegant e-commerce platform for a premium boutique selling luxury plushies and gift sets.",
+    solution: "Built a beautiful, modern e-commerce storefront focusing on the premium shopping and gift experience.",
     features: [
-      "Real-time inventory tracking",
-      "GST billing support",
-      "Sales analytics dashboard",
-      "Multi-store management",
-      "Automated stock updates"
+      "Luxury product showcase",
+      "Handcrafted gift sets category",
+      "Responsive modern layout",
+      "Seamless checkout experience"
     ],
-    note: "This is a demo concept project built to showcase our capabilities.",
-    icon: ShoppingCart,
-    color: "from-blue-500 to-indigo-500",
-    bg: "bg-blue-50",
-    badgeColor: "text-blue-700 bg-blue-100 border-blue-200"
+    technologies: ["React", "Vite", "JavaScript", "Tailwind CSS"],
+    image: "/inzfyer.png",
+    url: "https://www.inzfyer.in/"
   },
   {
-    title: "Restaurant Ordering & Delivery App",
-    industry: "Food & Beverage",
-    desc: "A mobile ordering platform designed for restaurants, cafes, and food businesses to manage orders and deliveries efficiently.",
+    client: "NMS Dairy Farm",
+    type: "Business Website",
+    problem: "Needed a digital presence to showcase premium dairy products and farm business operations to customers.",
+    solution: "Designed and developed a modern, highly responsive website with customer-friendly navigation.",
     features: [
-      "Digital menu management",
-      "Live order tracking",
-      "Driver GPS tracking",
-      "Kitchen order dashboard",
-      "Automated pricing and promotions"
+      "Premium product showcase",
+      "Farm operations overview",
+      "Responsive layout"
     ],
-    note: "This is a prototype built to demonstrate restaurant technology solutions.",
-    icon: MonitorSmartphone,
-    color: "from-orange-500 to-red-500",
-    bg: "bg-orange-50",
-    badgeColor: "text-orange-700 bg-orange-100 border-orange-200"
+    technologies: ["React", "Next.js", "Tailwind CSS", "Vercel Hosting"],
+    image: "/nms-dairy-farm.png",
+    url: "https://nms-dairy-farm.vercel.app/"
   },
   {
-    title: "SaaS Workflow Automation Dashboard",
-    industry: "Startup / SaaS",
-    desc: "A scalable dashboard platform built for startups and businesses to manage workflows, analytics, and team productivity.",
+    client: "Confusion Clothing",
+    type: "E-Commerce Website",
+    problem: "Required a premium online shopping platform for a boutique clothing brand.",
+    solution: "Built a custom, responsive fashion e-commerce storefront.",
     features: [
-      "AI-powered analytics insights",
-      "Role-based user access",
-      "Custom reporting engine",
-      "Task automation workflows",
-      "Performance dashboards"
+      "Category sorting",
+      "Product filters",
+      "Responsive layout grids",
+      "Premium shopping experience"
     ],
-    note: "This project is a demonstration of enterprise dashboard capabilities.",
-    icon: Rocket,
-    color: "from-emerald-500 to-teal-500",
-    bg: "bg-emerald-50",
-    badgeColor: "text-emerald-700 bg-emerald-100 border-emerald-200"
+    technologies: ["HTML5", "CSS3", "JavaScript", "GitHub Pages"],
+    image: "/confusion-clothing.png",
+    url: "https://confusionclothing.github.io/shop/"
+  }
+];
+
+const developmentProjects: Project[] = [
+  {
+    client: "WISDO POS System",
+    type: "Business Software",
+    problem: "Retail enterprises require reliable internal software to manage daily operations and inventory.",
+    solution: "Developing a custom Point of Sale (POS) and inventory management platform.",
+    features: [
+      "Live billing interfaces",
+      "Stock tracking metrics",
+      "Invoicing",
+      "Role-based controls",
+      "Sales report diagnostics"
+    ],
+    technologies: ["React", "Next.js", "Tailwind CSS", "IndexedDB", "NodeJS"],
+    image: "/wisdo-pos.png"
   }
 ];
 
 export default function ClientsSection() {
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-
-  // Prevent background scrolling when modal is open
-  useEffect(() => {
-    if (selectedProject) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-    return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, [selectedProject]);
-
   return (
-    <section className="relative py-16 sm:py-24 lg:py-40 overflow-hidden bg-slate-50/50">
+    <section className="relative py-20 sm:py-28 lg:py-40 overflow-hidden bg-slate-50/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 lg:mb-28 animate-fade-in-up">
+        {/* Header Section */}
+        <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-24 animate-fade-in-up">
           <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-white shadow-[0_4px_12px_rgba(0,0,0,0.03)] border border-slate-200/60 mb-8">
             <Sparkles className="w-4 h-4 text-indigo-500" />
-            <span className="text-sm font-bold tracking-wide text-slate-700 uppercase">Concept Projects</span>
+            <span className="text-sm font-bold tracking-wide text-slate-700 uppercase">Our Work</span>
           </div>
           
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6 sm:mb-8">
-            Custom Web Development Case Studies by <span className="text-gradient">WISDO TECH</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6 sm:mb-8">
+            Case Studies & <span className="text-gradient">Real Results</span>
           </h2>
 
           <p className="text-base sm:text-lg lg:text-xl text-slate-500 leading-relaxed font-light">
-            Explore our high-performance product prototypes and custom software solutions engineered to demonstrate our advanced technical expertise.
+            Explore the bespoke digital solutions we've engineered for our clients. No concepts, just actual working products solving real business needs.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 pb-12">
-          {featuredProjects.map((project, i) => {
-            const Icon = project.icon;
-            return (
-              <div 
-                key={i} 
-                style={{ animationDelay: `${i * 150}ms`, animationFillMode: 'both' }}
-                className="w-full relative group bg-white rounded-[2rem] p-8 lg:p-10 border border-slate-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.03)] transition-all duration-500 hover:-translate-y-4 hover:shadow-[0_40px_80px_-20px_rgba(79,70,229,0.15)] animate-fade-in-up flex flex-col items-center sm:items-start text-center sm:text-left h-full"
-              >
-                {/* Industry Tag */}
-                <div className={`absolute top-6 right-6 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider rounded-md border ${project.badgeColor}`}>
-                  {project.industry}
-                </div>
+        {/* Completed Projects Section */}
+        <div className="mb-24">
+          <div className="flex items-center gap-4 mb-12">
+            <h3 className="text-2xl font-bold text-slate-900 tracking-tight">Completed Projects</h3>
+            <div className="h-px bg-slate-200 flex-grow"></div>
+          </div>
 
-                <div className={`w-14 h-14 rounded-2xl ${project.bg} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500`}>
-                  <div className={`bg-gradient-to-br ${project.color} w-8 h-8 rounded-xl flex items-center justify-center text-white shadow-md`}>
-                    <Icon className="w-4 h-4" />
-                  </div>
-                </div>
-                
-                <div className="mb-4">
-                  <div className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Concept Project</div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors tracking-tight line-clamp-2">
-                    {project.title}
-                  </h3>
-                </div>
+          <div className="flex flex-col gap-12 lg:gap-20">
+            {completedProjects.map((project, idx) => (
+              <ProjectCard key={idx} project={project} status="Completed" reverse={idx % 2 !== 0} priority={idx === 0} />
+            ))}
+          </div>
+        </div>
 
-                <p className="text-sm lg:text-base text-slate-500 font-medium leading-relaxed mb-8 flex-grow line-clamp-3">
-                  {project.desc}
-                </p>
+        {/* In Development Section */}
+        <div>
+          <div className="flex items-center gap-4 mb-12">
+            <h3 className="text-2xl font-bold text-slate-900 tracking-tight">Current / In Development</h3>
+            <div className="h-px bg-slate-200 flex-grow"></div>
+          </div>
 
-                {/* Features List Preview */}
-                <div className="space-y-3 mb-10 pt-6 border-t border-slate-100 w-full">
-                  {project.features.slice(0, 3).map((feature, idx) => (
-                    <div key={idx} className="flex items-start gap-3 justify-center sm:justify-start">
-                      <CheckCircle className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
-                      <span className="text-sm font-medium text-slate-700">{feature}</span>
-                    </div>
-                  ))}
-                  {project.features.length > 3 && (
-                     <div className="text-xs font-bold text-slate-400 uppercase tracking-widest pl-7 pt-2">
-                       + {project.features.length - 3} More Features
-                     </div>
-                  )}
-                </div>
-
-                <div className="mt-auto w-full">
-                  <button 
-                    onClick={() => setSelectedProject(project)}
-                    className="inline-flex items-center justify-center w-full py-4 rounded-xl bg-slate-50 text-slate-900 text-sm font-bold uppercase tracking-wide group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300 shadow-sm group-hover:shadow-indigo-500/25 active:scale-95"
-                  >
-                    View Case Study
-                  </button>
-                </div>
-              </div>
-            );
-          })}
+          <div className="flex flex-col gap-12 lg:gap-20">
+            {developmentProjects.map((project, idx) => (
+              <ProjectCard key={idx} project={project} status="In Development" reverse={false} />
+            ))}
+          </div>
         </div>
 
       </div>
+    </section>
+  );
+}
 
-      {/* Case Study Modal Overlay */}
-      <div 
-        className={`fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 transition-all duration-300 ${
-          selectedProject ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
-      >
-        {/* Backdrop */}
-        <div 
-          className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity"
-          onClick={() => setSelectedProject(null)}
+function ProjectCard({ project, status, reverse, priority = false }: { project: Project, status: string, reverse: boolean, priority?: boolean }) {
+  return (
+    <div className={`flex flex-col ${reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-8 lg:gap-16 items-center bg-white rounded-[2.5rem] p-6 sm:p-8 lg:p-10 border border-slate-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_50px_-10px_rgba(79,70,229,0.1)] transition-shadow duration-500`}>
+      
+      {/* Image Side */}
+      <div className="w-full lg:w-1/2 relative aspect-[4/3] rounded-[1.5rem] overflow-hidden bg-slate-50 border border-slate-100 group">
+        <Image 
+          src={project.image} 
+          alt={`${project.client} Screenshot`} 
+          fill 
+          className="object-cover group-hover:scale-105 transition-transform duration-700"
+          sizes="(max-w-1024px) 100vw, 50vw"
+          priority={priority}
         />
-
-        {/* Modal Content */}
-        {selectedProject && (() => {
-          const ModalIcon = selectedProject.icon;
-          return (
-            <div className="relative w-full max-w-3xl bg-white rounded-[2rem] shadow-2xl overflow-hidden transform transition-all duration-500 scale-100 animate-fade-in-up flex flex-col max-h-[90vh]">
-              
-              {/* Header */}
-              <div className="flex items-center justify-between p-6 sm:p-8 border-b border-slate-100">
-                <div className="flex items-center gap-4">
-                  <div className={`w-12 h-12 rounded-xl ${selectedProject.bg} flex items-center justify-center shrink-0`}>
-                     <div className={`bg-gradient-to-br ${selectedProject.color} w-6 h-6 rounded-lg flex items-center justify-center text-white shadow-sm`}>
-                       <ModalIcon className="w-3 h-3" />
-                     </div>
-                  </div>
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight leading-tight">
-                      {selectedProject.title}
-                    </h3>
-                  </div>
-                </div>
-                <button 
-                  onClick={() => setSelectedProject(null)}
-                  className="w-10 h-10 rounded-full bg-slate-50 hover:bg-slate-100 flex items-center justify-center text-slate-500 hover:text-slate-900 transition-colors shrink-0 outline-none"
-                >
-                  <X className="w-5 h-5" />
-                </button>
-              </div>
-
-              {/* Body */}
-              <div className="p-6 sm:p-8 overflow-y-auto">
-                <div className={`inline-block px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-lg border ${selectedProject.badgeColor} mb-6`}>
-                  {selectedProject.industry}
-                </div>
-
-                <p className="text-lg text-slate-600 leading-relaxed font-medium mb-10">
-                  {selectedProject.desc}
-                </p>
-
-                <div className="mb-10">
-                  <h4 className="text-sm font-bold text-slate-900 uppercase tracking-widest mb-6 border-b border-slate-100 pb-2">
-                    Core Functionality
-                  </h4>
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    {selectedProject.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-start gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100/60">
-                        <CheckCircle className="w-5 h-5 text-indigo-500 shrink-0 mt-0.5" />
-                        <span className="text-sm font-semibold text-slate-700">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Concept project disclaimer */}
-                <div className="bg-indigo-50/50 rounded-2xl p-6 border border-indigo-100/50 flex items-start gap-4">
-                  <Sparkles className="w-6 h-6 text-indigo-500 shrink-0 mt-1" />
-                  <p className="text-sm font-medium text-slate-600 leading-relaxed italic">
-                    {selectedProject.note}
-                  </p>
-                </div>
-              </div>
-
-              {/* Footer */}
-              <div className="p-6 sm:p-8 border-t border-slate-100 bg-slate-50/50 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <p className="text-sm font-bold text-slate-500">Interested in a bespoke solution like this?</p>
-                <Link 
-                  href="/contact"
-                  className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-xl bg-slate-900 text-white text-sm font-bold uppercase tracking-wide hover:bg-indigo-600 transition-all shadow-md hover:shadow-indigo-500/25 gap-2"
-                >
-                  Start Similar Project
-                  <ExternalLink className="w-4 h-4" />
-                </Link>
-              </div>
-              
-            </div>
-          );
-        })()}
+        
+        {/* Status Badge overlay */}
+        <div className="absolute top-4 left-4 sm:top-6 sm:left-6">
+          {status === "Completed" ? (
+            <span className="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur-md border border-emerald-100 text-emerald-700 text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-xl shadow-sm">
+              <CheckCircle2 className="w-4 h-4" />
+              Live Project
+            </span>
+          ) : (
+            <span className="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur-md border border-indigo-100 text-indigo-700 text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-xl shadow-sm">
+              <AlertCircle className="w-4 h-4 animate-pulse" />
+              In Development
+            </span>
+          )}
+        </div>
       </div>
 
-    </section>
+      {/* Content Side */}
+      <div className="w-full lg:w-1/2 flex flex-col">
+        <div className="inline-block px-3 py-1.5 text-[10px] font-bold text-indigo-600 bg-indigo-50 border border-indigo-100 rounded-lg uppercase tracking-wider mb-4 w-max">
+          {project.type}
+        </div>
+        
+        <h3 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-8">
+          {project.client}
+        </h3>
+
+        <div className="space-y-6 mb-10">
+          {/* Problem */}
+          <div className="flex gap-4">
+            <div className="w-10 h-10 rounded-full bg-rose-50 flex items-center justify-center shrink-0 border border-rose-100">
+              <Target className="w-5 h-5 text-rose-500" />
+            </div>
+            <div>
+              <h4 className="text-sm font-bold text-slate-900 uppercase tracking-widest mb-1">The Problem</h4>
+              <p className="text-base text-slate-500 font-medium leading-relaxed">{project.problem}</p>
+            </div>
+          </div>
+
+          {/* Solution */}
+          <div className="flex gap-4">
+            <div className="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center shrink-0 border border-emerald-100">
+              <Lightbulb className="w-5 h-5 text-emerald-500" />
+            </div>
+            <div>
+              <h4 className="text-sm font-bold text-slate-900 uppercase tracking-widest mb-1">Our Solution</h4>
+              <p className="text-base text-slate-500 font-medium leading-relaxed">{project.solution}</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Features & Tech */}
+        <div className="grid sm:grid-cols-2 gap-8 pt-8 border-t border-slate-100 mb-10">
+          <div>
+            <h4 className="text-xs font-bold text-slate-900 uppercase tracking-widest mb-4 flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-slate-400" /> Key Features
+            </h4>
+            <ul className="space-y-2">
+              {project.features.map((feature, i) => (
+                <li key={i} className="text-sm text-slate-600 font-medium flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 mt-1.5 shrink-0" />
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-xs font-bold text-slate-900 uppercase tracking-widest mb-4 flex items-center gap-2">
+              <Code2 className="w-4 h-4 text-slate-400" /> Technologies
+            </h4>
+            <div className="flex flex-wrap gap-2">
+              {project.technologies.map((tech, i) => (
+                <span key={i} className="text-xs font-semibold text-slate-500 bg-slate-50 border border-slate-100 px-2 py-1 rounded-md">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Action Button */}
+        {status === "Completed" && project.url ? (
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-auto inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-indigo-600 text-white font-bold text-sm uppercase tracking-wide py-4 px-8 rounded-xl shadow-md transition-all duration-300 active:scale-95 w-full sm:w-max"
+          >
+            <span>View Live Project</span>
+            <ExternalLink className="w-4 h-4" />
+          </a>
+        ) : (
+          <button
+            disabled
+            className="mt-auto inline-flex items-center justify-center gap-2 bg-slate-50 text-slate-400 font-bold text-sm uppercase tracking-wide py-4 px-8 rounded-xl border border-slate-200 cursor-not-allowed select-none w-full sm:w-max"
+          >
+            <span>Under Construction</span>
+          </button>
+        )}
+
+      </div>
+    </div>
   );
 }

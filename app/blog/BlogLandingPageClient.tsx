@@ -16,13 +16,14 @@ export default function BlogLandingPageClient({ posts }: BlogLandingPageClientPr
 
   const categories = [
     "All",
+    "Business Technology",
     "Website Development",
-    "Cyber Security",
-    "Information Security",
-    "Artificial Intelligence",
-    "Quantum Computing",
+    "Software & POS",
     "Digital Marketing",
-    "Business Technology"
+    "SEO",
+    "Design",
+    "AI & Automation",
+    "Cyber Security"
   ];
 
   // Filter posts based on query and category
@@ -47,7 +48,7 @@ export default function BlogLandingPageClient({ posts }: BlogLandingPageClientPr
         {/* Minimalist Hero Header */}
         <div className="max-w-3xl mb-16 sm:mb-20 text-left border-l-4 border-indigo-600 pl-6 sm:pl-8">
           <span className="text-xs font-bold tracking-widest text-indigo-600 uppercase block mb-3">
-            WISDO TECH Journal
+            Wisdo Tech Journal
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-none mb-6">
             The Engineering Journal

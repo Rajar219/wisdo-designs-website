@@ -13,25 +13,25 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: {
-    default: "WISDO TECH | Digital Solutions for Growing Businesses",
-    template: "%s | WISDO TECH",
+    default: "Wisdo Tech | Digital Solutions for Growing Businesses",
+    template: "%s | Wisdo Tech",
   },
-  description: "WISDO TECH — Digital Solutions for Growing Businesses. We build software, websites and digital experiences that help businesses operate, connect with customers and grow.",
+  description: "Wisdo Tech is a professional Software Development and Website Design company. We provide Custom Software Development, Business Website Development, and Digital Marketing Services.",
   keywords: [
+    "Wisdo Tech",
+    "Software Company",
+    "Web Development Company",
+    "Custom Software Development",
     "Website Development",
-    "Web Design",
-    "Web Hosting",
-    "Mobile App Development",
-    "Digital Marketing",
-    "Business Software",
-    "Software Development",
-    "Digital Marketing",
-    "Designing",
-    "WISDO TECH"
+    "Website Design",
+    "Business Website Development",
+    "POS Software",
+    "Digital Marketing Services",
+    "Software Development"
   ],
-  authors: [{ name: "WISDO TECH", url: "https://wisdodesigns.com" }],
-  creator: "WISDO TECH",
-  publisher: "WISDO TECH",
+  authors: [{ name: "Wisdo Tech", url: "https://wisdodesigns.com" }],
+  creator: "Wisdo Tech",
+  publisher: "Wisdo Tech",
   metadataBase: new URL("https://wisdodesigns.com"),
   icons: {
     icon: [
@@ -44,16 +44,16 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "WISDO TECH | Digital Solutions for Growing Businesses",
-    description: "WISDO TECH — Digital Solutions for Growing Businesses. We build software, websites and digital experiences that help businesses operate, connect with customers and grow.",
+    title: "Wisdo Tech | Digital Solutions for Growing Businesses",
+    description: "Wisdo Tech — Digital Solutions for Growing Businesses. We build software, websites and digital experiences that help businesses operate, connect with customers and grow.",
     url: "https://wisdodesigns.com",
-    siteName: "WISDO TECH",
+    siteName: "Wisdo Tech",
     images: [
       {
         url: "/logo-transparent.png",
         width: 1200,
         height: 630,
-        alt: "WISDO TECH - Digital Solutions for Growing Businesses",
+        alt: "Wisdo Tech - Digital Solutions for Growing Businesses",
       },
     ],
     locale: "en_US",
@@ -61,8 +61,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "WISDO TECH | Digital Solutions for Growing Businesses",
-    description: "WISDO TECH — Digital Solutions for Growing Businesses. We build software, websites and digital experiences that help businesses operate, connect with customers and grow.",
+    title: "Wisdo Tech | Digital Solutions for Growing Businesses",
+    description: "Wisdo Tech — Digital Solutions for Growing Businesses. We build software, websites and digital experiences that help businesses operate, connect with customers and grow.",
     images: ["/logo-transparent.png"],
   },
   verification: {
@@ -85,7 +85,7 @@ export default function RootLayout({
               {
                 "@context": "https://schema.org",
                 "@type": "Organization",
-                "name": "WISDO TECH",
+                "name": "Wisdo Tech",
                 "url": "https://wisdodesigns.com",
                 "logo": "https://wisdodesigns.com/logo-transparent.png",
                 "sameAs": [
@@ -103,7 +103,7 @@ export default function RootLayout({
               {
                 "@context": "https://schema.org",
                 "@type": "WebSite",
-                "name": "WISDO TECH",
+                "name": "Wisdo Tech",
                 "url": "https://wisdodesigns.com",
                 "potentialAction": {
                   "@type": "SearchAction",
@@ -114,7 +114,8 @@ export default function RootLayout({
               {
                 "@context": "https://schema.org",
                 "@type": "LocalBusiness",
-                "name": "WISDO TECH",
+                "name": "Wisdo Tech",
+                "description": "Custom Software Development and Web Development Company providing Business Website Development, POS Software, and Digital Marketing Services.",
                 "image": "https://wisdodesigns.com/logo-transparent.png",
                 "@id": "https://wisdodesigns.com/#localbusiness",
                 "url": "https://wisdodesigns.com",

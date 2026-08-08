@@ -10,7 +10,7 @@ export default function Footer() {
           
           {/* Brand & Contact */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6 lg:pr-8">
-            <Image src="/logo-transparent.png" alt="WISDO TECH Logo" width={150} height={100} className="h-16 md:h-24 w-auto object-contain md:origin-left md:scale-125" />
+            <Image src="/logo-transparent.png" alt="Wisdo Tech Logo" width={150} height={100} className="h-16 md:h-24 w-auto object-contain md:origin-left md:scale-125" />
             <p className="text-slate-500 text-sm md:text-base leading-relaxed max-w-sm font-light">
               We build software, websites and digital experiences that help businesses operate, connect with customers and grow.
             </p>
@@ -51,6 +51,7 @@ export default function Footer() {
           <div className="flex flex-col items-center md:items-start text-center md:text-left gap-4 md:gap-5">
             <p className="font-bold text-slate-900 mb-1 md:mb-2 font-sans tracking-wide text-lg">Company</p>
             <Link href="/about" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium">About Us</Link>
+            <Link href="/solutions" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium">Solutions</Link>
             <Link href="/contact" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium">Contact</Link>
             <Link href="/portfolio" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium">Portfolio</Link>
             <Link href="/pricing" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium">Pricing / Packages</Link>
@@ -61,17 +62,17 @@ export default function Footer() {
           {/* Social Links */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left gap-4 md:gap-5">
             <p className="font-bold text-slate-900 mb-1 md:mb-2 font-sans tracking-wide text-lg">Social</p>
-            <a href="#" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium">Twitter / X</a>
-            <a href="#" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium">LinkedIn</a>
+            <a href="https://x.com/wisdodesigns" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium">Twitter / X</a>
+            <a href="https://linkedin.com/company/wisdo-tech" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium">LinkedIn</a>
             <a href="https://instagram.com/wisdo_designs" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium">Instagram</a>
-            <a href="#" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium">GitHub</a>
+            <a href="https://github.com/Rajar219" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-indigo-600 transition-colors text-base font-medium">GitHub</a>
           </div>
 
         </div>
 
         <div className="border-t border-slate-200 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-slate-500 text-sm font-medium">
-            © {new Date().getFullYear()} WISDO TECH. All rights reserved.
+            © {new Date().getFullYear()} Wisdo Tech. All rights reserved.
           </p>
           <div className="flex gap-8 text-sm text-slate-500 font-medium">
             <Link href="/privacy" className="hover:text-indigo-600 transition-colors">Privacy Policy</Link>

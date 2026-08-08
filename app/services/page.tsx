@@ -2,21 +2,29 @@ import { MonitorPlay, Smartphone, Database, Bot, Receipt, AppWindow, Cpu, Packag
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Website Development & Custom Software Services | WISDO TECH",
-  description: "Explore our range of practical services: Website Development, Custom Software, POS, Databases, AI Integrations, Web Hosting, and Maintenance based on your requirements.",
+  title: "Website Design & Digital Marketing Services | Wisdo Tech",
+  description: "Wisdo Tech provides professional Website Design, Custom Software Development, POS Solutions, and Digital Marketing Services for modern businesses.",
   alternates: {
     canonical: "https://wisdodesigns.com/services",
   },
   openGraph: {
-    title: "Website Development & Custom Software Services | WISDO TECH",
-    description: "Explore our range of practical services: Website Development, Custom Software, POS, Databases, AI Integrations, Web Hosting, and Maintenance based on your requirements.",
+    title: "Website Design & Digital Marketing Services | Wisdo Tech",
+    description: "Wisdo Tech provides professional Website Design, Custom Software Development, POS Solutions, and Digital Marketing Services for modern businesses.",
     url: "https://wisdodesigns.com/services",
     type: "website",
+    images: [
+      {
+        url: "/logo-transparent.png",
+        width: 1200,
+        height: 630,
+        alt: "Wisdo Tech - Services",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Development & Custom Software Services | WISDO TECH",
-    description: "Explore our range of practical services: Website Development, Custom Software, POS, Databases, AI Integrations, Web Hosting, and Maintenance based on your requirements.",
+    title: "Website Design & Digital Marketing Services | Wisdo Tech",
+    description: "Wisdo Tech provides professional Website Design, Custom Software Development, POS Solutions, and Digital Marketing Services for modern businesses.",
   },
 };
 
@@ -107,6 +115,31 @@ const industries = [
 export default function ServicesPage() {
   return (
     <div className="bg-slate-50 min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "serviceType": "Website Design and Development",
+              "provider": {
+                "@type": "LocalBusiness",
+                "name": "Wisdo Tech"
+              }
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "serviceType": "Digital Marketing Services",
+              "provider": {
+                "@type": "LocalBusiness",
+                "name": "Wisdo Tech"
+              }
+            }
+          ])
+        }}
+      />
       {/* Page Header */}
       <section className="relative pt-28 pb-12 sm:pt-36 sm:pb-16 lg:pt-52 lg:pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute top-0 inset-x-0 h-full bg-gradient-to-b from-indigo-50/50 to-transparent -z-10" />

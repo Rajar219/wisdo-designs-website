@@ -1,116 +1,122 @@
-import { CheckCircle2, Zap, Bot, Layers, ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { Briefcase, Layers, Rocket, MessageCircle, Code2, LifeBuoy } from "lucide-react";
 
-
-const advantages = [
-  "Startup Friendly Solutions",
-  "Affordable Development",
-  "Fast Delivery",
-  "Modern Technologies",
-  "Scalable Systems"
+const reasons = [
+  {
+    num: "01",
+    title: "Business-Focused Solutions",
+    desc: "We build around the actual needs of your business.",
+    icon: Briefcase,
+    color: "text-indigo-600",
+    bg: "bg-indigo-50",
+    border: "border-indigo-100",
+    hoverBg: "group-hover:bg-indigo-600",
+    hoverBorder: "group-hover:border-indigo-600"
+  },
+  {
+    num: "02",
+    title: "Multiple Digital Capabilities",
+    desc: "Software, websites, design and digital marketing under one team.",
+    icon: Layers,
+    color: "text-emerald-600",
+    bg: "bg-emerald-50",
+    border: "border-emerald-100",
+    hoverBg: "group-hover:bg-emerald-600",
+    hoverBorder: "group-hover:border-emerald-600"
+  },
+  {
+    num: "03",
+    title: "Startup-Friendly Approach",
+    desc: "Professional digital solutions without unnecessary complexity.",
+    icon: Rocket,
+    color: "text-orange-600",
+    bg: "bg-orange-50",
+    border: "border-orange-100",
+    hoverBg: "group-hover:bg-orange-600",
+    hoverBorder: "group-hover:border-orange-600"
+  },
+  {
+    num: "04",
+    title: "Direct Communication",
+    desc: "Clear communication throughout the project.",
+    icon: MessageCircle,
+    color: "text-fuchsia-600",
+    bg: "bg-fuchsia-50",
+    border: "border-fuchsia-100",
+    hoverBg: "group-hover:bg-fuchsia-600",
+    hoverBorder: "group-hover:border-fuchsia-600"
+  },
+  {
+    num: "05",
+    title: "Modern Technology",
+    desc: "Use appropriate modern technologies based on project requirements.",
+    icon: Code2,
+    color: "text-blue-600",
+    bg: "bg-blue-50",
+    border: "border-blue-100",
+    hoverBg: "group-hover:bg-blue-600",
+    hoverBorder: "group-hover:border-blue-600"
+  },
+  {
+    num: "06",
+    title: "Long-Term Support",
+    desc: "Support doesn't have to end after deployment.",
+    icon: LifeBuoy,
+    color: "text-rose-600",
+    bg: "bg-rose-50",
+    border: "border-rose-100",
+    hoverBg: "group-hover:bg-rose-600",
+    hoverBorder: "group-hover:border-rose-600"
+  }
 ];
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-16 sm:py-20 lg:py-40 relative bg-white border-y border-slate-100 shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.02)]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-24 items-center">
+    <section className="py-20 sm:py-28 lg:py-40 relative bg-white border-y border-slate-100 shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.02)]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="animate-fade-in-up flex flex-col items-center lg:items-start text-center lg:text-left w-full">
+        <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-24 animate-fade-in-up">
           <span className="text-sm font-bold tracking-widest text-indigo-500 uppercase mb-4 block">
-            Why Choose Us
+            The Wisdo Tech Advantage
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6 sm:mb-8">
-            Why Choose <span className="text-gradient">WISDO TECH</span>?
+            Why Businesses Choose <span className="text-gradient">Wisdo Tech</span>
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-slate-500 font-light leading-relaxed mb-8 sm:mb-12 max-w-xl mx-auto lg:mx-0">
-            We partner with startups and ambitious businesses to build high-performance Web Design and Website Development solutions. Our agile approach means you get scalable software without the usual agency overhead.
+          <p className="text-base sm:text-lg lg:text-xl text-slate-500 font-light leading-relaxed">
+            We partner with startups and ambitious businesses to build high-performance solutions. Our approach means you get exactly what your business needs.
           </p>
-
-          <div className="grid sm:grid-cols-2 gap-y-8 gap-x-6">
-            {advantages.map((adv, i) => (
-              <div key={i} className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-emerald-50 border border-emerald-100/50 flex items-center justify-center shrink-0">
-                  <CheckCircle2 className="w-5 h-5 text-emerald-500" />
-                </div>
-                <span className="font-bold text-slate-800 text-base tracking-tight">{adv}</span>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-12 flex flex-wrap gap-4 items-center justify-center lg:justify-start">
-            <Link
-              href="/pricing"
-              className="inline-flex items-center gap-2 text-indigo-600 font-bold hover:text-indigo-800 transition-colors group text-sm sm:text-base"
-            >
-              <span>Explore Our Pricing Plans</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <span className="text-slate-300 hidden sm:inline">|</span>
-            <Link
-              href="/about"
-              className="inline-flex items-center gap-2 text-slate-600 font-semibold hover:text-slate-900 transition-colors text-sm sm:text-base"
-            >
-              <span>About Our Agency</span>
-            </Link>
-          </div>
         </div>
 
-        <div 
-          style={{ animationDelay: '200ms', animationFillMode: 'both' }}
-          className="relative w-full max-w-lg lg:max-w-none mx-auto lg:ml-auto animate-fade-in-up lg:pl-10"
-        >
-          
-          {/* Vertical Connecting Line (Timeline) */}
-          <div className="absolute left-[2.25rem] lg:left-[4.75rem] top-12 bottom-12 w-[2px] bg-slate-100 hidden sm:block" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10">
+          {reasons.map((reason, i) => {
+            const Icon = reason.icon;
+            return (
+              <div 
+                key={i}
+                style={{ animationDelay: `${i * 100}ms`, animationFillMode: 'both' }}
+                className="group relative bg-white rounded-[2rem] p-8 lg:p-10 border border-slate-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_50px_-10px_rgba(79,70,229,0.1)] transition-all duration-500 hover:-translate-y-2 animate-fade-in-up flex flex-col text-center sm:text-left items-center sm:items-start overflow-hidden"
+              >
+                {/* Background Number Watermark */}
+                <div className="absolute -bottom-6 -right-4 text-[8rem] font-extrabold text-slate-50 opacity-50 group-hover:opacity-100 group-hover:-translate-y-4 transition-all duration-700 pointer-events-none select-none z-0">
+                  {reason.num}
+                </div>
 
-          <div className="flex flex-col gap-12 lg:gap-16 items-center sm:items-stretch w-full">
-            
-            {/* Fast Development */}
-            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 sm:gap-6 lg:gap-8 group relative z-10 text-center sm:text-left w-full">
-              <div className="relative mt-1 shrink-0">
-                <div className="absolute inset-0 bg-indigo-100 rounded-full scale-150 opacity-0 group-hover:opacity-100 group-hover:scale-100 transition-all duration-500 -z-10" />
-                <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-2xl bg-white flex items-center justify-center text-indigo-600 border-2 border-indigo-50 group-hover:bg-indigo-600 group-hover:border-indigo-600 group-hover:text-white group-hover:-translate-y-2 group-hover:shadow-[0_15px_30px_-5px_rgba(79,70,229,0.4)] transition-all duration-500 shadow-sm relative overflow-hidden">
-                   <div className="absolute -top-1 -right-1 lg:-top-2 lg:-right-2 text-[4rem] lg:text-[5rem] font-extrabold text-slate-100 group-hover:text-white/10 leading-none pointer-events-none transition-colors duration-500">1</div>
-                   <Zap className="w-7 h-7 lg:w-8 lg:h-8 relative z-10" />
+                <div className="relative z-10 w-full flex flex-col items-center sm:items-start">
+                  <div className={`w-16 h-16 rounded-2xl ${reason.bg} border ${reason.border} flex items-center justify-center ${reason.color} mb-8 ${reason.hoverBg} group-hover:text-white transition-colors duration-500 shadow-sm`}>
+                    <Icon className="w-8 h-8" />
+                  </div>
+                  
+                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight mb-4 group-hover:text-indigo-600 transition-colors z-10">
+                    <span className="text-indigo-500 mr-2 opacity-50 text-sm hidden sm:inline">{reason.num} —</span>
+                    {reason.title}
+                  </h3>
+                  
+                  <p className="text-base text-slate-500 font-medium leading-relaxed z-10">
+                    {reason.desc}
+                  </p>
                 </div>
               </div>
-              <div className="pt-2">
-                <h3 className="text-2xl lg:text-3xl font-bold text-slate-900 tracking-tight mb-2 group-hover:text-indigo-600 transition-colors">Fast Development</h3>
-                <p className="text-slate-500 font-medium leading-relaxed lg:text-lg max-w-sm mx-auto sm:mx-0">Quick delivery using modern technologies and efficient workflows.</p>
-              </div>
-            </div>
-
-            {/* Smart Automation */}
-            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 sm:gap-6 lg:gap-8 group relative z-10 text-center sm:text-left w-full">
-              <div className="relative mt-1 shrink-0">
-                <div className="absolute inset-0 bg-fuchsia-100 rounded-full scale-150 opacity-0 group-hover:opacity-100 group-hover:scale-100 transition-all duration-500 -z-10" />
-                <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-2xl bg-white flex items-center justify-center text-fuchsia-600 border-2 border-fuchsia-50 group-hover:bg-fuchsia-600 group-hover:border-fuchsia-600 group-hover:text-white group-hover:-translate-y-2 group-hover:shadow-[0_15px_30px_-5px_rgba(217,70,239,0.4)] transition-all duration-500 shadow-sm relative overflow-hidden">
-                   <div className="absolute -top-1 -right-1 lg:-top-2 lg:-right-2 text-[4rem] lg:text-[5rem] font-extrabold text-slate-100 group-hover:text-white/10 leading-none pointer-events-none transition-colors duration-500">2</div>
-                   <Bot className="w-7 h-7 lg:w-8 lg:h-8 relative z-10" />
-                </div>
-              </div>
-              <div className="pt-2">
-                <h3 className="text-2xl lg:text-3xl font-bold text-slate-900 tracking-tight mb-2 group-hover:text-fuchsia-600 transition-colors">Smart Automation</h3>
-                <p className="text-slate-500 font-medium leading-relaxed lg:text-lg max-w-sm mx-auto sm:mx-0">Automate repetitive business operations with custom systems.</p>
-              </div>
-            </div>
-
-            {/* Scalable Systems */}
-            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 sm:gap-6 lg:gap-8 group relative z-10 text-center sm:text-left w-full">
-              <div className="relative mt-1 shrink-0">
-                <div className="absolute inset-0 bg-emerald-100 rounded-full scale-150 opacity-0 group-hover:opacity-100 group-hover:scale-100 transition-all duration-500 -z-10" />
-                <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-2xl bg-white flex items-center justify-center text-emerald-600 border-2 border-emerald-50 group-hover:bg-emerald-600 group-hover:border-emerald-600 group-hover:text-white group-hover:-translate-y-2 group-hover:shadow-[0_15px_30px_-5px_rgba(16,185,129,0.4)] transition-all duration-500 shadow-sm relative overflow-hidden">
-                   <div className="absolute -top-1 -right-1 lg:-top-2 lg:-right-2 text-[4rem] lg:text-[5rem] font-extrabold text-slate-100 group-hover:text-white/10 leading-none pointer-events-none transition-colors duration-500">3</div>
-                   <Layers className="w-7 h-7 lg:w-8 lg:h-8 relative z-10" />
-                </div>
-              </div>
-              <div className="pt-2">
-                <h3 className="text-2xl lg:text-3xl font-bold text-slate-900 tracking-tight mb-2 group-hover:text-emerald-600 transition-colors">Scalable Systems</h3>
-                <p className="text-slate-500 font-medium leading-relaxed lg:text-lg max-w-sm mx-auto sm:mx-0">Digital solutions designed to grow with your business.</p>
-              </div>
-            </div>
-
-          </div>
+            );
+          })}
         </div>
 
       </div>

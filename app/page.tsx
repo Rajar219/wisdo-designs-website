@@ -1,8 +1,12 @@
 import ServicesPreview from "./components/servicesPreview";
+import Solutions from "./components/solutions";
 import Technologies from "./components/technologies";
 import Process from "./components/process";
+import Security from "./components/security";
+import Support from "./components/support";
 import WhyChooseUs from "./components/whyChooseUs";
 import ClientsSection from "./components/clients";
+import BlogPreview from "./components/blogPreview";
 import Faq from "./components/faq";
 import Trust from "./components/trust";
 import { ArrowRight, Sparkles, Zap, Shield, Rocket, Bot, Layers, MonitorPlay, MessageCircle, Mail } from "lucide-react";
@@ -10,21 +14,29 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Website Development & Custom Software Solutions | WISDO TECH",
-  description: "WISDO TECH — Digital Solutions for Growing Businesses. We build software, websites and digital experiences that help businesses operate, connect with customers and grow.",
+  title: "Wisdo Tech | Software Company & Web Development Experts",
+  description: "Wisdo Tech is a leading Software Company offering Custom Software Development, Business Website Development, and Digital Marketing Services.",
   alternates: {
     canonical: "https://wisdodesigns.com",
   },
   openGraph: {
-    title: "Website Development & Custom Software Solutions | WISDO TECH",
-    description: "WISDO TECH — Digital Solutions for Growing Businesses. We build software, websites and digital experiences that help businesses operate, connect with customers and grow.",
+    title: "Wisdo Tech | Software Company & Web Development Experts",
+    description: "Wisdo Tech is a leading Software Company offering Custom Software Development, Business Website Development, and Digital Marketing Services.",
     url: "https://wisdodesigns.com",
     type: "website",
+    images: [
+      {
+        url: "/logo-transparent.png",
+        width: 1200,
+        height: 630,
+        alt: "Wisdo Tech - Software Company & Web Development",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Development & Custom Software Solutions | WISDO TECH",
-    description: "WISDO TECH — Digital Solutions for Growing Businesses. We build software, websites and digital experiences that help businesses operate, connect with customers and grow.",
+    title: "Wisdo Tech | Software Company & Web Development Experts",
+    description: "Wisdo Tech is a leading Software Company offering Custom Software Development, Business Website Development, and Digital Marketing Services.",
   },
 };
 
@@ -44,91 +56,43 @@ export default function Home() {
           <div className="max-w-2xl mx-auto text-center lg:text-left pt-2 lg:pt-0 animate-fade-in-up w-full flex flex-col items-center lg:items-start">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-[0_4px_12px_rgba(0,0,0,0.03)] border border-slate-200/60 mb-8 hover:scale-105 transition-transform duration-300">
               <Sparkles className="w-4 h-4 text-indigo-500" />
-              <span className="text-sm font-bold tracking-wide text-slate-700 uppercase">WISDO TECH</span>
+              <span className="text-sm font-bold tracking-wide text-slate-700 uppercase">Wisdo Tech</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[5.5rem] font-extrabold leading-[1.2] lg:leading-[1.1] tracking-tight text-slate-900 mb-5 sm:mb-8 drop-shadow-sm w-full">
-              Digital Solutions <br/> for <span className="text-gradient">Growing Businesses</span>
+              Digital Solutions Built for <span className="text-gradient">Growing Businesses</span>
             </h1>
 
-            <p className="text-base sm:text-lg lg:text-2xl text-slate-500 leading-relaxed font-light max-w-xl mb-6 sm:mb-8 w-full text-center lg:text-left break-words">
-              We build <strong className="font-semibold text-slate-700">software, websites</strong> and <strong className="font-semibold text-slate-700">digital experiences</strong> that help businesses operate, connect with customers and grow.
+            <p className="text-base sm:text-lg lg:text-2xl text-slate-500 leading-relaxed font-light max-w-xl mb-8 sm:mb-10 w-full text-center lg:text-left break-words">
+              Software development, website development, creative design and digital marketing solutions built around your business.
             </p>
 
-            {/* Small Service Highlight Tags */}
-            <div className="flex flex-wrap justify-center lg:justify-start gap-2 mb-8 max-w-xl">
-              <span className="px-3 py-1.5 rounded-lg bg-indigo-50/80 border border-indigo-100 text-indigo-600 text-[11px] sm:text-xs font-bold tracking-wide whitespace-nowrap">
-                Software Development
-              </span>
-              <span className="px-3 py-1.5 rounded-lg bg-emerald-50/80 border border-emerald-100 text-emerald-600 text-[11px] sm:text-xs font-bold tracking-wide whitespace-nowrap">
-                Website Development
-              </span>
-              <span className="px-3 py-1.5 rounded-lg bg-purple-50/80 border border-purple-100 text-purple-600 text-[11px] sm:text-xs font-bold tracking-wide whitespace-nowrap">
-                Designing
-              </span>
-              <span className="px-3 py-1.5 rounded-lg bg-rose-50/80 border border-rose-100 text-rose-600 text-[11px] sm:text-xs font-bold tracking-wide whitespace-nowrap">
-                Digital Marketing
-              </span>
-            </div>
-
-            <div className="mt-2 flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center lg:justify-start w-full">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center lg:justify-start w-full">
               <Link
                 href="/contact"
                 className="group w-full sm:w-auto relative flex items-center justify-center gap-2 bg-slate-900 text-white px-8 py-4 rounded-xl sm:rounded-full overflow-hidden transition-all duration-300 shadow-xl shadow-slate-900/10 hover:-translate-y-1 hover:shadow-indigo-500/30"
               >
-                <span className="relative z-10 font-bold tracking-wide text-base">Get Free Consultation</span>
+                <span className="relative z-10 font-bold tracking-wide text-base">Start Your Project</span>
                 <ArrowRight className="w-5 h-5 sm:w-4 sm:h-4 relative z-10 group-hover:translate-x-1 transition-transform" />
                 <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </Link>
 
-              <Link
-                href="/portfolio"
-                className="flex w-full sm:w-auto items-center justify-center px-8 py-4 rounded-xl sm:rounded-full bg-white/80 backdrop-blur-sm border border-slate-200/60 font-medium text-slate-700 text-base shadow-sm hover:bg-white hover:border-slate-300 transition-all duration-300 hover:-translate-y-1"
-              >
-                View Portfolio
-              </Link>
-            </div>
-
-            {/* Quick Contact Triggers */}
-            <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 items-center justify-center lg:justify-start text-sm font-semibold text-slate-500">
               <a
                 href="https://wa.me/919787362199"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 text-emerald-600 hover:text-emerald-700 transition-colors"
+                className="group flex w-full sm:w-auto items-center justify-center gap-2 px-8 py-4 rounded-xl sm:rounded-full bg-white/80 backdrop-blur-sm border border-slate-200/60 font-medium text-slate-700 text-base shadow-sm hover:bg-white hover:border-slate-300 transition-all duration-300 hover:-translate-y-1"
               >
-                <MessageCircle className="w-4 h-4 text-emerald-500 shrink-0" />
-                <span>Chat on WhatsApp</span>
-              </a>
-              <span className="text-slate-200 hidden sm:inline">|</span>
-              <a
-                href="mailto:wisdodesigns@gmail.com"
-                className="flex items-center gap-1.5 hover:text-indigo-600 transition-colors"
-              >
-                <Mail className="w-4 h-4 text-indigo-500 shrink-0" />
-                <span>Email: wisdodesigns@gmail.com</span>
+                <MessageCircle className="w-5 h-5 text-emerald-500 group-hover:text-emerald-600 transition-colors" />
+                Talk to Wisdo Tech
               </a>
             </div>
 
-            {/* Trust Line & Indicators */}
-            <div className="mt-10 flex flex-col items-center lg:items-start space-y-4">
-              <div className="text-sm font-medium text-slate-500 flex items-center justify-center lg:justify-start gap-2">
-                Helping startups build scalable digital products
-              </div>
-              <div className="flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-3 text-sm font-semibold text-slate-400">
-                <div className="flex items-center gap-2">
-                  <Rocket className="w-4 h-4" />
-                  <span>Startup Friendly</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Zap className="w-4 h-4" />
-                  <span>Fast Delivery</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Shield className="w-4 h-4" />
-                  <span>Affordable Solutions</span>
-                </div>
-              </div>
+            {/* Trust Line */}
+            <div className="mt-10 pt-6 border-t border-slate-200/50 w-full max-w-xl">
+              <p className="text-sm sm:text-base font-medium text-slate-500 text-center lg:text-left">
+                From idea to launch — we help businesses build, improve and grow digitally.
+              </p>
             </div>
           </div>
 
@@ -211,10 +175,14 @@ export default function Home() {
       </section>
 
       <ServicesPreview />
-      <Technologies />
-      <Process />
       <WhyChooseUs />
       <ClientsSection />
+      <Solutions />
+      <Process />
+      <Security />
+      <Support />
+      <Technologies />
+      <BlogPreview />
       <Faq />
       <Trust />
     </div>
