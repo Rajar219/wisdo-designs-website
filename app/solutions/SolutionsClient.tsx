@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Globe, Terminal, Calculator, Boxes, ShoppingBag, Smartphone, Paintbrush, TrendingUp, Zap, Target, Lightbulb, CheckCircle2, Users, ListTree, ArrowRight } from "lucide-react";
-import Link from "next/link";
+import TrackedLink from "../components/TrackedLink";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 
@@ -289,15 +289,21 @@ export default function SolutionsClient() {
 
                 </div>
 
-                {/* Action */}
                 <div className="pt-10 border-t border-slate-200/60">
-                  <Link 
-                    href="/contact"
+                  <TrackedLink 
+                    href={`/contact?service=${encodeURIComponent(
+                      solution.title.includes("Web") || solution.title.includes("E-commerce") ? "Website Development" :
+                      solution.title.includes("Design") ? "Designing" :
+                      solution.title.includes("Marketing") ? "Digital Marketing" :
+                      "Software Development"
+                    )}`}
+                    eventName="service_cta_click"
+                    eventPayload={{ service: solution.title }}
                     className="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-wide transition-colors shadow-sm w-full sm:w-max group"
                   >
-                    <span>Start Your Project</span>
+                    <span>Request a Quote</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Link>
+                  </TrackedLink>
                 </div>
 
               </div>

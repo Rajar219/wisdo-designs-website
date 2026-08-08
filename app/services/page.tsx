@@ -1,5 +1,7 @@
-import { MonitorPlay, Smartphone, Database, Bot, Receipt, AppWindow, Cpu, Package, Server, Wrench, Building2, Coffee, Hotel, Utensils, ShoppingBag, Rocket, Plane, Store } from "lucide-react";
+import { MonitorPlay, Smartphone, Database, Bot, Receipt, AppWindow, Cpu, Package, Server, Wrench, Building2, Coffee, Hotel, Utensils, ShoppingBag, Rocket, Plane, Store, MessageCircle } from "lucide-react";
 import { Metadata } from "next";
+import Link from "next/link";
+import TrackedLink from "../components/TrackedLink";
 
 export const metadata: Metadata = {
   title: "Website Design & Digital Marketing Services | Wisdo Tech",
@@ -178,9 +180,20 @@ export default function ServicesPage() {
                 <h2 className="text-2xl font-bold text-slate-900 mb-4 tracking-tight group-hover:text-indigo-600 transition-colors">
                   {service.title}
                 </h2>
-                <p className="text-slate-500 leading-relaxed font-medium max-w-sm mx-auto sm:mx-0">
+                <p className="text-slate-500 leading-relaxed font-medium max-w-sm mx-auto sm:mx-0 mb-6">
                   {service.desc}
                 </p>
+                <div className="mt-auto pt-2 w-full">
+                  <TrackedLink 
+                    href={`/contact?service=${encodeURIComponent(service.title)}`}
+                    eventName="service_cta_click"
+                    eventPayload={{ service: service.title }}
+                    className="inline-flex items-center justify-center gap-2 bg-slate-50 hover:bg-indigo-600 text-indigo-600 hover:text-white px-6 py-3 rounded-xl font-bold text-sm transition-colors w-full group"
+                  >
+                    <span>Request a Quote</span>
+                    <span className="group-hover:translate-x-1 transition-transform">→</span>
+                  </TrackedLink>
+                </div>
               </div>
             );
           })}
@@ -216,6 +229,23 @@ export default function ServicesPage() {
               );
             })}
           </div>
+
+          {/* Global CTA */}
+          <div className="mt-20 sm:mt-24 text-center border-t border-slate-200/50 pt-12 sm:pt-16">
+            <p className="text-xl text-slate-500 font-medium mb-6">Not sure which service you need?</p>
+            <TrackedLink
+              href="/api/whatsapp"
+              eventName="whatsapp_click"
+              eventPayload={{ location: "services_global_cta" }}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-emerald-50 text-emerald-600 border border-emerald-200 hover:bg-emerald-500 hover:text-white px-8 py-4 rounded-xl font-bold transition-all shadow-sm hover:-translate-y-1"
+            >
+              <MessageCircle className="w-5 h-5" />
+              <span>Chat with Wisdo Tech</span>
+            </TrackedLink>
+          </div>
+
         </div>
       </section>
     </div>

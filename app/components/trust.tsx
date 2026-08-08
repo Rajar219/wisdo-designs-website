@@ -1,5 +1,6 @@
 import { MessageCircle, ArrowRight, Mail } from "lucide-react";
 import Link from "next/link";
+import TrackedLink from "./TrackedLink";
 
 export default function Trust() {
   return (
@@ -27,27 +28,31 @@ export default function Trust() {
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-100 to-purple-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </Link>
 
-          <a
-            href="https://wa.me/919787362199"
+          <TrackedLink
+            href="/api/whatsapp"
+            eventName="whatsapp_click"
+            eventPayload={{ location: "trust_section" }}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-8 py-4 rounded-xl sm:rounded-full bg-white/10 backdrop-blur-md border border-white/20 font-medium text-white shadow-sm hover:bg-white/20 transition-all duration-300 hover:-translate-y-1"
           >
-            Talk to Wisdo Tech
-          </a>
+            Chat with Wisdo Tech
+          </TrackedLink>
         </div>
 
         {/* WhatsApp & Email fallback anchors */}
         <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 items-center justify-center text-slate-300 text-sm font-semibold">
-          <a
-            href="https://wa.me/919787362199"
+          <TrackedLink
+            href="/api/whatsapp"
+            eventName="whatsapp_click"
+            eventPayload={{ location: "trust_links" }}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 hover:text-emerald-400 transition-colors"
           >
             <MessageCircle className="w-4 h-4 text-emerald-400 shrink-0" />
             <span>Chat on WhatsApp</span>
-          </a>
+          </TrackedLink>
           <span className="text-white/20 hidden sm:inline">|</span>
           <a
             href="mailto:wisdodesigns@gmail.com"

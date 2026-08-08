@@ -9,6 +9,7 @@ import ClientsSection from "./components/clients";
 import BlogPreview from "./components/blogPreview";
 import Faq from "./components/faq";
 import Trust from "./components/trust";
+import TrackedLink from "./components/TrackedLink";
 import { ArrowRight, Sparkles, Zap, Shield, Rocket, Bot, Layers, MonitorPlay, MessageCircle, Mail } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
@@ -77,15 +78,17 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </Link>
 
-              <a
-                href="https://wa.me/919787362199"
+              <TrackedLink
+                href="/api/whatsapp"
+                eventName="whatsapp_click"
+                eventPayload={{ location: "hero" }}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex w-full sm:w-auto items-center justify-center gap-2 px-8 py-4 rounded-xl sm:rounded-full bg-white/80 backdrop-blur-sm border border-slate-200/60 font-medium text-slate-700 text-base shadow-sm hover:bg-white hover:border-slate-300 transition-all duration-300 hover:-translate-y-1"
               >
                 <MessageCircle className="w-5 h-5 text-emerald-500 group-hover:text-emerald-600 transition-colors" />
-                Talk to Wisdo Tech
-              </a>
+                Chat with Wisdo Tech
+              </TrackedLink>
             </div>
 
             {/* Trust Line */}

@@ -1,7 +1,8 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ExternalLink, CheckCircle2, AlertCircle } from "lucide-react";
+import { ExternalLink, CheckCircle2, AlertCircle, MessageCircle } from "lucide-react";
+import TrackedLink from "../components/TrackedLink";
 
 export const metadata: Metadata = {
   title: "Our Work | Web Development Company Portfolio | Wisdo Tech",
@@ -181,6 +182,22 @@ export default function PortfolioPage() {
               </div>
             </article>
           ))}
+        </div>
+
+        {/* Global CTA */}
+        <div className="mt-20 sm:mt-24 text-center border-t border-slate-200/50 pt-12 sm:pt-16">
+          <p className="text-xl text-slate-500 font-medium mb-6">Need a custom solution like these?</p>
+          <TrackedLink
+            href="/api/whatsapp"
+            eventName="whatsapp_click"
+            eventPayload={{ location: "portfolio_global_cta" }}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 bg-emerald-50 text-emerald-600 border border-emerald-200 hover:bg-emerald-500 hover:text-white px-8 py-4 rounded-xl font-bold transition-all shadow-sm hover:-translate-y-1"
+          >
+            <MessageCircle className="w-5 h-5" />
+            <span>Chat with Wisdo Tech</span>
+          </TrackedLink>
         </div>
 
       </div>

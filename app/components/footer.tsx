@@ -1,6 +1,7 @@
-import { ExternalLink, Mail, MapPin, Phone } from "lucide-react";
+import { ExternalLink, Mail, MapPin, Phone, MessageCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import TrackedLink from "./TrackedLink";
 
 export default function Footer() {
   return (
@@ -27,6 +28,17 @@ export default function Footer() {
                 <Phone className="w-5 h-5 text-indigo-500 shrink-0" />
                 +91 9787362199
               </a>
+              <TrackedLink 
+                href="/api/whatsapp" 
+                eventName="whatsapp_click"
+                eventPayload={{ location: "footer" }}
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex items-center gap-3 text-slate-600 text-sm font-medium hover:text-emerald-500 transition-colors mt-2"
+              >
+                <MessageCircle className="w-5 h-5 text-emerald-500 shrink-0" />
+                Chat with Wisdo Tech
+              </TrackedLink>
             </div>
           </div>
 

@@ -1,11 +1,19 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense, useEffect } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { Mail, MessageCircle, MapPin, Send, CheckCircle2, Loader2 } from "lucide-react";
-import emailjs from "@emailjs/browser";
+import { submitContactForm } from "../actions/contact";
+import { contactSchema, ContactFormData } from "../lib/schemas";
+import { trackEvent } from "../lib/analytics";
 
-export default function ContactForm() {
-  const [formData, setFormData] = useState({
+function ContactFormContent() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const serviceParam = searchParams.get("service");
+  const sourceParam = searchParams.get("source") || searchParams.get("utm_source");
+
+  const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     businessName: "",
     phone: "",
@@ -13,54 +21,99 @@ export default function ContactForm() {
     serviceRequired: "Software Development",
     budgetRange: "",
     preferredContact: "Email",
-    message: ""
+    message: "",
+    source: "Website",
+    botcheck: ""
   });
+
+  useEffect(() => {
+    trackEvent("contact_form_open");
+  }, []);
+
+  // Set the service Required based on URL param on mount
+  useEffect(() => {
+    if (serviceParam) {
+      const allowedServices = ["Software Development", "Website Development", "Designing", "Digital Marketing", "Other"];
+      if (allowedServices.includes(serviceParam)) {
+        setFormData(prev => ({ ...prev, serviceRequired: serviceParam as any }));
+      } else {
+        // Fallback for mappings
+        if (serviceParam.includes("Web") || serviceParam.includes("Site")) {
+           setFormData(prev => ({ ...prev, serviceRequired: "Website Development" }));
+        } else if (serviceParam.includes("Design") || serviceParam.includes("Brand")) {
+           setFormData(prev => ({ ...prev, serviceRequired: "Designing" }));
+        } else if (serviceParam.includes("Marketing") || serviceParam.includes("SEO")) {
+           setFormData(prev => ({ ...prev, serviceRequired: "Digital Marketing" }));
+        } else if (serviceParam.includes("Software") || serviceParam.includes("App") || serviceParam.includes("System") || serviceParam.includes("POS")) {
+           setFormData(prev => ({ ...prev, serviceRequired: "Software Development" }));
+        } else {
+           setFormData(prev => ({ ...prev, serviceRequired: "Other" }));
+        }
+      }
+    }
+  }, [serviceParam]);
+
+  useEffect(() => {
+    let resolvedSource = "Website";
+    if (sourceParam) {
+      resolvedSource = sourceParam;
+    } else if (typeof document !== "undefined" && document.referrer) {
+      const ref = document.referrer.toLowerCase();
+      if (ref.includes("google")) resolvedSource = "Google";
+      else if (ref.includes("instagram")) resolvedSource = "Instagram";
+      else if (ref.includes("wa.me") || ref.includes("whatsapp")) resolvedSource = "WhatsApp";
+      else if (!ref.includes(window.location.hostname)) resolvedSource = "Referral";
+    }
+    setFormData(prev => ({ ...prev, source: resolvedSource }));
+  }, [sourceParam]);
   
+  const [errors, setErrors] = useState<Record<string, string[]>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "error">("idle");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus("idle");
+    setErrors({});
+
+    // Client-side validation
+    const validatedFields = contactSchema.safeParse(formData);
+    if (!validatedFields.success) {
+      setErrors(validatedFields.error.flatten().fieldErrors);
+      setIsSubmitting(false);
+      return;
+    }
 
     try {
-      const SERVICE_ID = "service_placeholder";
-      const TEMPLATE_ID = "template_placeholder";
-      const PUBLIC_KEY = "public_key_placeholder";
-      
-      const templateParams = {
-        name: formData.name,
-        businessName: formData.businessName,
-        email: formData.email,
-        phone: formData.phone,
-        serviceRequired: formData.serviceRequired,
-        budgetRange: formData.budgetRange,
-        preferredContact: formData.preferredContact,
-        message: formData.message,
-        to_email: "wisdodesigns@gmail.com",
-      };
-
-      if (SERVICE_ID === "service_placeholder") {
-        await new Promise((resolve) => setTimeout(resolve, 1500));
-        console.warn("EmailJS Keys missing. Form submission simulated.");
+      const response = await submitContactForm(validatedFields.data);
+      if (response.success) {
+        trackEvent("contact_form_submit", { service: formData.serviceRequired, source: formData.source });
+        router.push("/thank-you");
       } else {
-        await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
+        if (response.errors) {
+          setErrors(response.errors);
+        } else {
+          console.error("Server Action Failed:", response.message);
+          setSubmitStatus("error");
+          setTimeout(() => setSubmitStatus("idle"), 5000);
+        }
       }
-
-      setSubmitStatus("success");
-      setFormData({ name: "", businessName: "", phone: "", email: "", serviceRequired: "Software Development", budgetRange: "", preferredContact: "Email", message: "" });
     } catch (error) {
-      console.error("Failed to send email:", error);
+      console.error("Failed to submit form:", error);
       setSubmitStatus("error");
+      setTimeout(() => setSubmitStatus("idle"), 5000);
     } finally {
       setIsSubmitting(false);
-      setTimeout(() => setSubmitStatus("idle"), 5000);
     }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    // Clear error for the field being typed in
+    if (errors[e.target.name]) {
+      setErrors({ ...errors, [e.target.name]: [] });
+    }
   };
 
   return (
@@ -108,7 +161,7 @@ export default function ContactForm() {
                   </div>
                 </a>
 
-                <a href="https://wa.me/919787362199" className="flex flex-col lg:flex-row items-center lg:items-start gap-4 group">
+                <a href="/api/whatsapp" onClick={() => trackEvent("whatsapp_click", { location: "contact_cards" })} className="flex flex-col lg:flex-row items-center lg:items-start gap-4 group">
                   <div className="w-14 h-14 lg:w-12 lg:h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
                     <MessageCircle className="w-6 h-6 lg:w-5 lg:h-5" />
                   </div>
@@ -140,183 +193,172 @@ export default function ContactForm() {
             <div className="bg-white rounded-[2rem] p-6 sm:p-8 md:p-12 border border-slate-100 shadow-[0_20px_60px_-15px_rgba(49,46,129,0.05)] relative overflow-hidden">
               <div className="absolute top-0 right-0 w-48 h-48 sm:w-64 sm:h-64 bg-indigo-50/50 rounded-bl-full -z-10" />
 
-              {submitStatus === "success" ? (
-                <div className="text-center py-16 animate-fade-in-up">
-                  <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <CheckCircle2 className="w-10 h-10 text-emerald-600" />
-                  </div>
-                  <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight mb-4">Request Sent!</h2>
-                  <p className="text-slate-500 font-medium max-w-md mx-auto">
-                    Thank you for reaching out to Wisdo Tech. Core team has been instantly notified and will respond within 24 hours.
-                  </p>
-                </div>
-              ) : (
-                <>
-                  <h2 className="text-2xl font-bold text-slate-900 tracking-tight mb-2 text-center sm:text-left">Send us a message</h2>
-                  <p className="text-slate-500 mb-8 text-center sm:text-left">Tell us what you're trying to build. We'll help you identify the right digital solution.</p>
+              <h2 className="text-2xl font-bold text-slate-900 tracking-tight mb-2 text-center sm:text-left">Send us a message</h2>
+              <p className="text-slate-500 mb-8 text-center sm:text-left">Tell us what you're trying to build. We'll help you identify the right digital solution.</p>
 
-                  <form className="space-y-6" onSubmit={handleSubmit}>
+              <form className="space-y-6" onSubmit={handleSubmit} noValidate>
+              <input type="text" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" value={formData.botcheck || ""} onChange={handleChange} />
                     
-                    {/* Row 1 */}
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <label htmlFor="name" className="text-sm font-bold text-slate-700">Full Name *</label>
-                        <input
-                          required
-                          id="name"
-                          type="text"
-                          name="name"
-                          value={formData.name}
-                          onChange={handleChange}
-                          placeholder="Your Name"
-                          className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <label htmlFor="businessName" className="text-sm font-bold text-slate-700">Business Name *</label>
-                        <input
-                          required
-                          id="businessName"
-                          type="text"
-                          name="businessName"
-                          value={formData.businessName}
-                          onChange={handleChange}
-                          placeholder="Company or Brand"
-                          className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all"
-                        />
-                      </div>
-                    </div>
+                {/* Row 1 */}
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label htmlFor="name" className="text-sm font-bold text-slate-700">Full Name *</label>
+                    <input
+                      id="name"
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      placeholder="Your Name"
+                      className={`w-full bg-slate-50 border ${errors.name ? 'border-red-500 focus:ring-red-500/50 focus:border-red-500' : 'border-slate-200 focus:ring-indigo-500/50 focus:border-indigo-500'} rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 transition-all`}
+                    />
+                    {errors.name && <p className="text-red-500 text-xs font-medium">{errors.name[0]}</p>}
+                  </div>
+                  <div className="space-y-2">
+                    <label htmlFor="businessName" className="text-sm font-bold text-slate-700">Business Name</label>
+                    <input
+                      id="businessName"
+                      type="text"
+                      name="businessName"
+                      value={formData.businessName}
+                      onChange={handleChange}
+                      placeholder="Company or Brand"
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all"
+                    />
+                  </div>
+                </div>
 
-                    {/* Row 2 */}
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <label htmlFor="phone" className="text-sm font-bold text-slate-700">Phone Number *</label>
-                        <input
-                          required
-                          id="phone"
-                          type="tel"
-                          name="phone"
-                          value={formData.phone}
-                          onChange={handleChange}
-                          placeholder="+91 90000 00000"
-                          className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <label htmlFor="email" className="text-sm font-bold text-slate-700">Email Address *</label>
-                        <input
-                          required
-                          id="email"
-                          type="email"
-                          name="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          placeholder="email@example.com"
-                          className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all"
-                        />
-                      </div>
-                    </div>
+                {/* Row 2 */}
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label htmlFor="phone" className="text-sm font-bold text-slate-700">Phone Number *</label>
+                    <input
+                      id="phone"
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      placeholder="+91 90000 00000"
+                      className={`w-full bg-slate-50 border ${errors.phone ? 'border-red-500 focus:ring-red-500/50 focus:border-red-500' : 'border-slate-200 focus:ring-indigo-500/50 focus:border-indigo-500'} rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 transition-all`}
+                    />
+                    {errors.phone && <p className="text-red-500 text-xs font-medium">{errors.phone[0]}</p>}
+                  </div>
+                  <div className="space-y-2">
+                    <label htmlFor="email" className="text-sm font-bold text-slate-700">Email Address *</label>
+                    <input
+                      id="email"
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="email@example.com"
+                      className={`w-full bg-slate-50 border ${errors.email ? 'border-red-500 focus:ring-red-500/50 focus:border-red-500' : 'border-slate-200 focus:ring-indigo-500/50 focus:border-indigo-500'} rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 transition-all`}
+                    />
+                    {errors.email && <p className="text-red-500 text-xs font-medium">{errors.email[0]}</p>}
+                  </div>
+                </div>
 
-                    {/* Row 3 */}
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <label htmlFor="serviceRequired" className="text-sm font-bold text-slate-700">Service Required *</label>
-                        <select 
-                          id="serviceRequired"
-                          name="serviceRequired"
-                          value={formData.serviceRequired}
-                          onChange={handleChange}
-                          className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all appearance-none cursor-pointer"
-                        >
-                          <option>Software Development</option>
-                          <option>Website Development</option>
-                          <option>Designing</option>
-                          <option>Digital Marketing</option>
-                          <option>Other</option>
-                        </select>
-                      </div>
-                      <div className="space-y-2">
-                        <label htmlFor="preferredContact" className="text-sm font-bold text-slate-700">Preferred Contact Method *</label>
-                        <select 
-                          id="preferredContact"
-                          name="preferredContact"
-                          value={formData.preferredContact}
-                          onChange={handleChange}
-                          className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all appearance-none cursor-pointer"
-                        >
-                          <option>Email</option>
-                          <option>Phone</option>
-                          <option>WhatsApp</option>
-                        </select>
-                      </div>
-                    </div>
+                {/* Row 3 */}
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label htmlFor="serviceRequired" className="text-sm font-bold text-slate-700">Service Required *</label>
+                    <select 
+                      id="serviceRequired"
+                      name="serviceRequired"
+                      value={formData.serviceRequired}
+                      onChange={handleChange}
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all appearance-none cursor-pointer"
+                    >
+                      <option value="Software Development">Software Development</option>
+                      <option value="Website Development">Website Development</option>
+                      <option value="Designing">Designing</option>
+                      <option value="Digital Marketing">Digital Marketing</option>
+                      <option value="Other">Other</option>
+                    </select>
+                    {errors.serviceRequired && <p className="text-red-500 text-xs font-medium">{errors.serviceRequired[0]}</p>}
+                  </div>
+                  <div className="space-y-2">
+                    <label htmlFor="preferredContact" className="text-sm font-bold text-slate-700">Preferred Contact Method</label>
+                    <select 
+                      id="preferredContact"
+                      name="preferredContact"
+                      value={formData.preferredContact}
+                      onChange={handleChange}
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all appearance-none cursor-pointer"
+                    >
+                      <option value="Email">Email</option>
+                      <option value="Phone">Phone</option>
+                      <option value="WhatsApp">WhatsApp</option>
+                    </select>
+                    {errors.preferredContact && <p className="text-red-500 text-xs font-medium">{errors.preferredContact[0]}</p>}
+                  </div>
+                </div>
 
-                    {/* Row 4 */}
-                    <div className="space-y-2">
-                      <label htmlFor="budgetRange" className="text-sm font-bold text-slate-700">Budget Range <span className="text-slate-400 font-normal">(Optional)</span></label>
-                      <input
-                        id="budgetRange"
-                        type="text"
-                        name="budgetRange"
-                        value={formData.budgetRange}
-                        onChange={handleChange}
-                        placeholder="e.g. ₹20,000 - ₹50,000"
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all"
-                      />
-                    </div>
+                {/* Row 4 */}
+                <div className="space-y-2">
+                  <label htmlFor="budgetRange" className="text-sm font-bold text-slate-700">Budget Range</label>
+                  <input
+                    id="budgetRange"
+                    type="text"
+                    name="budgetRange"
+                    value={formData.budgetRange}
+                    onChange={handleChange}
+                    placeholder="e.g. ₹20,000 - ₹50,000"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all"
+                  />
+                </div>
 
-                    {/* Row 5 */}
-                    <div className="space-y-2">
-                      <label htmlFor="message" className="text-sm font-bold text-slate-700">Project Description *</label>
-                      <textarea
-                        required
-                        id="message"
-                        rows={4}
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        placeholder="Tell us about your project goals and specific requirements..."
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all resize-none"
-                      ></textarea>
-                    </div>
+                {/* Row 5 */}
+                <div className="space-y-2">
+                  <label htmlFor="message" className="text-sm font-bold text-slate-700">Project Description *</label>
+                  <textarea
+                    id="message"
+                    rows={4}
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="Tell us about your project goals and specific requirements..."
+                    className={`w-full bg-slate-50 border ${errors.message ? 'border-red-500 focus:ring-red-500/50 focus:border-red-500' : 'border-slate-200 focus:ring-indigo-500/50 focus:border-indigo-500'} rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 transition-all resize-none`}
+                  ></textarea>
+                  {errors.message && <p className="text-red-500 text-xs font-medium">{errors.message[0]}</p>}
+                </div>
 
-                    {submitStatus === "error" && (
-                      <p className="text-red-500 text-sm font-bold bg-red-50 p-4 rounded-xl border border-red-100">
-                        Error submitting form. Please utilize the WhatsApp or direct Email options above instead.
-                      </p>
+                {submitStatus === "error" && (
+                  <p className="text-red-500 text-sm font-bold bg-red-50 p-4 rounded-xl border border-red-100">
+                    Error submitting form. Please utilize the WhatsApp or direct Email options above instead.
+                  </p>
+                )}
+
+                <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                  <button 
+                    disabled={isSubmitting}
+                    className="flex-1 bg-slate-900 text-white font-medium px-8 py-4 rounded-xl flex items-center justify-center gap-2 hover:bg-indigo-600 transition-all duration-300 shadow-xl shadow-slate-900/10 hover:shadow-indigo-500/30 disabled:opacity-70 disabled:cursor-not-allowed"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="w-5 h-5 animate-spin" />
+                        <span>Processing...</span>
+                      </>
+                    ) : (
+                      <>
+                        <span>Request a Consultation</span>
+                        <Send className="w-4 h-4" />
+                      </>
                     )}
-
-                    <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                      <button 
-                        disabled={isSubmitting}
-                        className="flex-1 bg-slate-900 text-white font-medium px-8 py-4 rounded-xl flex items-center justify-center gap-2 hover:bg-indigo-600 transition-all duration-300 shadow-xl shadow-slate-900/10 hover:shadow-indigo-500/30 disabled:opacity-70 disabled:cursor-not-allowed"
-                      >
-                        {isSubmitting ? (
-                          <>
-                            <Loader2 className="w-5 h-5 animate-spin" />
-                            <span>Processing...</span>
-                          </>
-                        ) : (
-                          <>
-                            <span>Request a Consultation</span>
-                            <Send className="w-4 h-4" />
-                          </>
-                        )}
-                      </button>
-                      
-                      <a 
-                        href="https://wa.me/919787362199"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="flex-1 bg-emerald-50 text-emerald-600 font-medium px-8 py-4 rounded-xl flex items-center justify-center gap-2 border border-emerald-200 hover:bg-emerald-500 hover:text-white transition-all duration-300 shadow-sm"
-                      >
-                        <MessageCircle className="w-5 h-5" />
-                        <span>Chat on WhatsApp</span>
-                      </a>
-                    </div>
-                  </form>
-                </>
-              )}
+                  </button>
+                  
+                  <a 
+                    href="/api/whatsapp"
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={() => trackEvent("whatsapp_click", { location: "contact_error_fallback" })}
+                    className="flex-1 bg-emerald-50 text-emerald-600 font-medium px-8 py-4 rounded-xl flex items-center justify-center gap-2 border border-emerald-200 hover:bg-emerald-500 hover:text-white transition-all duration-300 shadow-sm"
+                  >
+                    <MessageCircle className="w-5 h-5" />
+                    <span>Chat on WhatsApp</span>
+                  </a>
+                </div>
+              </form>
             </div>
           </div>
 
@@ -324,4 +366,12 @@ export default function ContactForm() {
       </section>
     </div>
   );
+}
+
+export default function ContactForm() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-slate-50 flex flex-col items-center justify-center text-slate-500"><Loader2 className="w-10 h-10 animate-spin mb-4" /><span>Loading secure form...</span></div>}>
+      <ContactFormContent />
+    </Suspense>
+  )
 }
