@@ -40,11 +40,11 @@ export default function Navbar() {
       >
 
         {/* ===== MOBILE NAVBAR ===== */}
-        <div className="grid grid-cols-[1fr_auto_1fr] items-center w-full h-20 px-4 lg:hidden">
+        <div className="flex items-center justify-between w-full h-20 px-4 lg:hidden relative">
 
           {/* Hamburger */}
           <button
-            className="justify-self-start p-2 text-slate-900 hover:text-indigo-600 active:scale-95 z-[110]"
+            className="p-2 -ml-2 text-slate-900 hover:text-indigo-600 active:scale-95 z-[110]"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
           >
@@ -55,10 +55,10 @@ export default function Navbar() {
             )}
           </button>
 
-          {/* Logo */}
+          {/* Logo (Perfectly Centered) */}
           <Link
             href="/"
-            className="justify-self-center flex items-center"
+            className="absolute left-1/2 -translate-x-1/2 flex items-center"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             <Image
@@ -67,12 +67,12 @@ export default function Navbar() {
               width={105}
               height={70}
               priority
-              className="h-12 sm:h-14 w-auto object-contain drop-shadow-md -translate-x-1"
+              className="h-12 sm:h-14 w-auto object-contain drop-shadow-md"
             />
           </Link>
 
-          {/* Empty column to keep balance */}
-          <div />
+          {/* Placeholder to balance flex space */}
+          <div className="w-7" />
         </div>
 
         {/* ===== DESKTOP NAVBAR ===== */}
@@ -228,66 +228,71 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* ===== MOBILE MENU OVERLAY ===== */}
+      {/* ===== MOBILE MENU OVERLAY (Side Drawer) ===== */}
       <div
-        className={`fixed inset-0 bg-white z-[105] lg:hidden transition-all duration-500 ${isMobileMenuOpen
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 -translate-y-[20%] pointer-events-none"
+        className={`fixed inset-0 z-[105] lg:hidden transition-all duration-500 ${isMobileMenuOpen
+            ? "pointer-events-auto"
+            : "pointer-events-none"
           }`}
       >
-        <div className="flex flex-col h-full pt-28 pb-8 px-6 overflow-y-auto">
+        {/* Backdrop overlay */}
+        <div 
+          className={`absolute inset-0 bg-slate-900/20 backdrop-blur-sm transition-opacity duration-500 ${isMobileMenuOpen ? "opacity-100" : "opacity-0"}`}
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
 
-          {/* Close Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(false)}
-            aria-label="Close menu"
-            className="absolute top-6 right-6 w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-600 hover:text-slate-900 transition-colors"
-          >
-            <X className="w-5 h-5" />
-          </button>
-
-          <div className="flex flex-col gap-6 text-center text-2xl font-bold text-slate-800 tracking-tight flex-grow justify-center">
-
-            <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
-              Home
-            </Link>
-
-            <Link href="/services" onClick={() => setIsMobileMenuOpen(false)}>
-              Services
-            </Link>
-
-            <Link href="/solutions" onClick={() => setIsMobileMenuOpen(false)}>
-              Solutions
-            </Link>
-
-            <Link href="/portfolio" onClick={() => setIsMobileMenuOpen(false)}>
-              Our Work
-            </Link>
-
-            <Link href="/about" onClick={() => setIsMobileMenuOpen(false)}>
-              About
-            </Link>
-
-            <Link href="/blog" onClick={() => setIsMobileMenuOpen(false)}>
-              Blog
-            </Link>
-
-            <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
-              Contact
-            </Link>
-
+        {/* Drawer */}
+        <div className={`absolute top-0 left-0 w-[85%] max-w-sm h-[100dvh] bg-white shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col ${isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"}`}>
+          
+          <div className="flex items-center justify-between p-6 border-b border-slate-100">
+            <Image
+              src="/logo-transparent.png"
+              alt="Wisdo Tech Logo"
+              width={90}
+              height={60}
+              className="h-10 w-auto object-contain"
+            />
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="p-2 -mr-2 text-slate-500 hover:text-slate-900 bg-slate-50 rounded-full"
+            >
+              <X className="w-5 h-5" />
+            </button>
           </div>
 
-          <div className="mt-auto pt-10">
+          <div className="flex flex-col gap-2 p-6 overflow-y-auto flex-grow text-lg font-bold text-slate-700">
+            <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="py-3 hover:text-indigo-600 border-b border-slate-50">
+              Home
+            </Link>
+            <Link href="/services" onClick={() => setIsMobileMenuOpen(false)} className="py-3 hover:text-indigo-600 border-b border-slate-50">
+              Services
+            </Link>
+            <Link href="/solutions" onClick={() => setIsMobileMenuOpen(false)} className="py-3 hover:text-indigo-600 border-b border-slate-50">
+              Solutions
+            </Link>
+            <Link href="/portfolio" onClick={() => setIsMobileMenuOpen(false)} className="py-3 hover:text-indigo-600 border-b border-slate-50">
+              Our Work
+            </Link>
+            <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="py-3 hover:text-indigo-600 border-b border-slate-50">
+              About
+            </Link>
+            <Link href="/blog" onClick={() => setIsMobileMenuOpen(false)} className="py-3 hover:text-indigo-600 border-b border-slate-50">
+              Blog
+            </Link>
+            <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="py-3 hover:text-indigo-600 border-b border-slate-50">
+              Contact
+            </Link>
+          </div>
+
+          <div className="p-6 mt-auto bg-slate-50 border-t border-slate-100">
             <Link
               href="/contact"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="w-full bg-slate-900 text-white py-4 rounded-xl text-center font-semibold text-lg hover:bg-indigo-600 transition-colors shadow-lg block"
+              className="flex items-center justify-center w-full bg-slate-900 text-white py-4 rounded-xl font-bold text-sm uppercase tracking-wide hover:bg-indigo-600 shadow-md"
             >
               Start Your Project
             </Link>
           </div>
-
         </div>
       </div>
     </>
