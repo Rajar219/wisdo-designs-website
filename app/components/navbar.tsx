@@ -74,7 +74,7 @@ export default function Navbar() {
       >
         {/* ===== MOBILE NAVBAR (Strict CSS Grid 3 equal columns for mathematical logo centering) ===== */}
         <div className="lg:hidden w-full px-4">
-          <div className="grid grid-cols-3 items-center w-full h-16 sm:h-18">
+          <div className="grid grid-cols-3 items-center w-full h-18 sm:h-20">
             {/* Left: Premium Hamburger Button */}
             <div className="flex items-center justify-start">
               <button
@@ -114,10 +114,10 @@ export default function Navbar() {
                 <Image
                   src="/logo-transparent.png"
                   alt="Wisdo Tech"
-                  width={110}
-                  height={72}
+                  width={120}
+                  height={80}
                   priority
-                  className="h-11 sm:h-12 w-auto object-contain drop-shadow-xs transition-transform duration-300 group-hover:scale-105"
+                  className="h-[48px] sm:h-[54px] w-auto object-contain drop-shadow-xs transition-transform duration-300 group-hover:scale-105"
                 />
                 <span className="text-[8px] sm:text-[9px] font-semibold tracking-[0.16em] uppercase text-slate-500 whitespace-nowrap select-none mt-0.5">
                   Trust Wisdom Innovation
@@ -335,11 +335,11 @@ export default function Navbar() {
               <Image
                 src="/logo-transparent.png"
                 alt="Wisdo Tech"
-                width={90}
-                height={60}
-                className="h-9 w-auto object-contain transition-transform group-hover:scale-105"
+                width={105}
+                height={70}
+                className="h-[42px] w-auto object-contain transition-transform group-hover:scale-105"
               />
-              <span className="text-[7.5px] font-semibold tracking-[0.14em] uppercase text-slate-400 mt-0.5">
+              <span className="text-[8px] font-semibold tracking-[0.14em] uppercase text-slate-400 mt-0.5">
                 Trust Wisdom Innovation
               </span>
             </Link>
