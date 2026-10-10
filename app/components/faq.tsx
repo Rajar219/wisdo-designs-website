@@ -19,7 +19,7 @@ export default function Faq() {
       answer: (
         <>
           We offer a full suite of specialized digital services, including premium{" "}
-          <Link href="/services" className="text-indigo-600 font-bold hover:underline">
+          <Link href="/services" className="text-blue-600 font-bold hover:underline">
             Web Design & Website Development
           </Link>
           , robust retail billing and POS software, custom mobile app development, performance-driven digital marketing, and reliable web hosting.
@@ -32,7 +32,7 @@ export default function Faq() {
       answer: (
         <>
           At Wisdo Tech, we follow a structured, collaborative process starting from in-depth discovery, wireframing, and custom UI/UX design, to high-performance web engineering. Learn more about{" "}
-          <Link href="/about" className="text-indigo-600 font-bold hover:underline">
+          <Link href="/about" className="text-blue-600 font-bold hover:underline">
             our agency philosophy
           </Link>{" "}
           or reach out to discuss your specific requirements.
@@ -45,7 +45,7 @@ export default function Faq() {
       answer: (
         <>
           Yes, we build tailor-made retail billing & POS systems, automated reservation portals, CRM systems, and custom workflow dashboards to streamline daily operations. Feel free to explore our{" "}
-          <Link href="/services" className="text-indigo-600 font-bold hover:underline">
+          <Link href="/services" className="text-blue-600 font-bold hover:underline">
             business systems capabilities
           </Link>{" "}
           to see how we can assist you.
@@ -58,11 +58,11 @@ export default function Faq() {
       answer: (
         <>
           Absolutely. We partner with startups across India and globally to build custom solutions at competitive prices. You can check out{" "}
-          <Link href="/pricing" className="text-indigo-600 font-bold hover:underline">
+          <Link href="/pricing" className="text-blue-600 font-bold hover:underline">
             our pricing plans
           </Link>{" "}
           or view open roles on our{" "}
-          <Link href="/careers" className="text-indigo-600 font-bold hover:underline">
+          <Link href="/careers" className="text-blue-600 font-bold hover:underline">
             careers page
           </Link>{" "}
           if you are looking to join our growing engineering team.
@@ -75,7 +75,7 @@ export default function Faq() {
       answer: (
         <>
           Timelines vary depending on complexity. A standard business website can take 2-4 weeks, while larger custom platforms or mobile apps may take 6-12 weeks. To get an accurate timeline, feel free to{" "}
-          <Link href="/contact" className="text-indigo-600 font-bold hover:underline">
+          <Link href="/contact" className="text-blue-600 font-bold hover:underline">
             contact us for a free consultation
           </Link>
           .
@@ -112,13 +112,13 @@ export default function Faq() {
       />
 
       {/* Decorative Orbs */}
-      <div className="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-indigo-50/50 rounded-full blur-[120px] -z-10" />
+      <div className="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-blue-50/50 rounded-full blur-[120px] -z-10" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="text-center mb-12 sm:mb-16 lg:mb-24 animate-fade-in-up">
           <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-white shadow-[0_4px_12px_rgba(0,0,0,0.03)] border border-slate-200/60 mb-6">
-            <HelpCircle className="w-4 h-4 text-indigo-500" />
+            <HelpCircle className="w-4 h-4 text-blue-600" />
             <span className="text-sm font-bold tracking-wide text-slate-700 uppercase">Questions & Answers</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6">
@@ -139,13 +139,13 @@ export default function Faq() {
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full flex items-center justify-between p-6 sm:p-8 text-left font-bold text-slate-800 text-base sm:text-lg lg:text-xl tracking-tight focus:outline-none transition-colors duration-300 hover:text-indigo-600"
+                  className="w-full flex items-center justify-between p-6 sm:p-8 text-left font-bold text-slate-800 text-base sm:text-lg lg:text-xl tracking-tight focus:outline-none transition-colors duration-300 hover:text-blue-600"
                   aria-expanded={isOpen}
                 >
                   <span>{faq.question}</span>
                   <ChevronDown
                     className={`w-5 h-5 sm:w-6 sm:h-6 text-slate-400 shrink-0 ml-4 transition-transform duration-300 ${
-                      isOpen ? "rotate-180 text-indigo-500" : ""
+                      isOpen ? "rotate-180 text-blue-600" : ""
                     }`}
                   />
                 </button>

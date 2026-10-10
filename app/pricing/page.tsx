@@ -75,12 +75,12 @@ export default function PricingPage() {
     <div className="bg-slate-50 min-h-screen">
       {/* Header */}
       <section className="relative pt-28 pb-12 sm:pt-36 sm:pb-16 lg:pt-52 lg:pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden text-center">
-        <div className="absolute top-0 inset-x-0 h-full bg-gradient-to-b from-indigo-50/50 to-transparent -z-10" />
-        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-indigo-200/30 blur-[130px] rounded-full mix-blend-multiply -z-10" />
+        <div className="absolute top-0 inset-x-0 h-full bg-gradient-to-b from-blue-50/50 to-transparent -z-10" />
+        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-blue-200/30 blur-[130px] rounded-full mix-blend-multiply -z-10" />
 
         <div className="max-w-4xl mx-auto animate-fade-in-up">
-          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-md shadow-sm border border-indigo-100/50 mb-8">
-            <Sparkles className="w-4 h-4 text-indigo-500" />
+          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-md shadow-sm border border-blue-100/50 mb-8">
+            <Sparkles className="w-4 h-4 text-blue-600" />
             <span className="text-sm font-semibold tracking-wide text-slate-700">Flexible Pricing</span>
           </div>
 
@@ -93,7 +93,7 @@ export default function PricingPage() {
           </p>
 
           {/* Special Offer Banner */}
-          <div className="inline-flex flex-col sm:flex-row items-center gap-3 bg-indigo-600 text-white px-6 py-4 rounded-2xl shadow-lg shadow-indigo-500/25">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-3 bg-blue-600 text-white px-6 py-4 rounded-2xl shadow-lg shadow-blue-500/25">
              <Tag className="w-5 h-5 shrink-0" />
              <span className="font-bold tracking-wide">Special offers for new startups, new business persons and students!</span>
           </div>
@@ -109,12 +109,12 @@ export default function PricingPage() {
               key={i}
               className={`relative bg-white rounded-[2rem] p-8 border transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between ${
                 service.popular
-                  ? "border-indigo-500 shadow-[0_20px_50px_-10px_rgba(79,70,229,0.15)] ring-2 ring-indigo-500/10"
+                  ? "border-blue-500 shadow-[0_20px_50px_-10px_rgba(37,99,235,0.15)] ring-2 ring-blue-500/10"
                   : "border-slate-200/60 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.08)]"
               }`}
             >
               {service.popular && (
-                <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-[10px] font-bold uppercase tracking-widest py-1.5 px-4 rounded-full shadow-md whitespace-nowrap">
+                <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-blue-600 to-blue-700 text-white text-[10px] font-bold uppercase tracking-widest py-1.5 px-4 rounded-full shadow-md whitespace-nowrap">
                   Most Requested
                 </span>
               )}
@@ -128,15 +128,15 @@ export default function PricingPage() {
                 <div className="flex flex-col gap-1 mb-8">
                   <span className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">{service.price}</span>
                   {service.price !== "Custom Quote" && (
-                     <span className="text-xs font-bold text-indigo-600 uppercase tracking-widest">* Base Price</span>
+                     <span className="text-xs font-bold text-blue-600 uppercase tracking-widest">* Base Price</span>
                   )}
                 </div>
 
                 <div className="space-y-3 border-t border-slate-100 pt-8 mb-8">
                   {service.features.map((feature, idx) => (
                     <div key={idx} className="flex items-start gap-3">
-                      <div className="w-5 h-5 rounded-full bg-indigo-50 flex items-center justify-center shrink-0 mt-0.5">
-                        <Check className="w-3.5 h-3.5 text-indigo-600" />
+                      <div className="w-5 h-5 rounded-full bg-blue-50 flex items-center justify-center shrink-0 mt-0.5">
+                        <Check className="w-3.5 h-3.5 text-blue-600" />
                       </div>
                       <span className="text-sm font-semibold text-slate-700 leading-tight">{feature}</span>
                     </div>
@@ -148,7 +148,7 @@ export default function PricingPage() {
                 href={`/contact?service=${encodeURIComponent(service.name)}`}
                 className={`w-full py-4 rounded-xl text-sm font-bold uppercase tracking-wide text-center transition-all duration-300 mt-auto ${
                   service.popular
-                    ? "bg-slate-900 text-white hover:bg-indigo-600 shadow-md shadow-slate-900/10"
+                    ? "bg-slate-900 text-white hover:bg-blue-600 shadow-md shadow-slate-900/10"
                     : "bg-slate-50 text-slate-900 hover:bg-slate-200 border border-slate-200"
                 }`}
               >

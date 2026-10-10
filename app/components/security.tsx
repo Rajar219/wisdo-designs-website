@@ -21,7 +21,7 @@ export default function Security() {
     <section className="py-20 sm:py-28 lg:py-36 relative bg-slate-900 overflow-hidden text-slate-300">
       
       {/* Background Glows */}
-      <div className="absolute top-0 left-1/4 w-[400px] h-[400px] bg-indigo-500/20 blur-[120px] rounded-full mix-blend-screen pointer-events-none" />
+      <div className="absolute top-0 left-1/4 w-[400px] h-[400px] bg-blue-600/20 blur-[120px] rounded-full mix-blend-screen pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-emerald-500/10 blur-[150px] rounded-full mix-blend-screen pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -43,8 +43,8 @@ export default function Security() {
           {/* Security Column (Spans 2 columns on lg) */}
           <div className="lg:col-span-2 bg-slate-800/30 border border-slate-700/50 rounded-3xl p-8 sm:p-10 backdrop-blur-sm">
             <div className="flex items-center gap-3 mb-8 pb-6 border-b border-slate-700/50">
-              <div className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center border border-indigo-500/20">
-                <Lock className="w-5 h-5 text-indigo-400" />
+              <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center border border-blue-500/20">
+                <Lock className="w-5 h-5 text-blue-400" />
               </div>
               <h3 className="text-2xl font-bold text-white tracking-tight">Security Practices</h3>
             </div>
@@ -54,8 +54,8 @@ export default function Security() {
                 const Icon = feature.icon;
                 return (
                   <div key={i} className="flex items-center gap-4 group">
-                    <div className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center shrink-0 border border-slate-700 group-hover:border-indigo-500/50 group-hover:bg-indigo-500/10 transition-colors">
-                      <Icon className="w-4 h-4 text-slate-400 group-hover:text-indigo-400 transition-colors" />
+                    <div className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center shrink-0 border border-slate-700 group-hover:border-blue-500/50 group-hover:bg-blue-500/10 transition-colors">
+                      <Icon className="w-4 h-4 text-slate-400 group-hover:text-blue-400 transition-colors" />
                     </div>
                     <span className="font-semibold text-slate-300 group-hover:text-white transition-colors">{feature.name}</span>
                   </div>

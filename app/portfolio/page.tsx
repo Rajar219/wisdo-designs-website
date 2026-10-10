@@ -39,8 +39,8 @@ export default function PortfolioPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         
         {/* Header Section */}
-        <div className="max-w-3xl mb-16 sm:mb-20 text-left border-l-4 border-indigo-600 pl-6 sm:pl-8">
-          <span className="text-xs font-bold tracking-widest text-indigo-600 uppercase block mb-3">
+        <div className="max-w-3xl mb-16 sm:mb-20 text-left border-l-4 border-blue-600 pl-6 sm:pl-8">
+          <span className="text-xs font-bold tracking-widest text-blue-600 uppercase block mb-3">
             Our Work
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-none mb-6">
@@ -72,12 +72,12 @@ export default function PortfolioPage() {
                 {/* Status Badge overlay */}
                 <div className="absolute top-4 left-4">
                   {project.status === "Live" ? (
-                    <span className="inline-flex items-center gap-1.5 bg-emerald-50 border border-emerald-200 text-emerald-700 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-lg">
-                      <CheckCircle2 className="w-3 h-3" />
-                      {project.status}
+                    <span className="inline-flex items-center gap-1.5 bg-white/95 backdrop-blur-md border border-emerald-200 text-emerald-700 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-lg shadow-xs">
+                      <CheckCircle2 className="w-3 h-3 text-emerald-600" />
+                      Completed & Delivered
                     </span>
                   ) : (
-                    <span className="inline-flex items-center gap-1.5 bg-indigo-50 border border-indigo-200 text-indigo-700 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-lg">
+                    <span className="inline-flex items-center gap-1.5 bg-white/95 backdrop-blur-md border border-blue-200 text-blue-700 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-lg shadow-xs">
                       <AlertCircle className="w-3 h-3 animate-pulse" />
                       In Development
                     </span>
@@ -88,11 +88,11 @@ export default function PortfolioPage() {
               {/* Body details */}
               <div className="p-6 sm:p-8 flex flex-col flex-grow">
                 {/* Category header */}
-                <span className="text-[11px] font-extrabold text-indigo-600 uppercase tracking-widest block mb-2">
+                <span className="text-[11px] font-extrabold text-blue-600 uppercase tracking-widest block mb-2">
                   {project.category}
                 </span>
 
-                <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3 tracking-tight group-hover:text-indigo-600 transition-colors">
+                <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3 tracking-tight group-hover:text-blue-600 transition-colors">
                   <Link href={`/portfolio/${project.slug}`}>
                     {project.title}
                   </Link>
@@ -114,22 +114,32 @@ export default function PortfolioPage() {
                   ))}
                 </div>
 
-                {/* Action button */}
-                <div className="pt-4 border-t border-slate-100 mt-auto">
-                  {project.status === "Live" ? (
-                    <Link
-                      href={`/portfolio/${project.slug}`}
-                      className="w-full inline-flex items-center justify-center gap-2 bg-indigo-50 hover:bg-indigo-600 text-indigo-700 hover:text-white font-bold text-sm uppercase tracking-wider py-3.5 rounded-xl shadow-sm transition-all duration-300 active:scale-95"
-                    >
-                      <span>Read Case Study</span>
-                      <ExternalLink className="w-4 h-4" />
-                    </Link>
+                {/* Action buttons */}
+                <div className="pt-4 border-t border-slate-100 mt-auto flex flex-col sm:flex-row gap-2.5">
+                  {project.status === "Live" && project.url ? (
+                    <>
+                      <a
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-blue-600 text-white font-bold text-xs uppercase tracking-wider py-3 px-4 rounded-xl shadow-xs transition-all duration-300 active:scale-95"
+                      >
+                        <span>Visit Website</span>
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                      <Link
+                        href={`/portfolio/${project.slug}`}
+                        className="flex-1 inline-flex items-center justify-center gap-2 bg-blue-50 hover:bg-blue-100 text-blue-700 font-bold text-xs uppercase tracking-wider py-3 px-4 rounded-xl transition-all duration-300 active:scale-95 border border-blue-100/80"
+                      >
+                        <span>Case Study</span>
+                      </Link>
+                    </>
                   ) : (
                     <button
                       disabled
-                      className="w-full inline-flex items-center justify-center gap-2 bg-slate-100 text-slate-400 font-bold text-sm uppercase tracking-wider py-3.5 rounded-xl border border-slate-200 cursor-not-allowed select-none"
+                      className="w-full inline-flex items-center justify-center gap-2 bg-slate-100 text-slate-400 font-bold text-xs uppercase tracking-wider py-3 rounded-xl border border-slate-200 cursor-not-allowed select-none"
                     >
-                      <span>Coming Soon</span>
+                      <span>In Development</span>
                     </button>
                   )}
                 </div>

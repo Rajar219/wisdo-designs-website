@@ -79,7 +79,7 @@ export default async function ServiceDetailsPage({ params }: PageProps) {
         <div className="mb-8">
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-indigo-600 transition-colors uppercase tracking-wider group"
+            className="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors uppercase tracking-wider group"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Back to Services
@@ -138,7 +138,7 @@ export default async function ServiceDetailsPage({ params }: PageProps) {
                 href={`/contact?service=${encodeURIComponent(service.title)}`}
                 eventName="service_cta_click"
                 eventPayload={{ service: service.title, location: "service_detail" }}
-                className="w-full inline-flex items-center justify-center gap-2 bg-indigo-600 text-white py-3.5 rounded-xl font-bold text-sm uppercase tracking-wide hover:bg-indigo-700 transition-all shadow-md active:scale-95"
+                className="w-full inline-flex items-center justify-center gap-2 bg-blue-600 text-white py-3.5 rounded-xl font-bold text-sm uppercase tracking-wide hover:bg-blue-700 transition-all shadow-md active:scale-95"
               >
                 <MessageSquare className="w-4 h-4" />
                 Request a Quote

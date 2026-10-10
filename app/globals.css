@@ -1,14 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Chakra+Petch:wght@500;600;700&family=Orbitron:wght@600;700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-sans: var(--font-outfit), sans-serif;
+  --font-sans: var(--font-outfit), 'Outfit', sans-serif;
+  --font-orbitron: var(--font-orbitron), 'Orbitron', 'Audiowide', 'Chakra Petch', sans-serif;
+}
+
+.font-orbitron {
+  font-family: var(--font-orbitron), 'Orbitron', 'Audiowide', 'Chakra Petch', sans-serif;
 }
 
 :root {
   --background: #ffffff;
   --foreground: #0f172a;
-  --primary: #6366f1; /* Indigo/Purple premium accent */
-  --primary-glow: rgba(99, 102, 241, 0.4);
+  --primary: #2563eb; /* Professional Royal Blue */
+  --primary-glow: rgba(37, 99, 235, 0.25);
 }
 
 html,
@@ -51,14 +57,14 @@ body {
 @media (hover: hover) {
   .glass-card:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 20px 40px -10px rgba(99, 102, 241, 0.15);
+    box-shadow: 0 20px 40px -10px rgba(37, 99, 235, 0.12);
     border: 1px solid rgba(255, 255, 255, 0.9);
   }
 }
 
 /* Premium Typography Gradients */
 .text-gradient {
-  background: linear-gradient(135deg, #1e293b 0%, #6366f1 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #2563eb 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -74,9 +80,9 @@ body {
   z-index: -1;
   background-color: #f8fafc;
   background-image: 
-    radial-gradient(at 0% 0%, hsla(253,16%,7%,0.03) 0, transparent 50%), 
-    radial-gradient(at 50% 0%, hsla(225,39%,30%,0.04) 0, transparent 50%), 
-    radial-gradient(at 100% 0%, hsla(339,49%,30%,0.03) 0, transparent 50%);
+    radial-gradient(at 0% 0%, hsla(215,25%,27%,0.03) 0, transparent 50%), 
+    radial-gradient(at 50% 0%, hsla(221,83%,53%,0.04) 0, transparent 50%), 
+    radial-gradient(at 100% 0%, hsla(217,91%,60%,0.03) 0, transparent 50%);
 }
 
 .glow-orb {

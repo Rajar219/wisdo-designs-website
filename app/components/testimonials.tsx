@@ -28,7 +28,7 @@ export default function Testimonials() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20 animate-fade-in-up">
-          <span className="text-sm font-bold tracking-widest text-indigo-500 uppercase mb-4 block">
+          <span className="text-sm font-bold tracking-widest text-blue-600 uppercase mb-4 block">
             Social Proof
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6">
@@ -47,7 +47,7 @@ export default function Testimonials() {
               className="relative bg-slate-50/50 rounded-3xl p-8 sm:p-10 border border-slate-100 hover:shadow-lg hover:shadow-slate-200/50 hover:bg-white hover:-translate-y-2 transition-all duration-300 flex flex-col group"
             >
               {/* Quote Icon */}
-              <div className="absolute -top-5 -right-2 text-indigo-500/10 group-hover:text-indigo-500/20 transition-colors pointer-events-none">
+              <div className="absolute -top-5 -right-2 text-blue-500/10 group-hover:text-blue-500/20 transition-colors pointer-events-none">
                 <Quote className="w-24 h-24 rotate-180" />
               </div>
 
@@ -62,13 +62,13 @@ export default function Testimonials() {
               </p>
 
               <div className="flex items-center gap-4 mt-auto pt-6 border-t border-slate-200/60">
-                <div className="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center border border-indigo-200 shrink-0">
-                  <span className="text-indigo-600 font-bold text-lg">{testimonial.clientName.charAt(0)}</span>
+                <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center border border-blue-200 shrink-0">
+                  <span className="text-blue-600 font-bold text-lg">{testimonial.clientName.charAt(0)}</span>
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 leading-tight">{testimonial.clientName}</h4>
                   <p className="text-sm font-medium text-slate-500">{testimonial.businessName}</p>
-                  <p className="text-xs font-bold text-indigo-500 uppercase tracking-wider mt-1">
+                  <p className="text-xs font-bold text-blue-600 uppercase tracking-wider mt-1">
                     {testimonial.projectType}
                   </p>
                 </div>

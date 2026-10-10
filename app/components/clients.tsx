@@ -16,48 +16,49 @@ interface Project {
 
 const completedProjects: Project[] = [
   {
+    client: "NMS Dairy Farm",
+    type: "Business Website",
+    problem: "Needed a modern digital presence to showcase fresh farm dairy products and direct-from-farm deliveries with custom domain integration and SEO setup.",
+    solution: "Designed, engineered, and delivered a high-performance responsive website featuring domain integration (nmsdairyfarm.shop) and comprehensive SEO configuration.",
+    features: [
+      "Custom domain integration (nmsdairyfarm.shop)",
+      "Completed SEO setup & metadata",
+      "Farm operations & fresh milk showcase",
+      "Direct customer order channels"
+    ],
+    technologies: ["React", "Next.js", "Tailwind CSS", "Domain Integration", "SEO Setup"],
+    image: "/nms-dairy-farm.png",
+    url: "https://nmsdairyfarm.shop"
+  },
+  {
     client: "INZFYER",
     type: "E-Commerce Website",
-    problem: "Needed an elegant e-commerce platform for a premium boutique selling luxury plushies and gift sets.",
-    solution: "Built a beautiful, modern e-commerce storefront focusing on the premium shopping and gift experience.",
+    problem: "Needed an elegant e-commerce platform for a boutique brand selling cute handmade plushies, keychains, and aesthetic gift sets across India.",
+    solution: "Built a fast, modern digital storefront prioritizing product aesthetics, frictionless browsing, and a seamless customer checkout experience.",
     features: [
-      "Luxury product showcase",
-      "Handcrafted gift sets category",
-      "Responsive modern layout",
-      "Seamless checkout experience"
+      "Cute handmade plushies showcase",
+      "Aesthetic gifts & keychains catalog",
+      "Mobile-first responsive storefront",
+      "Streamlined order & checkout experience"
     ],
     technologies: ["React", "Vite", "JavaScript", "Tailwind CSS"],
     image: "/inzfyer.png",
-    url: "https://www.inzfyer.in/"
+    url: "https://www.inzfyer.in"
   },
   {
-    client: "NMS Dairy Farm",
-    type: "Business Website",
-    problem: "Needed a digital presence to showcase premium dairy products and farm business operations to customers.",
-    solution: "Designed and developed a modern, highly responsive website with customer-friendly navigation.",
+    client: "Saravanan — Senior Advocate Website",
+    type: "Legal Website / Professional Services",
+    problem: "Advocate SARAVANAN.N, Supreme Court of India, required a distinguished, authoritative digital presence for legal representation and advisory counsel.",
+    solution: "Engineered a dignified, responsive legal chamber website highlighting Supreme Court practice areas, credentials, and clear consultation access.",
     features: [
-      "Premium product showcase",
-      "Farm operations overview",
-      "Responsive layout"
+      "Supreme Court chamber profile",
+      "Constitutional, Appellate & Commercial law",
+      "Direct legal consultation inquiry channel",
+      "Responsive editorial layout"
     ],
-    technologies: ["React", "Next.js", "Tailwind CSS", "Vercel Hosting"],
-    image: "/nms-dairy-farm.png",
-    url: "https://nms-dairy-farm.vercel.app/"
-  },
-  {
-    client: "Confusion Clothing",
-    type: "E-Commerce Website",
-    problem: "Required a premium online shopping platform for a boutique clothing brand.",
-    solution: "Built a custom, responsive fashion e-commerce storefront.",
-    features: [
-      "Category sorting",
-      "Product filters",
-      "Responsive layout grids",
-      "Premium shopping experience"
-    ],
-    technologies: ["HTML5", "CSS3", "JavaScript", "GitHub Pages"],
-    image: "/confusion-clothing.png",
-    url: "https://confusionclothing.github.io/shop/"
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "SEO Optimization"],
+    image: "/saravanan-advocate.png",
+    url: "https://saravananadv.world"
   }
 ];
 
@@ -87,7 +88,7 @@ export default function ClientsSection() {
         {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-24 animate-fade-in-up">
           <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-white shadow-[0_4px_12px_rgba(0,0,0,0.03)] border border-slate-200/60 mb-8">
-            <Sparkles className="w-4 h-4 text-indigo-500" />
+            <Sparkles className="w-4 h-4 text-blue-600" />
             <span className="text-sm font-bold tracking-wide text-slate-700 uppercase">Our Work</span>
           </div>
           
@@ -135,7 +136,7 @@ export default function ClientsSection() {
 
 function ProjectCard({ project, status, reverse, priority = false }: { project: Project, status: string, reverse: boolean, priority?: boolean }) {
   return (
-    <div className={`flex flex-col ${reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-8 lg:gap-16 items-center bg-white rounded-[2.5rem] p-6 sm:p-8 lg:p-10 border border-slate-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_50px_-10px_rgba(79,70,229,0.1)] transition-shadow duration-500`}>
+    <div className={`flex flex-col ${reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-8 lg:gap-16 items-center bg-white rounded-[2.5rem] p-6 sm:p-8 lg:p-10 border border-slate-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_50px_-10px_rgba(37,99,235,0.1)] transition-shadow duration-500`}>
       
       {/* Image Side */}
       <div className="w-full lg:w-1/2 relative aspect-[4/3] rounded-[1.5rem] overflow-hidden bg-slate-50 border border-slate-100 group">
@@ -151,12 +152,12 @@ function ProjectCard({ project, status, reverse, priority = false }: { project: 
         {/* Status Badge overlay */}
         <div className="absolute top-4 left-4 sm:top-6 sm:left-6">
           {status === "Completed" ? (
-            <span className="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur-md border border-emerald-100 text-emerald-700 text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-xl shadow-sm">
-              <CheckCircle2 className="w-4 h-4" />
-              Live Project
+            <span className="inline-flex items-center gap-1.5 bg-white/95 backdrop-blur-md border border-emerald-200 text-emerald-700 text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-xl shadow-xs">
+              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+              Completed & Delivered
             </span>
           ) : (
-            <span className="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur-md border border-indigo-100 text-indigo-700 text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-xl shadow-sm">
+            <span className="inline-flex items-center gap-1.5 bg-white/95 backdrop-blur-md border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-xl shadow-xs">
               <AlertCircle className="w-4 h-4 animate-pulse" />
               In Development
             </span>
@@ -166,7 +167,7 @@ function ProjectCard({ project, status, reverse, priority = false }: { project: 
 
       {/* Content Side */}
       <div className="w-full lg:w-1/2 flex flex-col">
-        <div className="inline-block px-3 py-1.5 text-[10px] font-bold text-indigo-600 bg-indigo-50 border border-indigo-100 rounded-lg uppercase tracking-wider mb-4 w-max">
+        <div className="inline-block px-3 py-1.5 text-[10px] font-bold text-blue-600 bg-blue-50 border border-blue-100 rounded-lg uppercase tracking-wider mb-4 w-max">
           {project.type}
         </div>
         
@@ -207,7 +208,7 @@ function ProjectCard({ project, status, reverse, priority = false }: { project: 
             <ul className="space-y-2">
               {project.features.map((feature, i) => (
                 <li key={i} className="text-sm text-slate-600 font-medium flex items-start gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 mt-1.5 shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-1.5 shrink-0" />
                   {feature}
                 </li>
               ))}
@@ -233,9 +234,9 @@ function ProjectCard({ project, status, reverse, priority = false }: { project: 
             href={project.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-auto inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-indigo-600 text-white font-bold text-sm uppercase tracking-wide py-4 px-8 rounded-xl shadow-md transition-all duration-300 active:scale-95 w-full sm:w-max"
+            className="mt-auto inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-blue-600 text-white font-bold text-sm uppercase tracking-wide py-4 px-8 rounded-xl shadow-md transition-all duration-300 active:scale-95 w-full sm:w-max"
           >
-            <span>View Live Project</span>
+            <span>Visit Website</span>
             <ExternalLink className="w-4 h-4" />
           </a>
         ) : (

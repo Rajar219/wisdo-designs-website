@@ -39,7 +39,7 @@ export default function BlogPreview() {
             <article
               key={post.slug}
               style={{ animationDelay: `${index * 150}ms`, animationFillMode: 'both' }}
-              className="bg-white rounded-3xl border border-slate-200/60 shadow-sm hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-500 overflow-hidden flex flex-col h-full group animate-fade-in-up"
+              className="bg-white rounded-3xl border border-slate-200/60 shadow-sm hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-500 overflow-hidden flex flex-col h-full group animate-fade-in-up"
             >
               <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">
                 <Image
@@ -68,7 +68,7 @@ export default function BlogPreview() {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold text-slate-900 mb-3 tracking-tight group-hover:text-indigo-600 transition-colors leading-snug line-clamp-2">
+                <h3 className="text-xl font-bold text-slate-900 mb-3 tracking-tight group-hover:text-blue-600 transition-colors leading-snug line-clamp-2">
                   <Link href={`/blog/${post.slug}`} className="before:absolute before:inset-0">
                     {post.title}
                   </Link>
@@ -78,7 +78,7 @@ export default function BlogPreview() {
                   {post.description}
                 </p>
 
-                <div className="mt-auto pt-4 flex items-center text-sm font-bold text-indigo-600 uppercase tracking-wider group-hover:text-indigo-800 transition-colors">
+                <div className="mt-auto pt-4 flex items-center text-sm font-bold text-blue-600 uppercase tracking-wider group-hover:text-blue-800 transition-colors">
                   Read Article <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>

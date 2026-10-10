@@ -22,7 +22,7 @@ export const servicesData: ServiceData[] = [
     seoTitle: "Professional Website Development Services | Wisdo Tech",
     description: "We build fast, secure, and search-optimized business websites that drive conversions and represent your brand perfectly across all devices.",
     iconName: "MonitorPlay",
-    color: "from-blue-500 to-indigo-500",
+    color: "from-blue-600 to-blue-700",
     bg: "bg-blue-50",
     sections: [
       {
@@ -52,8 +52,8 @@ export const servicesData: ServiceData[] = [
     seoTitle: "Custom Software Development Company | Wisdo Tech",
     description: "Bespoke software systems, SaaS applications, and internal tools engineered from scratch to resolve your specific operational bottlenecks.",
     iconName: "Cpu",
-    color: "from-purple-500 to-indigo-500",
-    bg: "bg-purple-50",
+    color: "from-slate-800 to-blue-900",
+    bg: "bg-blue-50",
     sections: [
       {
         heading: "Bespoke Business Systems",
@@ -82,8 +82,8 @@ export const servicesData: ServiceData[] = [
     seoTitle: "UI/UX & Graphic Design Services | Wisdo Tech",
     description: "Premium UI/UX design, brand identity, and graphic design services that elevate your digital presence and engage your target audience.",
     iconName: "AppWindow",
-    color: "from-fuchsia-500 to-pink-500",
-    bg: "bg-fuchsia-50",
+    color: "from-sky-500 to-blue-600",
+    bg: "bg-sky-50",
     sections: [
       {
         heading: "User Interface (UI) & User Experience (UX)",

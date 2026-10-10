@@ -108,7 +108,7 @@ export default function Solutions() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20 animate-fade-in-up">
-          <span className="text-sm font-bold tracking-widest text-indigo-500 uppercase mb-4 block">
+          <span className="text-sm font-bold tracking-widest text-blue-600 uppercase mb-4 block">
             Industry Expertise
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6">
@@ -133,8 +133,8 @@ export default function Solutions() {
                   onClick={() => setActiveTab(solution.id)}
                   className={`flex items-center gap-4 w-full text-left px-5 py-4 rounded-2xl transition-all duration-300 ${
                     isActive 
-                      ? "bg-indigo-600 text-white shadow-md shadow-indigo-500/25" 
-                      : "bg-transparent text-slate-600 hover:bg-slate-50 hover:text-indigo-600"
+                      ? "bg-blue-600 text-white shadow-md shadow-blue-500/25" 
+                      : "bg-transparent text-slate-600 hover:bg-slate-50 hover:text-blue-600"
                   }`}
                 >
                   <Icon className={`w-5 h-5 ${isActive ? "text-white" : "text-slate-400"}`} />
@@ -145,15 +145,15 @@ export default function Solutions() {
           </div>
 
           {/* Content Area */}
-          <div className="w-full lg:w-2/3 bg-white rounded-[2rem] border border-slate-100 shadow-[0_20px_50px_-10px_rgba(79,70,229,0.05)] p-8 sm:p-12 min-h-[400px] flex flex-col relative overflow-hidden transition-all duration-500">
+          <div className="w-full lg:w-2/3 bg-white rounded-[2rem] border border-slate-100 shadow-[0_20px_50px_-10px_rgba(37,99,235,0.05)] p-8 sm:p-12 min-h-[400px] flex flex-col relative overflow-hidden transition-all duration-500">
             
             {/* Background subtle icon */}
-            <div className="absolute -bottom-10 -right-10 text-indigo-50/50 pointer-events-none">
+            <div className="absolute -bottom-10 -right-10 text-blue-50/50 pointer-events-none">
                <activeContent.icon className="w-64 h-64" />
             </div>
 
             <div className="relative z-10 flex-grow">
-              <div className="inline-block px-3 py-1.5 text-[10px] font-bold text-indigo-600 bg-indigo-50 border border-indigo-100 rounded-lg uppercase tracking-wider mb-6">
+              <div className="inline-block px-3 py-1.5 text-[10px] font-bold text-blue-600 bg-blue-50 border border-blue-100 rounded-lg uppercase tracking-wider mb-6">
                 Possible Solutions
               </div>
               
@@ -178,7 +178,7 @@ export default function Solutions() {
             <div className="relative z-10 pt-8 border-t border-slate-100 mt-auto">
               <Link 
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-wide hover:bg-indigo-600 transition-colors shadow-sm w-full sm:w-max justify-center"
+                className="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-wide hover:bg-blue-600 transition-colors shadow-sm w-full sm:w-max justify-center"
               >
                 <span>Start Your Project</span>
                 <ArrowRight className="w-4 h-4" />

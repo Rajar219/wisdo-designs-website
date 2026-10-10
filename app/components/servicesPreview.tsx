@@ -6,9 +6,9 @@ const serviceCategories = [
     category: "Software Development",
     desc: "Bespoke tools and systems built to streamline your custom workflows.",
     icon: Cpu,
-    accent: "text-indigo-600",
-    bg: "bg-indigo-50",
-    border: "border-indigo-100/50",
+    accent: "text-blue-600",
+    bg: "bg-blue-50",
+    border: "border-blue-100/50",
     deliverables: [
       "Custom business software",
       "POS and billing systems",
@@ -55,9 +55,9 @@ const serviceCategories = [
     category: "Digital Marketing",
     desc: "Data-driven marketing strategies to increase reach and conversions.",
     icon: Megaphone,
-    accent: "text-fuchsia-600",
-    bg: "bg-fuchsia-50",
-    border: "border-fuchsia-100/50",
+    accent: "text-sky-600",
+    bg: "bg-sky-50",
+    border: "border-sky-100/50",
     deliverables: [
       "SEO",
       "Google Business Profile optimization",
@@ -73,12 +73,12 @@ export default function ServicesPreview() {
   return (
     <section className="py-16 sm:py-20 lg:py-32 relative z-10 bg-slate-50/50 border-t border-slate-100 shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.02)] overflow-hidden">
       {/* Background Decor */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-indigo-50/30 rounded-full blur-3xl -z-10" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-50/40 rounded-full blur-3xl -z-10" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 lg:mb-20 animate-fade-in-up">
-          <span className="text-sm font-bold tracking-widest text-indigo-500 uppercase mb-4 block">
+          <span className="text-sm font-bold tracking-widest text-blue-600 uppercase mb-4 block">
             What We Do
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6">
@@ -95,7 +95,7 @@ export default function ServicesPreview() {
             return (
               <div 
                 key={groupIdx} 
-                className="bg-white rounded-[2rem] p-8 sm:p-10 border border-slate-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.03)] hover:-translate-y-2 hover:shadow-[0_20px_50px_-10px_rgba(79,70,229,0.1)] transition-all duration-500 group flex flex-col relative animate-fade-in-up"
+                className="bg-white rounded-[2rem] p-8 sm:p-10 border border-slate-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.03)] hover:-translate-y-2 hover:shadow-[0_20px_50px_-10px_rgba(37,99,235,0.1)] transition-all duration-500 group flex flex-col relative animate-fade-in-up"
                 style={{ animationDelay: `${groupIdx * 150}ms`, animationFillMode: 'both' }}
               >
                 <div className={`w-16 h-16 rounded-2xl ${group.bg} flex items-center justify-center ${group.accent} mb-8 shrink-0 border ${group.border} shadow-sm transition-transform duration-500 group-hover:scale-110`}>

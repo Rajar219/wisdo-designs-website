@@ -72,7 +72,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
         <div className="mb-8">
           <Link
             href="/portfolio"
-            className="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-indigo-600 transition-colors uppercase tracking-wider group"
+            className="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors uppercase tracking-wider group"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Back to Portfolio
@@ -81,7 +81,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
         {/* Article Header */}
         <header className="mb-10 sm:mb-14">
-          <span className="inline-block px-3 py-1.5 text-xs font-bold uppercase tracking-wider bg-indigo-50 border border-indigo-100 text-indigo-600 rounded-lg mb-6">
+          <span className="inline-block px-3 py-1.5 text-xs font-bold uppercase tracking-wider bg-blue-50 border border-blue-100 text-blue-600 rounded-lg mb-6">
             {project.category}
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-slate-900 tracking-tight leading-[1.15] mb-6 sm:mb-8">
@@ -93,17 +93,17 @@ export default async function CaseStudyPage({ params }: PageProps) {
           
           <div className="flex flex-wrap items-center gap-4 text-sm font-semibold text-slate-500 pb-8 border-b border-slate-200/60">
             <span className="inline-flex items-center gap-1.5 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-lg">
-              <CheckCircle2 className="w-3 h-3" />
-              {project.status}
+              <CheckCircle2 className="w-3 h-3 text-emerald-600" />
+              Completed & Delivered
             </span>
             {project.url && (
               <a
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-indigo-600 hover:text-indigo-700 transition-colors"
+                className="inline-flex items-center gap-1.5 text-blue-600 hover:text-blue-700 font-bold transition-colors"
               >
-                View Live Project <ExternalLink className="w-4 h-4" />
+                Visit Website <ExternalLink className="w-4 h-4" />
               </a>
             )}
           </div>
@@ -169,7 +169,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 href="/contact"
                 eventName="service_cta_click"
                 eventPayload={{ location: "case_study_sidebar", project: project.title }}
-                className="w-full inline-flex items-center justify-center gap-2 bg-indigo-600 text-white py-3.5 rounded-xl font-bold text-sm uppercase tracking-wide hover:bg-indigo-700 transition-all shadow-md active:scale-95"
+                className="w-full inline-flex items-center justify-center gap-2 bg-blue-600 text-white py-3.5 rounded-xl font-bold text-sm uppercase tracking-wide hover:bg-blue-700 transition-all shadow-md active:scale-95"
               >
                 <MessageSquare className="w-4 h-4" />
                 Get in Touch

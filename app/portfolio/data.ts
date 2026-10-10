@@ -8,7 +8,7 @@ export interface CaseStudy {
   title: string;
   seoTitle: string;
   description: string;
-  category: "Business Website" | "E-Commerce Website" | "Business Software";
+  category: "Business Website" | "E-Commerce Website" | "Business Software" | "Legal Website / Professional Services";
   status: "Live" | "In Development";
   image: string;
   url?: string;
@@ -18,52 +18,77 @@ export interface CaseStudy {
 
 export const portfolioData: CaseStudy[] = [
   {
-    slug: "inzfyer",
-    title: "INZFYER",
-    seoTitle: "INZFYER Case Study | E-Commerce Website Development | Wisdo Tech",
-    description: "A premium boutique e-commerce platform for luxury plushies, handcrafted toy gift sets, and artisanal ceramics.",
-    category: "E-Commerce Website",
+    slug: "nms-dairy-farm",
+    title: "NMS Dairy Farm",
+    seoTitle: "NMS Dairy Farm Case Study | Business Website Development | Wisdo Tech",
+    description: "A modern dairy farm website showcasing fresh cow and buffalo milk, farm operations, and direct customer ordering, with completed custom domain integration and SEO setup.",
+    category: "Business Website",
     status: "Live",
-    image: "/inzfyer.png",
-    url: "https://www.inzfyer.in/",
-    technologies: ["React", "Vite", "JavaScript", "Tailwind CSS"],
+    image: "/nms-dairy-farm.png",
+    url: "https://nmsdairyfarm.shop",
+    technologies: ["React", "Next.js", "Tailwind CSS", "Domain Integration", "SEO Setup"],
     sections: [
       {
         heading: "The Challenge",
-        content: "INZFYER needed a premium digital storefront that reflected the luxury and craftsmanship of their handcrafted toys and ceramics. The existing solution lacked the visual fidelity and smooth user experience required to convert high-end shoppers, and the checkout flow was causing significant drop-offs."
+        content: "NMS Dairy Farm needed a professional digital presence to transition to direct customer delivery and local partnerships. They required custom domain configuration (nmsdairyfarm.shop) and structured SEO setup for local customer discovery."
       },
       {
         heading: "Our Approach",
-        content: "We completely redesigned the user interface with a mobile-first approach, prioritizing high-resolution imagery, subtle animations, and a seamless unboxing experience online. By leveraging React and Vite, we ensured the site was lightning fast, instantly loading product grids without lag. We also streamlined the checkout process to minimize friction."
+        content: "We developed a high-speed Next.js application highlighting farm-fresh milk products and direct WhatsApp order channels. We completed full DNS domain integration for nmsdairyfarm.shop and deployed structured on-page SEO metadata."
       },
       {
         heading: "The Results",
-        content: "The new platform delivered a 40% increase in mobile conversion rates within the first month. The site's performance metrics improved drastically, leading to better organic search rankings and longer average session durations."
+        content: "The completed and delivered website provides seamless domain access, clear product details, and reliable ordering channels for households and commercial customers."
       }
     ]
   },
   {
-    slug: "nms-dairy-farm",
-    title: "NMS Dairy Farm",
-    seoTitle: "NMS Dairy Farm Case Study | Business Website Development | Wisdo Tech",
-    description: "A modern dairy farm website showcasing premium dairy products, farm business operations, and customer-friendly navigation structured inside a highly responsive layout.",
-    category: "Business Website",
+    slug: "inzfyer",
+    title: "INZFYER",
+    seoTitle: "INZFYER Case Study | E-Commerce Website Development | Wisdo Tech",
+    description: "A delightful boutique e-commerce platform for cute handmade plushies, aesthetic keychains, and artisanal gift sets delivered across India.",
+    category: "E-Commerce Website",
     status: "Live",
-    image: "/nms-dairy-farm.png",
-    url: "https://nms-dairy-farm.vercel.app/",
-    technologies: ["React", "Next.js", "Tailwind CSS", "Lucide Icons", "Vercel Hosting"],
+    image: "/inzfyer.png",
+    url: "https://www.inzfyer.in",
+    technologies: ["React", "Vite", "JavaScript", "Tailwind CSS"],
     sections: [
       {
         heading: "The Challenge",
-        content: "NMS Dairy Farm had a strong local presence but zero digital footprint. They needed a professional website to showcase their farm operations, educate consumers about their organic processes, and provide clear channels for B2B and B2C inquiries."
+        content: "INZFYER required a modern, highly aesthetic digital storefront to showcase their handcrafted plushies, cute keychains, and surprise gift collections with fluid mobile navigation and zero lag."
       },
       {
         heading: "Our Approach",
-        content: "We utilized Next.js to build a robust, SEO-optimized static site. The design language was crafted to feel organic and trustworthy, utilizing clean layouts and high-quality photography. We implemented clear Call-To-Action (CTA) sections directing users to WhatsApp and contact forms for seamless inquiries."
+        content: "We engineered an ultra-fast storefront using React and Vite, focusing on vibrant visual product cards, intuitive category browsing, and a frictionless mobile checkout flow."
       },
       {
         heading: "The Results",
-        content: "The new website established instant credibility for NMS Dairy Farm in the digital space. They saw a significant uptick in wholesale inquiries and local retail partnerships, directly attributed to their new professional online presence."
+        content: "The completed and delivered platform offers a delightful gift shopping experience, establishing a distinctive online brand identity and smooth ordering flow."
+      }
+    ]
+  },
+  {
+    slug: "saravanan-senior-advocate",
+    title: "Saravanan — Senior Advocate Website",
+    seoTitle: "Saravanan Senior Advocate Case Study | Legal Website Development | Wisdo Tech",
+    description: "An authoritative, dignified legal chamber website engineered for Advocate SARAVANAN.N, Supreme Court of India, featuring practice areas, chamber profile, and direct consultation channels.",
+    category: "Legal Website / Professional Services",
+    status: "Live",
+    image: "/saravanan-advocate.png",
+    url: "https://saravananadv.world",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "SEO Optimization", "Responsive Design"],
+    sections: [
+      {
+        heading: "The Challenge",
+        content: "Advocate SARAVANAN.N required a distinguished web presence representing his chamber at the Supreme Court of India. The platform needed to communicate legal expertise with dignity, clarity, and strict adherence to professional standards."
+      },
+      {
+        heading: "Our Approach",
+        content: "We built an authoritative, high-performance web experience highlighting core practice areas—including Constitutional Law, Appellate Practice, Commercial Disputes, and Civil Litigation—with rapid load times and direct consultation access."
+      },
+      {
+        heading: "The Results",
+        content: "The delivered website serves as a sophisticated digital chamber presence, providing individuals and corporate clients with direct access to professional legal representation and advisory counsel."
       }
     ]
   },
@@ -80,15 +105,15 @@ export const portfolioData: CaseStudy[] = [
     sections: [
       {
         heading: "The Challenge",
-        content: "Confusion Clothing required a sleek, fast, and highly visual storefront to showcase their latest fashion drops. The primary challenge was building a highly responsive grid system that looked editorial on desktop while remaining incredibly easy to navigate on mobile devices."
+        content: "Confusion Clothing required a sleek, fast, and highly visual storefront to showcase their latest fashion drops with responsive layouts."
       },
       {
         heading: "Our Approach",
-        content: "We developed a custom frontend using raw HTML5, CSS3, and JavaScript to guarantee zero bloat and maximum performance. We implemented advanced CSS Grid and Flexbox techniques to create dynamic product galleries, along with custom JavaScript for seamless category filtering without page reloads."
+        content: "We developed a custom frontend using lightweight HTML5, CSS3, and JavaScript with responsive grid layouts and intuitive product filtering."
       },
       {
         heading: "The Results",
-        content: "The lightweight architecture resulted in near-instant page loads. The boutique aesthetic of the site perfectly matched the brand's identity, resulting in higher engagement and a significant reduction in bounce rates."
+        content: "The lightweight architecture delivered rapid page loads and an engaging shopping experience."
       }
     ]
   }

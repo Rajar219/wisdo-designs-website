@@ -115,9 +115,9 @@ function QuoteFormContent() {
   return (
     <div className="bg-slate-50 min-h-screen">
       <section className="relative pt-28 pb-12 sm:pt-36 sm:pb-16 lg:pt-52 lg:pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute top-0 inset-x-0 h-full bg-gradient-to-b from-indigo-50/50 to-transparent -z-10" />
+        <div className="absolute top-0 inset-x-0 h-full bg-gradient-to-b from-blue-50/50 to-transparent -z-10" />
         <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
-          <p className="text-sm font-bold tracking-widest text-indigo-500 uppercase mb-4">
+          <p className="text-sm font-bold tracking-widest text-blue-600 uppercase mb-4">
             Request A Quote
           </p>
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-4 sm:mb-6 drop-shadow-sm">
@@ -131,11 +131,11 @@ function QuoteFormContent() {
 
       <section className="pb-16 sm:pb-24 lg:pb-48 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto animate-fade-in-up">
-          <div className="bg-white rounded-[2rem] p-6 sm:p-8 md:p-12 border border-slate-100 shadow-[0_20px_60px_-15px_rgba(49,46,129,0.05)] relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-48 h-48 sm:w-64 sm:h-64 bg-indigo-50/50 rounded-bl-full -z-10" />
+          <div className="bg-white rounded-[2rem] p-6 sm:p-8 md:p-12 border border-slate-100 shadow-[0_20px_60px_-15px_rgba(15,23,42,0.05)] relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-48 h-48 sm:w-64 sm:h-64 bg-blue-50/50 rounded-bl-full -z-10" />
 
             <div className="flex items-center gap-4 mb-2">
-                <FileText className="w-8 h-8 text-indigo-600" />
+                <FileText className="w-8 h-8 text-blue-600" />
                 <h2 className="text-2xl font-bold text-slate-900 tracking-tight">Project Details</h2>
             </div>
             <p className="text-slate-500 mb-10">Provide as much detail as possible to receive an accurate estimate.</p>
@@ -153,7 +153,7 @@ function QuoteFormContent() {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Your Name"
-                    className={`w-full bg-slate-50 border ${errors.name ? 'border-red-500' : 'border-slate-200 focus:border-indigo-500'} rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all`}
+                    className={`w-full bg-slate-50 border ${errors.name ? 'border-red-500' : 'border-slate-200 focus:border-blue-500'} rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all`}
                   />
                   {errors.name && <p className="text-red-500 text-xs font-medium">{errors.name[0]}</p>}
                 </div>
@@ -166,7 +166,7 @@ function QuoteFormContent() {
                     value={formData.businessName}
                     onChange={handleChange}
                     placeholder="Company or Brand"
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all"
                   />
                 </div>
               </div>
@@ -181,7 +181,7 @@ function QuoteFormContent() {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="+91 90000 00000"
-                    className={`w-full bg-slate-50 border ${errors.phone ? 'border-red-500' : 'border-slate-200 focus:border-indigo-500'} rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all`}
+                    className={`w-full bg-slate-50 border ${errors.phone ? 'border-red-500' : 'border-slate-200 focus:border-blue-500'} rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all`}
                   />
                   {errors.phone && <p className="text-red-500 text-xs font-medium">{errors.phone[0]}</p>}
                 </div>
@@ -194,7 +194,7 @@ function QuoteFormContent() {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="email@example.com"
-                    className={`w-full bg-slate-50 border ${errors.email ? 'border-red-500' : 'border-slate-200 focus:border-indigo-500'} rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all`}
+                    className={`w-full bg-slate-50 border ${errors.email ? 'border-red-500' : 'border-slate-200 focus:border-blue-500'} rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all`}
                   />
                   {errors.email && <p className="text-red-500 text-xs font-medium">{errors.email[0]}</p>}
                 </div>
@@ -208,7 +208,7 @@ function QuoteFormContent() {
                     name="serviceRequired"
                     value={formData.serviceRequired}
                     onChange={handleChange}
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all appearance-none cursor-pointer"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all appearance-none cursor-pointer"
                   >
                     <option value="Software Development">Software Development</option>
                     <option value="Website Development">Website Development</option>
@@ -225,7 +225,7 @@ function QuoteFormContent() {
                     name="expectedTimeline"
                     value={formData.expectedTimeline}
                     onChange={handleChange}
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all appearance-none cursor-pointer"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all appearance-none cursor-pointer"
                   >
                     <option value="As soon as possible">As soon as possible</option>
                     <option value="Within 1 month">Within 1 month</option>
@@ -245,7 +245,7 @@ function QuoteFormContent() {
                   value={formData.budgetRange}
                   onChange={handleChange}
                   placeholder="e.g. price starts from ₹2,000"
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all"
+                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all"
                 />
               </div>
 
@@ -258,7 +258,7 @@ function QuoteFormContent() {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Tell us about your project goals and specific requirements..."
-                  className={`w-full bg-slate-50 border ${errors.message ? 'border-red-500' : 'border-slate-200 focus:border-indigo-500'} rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all resize-none`}
+                  className={`w-full bg-slate-50 border ${errors.message ? 'border-red-500' : 'border-slate-200 focus:border-blue-500'} rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all resize-none`}
                 ></textarea>
                 {errors.message && <p className="text-red-500 text-xs font-medium">{errors.message[0]}</p>}
               </div>
@@ -272,7 +272,7 @@ function QuoteFormContent() {
               <div className="pt-4 flex justify-end">
                 <button 
                   disabled={isSubmitting}
-                  className="w-full sm:w-auto bg-slate-900 text-white font-medium px-12 py-4 rounded-xl flex items-center justify-center gap-2 hover:bg-indigo-600 transition-all duration-300 shadow-xl shadow-slate-900/10 hover:shadow-indigo-500/30 disabled:opacity-70 disabled:cursor-not-allowed"
+                  className="w-full sm:w-auto bg-slate-900 text-white font-medium px-12 py-4 rounded-xl flex items-center justify-center gap-2 hover:bg-blue-600 transition-all duration-300 shadow-xl shadow-slate-900/10 hover:shadow-blue-500/30 disabled:opacity-70 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
                     <>

@@ -7,11 +7,11 @@ const steps = [
     desc: "Understand the business and requirements.",
     icon: Search,
     colorClasses: {
-      border: "border-indigo-100",
-      bg: "bg-indigo-50",
-      text: "text-indigo-600",
-      shadow: "shadow-indigo-500/20",
-      accent: "text-indigo-500"
+      border: "border-blue-100",
+      bg: "bg-blue-50",
+      text: "text-blue-600",
+      shadow: "shadow-blue-500/20",
+      accent: "text-blue-600"
     }
   },
   {
@@ -20,11 +20,11 @@ const steps = [
     desc: "Define scope, features, timeline and technical approach.",
     icon: Target,
     colorClasses: {
-      border: "border-fuchsia-100",
-      bg: "bg-fuchsia-50",
-      text: "text-fuchsia-600",
-      shadow: "shadow-fuchsia-500/20",
-      accent: "text-fuchsia-500"
+      border: "border-slate-200",
+      bg: "bg-slate-100",
+      text: "text-slate-800",
+      shadow: "shadow-slate-500/20",
+      accent: "text-slate-700"
     }
   },
   {
@@ -100,7 +100,7 @@ export default function Process() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-24 animate-fade-in-up">
-          <span className="text-sm font-bold tracking-widest text-indigo-500 uppercase mb-4 block">
+          <span className="text-sm font-bold tracking-widest text-blue-600 uppercase mb-4 block">
             How We Work
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6">
