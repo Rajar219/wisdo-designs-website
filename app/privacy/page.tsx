@@ -68,8 +68,8 @@ export default function PrivacyPage() {
             <p className="text-sm text-slate-500 font-light">
               If you have any questions or clarifications regarding this Privacy Policy, please contact our core operations team at:
               <br />
-              <a href="mailto:wisdodesigns@gmail.com" className="text-indigo-600 hover:text-indigo-700 font-bold mt-2 inline-block">
-                wisdodesigns@gmail.com
+              <a href="mailto:wisdotech1@gmail.com" className="text-indigo-600 hover:text-indigo-700 font-bold mt-2 inline-block">
+                wisdotech1@gmail.com
               </a>
             </p>
           </section>

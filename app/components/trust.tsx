@@ -55,11 +55,11 @@ export default function Trust() {
           </TrackedLink>
           <span className="text-white/20 hidden sm:inline">|</span>
           <a
-            href="mailto:wisdodesigns@gmail.com"
+            href="mailto:wisdotech1@gmail.com"
             className="flex items-center gap-1.5 hover:text-indigo-400 transition-colors"
           >
             <Mail className="w-4 h-4 text-indigo-400 shrink-0" />
-            <span>Email: wisdodesigns@gmail.com</span>
+            <span>Email: wisdotech1@gmail.com</span>
           </a>
         </div>
       </div>

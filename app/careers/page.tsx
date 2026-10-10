@@ -119,7 +119,7 @@ export default function CareersPage() {
                 <p className="text-sm text-slate-500 font-medium leading-relaxed max-w-xl">{pos.desc}</p>
               </div>
               <a
-                href={`mailto:wisdodesigns@gmail.com?subject=Application%20for%20${encodeURIComponent(pos.title)}`}
+                href={`mailto:wisdotech1@gmail.com?subject=Application%20for%20${encodeURIComponent(pos.title)}`}
                 className="inline-flex items-center justify-center px-6 py-3.5 bg-slate-900 text-white font-bold uppercase tracking-wide text-xs rounded-xl hover:bg-indigo-600 transition-all shadow-md hover:shadow-indigo-500/25 shrink-0"
               >
                 Apply Now
@@ -134,7 +134,7 @@ export default function CareersPage() {
               We are always looking for passionate builders. Drop us a mail with your portfolio, GitHub link, and resume, and we will get back to you!
             </p>
             <a
-              href="mailto:wisdodesigns@gmail.com?subject=General%20Careers%20Inquiry"
+              href="mailto:wisdotech1@gmail.com?subject=General%20Careers%20Inquiry"
               className="inline-flex items-center gap-2 px-8 py-3.5 bg-white border border-indigo-100 hover:border-indigo-500/50 text-indigo-600 rounded-xl font-semibold shadow-sm transition-all"
             >
               <Mail className="w-4 h-4" />

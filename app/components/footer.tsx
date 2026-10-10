@@ -20,9 +20,9 @@ export default function Footer() {
                 <MapPin className="w-5 h-5 text-indigo-500 shrink-0" />
                 <span>Chennai, India</span>
               </div>
-              <a href="mailto:wisdodesigns@gmail.com" className="flex items-center gap-3 text-slate-600 text-sm font-medium hover:text-indigo-600 transition-colors">
+              <a href="mailto:wisdotech1@gmail.com" className="flex items-center gap-3 text-slate-600 text-sm font-medium hover:text-indigo-600 transition-colors">
                 <Mail className="w-5 h-5 text-indigo-500 shrink-0" />
-                wisdodesigns@gmail.com
+                wisdotech1@gmail.com
               </a>
               <a href="tel:+919787362199" className="flex items-center gap-3 text-slate-600 text-sm font-medium hover:text-indigo-600 transition-colors">
                 <Phone className="w-5 h-5 text-indigo-500 shrink-0" />

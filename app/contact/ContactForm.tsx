@@ -2,7 +2,7 @@
 
 import { useState, Suspense, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Mail, MessageCircle, MapPin, Send, CheckCircle2, Loader2 } from "lucide-react";
+import { Mail, MessageCircle, MapPin, Send, Loader2 } from "lucide-react";
 import { submitContactForm } from "../actions/contact";
 import { contactSchema, ContactFormData } from "../lib/schemas";
 import { trackEvent } from "../lib/analytics";
@@ -35,7 +35,7 @@ function ContactFormContent() {
     if (serviceParam) {
       const allowedServices = ["Software Development", "Website Development", "Designing", "Digital Marketing", "Other"];
       if (allowedServices.includes(serviceParam)) {
-        setFormData(prev => ({ ...prev, serviceRequired: serviceParam as any }));
+        setFormData(prev => ({ ...prev, serviceRequired: serviceParam as ContactFormData["serviceRequired"] }));
       } else {
         // Fallback for mappings
         if (serviceParam.includes("Web") || serviceParam.includes("Site")) {
@@ -119,13 +119,13 @@ function ContactFormContent() {
   return (
     <div className="bg-slate-50 min-h-screen">
       {/* Page Header */}
-      <section className="relative pt-28 pb-12 sm:pt-36 sm:pb-16 lg:pt-52 lg:pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative pt-28 pb-12 sm:pt-36 sm:pb-16 lg:pt-52 lg:pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden w-full">
         <div className="absolute top-0 inset-x-0 h-full bg-gradient-to-b from-indigo-50/50 to-transparent -z-10" />
-        <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
+        <div className="max-w-4xl mx-auto text-center animate-fade-in-up w-full min-w-0">
           <p className="text-sm font-bold tracking-widest text-indigo-500 uppercase mb-4">
             Get in Touch
           </p>
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-4 sm:mb-6 drop-shadow-sm">
+          <h1 className="text-3xl sm:text-5xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-4 sm:mb-6 drop-shadow-sm">
             Let&apos;s Build Something <br className="hidden md:block" /> <span className="text-gradient">Incredible</span>
           </h1>
           <p className="text-base sm:text-lg lg:text-2xl text-slate-500 leading-relaxed font-light max-w-2xl mx-auto">
@@ -135,49 +135,49 @@ function ContactFormContent() {
       </section>
 
       {/* Two-Column Contact Section */}
-      <section className="pb-16 sm:pb-24 lg:pb-48 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-5 gap-10 sm:gap-12 lg:gap-16 items-start">
+      <section className="pb-16 sm:pb-24 lg:pb-48 px-4 sm:px-6 lg:px-8 relative z-10 w-full overflow-hidden">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-8 sm:gap-12 lg:gap-16 items-start w-full">
 
           {/* Left Column: Contact Info */}
           <div 
             style={{ animationDelay: '100ms', animationFillMode: 'both' }}
-            className="lg:col-span-2 space-y-6 sm:space-y-8 animate-fade-in-up"
+            className="lg:col-span-2 space-y-6 sm:space-y-8 animate-fade-in-up min-w-0 w-full"
           >
-            <div className="bg-white rounded-[2rem] p-6 sm:p-8 lg:p-10 border border-slate-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.03)] space-y-8 sm:space-y-10 text-center lg:text-left">
+            <div className="bg-white rounded-2xl sm:rounded-[2rem] p-5 sm:p-8 lg:p-10 border border-slate-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.03)] space-y-6 sm:space-y-10 text-center lg:text-left min-w-0 w-full">
 
               <div>
-                <h2 className="text-2xl font-bold text-slate-900 tracking-tight mb-2">Contact Information</h2>
-                <p className="text-slate-500 font-medium">Reach out directly via email or our dedicated business WhatsApp.</p>
+                <h2 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight mb-2">Contact Information</h2>
+                <p className="text-sm sm:text-base text-slate-500 font-medium">Reach out directly via email or our dedicated business WhatsApp.</p>
               </div>
 
-              <div className="space-y-8 lg:space-y-6">
-                <a href="mailto:wisdodesigns@gmail.com" className="flex flex-col lg:flex-row items-center lg:items-start gap-4 group">
-                  <div className="w-14 h-14 lg:w-12 lg:h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
-                    <Mail className="w-6 h-6 lg:w-5 lg:h-5" />
+              <div className="space-y-6 lg:space-y-6">
+                <a href="mailto:wisdotech1@gmail.com" className="flex flex-col lg:flex-row items-center lg:items-start gap-3 sm:gap-4 group min-w-0">
+                  <div className="w-12 h-12 lg:w-12 lg:h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                    <Mail className="w-5 h-5" />
                   </div>
-                  <div>
-                    <h3 className="text-sm font-bold text-slate-900 text-opacity-60 uppercase tracking-widest mb-1">Email Us</h3>
-                    <p className="text-lg font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">wisdodesigns@gmail.com</p>
-                  </div>
-                </a>
-
-                <a href="/api/whatsapp" onClick={() => trackEvent("whatsapp_click", { location: "contact_cards" })} className="flex flex-col lg:flex-row items-center lg:items-start gap-4 group">
-                  <div className="w-14 h-14 lg:w-12 lg:h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
-                    <MessageCircle className="w-6 h-6 lg:w-5 lg:h-5" />
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-bold text-slate-900 text-opacity-60 uppercase tracking-widest mb-1">WhatsApp Response</h3>
-                    <p className="text-lg font-bold text-slate-800 group-hover:text-emerald-600 transition-colors">+91 9787362199</p>
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-xs sm:text-sm font-bold text-slate-900 text-opacity-60 uppercase tracking-widest mb-1">Email Us</h3>
+                    <p className="text-base sm:text-lg font-bold text-slate-800 group-hover:text-indigo-600 transition-colors break-all sm:break-normal">wisdotech1@gmail.com</p>
                   </div>
                 </a>
 
-                <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 group">
-                  <div className="w-14 h-14 lg:w-12 lg:h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center shrink-0 group-hover:bg-purple-500 group-hover:text-white transition-colors">
-                    <MapPin className="w-6 h-6 lg:w-5 lg:h-5" />
+                <a href="/api/whatsapp" onClick={() => trackEvent("whatsapp_click", { location: "contact_cards" })} className="flex flex-col lg:flex-row items-center lg:items-start gap-3 sm:gap-4 group min-w-0">
+                  <div className="w-12 h-12 lg:w-12 lg:h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
+                    <MessageCircle className="w-5 h-5" />
                   </div>
-                  <div>
-                    <h3 className="text-sm font-bold text-slate-900 text-opacity-60 uppercase tracking-widest mb-1">HQ Location</h3>
-                    <p className="text-lg font-bold text-slate-800 group-hover:text-purple-600 transition-colors">Global Remote</p>
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-xs sm:text-sm font-bold text-slate-900 text-opacity-60 uppercase tracking-widest mb-1">WhatsApp Response</h3>
+                    <p className="text-base sm:text-lg font-bold text-slate-800 group-hover:text-emerald-600 transition-colors">+91 9787362199</p>
+                  </div>
+                </a>
+
+                <div className="flex flex-col lg:flex-row items-center lg:items-start gap-3 sm:gap-4 group min-w-0">
+                  <div className="w-12 h-12 lg:w-12 lg:h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center shrink-0 group-hover:bg-purple-500 group-hover:text-white transition-colors">
+                    <MapPin className="w-5 h-5" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-xs sm:text-sm font-bold text-slate-900 text-opacity-60 uppercase tracking-widest mb-1">HQ Location</h3>
+                    <p className="text-base sm:text-lg font-bold text-slate-800 group-hover:text-purple-600 transition-colors">Global Remote</p>
                   </div>
                 </div>
               </div>
@@ -188,19 +188,19 @@ function ContactFormContent() {
           {/* Right Column: Contact Form */}
           <div 
             style={{ animationDelay: '200ms', animationFillMode: 'both' }}
-            className="lg:col-span-3 animate-fade-in-up"
+            className="lg:col-span-3 animate-fade-in-up min-w-0 w-full"
           >
-            <div className="bg-white rounded-[2rem] p-6 sm:p-8 md:p-12 border border-slate-100 shadow-[0_20px_60px_-15px_rgba(49,46,129,0.05)] relative overflow-hidden">
+            <div className="bg-white rounded-2xl sm:rounded-[2rem] p-5 sm:p-8 md:p-12 border border-slate-100 shadow-[0_20px_60px_-15px_rgba(49,46,129,0.05)] relative overflow-hidden min-w-0 w-full">
               <div className="absolute top-0 right-0 w-48 h-48 sm:w-64 sm:h-64 bg-indigo-50/50 rounded-bl-full -z-10" />
 
-              <h2 className="text-2xl font-bold text-slate-900 tracking-tight mb-2 text-center sm:text-left">Send us a message</h2>
-              <p className="text-slate-500 mb-8 text-center sm:text-left">Tell us what you're trying to build. We'll help you identify the right digital solution.</p>
+              <h2 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight mb-2 text-center sm:text-left">Send us a message</h2>
+              <p className="text-sm sm:text-base text-slate-500 mb-6 sm:mb-8 text-center sm:text-left">Tell us what you&apos;re trying to build. We&apos;ll help you identify the right digital solution.</p>
 
-              <form className="space-y-6" onSubmit={handleSubmit} noValidate>
+              <form className="space-y-5 sm:space-y-6" onSubmit={handleSubmit} noValidate>
               <input type="text" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" value={formData.botcheck || ""} onChange={handleChange} />
                     
                 {/* Row 1 */}
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-bold text-slate-700">Full Name *</label>
                     <input
@@ -229,7 +229,7 @@ function ContactFormContent() {
                 </div>
 
                 {/* Row 2 */}
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                   <div className="space-y-2">
                     <label htmlFor="phone" className="text-sm font-bold text-slate-700">Phone Number *</label>
                     <input
@@ -259,7 +259,7 @@ function ContactFormContent() {
                 </div>
 
                 {/* Row 3 */}
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                   <div className="space-y-2">
                     <label htmlFor="serviceRequired" className="text-sm font-bold text-slate-700">Service Required *</label>
                     <select 
@@ -329,10 +329,10 @@ function ContactFormContent() {
                   </p>
                 )}
 
-                <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 w-full">
                   <button 
                     disabled={isSubmitting}
-                    className="flex-1 bg-slate-900 text-white font-medium px-8 py-4 rounded-xl flex items-center justify-center gap-2 hover:bg-indigo-600 transition-all duration-300 shadow-xl shadow-slate-900/10 hover:shadow-indigo-500/30 disabled:opacity-70 disabled:cursor-not-allowed"
+                    className="w-full sm:flex-1 bg-slate-900 text-white font-medium px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl flex items-center justify-center gap-2 hover:bg-indigo-600 transition-all duration-300 shadow-xl shadow-slate-900/10 hover:shadow-indigo-500/30 disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <>
@@ -352,15 +352,15 @@ function ContactFormContent() {
                     target="_blank"
                     rel="noreferrer"
                     onClick={() => trackEvent("whatsapp_click", { location: "contact_error_fallback" })}
-                    className="flex-1 bg-emerald-50 text-emerald-600 font-medium px-8 py-4 rounded-xl flex items-center justify-center gap-2 border border-emerald-200 hover:bg-emerald-500 hover:text-white transition-all duration-300 shadow-sm"
+                    className="w-full sm:flex-1 bg-emerald-50 text-emerald-600 font-medium px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl flex items-center justify-center gap-2 border border-emerald-200 hover:bg-emerald-500 hover:text-white transition-all duration-300 shadow-sm"
                   >
                     <MessageCircle className="w-5 h-5" />
                     <span>Chat on WhatsApp</span>
                   </a>
                 </div>
 
-                <div className="mt-6 w-full overflow-hidden rounded-xl bg-amber-50/80 border border-amber-200 py-3 shadow-sm relative flex items-center">
-                  <div className="animate-scroll whitespace-nowrap text-amber-700 text-sm font-semibold flex items-center">
+                <div className="mt-6 w-full max-w-full overflow-hidden rounded-xl bg-amber-50/80 border border-amber-200 py-3 shadow-sm relative flex items-center min-w-0">
+                  <div className="animate-scroll whitespace-nowrap text-amber-700 text-xs sm:text-sm font-semibold flex items-center shrink-0">
                     <span className="inline-flex items-center gap-2 px-4">
                       <span className="relative flex h-2.5 w-2.5 shrink-0">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-500 opacity-75"></span>

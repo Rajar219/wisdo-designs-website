@@ -1,7 +1,19 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import {
+  Menu,
+  X,
+  Home,
+  Briefcase,
+  Layers,
+  Sparkles,
+  User,
+  BookOpen,
+  Mail,
+  ChevronRight,
+  ArrowRight,
+} from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -19,66 +31,115 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Lock background scroll when mobile drawer is open & handle Escape key
   useEffect(() => {
     if (isMobileMenuOpen) {
+      const originalOverflow = document.body.style.overflow;
       document.body.style.overflow = "hidden";
+
+      const handleKeyDown = (e: KeyboardEvent) => {
+        if (e.key === "Escape") {
+          setIsMobileMenuOpen(false);
+        }
+      };
+      window.addEventListener("keydown", handleKeyDown);
+
+      return () => {
+        document.body.style.overflow = originalOverflow;
+        window.removeEventListener("keydown", handleKeyDown);
+      };
     } else {
-      document.body.style.overflow = "unset";
+      document.body.style.overflow = "";
     }
-    return () => {
-      document.body.style.overflow = "unset";
-    };
   }, [isMobileMenuOpen]);
+
+  const navLinks = [
+    { label: "Home", href: "/", icon: Home },
+    { label: "Services", href: "/services", icon: Briefcase },
+    { label: "Solutions", href: "/solutions", icon: Layers },
+    { label: "Our Work", href: "/portfolio", icon: Sparkles },
+    { label: "About", href: "/about", icon: User },
+    { label: "Blog", href: "/blog", icon: BookOpen },
+    { label: "Contact", href: "/contact", icon: Mail },
+  ];
 
   return (
     <>
       <nav
-        className={`fixed top-0 w-full z-[100] transition-all duration-300 ${scrolled
-            ? "bg-white/80 backdrop-blur-lg py-2 border-b border-slate-200 shadow-sm"
-            : "bg-white/40 backdrop-blur-md py-3 border-b border-slate-200/50"
-          }`}
+        className={`fixed top-0 w-full z-[100] transition-all duration-300 ${
+          scrolled
+            ? "bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-xs py-1.5 lg:py-2"
+            : "bg-white/60 backdrop-blur-md border-b border-slate-200/50 py-2 lg:py-3"
+        }`}
       >
+        {/* ===== MOBILE NAVBAR (Strict CSS Grid 3 equal columns for mathematical logo centering) ===== */}
+        <div className="lg:hidden w-full px-4">
+          <div className="grid grid-cols-3 items-center w-full h-16 sm:h-18">
+            {/* Left: Premium Hamburger Button */}
+            <div className="flex items-center justify-start">
+              <button
+                type="button"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+                aria-expanded={isMobileMenuOpen}
+                aria-controls="mobile-navigation-drawer"
+                className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-white/80 hover:bg-slate-50 border border-slate-200/80 text-slate-800 hover:text-indigo-600 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/25 active:scale-95 transition-all duration-200 shadow-2xs"
+              >
+                <div className="relative w-5 h-5 flex items-center justify-center">
+                  <Menu
+                    className={`w-5 h-5 absolute transition-all duration-300 stroke-[2] ${
+                      isMobileMenuOpen
+                        ? "opacity-0 rotate-90 scale-75"
+                        : "opacity-100 rotate-0 scale-100"
+                    }`}
+                  />
+                  <X
+                    className={`w-5 h-5 absolute transition-all duration-300 stroke-[2] ${
+                      isMobileMenuOpen
+                        ? "opacity-100 rotate-0 scale-100"
+                        : "opacity-0 -rotate-90 scale-75"
+                    }`}
+                  />
+                </div>
+              </button>
+            </div>
 
-        {/* ===== MOBILE NAVBAR ===== */}
-        <div className="flex items-center justify-between w-full h-20 px-4 lg:hidden relative">
+            {/* Center: Independently Centered WISDO TECH Logo & Locked Official Slogan */}
+            <div className="flex flex-col items-center justify-center text-center">
+              <Link
+                href="/"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="inline-flex flex-col items-center justify-center group focus:outline-hidden"
+              >
+                <Image
+                  src="/logo-transparent.png"
+                  alt="Wisdo Tech"
+                  width={110}
+                  height={72}
+                  priority
+                  className="h-11 sm:h-12 w-auto object-contain drop-shadow-xs transition-transform duration-300 group-hover:scale-105"
+                />
+                <span className="text-[8px] sm:text-[9px] font-semibold tracking-[0.16em] uppercase text-slate-500 whitespace-nowrap select-none mt-0.5">
+                  Trust Wisdom Innovation
+                </span>
+              </Link>
+            </div>
 
-          {/* Hamburger */}
-          <button
-            className="p-2 -ml-2 text-slate-900 hover:text-indigo-600 active:scale-95 z-[110]"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-          >
-            {isMobileMenuOpen ? (
-              <X className="w-7 h-7" />
-            ) : (
-              <Menu className="w-7 h-7" />
-            )}
-          </button>
-
-          {/* Logo (Perfectly Centered) */}
-          <Link
-            href="/"
-            className="absolute left-1/2 -translate-x-1/2 flex items-center"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            <Image
-              src="/logo-transparent.png"
-              alt="Wisdo Tech Logo"
-              width={105}
-              height={70}
-              priority
-              className="h-12 sm:h-14 w-auto object-contain drop-shadow-md"
-            />
-          </Link>
-
-          {/* Placeholder to balance flex space */}
-          <div className="w-7" />
+            {/* Right: Compact Contact Action */}
+            <div className="flex items-center justify-end">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-3.5 py-1.5 rounded-full text-xs font-semibold bg-slate-900 text-white hover:bg-indigo-600 active:scale-95 transition-all duration-200 shadow-xs tracking-tight"
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
         </div>
 
-        {/* ===== DESKTOP NAVBAR ===== */}
+        {/* ===== DESKTOP NAVBAR (Preserved Exactly) ===== */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="hidden lg:flex items-center justify-between">
-
             {/* Logo */}
             <Link
               href="/"
@@ -97,117 +158,129 @@ export default function Navbar() {
 
             {/* Nav Links */}
             <div className="flex items-center gap-6 xl:gap-8 font-medium text-slate-500">
-
               <Link
                 href="/"
-                className={`relative transition-colors duration-300 group py-2 ${pathname === "/"
+                className={`relative transition-colors duration-300 group py-2 ${
+                  pathname === "/"
                     ? "text-indigo-600 font-bold"
                     : "hover:text-indigo-600"
-                  }`}
+                }`}
               >
                 Home
                 <span
-                  className={`absolute bottom-0 left-0 h-[2px] bg-indigo-600 rounded-full transition-all duration-300 ${pathname === "/" ? "w-full" : "w-0 group-hover:w-full"
-                    }`}
-                ></span>
+                  className={`absolute bottom-0 left-0 h-[2px] bg-indigo-600 rounded-full transition-all duration-300 ${
+                    pathname === "/" ? "w-full" : "w-0 group-hover:w-full"
+                  }`}
+                />
               </Link>
 
               <Link
                 href="/services"
-                className={`relative transition-colors duration-300 group py-2 ${pathname === "/services"
+                className={`relative transition-colors duration-300 group py-2 ${
+                  pathname === "/services"
                     ? "text-indigo-600 font-bold"
                     : "hover:text-indigo-600"
-                  }`}
+                }`}
               >
                 Services
                 <span
-                  className={`absolute bottom-0 left-0 h-[2px] bg-indigo-600 rounded-full transition-all duration-300 ${pathname === "/services"
+                  className={`absolute bottom-0 left-0 h-[2px] bg-indigo-600 rounded-full transition-all duration-300 ${
+                    pathname === "/services"
                       ? "w-full"
                       : "w-0 group-hover:w-full"
-                    }`}
-                ></span>
+                  }`}
+                />
               </Link>
 
               <Link
                 href="/solutions"
-                className={`relative transition-colors duration-300 group py-2 ${pathname === "/solutions"
+                className={`relative transition-colors duration-300 group py-2 ${
+                  pathname === "/solutions"
                     ? "text-indigo-600 font-bold"
                     : "hover:text-indigo-600"
-                  }`}
+                }`}
               >
                 Solutions
                 <span
-                  className={`absolute bottom-0 left-0 h-[2px] bg-indigo-600 rounded-full transition-all duration-300 ${pathname === "/solutions"
+                  className={`absolute bottom-0 left-0 h-[2px] bg-indigo-600 rounded-full transition-all duration-300 ${
+                    pathname === "/solutions"
                       ? "w-full"
                       : "w-0 group-hover:w-full"
-                    }`}
-                ></span>
+                  }`}
+                />
               </Link>
 
               <Link
                 href="/portfolio"
-                className={`relative transition-colors duration-300 group py-2 ${pathname === "/portfolio"
+                className={`relative transition-colors duration-300 group py-2 ${
+                  pathname === "/portfolio"
                     ? "text-indigo-600 font-bold"
                     : "hover:text-indigo-600"
-                  }`}
+                }`}
               >
                 Our Work
                 <span
-                  className={`absolute bottom-0 left-0 h-[2px] bg-indigo-600 rounded-full transition-all duration-300 ${pathname === "/portfolio"
+                  className={`absolute bottom-0 left-0 h-[2px] bg-indigo-600 rounded-full transition-all duration-300 ${
+                    pathname === "/portfolio"
                       ? "w-full"
                       : "w-0 group-hover:w-full"
-                    }`}
-                ></span>
+                  }`}
+                />
               </Link>
 
               <Link
                 href="/about"
-                className={`relative transition-colors duration-300 group py-2 ${pathname === "/about"
+                className={`relative transition-colors duration-300 group py-2 ${
+                  pathname === "/about"
                     ? "text-indigo-600 font-bold"
                     : "hover:text-indigo-600"
-                  }`}
+                }`}
               >
                 About
                 <span
-                  className={`absolute bottom-0 left-0 h-[2px] bg-indigo-600 rounded-full transition-all duration-300 ${pathname === "/about"
+                  className={`absolute bottom-0 left-0 h-[2px] bg-indigo-600 rounded-full transition-all duration-300 ${
+                    pathname === "/about"
                       ? "w-full"
                       : "w-0 group-hover:w-full"
-                    }`}
-                ></span>
+                  }`}
+                />
               </Link>
 
               <Link
                 href="/blog"
-                className={`relative transition-colors duration-300 group py-2 ${pathname.startsWith("/blog")
+                className={`relative transition-colors duration-300 group py-2 ${
+                  pathname.startsWith("/blog")
                     ? "text-indigo-600 font-bold"
                     : "hover:text-indigo-600"
-                  }`}
+                }`}
               >
                 Blog
                 <span
-                  className={`absolute bottom-0 left-0 h-[2px] bg-indigo-600 rounded-full transition-all duration-300 ${pathname.startsWith("/blog")
+                  className={`absolute bottom-0 left-0 h-[2px] bg-indigo-600 rounded-full transition-all duration-300 ${
+                    pathname.startsWith("/blog")
                       ? "w-full"
                       : "w-0 group-hover:w-full"
-                    }`}
-                ></span>
+                  }`}
+                />
               </Link>
 
               <Link
                 href="/contact"
-                className={`relative transition-colors duration-300 group py-2 ${pathname === "/contact"
+                className={`relative transition-colors duration-300 group py-2 ${
+                  pathname === "/contact"
                     ? "text-indigo-600 font-bold"
                     : "hover:text-indigo-600"
-                  }`}
+                }`}
               >
                 Contact
                 <span
-                  className={`absolute bottom-0 left-0 h-[2px] bg-indigo-600 rounded-full transition-all duration-300 ${pathname === "/contact"
+                  className={`absolute bottom-0 left-0 h-[2px] bg-indigo-600 rounded-full transition-all duration-300 ${
+                    pathname === "/contact"
                       ? "w-full"
                       : "w-0 group-hover:w-full"
-                    }`}
-                ></span>
+                  }`}
+                />
               </Link>
-
             </div>
 
             {/* CTA Button */}
@@ -223,74 +296,120 @@ export default function Navbar() {
 
               <div className="absolute inset-0 bg-white/20 blur-md opacity-0 group-hover:animate-pulse transition-opacity" />
             </Link>
-
           </div>
         </div>
       </nav>
 
-      {/* ===== MOBILE MENU OVERLAY (Side Drawer) ===== */}
+      {/* ===== PREMIUM MOBILE NAVIGATION DRAWER ===== */}
       <div
-        className={`fixed inset-0 z-[105] lg:hidden transition-all duration-500 ${isMobileMenuOpen
-            ? "pointer-events-auto"
-            : "pointer-events-none"
-          }`}
+        id="mobile-navigation-drawer"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Mobile navigation menu"
+        className={`fixed inset-0 z-[120] lg:hidden transition-all duration-300 ${
+          isMobileMenuOpen ? "pointer-events-auto visible" : "pointer-events-none invisible"
+        }`}
       >
         {/* Backdrop overlay */}
-        <div 
-          className={`absolute inset-0 bg-slate-900/20 backdrop-blur-sm transition-opacity duration-500 ${isMobileMenuOpen ? "opacity-100" : "opacity-0"}`}
+        <div
+          aria-hidden="true"
           onClick={() => setIsMobileMenuOpen(false)}
+          className={`absolute inset-0 bg-slate-900/40 backdrop-blur-xs transition-opacity duration-300 ${
+            isMobileMenuOpen ? "opacity-100" : "opacity-0"
+          }`}
         />
 
-        {/* Drawer */}
-        <div className={`absolute top-0 left-0 w-[85%] max-w-sm h-[100dvh] bg-white shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col ${isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"}`}>
-          
-          <div className="flex items-center justify-between p-6 border-b border-slate-100">
-            <Image
-              src="/logo-transparent.png"
-              alt="Wisdo Tech Logo"
-              width={90}
-              height={60}
-              className="h-10 w-auto object-contain"
-            />
-            <button
+        {/* Drawer Panel */}
+        <div
+          className={`absolute top-0 left-0 w-[84%] max-w-[340px] h-[100dvh] bg-white shadow-2xl border-r border-slate-100 flex flex-col transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+            isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
+        >
+          {/* Drawer Header: Brand Logo & Refined Close Button */}
+          <div className="flex items-center justify-between px-5 py-4 border-b border-slate-100 bg-white shrink-0">
+            <Link
+              href="/"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="p-2 -mr-2 text-slate-500 hover:text-slate-900 bg-slate-50 rounded-full"
+              className="flex flex-col items-start group"
             >
-              <X className="w-5 h-5" />
+              <Image
+                src="/logo-transparent.png"
+                alt="Wisdo Tech"
+                width={90}
+                height={60}
+                className="h-9 w-auto object-contain transition-transform group-hover:scale-105"
+              />
+              <span className="text-[7.5px] font-semibold tracking-[0.14em] uppercase text-slate-400 mt-0.5">
+                Trust Wisdom Innovation
+              </span>
+            </Link>
+
+            <button
+              type="button"
+              onClick={() => setIsMobileMenuOpen(false)}
+              aria-label="Close navigation menu"
+              className="inline-flex items-center justify-center w-9 h-9 rounded-xl text-slate-500 hover:text-slate-900 hover:bg-slate-100 active:scale-95 transition-all duration-200 border border-slate-200/60"
+            >
+              <X className="w-5 h-5 stroke-[2]" />
             </button>
           </div>
 
-          <div className="flex flex-col gap-2 p-6 overflow-y-auto flex-grow text-lg font-bold text-slate-700">
-            <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="py-3 hover:text-indigo-600 border-b border-slate-50">
-              Home
-            </Link>
-            <Link href="/services" onClick={() => setIsMobileMenuOpen(false)} className="py-3 hover:text-indigo-600 border-b border-slate-50">
-              Services
-            </Link>
-            <Link href="/solutions" onClick={() => setIsMobileMenuOpen(false)} className="py-3 hover:text-indigo-600 border-b border-slate-50">
-              Solutions
-            </Link>
-            <Link href="/portfolio" onClick={() => setIsMobileMenuOpen(false)} className="py-3 hover:text-indigo-600 border-b border-slate-50">
-              Our Work
-            </Link>
-            <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="py-3 hover:text-indigo-600 border-b border-slate-50">
-              About
-            </Link>
-            <Link href="/blog" onClick={() => setIsMobileMenuOpen(false)} className="py-3 hover:text-indigo-600 border-b border-slate-50">
-              Blog
-            </Link>
-            <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="py-3 hover:text-indigo-600 border-b border-slate-50">
-              Contact
-            </Link>
+          {/* Drawer Navigation Links (Scrollable Area) */}
+          <div className="flex-1 overflow-y-auto overscroll-contain px-4 py-4 space-y-1.5">
+            {navLinks.map((item) => {
+              const isActive =
+                item.href === "/"
+                  ? pathname === "/"
+                  : item.href === "/blog"
+                  ? pathname.startsWith("/blog")
+                  : pathname === item.href;
+              const Icon = item.icon;
+
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`group flex items-center justify-between px-3.5 py-3 rounded-xl text-sm font-semibold transition-all duration-200 ${
+                    isActive
+                      ? "bg-indigo-50 text-indigo-600 shadow-2xs font-bold"
+                      : "text-slate-700 hover:text-indigo-600 hover:bg-slate-50"
+                  }`}
+                >
+                  <div className="flex items-center gap-3">
+                    <div
+                      className={`w-8 h-8 rounded-lg flex items-center justify-center transition-colors ${
+                        isActive
+                          ? "bg-indigo-600 text-white"
+                          : "bg-slate-100 text-slate-500 group-hover:bg-indigo-50 group-hover:text-indigo-600"
+                      }`}
+                    >
+                      <Icon className="w-4 h-4" />
+                    </div>
+                    <span>{item.label}</span>
+                  </div>
+
+                  <ChevronRight
+                    className={`w-4 h-4 transition-transform duration-200 ${
+                      isActive
+                        ? "text-indigo-500 translate-x-0.5"
+                        : "text-slate-300 group-hover:text-slate-500 group-hover:translate-x-0.5"
+                    }`}
+                  />
+                </Link>
+              );
+            })}
           </div>
 
-          <div className="p-6 mt-auto bg-slate-50 border-t border-slate-100">
+          {/* Drawer Bottom CTA (Fixed / Non-overlapping) */}
+          <div className="p-4 bg-slate-50/90 border-t border-slate-100 shrink-0">
             <Link
               href="/contact"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="flex items-center justify-center w-full bg-slate-900 text-white py-4 rounded-xl font-bold text-sm uppercase tracking-wide hover:bg-indigo-600 shadow-md"
+              className="group flex items-center justify-center w-full py-3.5 px-4 bg-slate-900 hover:bg-indigo-600 text-white rounded-xl font-semibold text-sm tracking-wide shadow-md shadow-slate-900/10 hover:shadow-indigo-500/20 active:scale-[0.99] transition-all duration-200"
             >
-              Start Your Project
+              <span>Start Your Project</span>
+              <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-200 group-hover:translate-x-1" />
             </Link>
           </div>
         </div>

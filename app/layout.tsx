@@ -95,7 +95,7 @@ export default function RootLayout({
                   "@type": "ContactPoint",
                   "telephone": "+91-9787362199",
                   "contactType": "customer service",
-                  "email": "wisdodesigns@gmail.com",
+                  "email": "wisdotech1@gmail.com",
                   "areaServed": "IN",
                   "availableLanguage": ["en"]
                 }

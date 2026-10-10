@@ -66,7 +66,7 @@ https://wisdo-designs-website.vercel.app
 For project inquiries or collaborations:
 
 📍 Chennai, India
-📧 [wisdointech@gmail.com](mailto:wisdointech@gmail.com)
+📧 [wisdotech1@gmail.com](mailto:wisdotech1@gmail.com)
 
 ## 📜 License
 
