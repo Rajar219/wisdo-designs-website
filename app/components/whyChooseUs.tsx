@@ -6,11 +6,11 @@ const reasons = [
     title: "Business-Focused Solutions",
     desc: "We build around the actual needs of your business.",
     icon: Briefcase,
-    color: "text-blue-600",
-    bg: "bg-blue-50",
-    border: "border-blue-100",
-    hoverBg: "group-hover:bg-blue-600",
-    hoverBorder: "group-hover:border-blue-600"
+    color: "text-emerald-700",
+    bg: "bg-emerald-50",
+    border: "border-emerald-100",
+    hoverBg: "group-hover:bg-emerald-700",
+    hoverBorder: "group-hover:border-emerald-700"
   },
   {
     num: "02",
@@ -39,22 +39,22 @@ const reasons = [
     title: "Direct Communication",
     desc: "Clear communication throughout the project.",
     icon: MessageCircle,
-    color: "text-sky-600",
-    bg: "bg-sky-50",
-    border: "border-sky-100",
-    hoverBg: "group-hover:bg-sky-600",
-    hoverBorder: "group-hover:border-sky-600"
+    color: "text-teal-600",
+    bg: "bg-teal-50",
+    border: "border-teal-100",
+    hoverBg: "group-hover:bg-teal-600",
+    hoverBorder: "group-hover:border-teal-600"
   },
   {
     num: "05",
     title: "Modern Technology",
     desc: "Use appropriate modern technologies based on project requirements.",
     icon: Code2,
-    color: "text-blue-600",
-    bg: "bg-blue-50",
-    border: "border-blue-100",
-    hoverBg: "group-hover:bg-blue-600",
-    hoverBorder: "group-hover:border-blue-600"
+    color: "text-emerald-600",
+    bg: "bg-emerald-50",
+    border: "border-emerald-100",
+    hoverBg: "group-hover:bg-emerald-600",
+    hoverBorder: "group-hover:border-emerald-600"
   },
   {
     num: "06",
@@ -75,7 +75,7 @@ export default function WhyChooseUs() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-24 animate-fade-in-up">
-          <span className="text-sm font-bold tracking-widest text-blue-600 uppercase mb-4 block">
+          <span className="text-sm font-bold tracking-widest text-emerald-600 uppercase mb-4 block">
             The Wisdo Tech Advantage
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6 sm:mb-8">
@@ -93,7 +93,7 @@ export default function WhyChooseUs() {
               <div 
                 key={i}
                 style={{ animationDelay: `${i * 100}ms`, animationFillMode: 'both' }}
-                className="group relative bg-white rounded-[2rem] p-8 lg:p-10 border border-slate-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_50px_-10px_rgba(37,99,235,0.1)] transition-all duration-500 hover:-translate-y-2 animate-fade-in-up flex flex-col text-center sm:text-left items-center sm:items-start overflow-hidden"
+                className="group relative bg-white rounded-[2rem] p-8 lg:p-10 border border-slate-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_50px_-10px_rgba(5,150,105,0.12)] transition-all duration-500 hover:-translate-y-2 animate-fade-in-up flex flex-col text-center sm:text-left items-center sm:items-start overflow-hidden"
               >
                 {/* Background Number Watermark */}
                 <div className="absolute -bottom-6 -right-4 text-[8rem] font-extrabold text-slate-50 opacity-50 group-hover:opacity-100 group-hover:-translate-y-4 transition-all duration-700 pointer-events-none select-none z-0">
@@ -105,8 +105,8 @@ export default function WhyChooseUs() {
                     <Icon className="w-8 h-8" />
                   </div>
                   
-                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight mb-4 group-hover:text-blue-600 transition-colors z-10">
-                    <span className="text-blue-600 mr-2 opacity-50 text-sm hidden sm:inline">{reason.num} —</span>
+                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight mb-4 group-hover:text-emerald-600 transition-colors z-10">
+                    <span className="text-emerald-600 mr-2 opacity-50 text-sm hidden sm:inline">{reason.num} —</span>
                     {reason.title}
                   </h3>
                   

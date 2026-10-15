@@ -120,9 +120,9 @@ function ContactFormContent() {
     <div className="bg-slate-50 min-h-screen">
       {/* Page Header */}
       <section className="relative pt-28 pb-12 sm:pt-36 sm:pb-16 lg:pt-52 lg:pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden w-full">
-        <div className="absolute top-0 inset-x-0 h-full bg-gradient-to-b from-blue-50/50 to-transparent -z-10" />
+        <div className="absolute top-0 inset-x-0 h-full bg-gradient-to-b from-emerald-50/50 to-transparent -z-10" />
         <div className="max-w-4xl mx-auto text-center animate-fade-in-up w-full min-w-0">
-          <p className="text-sm font-bold tracking-widest text-blue-600 uppercase mb-4">
+          <p className="text-sm font-bold tracking-widest text-emerald-600 uppercase mb-4">
             Get in Touch
           </p>
           <h1 className="text-3xl sm:text-5xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-4 sm:mb-6 drop-shadow-sm">
@@ -152,12 +152,12 @@ function ContactFormContent() {
 
               <div className="space-y-6 lg:space-y-6">
                 <a href="mailto:wisdotech1@gmail.com" className="flex flex-col lg:flex-row items-center lg:items-start gap-3 sm:gap-4 group min-w-0">
-                  <div className="w-12 h-12 lg:w-12 lg:h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                  <div className="w-12 h-12 lg:w-12 lg:h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div className="min-w-0 flex-1">
                     <h3 className="text-xs sm:text-sm font-bold text-slate-900 text-opacity-60 uppercase tracking-widest mb-1">Email Us</h3>
-                    <p className="text-base sm:text-lg font-bold text-slate-800 group-hover:text-blue-600 transition-colors break-all sm:break-normal">wisdotech1@gmail.com</p>
+                    <p className="text-base sm:text-lg font-bold text-slate-800 group-hover:text-emerald-600 transition-colors break-all sm:break-normal">wisdotech1@gmail.com</p>
                   </div>
                 </a>
 
@@ -191,7 +191,7 @@ function ContactFormContent() {
             className="lg:col-span-3 animate-fade-in-up min-w-0 w-full"
           >
             <div className="bg-white rounded-2xl sm:rounded-[2rem] p-5 sm:p-8 md:p-12 border border-slate-100 shadow-[0_20px_60px_-15px_rgba(15,23,42,0.05)] relative overflow-hidden min-w-0 w-full">
-              <div className="absolute top-0 right-0 w-48 h-48 sm:w-64 sm:h-64 bg-blue-50/50 rounded-bl-full -z-10" />
+              <div className="absolute top-0 right-0 w-48 h-48 sm:w-64 sm:h-64 bg-emerald-50/50 rounded-bl-full -z-10" />
 
               <h2 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight mb-2 text-center sm:text-left">Send us a message</h2>
               <p className="text-sm sm:text-base text-slate-500 mb-6 sm:mb-8 text-center sm:text-left">Tell us what you&apos;re trying to build. We&apos;ll help you identify the right digital solution.</p>
@@ -210,7 +210,7 @@ function ContactFormContent() {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="Your Name"
-                      className={`w-full bg-slate-50 border ${errors.name ? 'border-red-500 focus:ring-red-500/50 focus:border-red-500' : 'border-slate-200 focus:ring-blue-500/50 focus:border-blue-500'} rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 transition-all`}
+                      className={`w-full bg-slate-50 border ${errors.name ? 'border-red-500 focus:ring-red-500/50 focus:border-red-500' : 'border-slate-200 focus:ring-emerald-500/50 focus:border-emerald-500'} rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 transition-all`}
                     />
                     {errors.name && <p className="text-red-500 text-xs font-medium">{errors.name[0]}</p>}
                   </div>
@@ -223,7 +223,7 @@ function ContactFormContent() {
                       value={formData.businessName}
                       onChange={handleChange}
                       placeholder="Company or Brand"
-                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all"
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 transition-all"
                     />
                   </div>
                 </div>
@@ -239,7 +239,7 @@ function ContactFormContent() {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="+91 90000 00000"
-                      className={`w-full bg-slate-50 border ${errors.phone ? 'border-red-500 focus:ring-red-500/50 focus:border-red-500' : 'border-slate-200 focus:ring-blue-500/50 focus:border-blue-500'} rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 transition-all`}
+                      className={`w-full bg-slate-50 border ${errors.phone ? 'border-red-500 focus:ring-red-500/50 focus:border-red-500' : 'border-slate-200 focus:ring-emerald-500/50 focus:border-emerald-500'} rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 transition-all`}
                     />
                     {errors.phone && <p className="text-red-500 text-xs font-medium">{errors.phone[0]}</p>}
                   </div>
@@ -252,7 +252,7 @@ function ContactFormContent() {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="email@example.com"
-                      className={`w-full bg-slate-50 border ${errors.email ? 'border-red-500 focus:ring-red-500/50 focus:border-red-500' : 'border-slate-200 focus:ring-blue-500/50 focus:border-blue-500'} rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 transition-all`}
+                      className={`w-full bg-slate-50 border ${errors.email ? 'border-red-500 focus:ring-red-500/50 focus:border-red-500' : 'border-slate-200 focus:ring-emerald-500/50 focus:border-emerald-500'} rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 transition-all`}
                     />
                     {errors.email && <p className="text-red-500 text-xs font-medium">{errors.email[0]}</p>}
                   </div>
@@ -267,7 +267,7 @@ function ContactFormContent() {
                       name="serviceRequired"
                       value={formData.serviceRequired}
                       onChange={handleChange}
-                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all appearance-none cursor-pointer"
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 transition-all appearance-none cursor-pointer"
                     >
                       <option value="Software Development">Software Development</option>
                       <option value="Website Development">Website Development</option>
@@ -284,7 +284,7 @@ function ContactFormContent() {
                       name="preferredContact"
                       value={formData.preferredContact}
                       onChange={handleChange}
-                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all appearance-none cursor-pointer"
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 transition-all appearance-none cursor-pointer"
                     >
                       <option value="Email">Email</option>
                       <option value="Phone">Phone</option>
@@ -304,7 +304,7 @@ function ContactFormContent() {
                     value={formData.budgetRange}
                     onChange={handleChange}
                     placeholder="e.g. price starts from ₹2,000"
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 transition-all"
                   />
                 </div>
 
@@ -318,7 +318,7 @@ function ContactFormContent() {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Tell us about your project goals and specific requirements..."
-                    className={`w-full bg-slate-50 border ${errors.message ? 'border-red-500 focus:ring-red-500/50 focus:border-red-500' : 'border-slate-200 focus:ring-blue-500/50 focus:border-blue-500'} rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 transition-all resize-none`}
+                    className={`w-full bg-slate-50 border ${errors.message ? 'border-red-500 focus:ring-red-500/50 focus:border-red-500' : 'border-slate-200 focus:ring-emerald-500/50 focus:border-emerald-500'} rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:ring-2 transition-all resize-none`}
                   ></textarea>
                   {errors.message && <p className="text-red-500 text-xs font-medium">{errors.message[0]}</p>}
                 </div>
@@ -332,7 +332,7 @@ function ContactFormContent() {
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 w-full">
                   <button 
                     disabled={isSubmitting}
-                    className="w-full sm:flex-1 bg-slate-900 text-white font-medium px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl flex items-center justify-center gap-2 hover:bg-blue-600 transition-all duration-300 shadow-xl shadow-slate-900/10 hover:shadow-blue-500/30 disabled:opacity-70 disabled:cursor-not-allowed"
+                    className="w-full sm:flex-1 bg-slate-900 text-white font-medium px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl flex items-center justify-center gap-2 hover:bg-emerald-600 transition-all duration-300 shadow-xl shadow-slate-900/10 hover:shadow-emerald-500/30 disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <>

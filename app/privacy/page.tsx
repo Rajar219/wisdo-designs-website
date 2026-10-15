@@ -25,7 +25,7 @@ export default function PrivacyPage() {
     <div className="bg-slate-50 min-h-screen py-24 sm:py-36 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto bg-white rounded-3xl p-8 sm:p-12 border border-slate-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.02)]">
         <div className="flex items-center gap-4 border-b border-slate-100 pb-8 mb-8">
-          <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center shrink-0">
+          <div className="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center shrink-0">
             <Shield className="w-6 h-6" />
           </div>
           <div>
@@ -68,7 +68,7 @@ export default function PrivacyPage() {
             <p className="text-sm text-slate-500 font-light">
               If you have any questions or clarifications regarding this Privacy Policy, please contact our core operations team at:
               <br />
-              <a href="mailto:wisdotech1@gmail.com" className="text-blue-600 hover:text-blue-700 font-bold mt-2 inline-block">
+              <a href="mailto:wisdotech1@gmail.com" className="text-emerald-600 hover:text-emerald-700 font-bold mt-2 inline-block">
                 wisdotech1@gmail.com
               </a>
             </p>

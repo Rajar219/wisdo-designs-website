@@ -142,14 +142,14 @@ export default function SolutionsClient() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 selection:bg-blue-500/30">
+    <div className="min-h-screen flex flex-col bg-slate-50 selection:bg-emerald-500/30">
       <Navbar />
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 lg:pt-48 lg:pb-24 bg-white border-b border-slate-100 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-50/50 via-white to-white -z-10"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-emerald-50/50 via-white to-white -z-10"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in-up">
-          <span className="text-sm font-bold tracking-widest text-blue-600 uppercase mb-4 block">
+          <span className="text-sm font-bold tracking-widest text-emerald-600 uppercase mb-4 block">
             End-to-End Capabilities
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6 sm:mb-8 max-w-4xl mx-auto">
@@ -177,11 +177,11 @@ export default function SolutionsClient() {
                 onClick={() => scrollTo(solution.id)}
                 className={`flex items-center gap-3 w-full text-left px-4 py-3 rounded-xl transition-all duration-300 ${
                   isActive 
-                    ? "bg-blue-50 text-blue-700 font-bold" 
+                    ? "bg-emerald-50 text-emerald-700 font-bold" 
                     : "bg-transparent text-slate-500 hover:bg-slate-50 hover:text-slate-900 font-medium"
                 }`}
               >
-                <Icon className={`w-4 h-4 ${isActive ? "text-blue-600" : "text-slate-400"}`} />
+                <Icon className={`w-4 h-4 ${isActive ? "text-emerald-600" : "text-slate-400"}`} />
                 <span className="text-sm">{solution.title}</span>
               </button>
             );
@@ -191,7 +191,7 @@ export default function SolutionsClient() {
         {/* Mobile Navigation Dropdown */}
         <div className="w-full sticky top-20 z-20 bg-white/80 backdrop-blur-md py-4 border-b border-slate-100 lg:hidden">
             <select 
-              className="w-full bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block p-3 font-bold"
+              className="w-full bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-xl focus:ring-emerald-500 focus:border-emerald-500 block p-3 font-bold"
               value={activeSection}
               onChange={(e) => scrollTo(e.target.value)}
             >
@@ -217,7 +217,7 @@ export default function SolutionsClient() {
                 
                 {/* Header */}
                 <div className="flex items-center gap-6 mb-10 pb-10 border-b border-slate-200/60">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-lg shadow-blue-500/25">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-lg shadow-emerald-500/25">
                     <Icon className="w-8 h-8 sm:w-10 sm:h-10" />
                   </div>
                   <div>
@@ -246,7 +246,7 @@ export default function SolutionsClient() {
 
                     <div>
                       <h4 className="flex items-center gap-2 text-sm font-bold text-slate-900 uppercase tracking-widest mb-4">
-                        <Users className="w-4 h-4 text-blue-600" /> Who It Is For
+                        <Users className="w-4 h-4 text-emerald-600" /> Who It Is For
                       </h4>
                       <div className="bg-white border border-slate-200/60 px-5 py-4 rounded-xl text-slate-600 font-medium text-sm">
                         {solution.who}
@@ -263,7 +263,7 @@ export default function SolutionsClient() {
                       <ul className="space-y-3">
                         {solution.features.map((feature, i) => (
                           <li key={i} className="flex items-start gap-3">
-                            <span className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2 shrink-0"></span>
+                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 mt-2 shrink-0"></span>
                             <span className="text-slate-600 font-medium">{feature}</span>
                           </li>
                         ))}
@@ -299,7 +299,7 @@ export default function SolutionsClient() {
                   )}`}
                   eventName="service_cta_click"
                   eventPayload={{ service: solution.title }}
-                  className="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-wide transition-colors shadow-sm w-full sm:w-max group"
+                  className="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-emerald-600 text-white px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-wide transition-colors shadow-sm w-full sm:w-max group"
                 >
                     <span>Request a Quote</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

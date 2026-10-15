@@ -24,7 +24,7 @@ export default function ArticleFaq({ faqs }: ArticleFaqProps) {
   return (
     <section className="mt-16 pt-12 border-t border-slate-100">
       <h3 className="text-2xl font-extrabold text-slate-900 mb-6 tracking-tight flex items-center gap-2">
-        <HelpCircle className="w-5 h-5 text-blue-600" />
+        <HelpCircle className="w-5 h-5 text-emerald-600" />
         Frequently Asked Questions
       </h3>
 
@@ -38,13 +38,13 @@ export default function ArticleFaq({ faqs }: ArticleFaqProps) {
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex items-center justify-between p-6 text-left font-bold text-slate-800 text-base sm:text-lg tracking-tight focus:outline-none hover:text-blue-600 transition-colors"
+                className="w-full flex items-center justify-between p-6 text-left font-bold text-slate-800 text-base sm:text-lg tracking-tight focus:outline-none hover:text-emerald-600 transition-colors"
                 aria-expanded={isOpen}
               >
                 <span>{faq.question}</span>
                 <ChevronDown
                   className={`w-4 h-4 sm:w-5 sm:h-5 text-slate-400 shrink-0 ml-4 transition-transform duration-300 ${
-                    isOpen ? "rotate-180 text-blue-600" : ""
+                    isOpen ? "rotate-180 text-emerald-600" : ""
                   }`}
                 />
               </button>

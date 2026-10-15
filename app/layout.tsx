@@ -158,10 +158,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="antialiased text-slate-800 bg-slate-50 relative min-h-screen selection:bg-blue-500/30 font-sans">
+      <body className="antialiased text-slate-800 bg-slate-50 relative min-h-screen selection:bg-emerald-500/30 font-sans">
         <div className="bg-mesh" />
-        <div className="glow-orb bg-blue-200/40 w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px] top-[-100px] left-[-100px] sm:left-[-200px]" />
-        <div className="glow-orb bg-blue-100/40 w-[300px] h-[300px] sm:w-[450px] sm:h-[450px] lg:w-[600px] lg:h-[600px] top-[40%] right-[-50px] sm:right-[-100px]" />
+        <div className="glow-orb bg-emerald-200/40 w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px] top-[-100px] left-[-100px] sm:left-[-200px]" />
+        <div className="glow-orb bg-teal-100/40 w-[300px] h-[300px] sm:w-[450px] sm:h-[450px] lg:w-[600px] lg:h-[600px] top-[40%] right-[-50px] sm:right-[-100px]" />
         
         <div className="relative z-10 flex flex-col min-h-[100dvh]">
           <Navbar />

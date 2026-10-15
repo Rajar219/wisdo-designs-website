@@ -7,11 +7,11 @@ const steps = [
     desc: "Understand the business and requirements.",
     icon: Search,
     colorClasses: {
-      border: "border-blue-100",
-      bg: "bg-blue-50",
-      text: "text-blue-600",
-      shadow: "shadow-blue-500/20",
-      accent: "text-blue-600"
+      border: "border-emerald-100",
+      bg: "bg-emerald-50",
+      text: "text-emerald-700",
+      shadow: "shadow-emerald-500/20",
+      accent: "text-emerald-700"
     }
   },
   {
@@ -33,11 +33,11 @@ const steps = [
     desc: "Create the visual and user experience direction.",
     icon: PenTool,
     colorClasses: {
-      border: "border-sky-100",
-      bg: "bg-sky-50",
-      text: "text-sky-600",
-      shadow: "shadow-sky-500/20",
-      accent: "text-sky-500"
+      border: "border-teal-100",
+      bg: "bg-teal-50",
+      text: "text-teal-600",
+      shadow: "shadow-teal-500/20",
+      accent: "text-teal-500"
     }
   },
   {
@@ -85,11 +85,11 @@ const steps = [
     desc: "Provide maintenance, improvements and future development.",
     icon: LifeBuoy,
     colorClasses: {
-      border: "border-blue-100",
-      bg: "bg-blue-50",
-      text: "text-blue-600",
-      shadow: "shadow-blue-500/20",
-      accent: "text-blue-500"
+      border: "border-emerald-100",
+      bg: "bg-emerald-50",
+      text: "text-emerald-600",
+      shadow: "shadow-emerald-500/20",
+      accent: "text-emerald-500"
     }
   }
 ];
@@ -100,7 +100,7 @@ export default function Process() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-24 animate-fade-in-up">
-          <span className="text-sm font-bold tracking-widest text-blue-600 uppercase mb-4 block">
+          <span className="text-sm font-bold tracking-widest text-emerald-600 uppercase mb-4 block">
             How We Work
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6">

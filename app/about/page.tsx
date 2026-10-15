@@ -36,12 +36,12 @@ export default function AboutPage() {
       
       {/* Hero Section */}
       <section className="relative pt-28 pb-12 sm:pt-36 sm:pb-16 lg:pt-52 lg:pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden text-center">
-        <div className="absolute top-0 inset-x-0 h-full bg-gradient-to-b from-blue-50/50 to-transparent -z-10" />
-        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-blue-200/30 blur-[130px] rounded-full mix-blend-multiply -z-10" />
+        <div className="absolute top-0 inset-x-0 h-full bg-gradient-to-b from-emerald-50/50 to-transparent -z-10" />
+        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-emerald-200/30 blur-[130px] rounded-full mix-blend-multiply -z-10" />
 
         <div className="max-w-4xl mx-auto animate-fade-in-up">
-          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-md shadow-sm border border-blue-100/50 mb-8">
-            <Sparkles className="w-4 h-4 text-blue-600" />
+          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-md shadow-sm border border-emerald-100/50 mb-8">
+            <Sparkles className="w-4 h-4 text-emerald-600" />
             <span className="text-sm font-semibold tracking-wide text-slate-700">Technology Designed for Business Growth</span>
           </div>
 
@@ -61,7 +61,7 @@ export default function AboutPage() {
           
           {/* Main About Text */}
           <div className="text-left animate-fade-in-up">
-            <span className="text-sm font-bold tracking-widest text-blue-600 uppercase mb-4 block">
+            <span className="text-sm font-bold tracking-widest text-emerald-600 uppercase mb-4 block">
               About Wisdo Tech
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-8">
@@ -93,7 +93,7 @@ export default function AboutPage() {
 
           {/* Core Focus Areas */}
           <div className="relative animate-fade-in-up" style={{ animationDelay: '150ms' }}>
-            <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/5 to-slate-500/5 rounded-[2.5rem] blur-2xl transform scale-105 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/5 to-teal-500/5 rounded-[2.5rem] blur-2xl transform scale-105 pointer-events-none" />
             
             <div className="bg-slate-50 border border-slate-100 p-8 sm:p-10 rounded-[2.5rem] shadow-xl relative z-10">
               <h3 className="text-2xl font-bold text-slate-900 mb-8 tracking-tight">Our Core Focus</h3>
@@ -102,7 +102,7 @@ export default function AboutPage() {
                 
                 {/* 1 */}
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center shrink-0 border border-blue-200">
+                  <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 border border-emerald-200">
                     <Target className="w-5 h-5" />
                   </div>
                   <div>
@@ -128,7 +128,7 @@ export default function AboutPage() {
 
                 {/* 3 */}
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 border border-blue-200">
+                  <div className="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center shrink-0 border border-teal-200">
                     <PenTool className="w-5 h-5" />
                   </div>
                   <div>
@@ -141,7 +141,7 @@ export default function AboutPage() {
 
                 {/* 4 */}
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center shrink-0 border border-sky-200">
+                  <div className="w-12 h-12 rounded-xl bg-teal-100 text-teal-600 flex items-center justify-center shrink-0 border border-teal-200">
                     <CheckCircle2 className="w-5 h-5" />
                   </div>
                   <div>

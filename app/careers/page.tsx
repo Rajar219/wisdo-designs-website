@@ -48,10 +48,10 @@ export default function CareersPage() {
     <div className="bg-slate-50 min-h-screen">
       {/* Header */}
       <section className="relative pt-28 pb-12 sm:pt-36 sm:pb-16 lg:pt-52 lg:pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden text-center">
-        <div className="absolute top-0 inset-x-0 h-full bg-gradient-to-b from-blue-50/50 to-transparent -z-10" />
+        <div className="absolute top-0 inset-x-0 h-full bg-gradient-to-b from-emerald-50/50 to-transparent -z-10" />
         <div className="max-w-4xl mx-auto animate-fade-in-up">
-          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-md shadow-sm border border-blue-100/50 mb-8">
-            <Sparkles className="w-4 h-4 text-blue-600" />
+          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-md shadow-sm border border-emerald-100/50 mb-8">
+            <Sparkles className="w-4 h-4 text-emerald-600" />
             <span className="text-sm font-semibold tracking-wide text-slate-700">Remote Opportunities</span>
           </div>
 
@@ -71,7 +71,7 @@ export default function CareersPage() {
           <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight text-center mb-12">Perks of Joining Our Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 flex flex-col gap-4 text-center items-center">
-              <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center">
                 <Laptop className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-bold text-slate-900">100% Remote Workflow</h3>
@@ -80,7 +80,7 @@ export default function CareersPage() {
               </p>
             </div>
             <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 flex flex-col gap-4 text-center items-center">
-              <div className="w-12 h-12 bg-sky-50 text-sky-600 rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center">
                 <Globe className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-bold text-slate-900">Modern Architecture Stack</h3>
@@ -109,10 +109,10 @@ export default function CareersPage() {
           {positions.map((pos, i) => (
             <div
               key={i}
-              className="bg-white rounded-2xl p-8 border border-slate-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.02)] transition-all duration-300 hover:shadow-[0_20px_50px_-10px_rgba(37,99,235,0.05)] hover:border-blue-100/50 flex flex-col sm:flex-row justify-between sm:items-center gap-6"
+              className="bg-white rounded-2xl p-8 border border-slate-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.02)] transition-all duration-300 hover:shadow-[0_20px_50px_-10px_rgba(5,150,105,0.05)] hover:border-emerald-100/50 flex flex-col sm:flex-row justify-between sm:items-center gap-6"
             >
               <div>
-                <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 border border-blue-100/50 px-3 py-1 rounded-full mb-3 inline-block">
+                <span className="text-xs font-bold uppercase tracking-wider text-emerald-600 bg-emerald-50 border border-emerald-100/50 px-3 py-1 rounded-full mb-3 inline-block">
                   {pos.type}
                 </span>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">{pos.title}</h3>
@@ -120,7 +120,7 @@ export default function CareersPage() {
               </div>
               <a
                 href={`mailto:wisdotech1@gmail.com?subject=Application%20for%20${encodeURIComponent(pos.title)}`}
-                className="inline-flex items-center justify-center px-6 py-3.5 bg-slate-900 text-white font-bold uppercase tracking-wide text-xs rounded-xl hover:bg-blue-600 transition-all shadow-md hover:shadow-blue-500/25 shrink-0"
+                className="inline-flex items-center justify-center px-6 py-3.5 bg-slate-900 text-white font-bold uppercase tracking-wide text-xs rounded-xl hover:bg-emerald-600 transition-all shadow-md hover:shadow-emerald-500/25 shrink-0"
               >
                 Apply Now
               </a>
@@ -128,14 +128,14 @@ export default function CareersPage() {
           ))}
 
           {/* General Inquiries */}
-          <div className="bg-blue-50/50 rounded-2xl p-8 border border-blue-100/50 text-center max-w-2xl mx-auto mt-16">
+          <div className="bg-emerald-50/50 rounded-2xl p-8 border border-emerald-100/50 text-center max-w-2xl mx-auto mt-16">
             <h3 className="text-lg font-bold text-slate-900 mb-2">No perfect role listed?</h3>
             <p className="text-sm text-slate-600 font-medium leading-relaxed mb-6">
               We are always looking for passionate builders. Drop us a mail with your portfolio, GitHub link, and resume, and we will get back to you!
             </p>
             <a
               href="mailto:wisdotech1@gmail.com?subject=General%20Careers%20Inquiry"
-              className="inline-flex items-center gap-2 px-8 py-3.5 bg-white border border-blue-100 hover:border-blue-500/50 text-blue-600 rounded-xl font-semibold shadow-sm transition-all"
+              className="inline-flex items-center gap-2 px-8 py-3.5 bg-white border border-emerald-100 hover:border-emerald-500/50 text-emerald-600 rounded-xl font-semibold shadow-sm transition-all"
             >
               <Mail className="w-4 h-4" />
               <span>Email Careers</span>

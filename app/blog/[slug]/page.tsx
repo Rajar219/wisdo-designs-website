@@ -124,7 +124,7 @@ export default async function BlogPostReaderPage({ params }: PageProps) {
         <div className="mb-8">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors uppercase tracking-wider group"
+            className="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors uppercase tracking-wider group"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Back to Articles
@@ -133,7 +133,7 @@ export default async function BlogPostReaderPage({ params }: PageProps) {
 
         {/* Article Header */}
         <header className="mb-10 sm:mb-14">
-          <span className="inline-block px-3 py-1.5 text-xs font-bold uppercase tracking-wider bg-blue-50 border border-blue-100 text-blue-600 rounded-lg mb-6">
+          <span className="inline-block px-3 py-1.5 text-xs font-bold uppercase tracking-wider bg-emerald-50 border border-emerald-100 text-emerald-600 rounded-lg mb-6">
             {post.category}
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-slate-900 tracking-tight leading-[1.15] mb-6 sm:mb-8">
@@ -143,7 +143,7 @@ export default async function BlogPostReaderPage({ params }: PageProps) {
           {/* Metadata Row */}
           <div className="flex flex-wrap items-center gap-y-3 gap-x-6 text-sm font-semibold text-slate-500 pb-8 border-b border-slate-200/60">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full bg-blue-50 text-blue-600 font-extrabold flex items-center justify-center text-xs">
+              <div className="w-8 h-8 rounded-full bg-emerald-50 text-emerald-600 font-extrabold flex items-center justify-center text-xs">
                 {post.author.charAt(0)}
               </div>
               <span>Written by {post.author}</span>
@@ -218,7 +218,7 @@ export default async function BlogPostReaderPage({ params }: PageProps) {
             {/* Share Post Card */}
             <div className="bg-white rounded-3xl p-6 border border-slate-200/60 shadow-sm space-y-4">
               <h4 className="font-bold text-slate-800 text-base tracking-tight flex items-center gap-2">
-                <Share2 className="w-4 h-4 text-blue-600" />
+                <Share2 className="w-4 h-4 text-emerald-600" />
                 Share this Article
               </h4>
               <div className="grid grid-cols-4 gap-2">
@@ -261,7 +261,7 @@ export default async function BlogPostReaderPage({ params }: PageProps) {
                 href="/contact"
                 eventName="service_cta_click"
                 eventPayload={{ location: "blog_sidebar", blog: post.title }}
-                className="w-full inline-flex items-center justify-center gap-2 bg-blue-600 text-white py-3.5 rounded-xl font-bold text-sm uppercase tracking-wide hover:bg-blue-700 transition-all shadow-md active:scale-95"
+                className="w-full inline-flex items-center justify-center gap-2 bg-emerald-600 text-white py-3.5 rounded-xl font-bold text-sm uppercase tracking-wide hover:bg-emerald-700 transition-all shadow-md active:scale-95"
               >
                 <MessageSquare className="w-4 h-4" />
                 Get in Touch

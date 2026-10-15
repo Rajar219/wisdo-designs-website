@@ -46,8 +46,8 @@ export default function BlogLandingPageClient({ posts }: BlogLandingPageClientPr
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         
         {/* Minimalist Hero Header */}
-        <div className="max-w-3xl mb-16 sm:mb-20 text-left border-l-4 border-blue-600 pl-6 sm:pl-8">
-          <span className="text-xs font-bold tracking-widest text-blue-600 uppercase block mb-3">
+        <div className="max-w-3xl mb-16 sm:mb-20 text-left border-l-4 border-emerald-600 pl-6 sm:pl-8">
+          <span className="text-xs font-bold tracking-widest text-emerald-600 uppercase block mb-3">
             Wisdo Tech Journal
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-none mb-6">
@@ -109,7 +109,7 @@ export default function BlogLandingPageClient({ posts }: BlogLandingPageClientPr
                       </div>
                     </div>
 
-                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3 tracking-tight group-hover:text-blue-600 transition-colors leading-snug">
+                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3 tracking-tight group-hover:text-emerald-600 transition-colors leading-snug">
                       <Link href={`/blog/${post.slug}`}>
                         {post.title}
                       </Link>
@@ -127,7 +127,7 @@ export default function BlogLandingPageClient({ posts }: BlogLandingPageClientPr
                       )}
                       <Link
                         href={`/blog/${post.slug}`}
-                        className="text-xs sm:text-sm font-bold text-blue-600 hover:text-blue-800 transition-colors uppercase tracking-wider"
+                        className="text-xs sm:text-sm font-bold text-emerald-600 hover:text-emerald-800 transition-colors uppercase tracking-wider"
                       >
                         Read Post →
                       </Link>
@@ -156,7 +156,7 @@ export default function BlogLandingPageClient({ posts }: BlogLandingPageClientPr
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2.5 rounded-full text-xs sm:text-sm font-bold tracking-tight whitespace-nowrap transition-all duration-300 border ${
                     selectedCategory === category
-                      ? "bg-blue-600 text-white border-blue-600 shadow-sm"
+                      ? "bg-emerald-600 text-white border-emerald-600 shadow-sm"
                       : "bg-white text-slate-600 hover:bg-slate-50 border-slate-200"
                   }`}
                 >
@@ -172,7 +172,7 @@ export default function BlogLandingPageClient({ posts }: BlogLandingPageClientPr
                 placeholder="Search articles..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-white rounded-full pl-12 pr-6 py-3 border border-slate-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500/10 focus:border-blue-600 transition-all font-medium text-slate-700 text-sm"
+                className="w-full bg-white rounded-full pl-12 pr-6 py-3 border border-slate-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/10 focus:border-emerald-600 transition-all font-medium text-slate-700 text-sm"
               />
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4.5 h-4.5 text-slate-400" />
             </div>
@@ -221,7 +221,7 @@ export default function BlogLandingPageClient({ posts }: BlogLandingPageClientPr
                       </div>
                     </div>
 
-                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2 tracking-tight group-hover:text-blue-600 transition-colors leading-snug">
+                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2 tracking-tight group-hover:text-emerald-600 transition-colors leading-snug">
                       <Link href={`/blog/${post.slug}`}>
                         {post.title}
                       </Link>
@@ -239,7 +239,7 @@ export default function BlogLandingPageClient({ posts }: BlogLandingPageClientPr
                       )}
                       <Link
                         href={`/blog/${post.slug}`}
-                        className="text-xs sm:text-sm font-bold text-blue-600 hover:text-blue-800 transition-colors uppercase tracking-wider"
+                        className="text-xs sm:text-sm font-bold text-emerald-600 hover:text-emerald-800 transition-colors uppercase tracking-wider"
                       >
                         Read Post →
                       </Link>
