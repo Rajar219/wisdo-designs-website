@@ -64,18 +64,18 @@ export default function Navbar() {
             : "bg-white/70 backdrop-blur-md border-b border-slate-200/50 py-2 lg:py-3"
         }`}
       >
-        {/* ===== MOBILE NAVBAR (Strict CSS Grid 3 equal columns for mathematical logo centering) ===== */}
-        <div className="lg:hidden w-full px-4">
-          <div className="grid grid-cols-3 items-center w-full h-[68px] sm:h-[76px]">
+        {/* ===== MOBILE NAVBAR (Resilient flex layout ensuring 0 overflow & fully visible Contact button) ===== */}
+        <div className="lg:hidden w-full px-3 xs:px-4 sm:px-6">
+          <div className="flex items-center justify-between w-full h-[64px] sm:h-[72px] max-w-7xl mx-auto">
             {/* Left: Futuristic Geometric Navigation Control */}
-            <div className="flex items-center justify-start">
+            <div className="flex items-center justify-start shrink-0">
               <button
                 type="button"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
                 aria-expanded={isMobileMenuOpen}
                 aria-controls="mobile-navigation-drawer"
-                className="relative inline-flex items-center justify-center w-11 h-11 rounded-xl bg-white/95 hover:bg-emerald-50/70 border border-slate-200/90 hover:border-emerald-500/40 text-slate-900 hover:text-emerald-600 focus:outline-hidden focus:ring-2 focus:ring-emerald-500/25 active:scale-95 transition-all duration-300 shadow-xs group"
+                className="relative inline-flex items-center justify-center w-10 h-10 xs:w-11 xs:h-11 rounded-xl bg-white/95 hover:bg-emerald-50/70 border border-slate-200/90 hover:border-emerald-500/40 text-slate-900 hover:text-emerald-600 focus:outline-hidden focus:ring-2 focus:ring-emerald-500/25 active:scale-95 transition-all duration-300 shadow-xs group"
               >
                 {/* Tech corner accents */}
                 <span className="absolute top-1 left-1 w-1.5 h-1.5 border-t border-l border-slate-300 group-hover:border-emerald-500 transition-colors" />
@@ -105,7 +105,7 @@ export default function Navbar() {
             </div>
 
             {/* Center: Independently Centered WISDO TECH Logo & Official Slogan */}
-            <div className="flex flex-col items-center justify-center text-center">
+            <div className="flex flex-col items-center justify-center text-center flex-1 min-w-0 px-2">
               <Link
                 href="/"
                 onClick={() => setIsMobileMenuOpen(false)}
@@ -117,19 +117,19 @@ export default function Navbar() {
                   width={140}
                   height={80}
                   priority
-                  className="h-[38px] sm:h-[42px] w-auto object-contain drop-shadow-xs transition-transform duration-300 group-hover:scale-105"
+                  className="h-[34px] xs:h-[38px] sm:h-[42px] w-auto object-contain drop-shadow-xs transition-transform duration-300 group-hover:scale-105"
                 />
-                <span className="text-[7.5px] sm:text-[8px] font-semibold tracking-[0.2em] uppercase text-slate-500 whitespace-nowrap select-none mt-0.5">
+                <span className="text-[7px] xs:text-[7.5px] sm:text-[8px] font-semibold tracking-[0.18em] xs:tracking-[0.2em] uppercase text-slate-500 whitespace-nowrap select-none mt-0.5">
                   Trust Wisdom Innovation
                 </span>
               </Link>
             </div>
 
             {/* Right: Contact Action Button */}
-            <div className="flex items-center justify-end">
+            <div className="flex items-center justify-end shrink-0">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-4 py-2 rounded-full text-xs font-semibold bg-slate-900 text-white hover:bg-emerald-600 active:scale-95 transition-all duration-200 shadow-xs tracking-tight"
+                className="inline-flex items-center justify-center px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-semibold bg-slate-900 text-white hover:bg-emerald-600 active:scale-95 transition-all duration-200 shadow-xs tracking-tight whitespace-nowrap"
               >
                 Contact
               </Link>

@@ -45,116 +45,117 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="w-full flex flex-col">
-      {/* ================= MOBILE HERO SECTION (Reference-Approved Futuristic Composition & Prominent Big W) — lg:hidden ================= */}
+      {/* ================= MOBILE HERO SECTION (High-Definition Cinematic Composition & Prominent Big W) — lg:hidden ================= */}
       <section className="lg:hidden relative w-full overflow-hidden pt-24 xs:pt-26 sm:pt-28 pb-8 xs:pb-10 flex flex-col items-center select-none">
-        {/* Full 9:16 Vertical Hero Background with Prominently Positioned & Centered Big W */}
+        {/* Full Cinematic Hero Background with Rich Emerald Lighting & Prominently Positioned Big W */}
         <div className="absolute inset-0 -z-30 overflow-hidden">
           <Image
-            src="/hero-mobile.jpg"
+            src="/hero-green.png"
             alt="Wisdo Tech Seasonal Emerald Landscape with Big W Emblem"
             fill
             priority
-            quality={95}
-            className="object-cover object-[68%_top] select-none pointer-events-none"
+            quality={100}
+            className="object-cover object-[68%_15%] sm:object-[70%_15%] md:object-[70%_center] select-none pointer-events-none blur-[1.5px] scale-[1.015] saturate-[1.12] contrast-[1.04] brightness-[1.02]"
             sizes="100vw"
           />
         </div>
 
-        {/* Localized Delicate Ambient Wash — Confined Strictly to Upper Content Column (stops before CTAs & Big W) */}
-        <div className="absolute inset-x-0 top-0 h-[300px] bg-gradient-to-b from-white/80 via-white/25 to-transparent -z-20 pointer-events-none" />
+        {/* Seamless Soft Cloud Glow at Top-Left for Headline Contrast with Natural Organic Falloff */}
+        <div className="absolute top-0 left-0 w-full h-[360px] bg-[radial-gradient(ellipse_at_top_left,rgba(255,255,255,0.80)_0%,rgba(255,255,255,0.30)_40%,transparent_70%)] -z-20 pointer-events-none" />
 
-        {/* Soft Cloud-Like Fog Transition Merging Hero Seamlessly into 'What We Do' */}
-        <div className="absolute inset-x-0 bottom-0 h-32 xs:h-36 sm:h-40 bg-gradient-to-t from-white via-white/80 via-white/25 to-transparent -z-20 pointer-events-none" />
+        {/* Seamless Soft Cloud-Like Fog Transition Merging Hero into 'WHAT WE DO' with Zero Hard Seam */}
+        <div className="absolute inset-x-0 bottom-0 h-32 sm:h-36 bg-gradient-to-t from-white via-white/80 via-white/20 to-transparent -z-20 pointer-events-none" />
 
         {/* Top Content: Badge, Left-Aligned Headline, Description, Translucent Glass CTAs & Glassmorphism Feature Panel */}
-        <div className="w-full max-w-[350px] xs:max-w-[380px] sm:max-w-md mx-auto px-4 xs:px-5 flex flex-col items-start text-left relative z-10 animate-fade-in-up">
+        <div className="w-full max-w-[350px] xs:max-w-[380px] sm:max-w-md md:max-w-xl mx-auto px-4 xs:px-5 flex flex-col items-start text-left relative z-10 animate-fade-in-up">
           
           {/* Seasonal Brand Badge with Generous Header Clearance */}
-          <div className="inline-flex items-center justify-center px-3.5 py-1 rounded-full bg-white/90 backdrop-blur-md shadow-2xs border border-emerald-300/70 mb-2.5 sm:mb-3">
+          <div className="inline-flex items-center justify-center px-3.5 py-1 rounded-full bg-white/95 backdrop-blur-md shadow-2xs border border-emerald-300/70 mb-2.5 sm:mb-3">
             <span className="font-orbitron text-[10.5px] xs:text-[11px] font-bold tracking-[0.22em] text-emerald-600 uppercase">
               WISDO TECH
             </span>
           </div>
 
-          {/* Headline Matching Desktop Typography & Exact Colour Treatment */}
-          <h1 className="text-[1.85rem] xs:text-[2.1rem] sm:text-4xl font-extrabold leading-[1.14] tracking-tight text-slate-900 mb-2.5 sm:mb-3">
+          {/* Headline Matching Desktop Typography: Dark Navy with Emerald-Green Emphasis on Businesses */}
+          <h1 className="text-[1.85rem] xs:text-[2.05rem] sm:text-4xl font-extrabold leading-[1.15] tracking-[-0.02em] text-slate-900 mb-2.5 sm:mb-3">
             Digital Solutions<br />
             Built for Growing<br />
             <span className="text-gradient">Businesses</span>
           </h1>
 
-          {/* Description */}
-          <p className="text-xs xs:text-[13px] sm:text-sm text-slate-700 leading-relaxed font-medium max-w-[310px] xs:max-w-[335px] mb-4 sm:mb-5 drop-shadow-2xs">
+          {/* Description — Pure White (#FFFFFF) with Clean Contrast & Zero Boxed Panel */}
+          <p className="text-xs xs:text-[13px] sm:text-sm text-white leading-[1.6] font-normal max-w-[255px] xs:max-w-[275px] sm:max-w-[340px] md:max-w-md mb-4 sm:mb-5 drop-shadow-[0_1px_3px_rgba(0,0,0,0.7)]">
             Software development, website development, creative design and digital marketing solutions built around your business.
           </p>
 
-          {/* Futuristic Stacked Mobile CTA Buttons — Translucent Glass Treatment Revealing Big W Behind */}
+          {/* Futuristic Stacked Mobile CTA Buttons — Refined Glassmorphism Revealing Big W Behind */}
           <div className="flex flex-col gap-2.5 w-full">
-            {/* Primary CTA: Dark Translucent Glass Button with Emerald Accent Circle & Restrained Green Glow */}
+            {/* Primary CTA: Refined Dark Glassmorphism with Subtle Emerald Edge Highlight & Elegant Arrow Interaction */}
             <Link
               href="/contact"
-              className="group relative w-full h-12 xs:h-13 pl-6 pr-2 rounded-full bg-slate-950/45 hover:bg-slate-950/65 backdrop-blur-md text-white font-bold tracking-wide inline-flex items-center justify-between border border-emerald-400/40 hover:border-emerald-400/60 shadow-[0_0_20px_rgba(16,185,129,0.20)] hover:shadow-[0_0_26px_rgba(16,185,129,0.32)] active:scale-[0.98] transition-all duration-300"
+              className="group relative w-full h-12 xs:h-12.5 px-5 rounded-full bg-slate-900/90 hover:bg-slate-900 backdrop-blur-xl text-white font-bold tracking-wide inline-flex items-center justify-between border border-emerald-400/50 hover:border-emerald-400/70 shadow-[0_4px_22px_rgba(5,150,105,0.22)] hover:shadow-[0_4px_26px_rgba(5,150,105,0.32)] active:scale-[0.98] transition-all duration-300"
             >
-              <span className="inline-flex items-center gap-2 text-xs xs:text-sm font-bold text-white tracking-wide drop-shadow-sm">
-                <span>Start Your Project</span>
-                <ArrowRight className="w-4 h-4 text-white group-hover:translate-x-1 transition-transform duration-200" />
+              <span className="text-xs xs:text-sm font-bold text-white tracking-wide drop-shadow-2xs">
+                Start Your Project
               </span>
 
-              <span className="w-9 h-9 xs:w-10 xs:h-10 rounded-full bg-emerald-950/60 backdrop-blur-sm border border-emerald-400/50 flex items-center justify-center text-emerald-300 group-hover:bg-emerald-500 group-hover:text-white group-hover:rotate-45 transition-all duration-300 shadow-xs shrink-0">
-                <ArrowUpRight className="w-4 h-4" />
+              <span className="w-8 h-8 rounded-full bg-emerald-500/25 border border-emerald-400/60 flex items-center justify-center text-emerald-300 group-hover:bg-emerald-500 group-hover:text-white group-hover:scale-105 active:scale-95 transition-all duration-300 shadow-2xs shrink-0">
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-300 ease-out" />
               </span>
             </Link>
 
-            {/* Secondary CTA: Translucent Light Glass Button with Emerald WhatsApp-style Icon Badge */}
+            {/* Secondary CTA: Light Frosted-Glass Treatment with Emerald WhatsApp-style Icon Badge */}
             <TrackedLink
               href="/api/whatsapp"
               eventName="whatsapp_click"
               eventPayload={{ location: "hero" }}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative w-full h-12 xs:h-13 pl-2.5 pr-5 rounded-full bg-white/45 hover:bg-white/65 backdrop-blur-md border border-white/70 hover:border-emerald-300/60 text-slate-900 text-xs xs:text-sm font-bold inline-flex items-center justify-between shadow-[0_4px_16px_rgba(0,0,0,0.05)] hover:shadow-md active:scale-[0.98] transition-all duration-300"
+              className="group relative w-full h-12 xs:h-12.5 pl-2.5 pr-5 rounded-full bg-white/75 hover:bg-white/90 backdrop-blur-xl border border-white/95 hover:border-emerald-300/80 text-slate-900 text-xs xs:text-sm font-bold inline-flex items-center justify-between shadow-[0_2px_14px_rgba(0,0,0,0.05)] hover:shadow-[0_4px_18px_rgba(5,150,105,0.15)] active:scale-[0.98] transition-all duration-300"
             >
-              <span className="w-9 h-9 xs:w-10 xs:h-10 rounded-full bg-emerald-500/90 text-white flex items-center justify-center shadow-xs shrink-0 group-hover:scale-105 transition-transform duration-200">
-                <MessageCircle className="w-4.5 h-4.5 fill-white/20 text-white" />
+              <span className="flex items-center gap-2.5">
+                <span className="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-xs shrink-0 group-hover:scale-105 transition-transform duration-300">
+                  <MessageCircle className="w-4 h-4 fill-white/20 text-white" />
+                </span>
+
+                <span className="font-bold text-slate-900 text-xs xs:text-sm tracking-tight">
+                  Chat with Wisdo Tech
+                </span>
               </span>
 
-              <span className="font-bold text-slate-900 text-xs xs:text-sm tracking-tight drop-shadow-2xs">
-                Chat with Wisdo Tech
-              </span>
-
-              <ArrowRight className="w-4 h-4 text-slate-700 group-hover:translate-x-1 transition-transform duration-200 shrink-0" />
+              <ArrowRight className="w-4 h-4 text-slate-600 group-hover:translate-x-0.5 transition-transform duration-300 shrink-0" />
             </TrackedLink>
           </div>
 
-          {/* Enlarged Glassmorphism Feature Panel with Translucent Glass */}
-          <div className="w-full rounded-2xl xs:rounded-3xl bg-white/60 backdrop-blur-md border border-white/75 shadow-[0_8px_24px_rgba(0,0,0,0.06)] p-2.5 xs:p-3 sm:p-3.5 mt-3 sm:mt-3.5">
-            <div className="grid grid-cols-3 gap-2 xs:gap-2.5 sm:gap-3">
+          {/* Refined Glassmorphism Feature Panel with Restrained Frosted Glass & Soft Shadows */}
+          <div className="w-full rounded-2xl xs:rounded-3xl bg-white/45 backdrop-blur-xl border border-white/70 shadow-[0_8px_28px_rgba(0,0,0,0.04)] p-2 xs:p-2.5 sm:p-3 mt-3 sm:mt-3.5">
+            <div className="grid grid-cols-3 gap-1.5 xs:gap-2 sm:gap-2.5">
               {/* Feature 1: AI Automation */}
-              <div className="flex flex-col items-center justify-between text-center p-2.5 xs:p-3 rounded-xl bg-white/55 hover:bg-white/80 border border-white/70 shadow-2xs transition-all duration-200">
-                <div className="w-10 h-10 xs:w-11 xs:h-11 rounded-xl bg-emerald-500/15 border border-emerald-500/25 flex items-center justify-center mb-2 shadow-2xs">
-                  <Bot className="w-5 h-5 xs:w-5.5 xs:h-5.5 text-emerald-600" />
+              <div className="flex flex-col items-center justify-center text-center p-2 xs:p-2.5 rounded-xl bg-white/60 hover:bg-white/85 backdrop-blur-md border border-white/80 shadow-[0_2px_6px_rgba(0,0,0,0.02)] hover:shadow-2xs transition-all duration-200 group/card">
+                <div className="w-8 h-8 xs:w-9 xs:h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-1.5 shadow-2xs group-hover/card:scale-105 transition-transform duration-200">
+                  <Bot className="w-4 h-4 xs:w-4.5 xs:h-4.5 text-emerald-600" />
                 </div>
-                <span className="text-[11px] xs:text-xs font-bold text-slate-800 leading-tight">
+                <span className="text-[10.5px] xs:text-[11px] font-bold text-slate-800 leading-[1.25] tracking-tight">
                   AI<br />Automation
                 </span>
               </div>
 
               {/* Feature 2: Scalable Systems */}
-              <div className="flex flex-col items-center justify-between text-center p-2.5 xs:p-3 rounded-xl bg-white/55 hover:bg-white/80 border border-white/70 shadow-2xs transition-all duration-200">
-                <div className="w-10 h-10 xs:w-11 xs:h-11 rounded-xl bg-emerald-500/15 border border-emerald-500/25 flex items-center justify-center mb-2 shadow-2xs">
-                  <Layers className="w-5 h-5 xs:w-5.5 xs:h-5.5 text-emerald-600" />
+              <div className="flex flex-col items-center justify-center text-center p-2 xs:p-2.5 rounded-xl bg-white/60 hover:bg-white/85 backdrop-blur-md border border-white/80 shadow-[0_2px_6px_rgba(0,0,0,0.02)] hover:shadow-2xs transition-all duration-200 group/card">
+                <div className="w-8 h-8 xs:w-9 xs:h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-1.5 shadow-2xs group-hover/card:scale-105 transition-transform duration-200">
+                  <Layers className="w-4 h-4 xs:w-4.5 xs:h-4.5 text-emerald-600" />
                 </div>
-                <span className="text-[11px] xs:text-xs font-bold text-slate-800 leading-tight">
+                <span className="text-[10.5px] xs:text-[11px] font-bold text-slate-800 leading-[1.25] tracking-tight">
                   Scalable<br />Systems
                 </span>
               </div>
 
               {/* Feature 3: Modern Tech Stack */}
-              <div className="flex flex-col items-center justify-between text-center p-2.5 xs:p-3 rounded-xl bg-white/55 hover:bg-white/80 border border-white/70 shadow-2xs transition-all duration-200">
-                <div className="w-10 h-10 xs:w-11 xs:h-11 rounded-xl bg-emerald-500/15 border border-emerald-500/25 flex items-center justify-center mb-2 shadow-2xs">
-                  <Monitor className="w-5 h-5 xs:w-5.5 xs:h-5.5 text-emerald-600" />
+              <div className="flex flex-col items-center justify-center text-center p-2 xs:p-2.5 rounded-xl bg-white/60 hover:bg-white/85 backdrop-blur-md border border-white/80 shadow-[0_2px_6px_rgba(0,0,0,0.02)] hover:shadow-2xs transition-all duration-200 group/card">
+                <div className="w-8 h-8 xs:w-9 xs:h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-1.5 shadow-2xs group-hover/card:scale-105 transition-transform duration-200">
+                  <Monitor className="w-4 h-4 xs:w-4.5 xs:h-4.5 text-emerald-600" />
                 </div>
-                <span className="text-[11px] xs:text-xs font-bold text-slate-800 leading-tight">
+                <span className="text-[10.5px] xs:text-[11px] font-bold text-slate-800 leading-[1.25] tracking-tight">
                   Modern<br />Tech Stack
                 </span>
               </div>
