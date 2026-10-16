@@ -27,7 +27,7 @@ export default function Footer() {
                 <Mail className="w-5 h-5 text-emerald-600 shrink-0" />
                 wisdotech1@gmail.com
               </a>
-              <a href="tel:+919787362199" className="flex items-center gap-3 text-slate-600 text-sm font-medium hover:text-emerald-600 transition-colors">
+              <a href="tel:+919787362199" className="hidden md:flex items-center gap-3 text-slate-600 text-sm font-medium hover:text-emerald-600 transition-colors">
                 <Phone className="w-5 h-5 text-emerald-600 shrink-0" />
                 +91 9787362199
               </a>

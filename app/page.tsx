@@ -46,7 +46,7 @@ export default function Home() {
   return (
     <div className="w-full flex flex-col">
       {/* ================= MOBILE HERO SECTION (High-Definition Cinematic Composition & Prominent Big W) — lg:hidden ================= */}
-      <section className="lg:hidden relative w-full overflow-hidden pt-24 xs:pt-26 sm:pt-28 pb-8 xs:pb-10 flex flex-col items-center select-none">
+      <section className="lg:hidden relative w-full overflow-hidden pt-24 xs:pt-26 sm:pt-28 pb-10 xs:pb-12 flex flex-col items-center select-none">
         {/* Full Cinematic Hero Background with Rich Emerald Lighting & Prominently Positioned Big W */}
         <div className="absolute inset-0 -z-30 overflow-hidden">
           <Image
@@ -54,17 +54,17 @@ export default function Home() {
             alt="Wisdo Tech Seasonal Emerald Landscape with Big W Emblem"
             fill
             priority
-            quality={100}
-            className="object-cover object-[68%_15%] sm:object-[70%_15%] md:object-[70%_center] select-none pointer-events-none blur-[1.5px] scale-[1.015] saturate-[1.12] contrast-[1.04] brightness-[1.02]"
+            unoptimized
+            className="object-cover object-[68%_16%] sm:object-[70%_16%] md:object-[70%_center] select-none pointer-events-none scale-[1.01] saturate-[1.08] contrast-[1.06] brightness-[1.01]"
             sizes="100vw"
           />
         </div>
 
         {/* Seamless Soft Cloud Glow at Top-Left for Headline Contrast with Natural Organic Falloff */}
-        <div className="absolute top-0 left-0 w-full h-[360px] bg-[radial-gradient(ellipse_at_top_left,rgba(255,255,255,0.80)_0%,rgba(255,255,255,0.30)_40%,transparent_70%)] -z-20 pointer-events-none" />
+        <div className="absolute top-0 left-0 w-full h-[360px] bg-[radial-gradient(ellipse_at_top_left,rgba(255,255,255,0.85)_0%,rgba(255,255,255,0.30)_40%,transparent_70%)] -z-20 pointer-events-none" />
 
         {/* Seamless Soft Cloud-Like Fog Transition Merging Hero into 'WHAT WE DO' with Zero Hard Seam */}
-        <div className="absolute inset-x-0 bottom-0 h-32 sm:h-36 bg-gradient-to-t from-white via-white/80 via-white/20 to-transparent -z-20 pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-0 h-36 sm:h-44 bg-gradient-to-t from-white via-white/85 via-white/30 to-transparent -z-20 pointer-events-none" />
 
         {/* Top Content: Badge, Left-Aligned Headline, Description, Translucent Glass CTAs & Glassmorphism Feature Panel */}
         <div className="w-full max-w-[350px] xs:max-w-[380px] sm:max-w-md md:max-w-xl mx-auto px-4 xs:px-5 flex flex-col items-start text-left relative z-10 animate-fade-in-up">
@@ -77,14 +77,14 @@ export default function Home() {
           </div>
 
           {/* Headline Matching Desktop Typography: Dark Navy with Emerald-Green Emphasis on Businesses */}
-          <h1 className="text-[1.85rem] xs:text-[2.05rem] sm:text-4xl font-extrabold leading-[1.15] tracking-[-0.02em] text-slate-900 mb-2.5 sm:mb-3">
+          <h1 className="text-[1.9rem] xs:text-[2.1rem] sm:text-4xl font-extrabold leading-[1.14] tracking-[-0.025em] text-slate-900 mb-2.5 sm:mb-3">
             Digital Solutions<br />
             Built for Growing<br />
-            <span className="text-gradient">Businesses</span>
+            <span className="bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 bg-clip-text text-transparent">Businesses</span>
           </h1>
 
           {/* Description — Pure White (#FFFFFF) with Clean Contrast & Zero Boxed Panel */}
-          <p className="text-xs xs:text-[13px] sm:text-sm text-white leading-[1.6] font-normal max-w-[255px] xs:max-w-[275px] sm:max-w-[340px] md:max-w-md mb-4 sm:mb-5 drop-shadow-[0_1px_3px_rgba(0,0,0,0.7)]">
+          <p className="text-xs xs:text-[13.5px] sm:text-sm text-white leading-[1.65] font-medium max-w-[280px] xs:max-w-[310px] sm:max-w-md mb-4.5 sm:mb-5 drop-shadow-[0_1px_3px_rgba(0,0,0,0.85)]">
             Software development, website development, creative design and digital marketing solutions built around your business.
           </p>
 
@@ -93,7 +93,7 @@ export default function Home() {
             {/* Primary CTA: Refined Dark Glassmorphism with Subtle Emerald Edge Highlight & Elegant Arrow Interaction */}
             <Link
               href="/contact"
-              className="group relative w-full h-12 xs:h-12.5 px-5 rounded-full bg-slate-900/90 hover:bg-slate-900 backdrop-blur-xl text-white font-bold tracking-wide inline-flex items-center justify-between border border-emerald-400/50 hover:border-emerald-400/70 shadow-[0_4px_22px_rgba(5,150,105,0.22)] hover:shadow-[0_4px_26px_rgba(5,150,105,0.32)] active:scale-[0.98] transition-all duration-300"
+              className="group relative w-full h-12 xs:h-12.5 px-5 rounded-full bg-slate-950/90 hover:bg-slate-950 backdrop-blur-xl text-white font-bold tracking-wide inline-flex items-center justify-between border border-emerald-400/50 hover:border-emerald-400/75 shadow-[inset_0_1px_1px_rgba(255,255,255,0.12),0_4px_22px_rgba(5,150,105,0.22)] active:scale-[0.98] transition-all duration-300"
             >
               <span className="text-xs xs:text-sm font-bold text-white tracking-wide drop-shadow-2xs">
                 Start Your Project
@@ -111,7 +111,7 @@ export default function Home() {
               eventPayload={{ location: "hero" }}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative w-full h-12 xs:h-12.5 pl-2.5 pr-5 rounded-full bg-white/75 hover:bg-white/90 backdrop-blur-xl border border-white/95 hover:border-emerald-300/80 text-slate-900 text-xs xs:text-sm font-bold inline-flex items-center justify-between shadow-[0_2px_14px_rgba(0,0,0,0.05)] hover:shadow-[0_4px_18px_rgba(5,150,105,0.15)] active:scale-[0.98] transition-all duration-300"
+              className="group relative w-full h-12 xs:h-12.5 pl-2.5 pr-5 rounded-full bg-white/80 hover:bg-white/95 backdrop-blur-xl border border-white/95 hover:border-emerald-300/80 text-slate-900 text-xs xs:text-sm font-bold inline-flex items-center justify-between shadow-[inset_0_1px_1px_rgba(255,255,255,0.85),0_2px_14px_rgba(0,0,0,0.06)] active:scale-[0.98] transition-all duration-300"
             >
               <span className="flex items-center gap-2.5">
                 <span className="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-xs shrink-0 group-hover:scale-105 transition-transform duration-300">
@@ -127,35 +127,35 @@ export default function Home() {
             </TrackedLink>
           </div>
 
-          {/* Refined Glassmorphism Feature Panel with Restrained Frosted Glass & Soft Shadows */}
-          <div className="w-full rounded-2xl xs:rounded-3xl bg-white/45 backdrop-blur-xl border border-white/70 shadow-[0_8px_28px_rgba(0,0,0,0.04)] p-2 xs:p-2.5 sm:p-3 mt-3 sm:mt-3.5">
-            <div className="grid grid-cols-3 gap-1.5 xs:gap-2 sm:gap-2.5">
+          {/* Refined Glassmorphism Feature Panel with Single-Layer Frosted Glass & Crisp Badges */}
+          <div className="w-full rounded-2xl bg-white/70 backdrop-blur-md border border-white/85 shadow-[0_4px_20px_rgba(0,0,0,0.04)] p-2 xs:p-2.5 mt-3.5">
+            <div className="grid grid-cols-3 divide-x divide-slate-200/50">
               {/* Feature 1: AI Automation */}
-              <div className="flex flex-col items-center justify-center text-center p-2 xs:p-2.5 rounded-xl bg-white/60 hover:bg-white/85 backdrop-blur-md border border-white/80 shadow-[0_2px_6px_rgba(0,0,0,0.02)] hover:shadow-2xs transition-all duration-200 group/card">
-                <div className="w-8 h-8 xs:w-9 xs:h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-1.5 shadow-2xs group-hover/card:scale-105 transition-transform duration-200">
-                  <Bot className="w-4 h-4 xs:w-4.5 xs:h-4.5 text-emerald-600" />
+              <div className="flex flex-col items-center justify-center text-center px-1 py-1.5 group/card">
+                <div className="w-8 h-8 xs:w-8.5 xs:h-8.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-1.5 shadow-2xs group-hover/card:scale-105 transition-transform duration-200">
+                  <Bot className="w-4 h-4 text-emerald-600" />
                 </div>
-                <span className="text-[10.5px] xs:text-[11px] font-bold text-slate-800 leading-[1.25] tracking-tight">
+                <span className="text-[11px] font-bold text-slate-800 leading-[1.25] tracking-tight">
                   AI<br />Automation
                 </span>
               </div>
 
               {/* Feature 2: Scalable Systems */}
-              <div className="flex flex-col items-center justify-center text-center p-2 xs:p-2.5 rounded-xl bg-white/60 hover:bg-white/85 backdrop-blur-md border border-white/80 shadow-[0_2px_6px_rgba(0,0,0,0.02)] hover:shadow-2xs transition-all duration-200 group/card">
-                <div className="w-8 h-8 xs:w-9 xs:h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-1.5 shadow-2xs group-hover/card:scale-105 transition-transform duration-200">
-                  <Layers className="w-4 h-4 xs:w-4.5 xs:h-4.5 text-emerald-600" />
+              <div className="flex flex-col items-center justify-center text-center px-1 py-1.5 group/card">
+                <div className="w-8 h-8 xs:w-8.5 xs:h-8.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-1.5 shadow-2xs group-hover/card:scale-105 transition-transform duration-200">
+                  <Layers className="w-4 h-4 text-emerald-600" />
                 </div>
-                <span className="text-[10.5px] xs:text-[11px] font-bold text-slate-800 leading-[1.25] tracking-tight">
+                <span className="text-[11px] font-bold text-slate-800 leading-[1.25] tracking-tight">
                   Scalable<br />Systems
                 </span>
               </div>
 
               {/* Feature 3: Modern Tech Stack */}
-              <div className="flex flex-col items-center justify-center text-center p-2 xs:p-2.5 rounded-xl bg-white/60 hover:bg-white/85 backdrop-blur-md border border-white/80 shadow-[0_2px_6px_rgba(0,0,0,0.02)] hover:shadow-2xs transition-all duration-200 group/card">
-                <div className="w-8 h-8 xs:w-9 xs:h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-1.5 shadow-2xs group-hover/card:scale-105 transition-transform duration-200">
-                  <Monitor className="w-4 h-4 xs:w-4.5 xs:h-4.5 text-emerald-600" />
+              <div className="flex flex-col items-center justify-center text-center px-1 py-1.5 group/card">
+                <div className="w-8 h-8 xs:w-8.5 xs:h-8.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-1.5 shadow-2xs group-hover/card:scale-105 transition-transform duration-200">
+                  <Monitor className="w-4 h-4 text-emerald-600" />
                 </div>
-                <span className="text-[10.5px] xs:text-[11px] font-bold text-slate-800 leading-[1.25] tracking-tight">
+                <span className="text-[11px] font-bold text-slate-800 leading-[1.25] tracking-tight">
                   Modern<br />Tech Stack
                 </span>
               </div>
