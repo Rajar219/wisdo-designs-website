@@ -1,4 +1,4 @@
-import { Wrench, ShieldCheck, FileText, Zap, Sparkles, Server, TrendingUp, RefreshCw, CheckCircle2, ArrowRight } from "lucide-react";
+import { Wrench, ShieldCheck, FileText, Zap, PlusCircle, Server, TrendingUp, RefreshCw, CheckCircle2, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 const supportServices = [
@@ -7,7 +7,7 @@ const supportServices = [
   { name: "Security Updates", icon: ShieldCheck },
   { name: "Content Updates", icon: FileText },
   { name: "Performance Improvements", icon: Zap },
-  { name: "Feature Enhancements", icon: Sparkles },
+  { name: "Feature Enhancements", icon: PlusCircle },
   { name: "Hosting & Deployment", icon: Server },
   { name: "SEO Improvements", icon: TrendingUp }
 ];

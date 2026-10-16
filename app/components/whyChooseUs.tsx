@@ -71,7 +71,7 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-20 sm:py-28 lg:py-40 relative bg-white border-y border-slate-100 shadow-[0_-20px_40px_-20px_rgba(0,0,0,0.02)]">
+    <section className="py-20 sm:py-28 lg:py-36 relative bg-white border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-24 animate-fade-in-up">

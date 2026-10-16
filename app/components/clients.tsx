@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Sparkles, ExternalLink, CheckCircle2, Target, Lightbulb, CheckCircle, Code2, AlertCircle } from "lucide-react";
+import { ExternalLink, CheckCircle2, Target, Lightbulb, CheckCircle, Code2, AlertCircle } from "lucide-react";
 
 interface Project {
   client: string;
@@ -87,8 +87,7 @@ export default function ClientsSection() {
         
         {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-24 animate-fade-in-up">
-          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-white shadow-[0_4px_12px_rgba(0,0,0,0.03)] border border-slate-200/60 mb-8">
-            <Sparkles className="w-4 h-4 text-emerald-600" />
+          <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white shadow-[0_4px_12px_rgba(0,0,0,0.03)] border border-slate-200/60 mb-8">
             <span className="text-sm font-bold tracking-wide text-slate-700 uppercase">Our Work</span>
           </div>
           

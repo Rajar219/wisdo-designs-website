@@ -1,4 +1,4 @@
-import { Sparkles, Mail, Laptop, Globe, Users } from "lucide-react";
+import { Mail, Laptop, Globe, Users } from "lucide-react";
 import Trust from "../components/trust";
 
 const positions = [
@@ -50,8 +50,7 @@ export default function CareersPage() {
       <section className="relative pt-28 pb-12 sm:pt-36 sm:pb-16 lg:pt-52 lg:pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden text-center">
         <div className="absolute top-0 inset-x-0 h-full bg-gradient-to-b from-emerald-50/50 to-transparent -z-10" />
         <div className="max-w-4xl mx-auto animate-fade-in-up">
-          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-md shadow-sm border border-emerald-100/50 mb-8">
-            <Sparkles className="w-4 h-4 text-emerald-600" />
+          <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/60 backdrop-blur-md shadow-sm border border-emerald-100/50 mb-8">
             <span className="text-sm font-semibold tracking-wide text-slate-700">Remote Opportunities</span>
           </div>
 

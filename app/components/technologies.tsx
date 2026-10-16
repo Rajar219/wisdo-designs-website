@@ -1,4 +1,4 @@
-import { MonitorPlay, Server, Bot, Code2, Terminal, Database, Sparkles, Cpu, Globe, Zap, Network, Blocks } from "lucide-react";
+import { MonitorPlay, Server, Bot, Code2, Terminal, Database, MessageSquare, Cpu, Globe, Zap, Network, Blocks } from "lucide-react";
 
 const techGroups = [
   {
@@ -39,7 +39,7 @@ const techGroups = [
     shadow: "shadow-[0_0_40px_-10px_rgba(5,150,105,0.3)] hover:shadow-[0_0_60px_-15px_rgba(5,150,105,0.4)]",
     highlight: true,
     skills: [
-      { name: "AI Chatbots", icon: Sparkles },
+      { name: "AI Chatbots", icon: MessageSquare },
       { name: "AI Customer Support Automation", icon: Zap },
       { name: "AI Tools Integration", icon: Cpu },
       { name: "LLM / AI Integrations", icon: Network },

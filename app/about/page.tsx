@@ -1,6 +1,6 @@
 import WhyChooseUs from "../components/whyChooseUs";
 import Technologies from "../components/technologies";
-import { Sparkles, Target, Zap, PenTool, LifeBuoy, CheckCircle2 } from "lucide-react";
+import { Target, Zap, PenTool, LifeBuoy, CheckCircle2 } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -40,8 +40,7 @@ export default function AboutPage() {
         <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-emerald-200/30 blur-[130px] rounded-full mix-blend-multiply -z-10" />
 
         <div className="max-w-4xl mx-auto animate-fade-in-up">
-          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-md shadow-sm border border-emerald-100/50 mb-8">
-            <Sparkles className="w-4 h-4 text-emerald-600" />
+          <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white/60 backdrop-blur-md shadow-sm border border-emerald-100/50 mb-8">
             <span className="text-sm font-semibold tracking-wide text-slate-700">Technology Designed for Business Growth</span>
           </div>
 
