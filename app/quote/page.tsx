@@ -1,35 +1,25 @@
 import { Metadata } from "next";
-import Navbar from "../components/navbar";
-import Footer from "../components/footer";
-import QuoteForm from "./QuoteForm";
+import ProjectDiscovery from "../components/ProjectDiscovery";
 
 export const metadata: Metadata = {
-  title: "Request a Quote | Web Development Pricing | Wisdo Tech",
-  description: "Request a custom quote for Website Development, Custom Software, or Digital Marketing. Fill out our form for an accurate estimate.",
+  title: "Project Discovery & Quote",
+  description: "Explore tailored software, web, and AI solutions for your business with Wisdo Tech's interactive project discovery experience.",
   alternates: {
     canonical: "https://wisdodesigns.com/quote",
   },
   openGraph: {
-    title: "Request a Quote | Wisdo Tech",
-    description: "Request a custom quote for Website Development, Custom Software, or Digital Marketing.",
+    title: "Project Discovery & Quote | Wisdo Tech",
+    description: "Explore tailored software, web, and AI solutions for your business with Wisdo Tech's interactive project discovery experience.",
     url: "https://wisdodesigns.com/quote",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "Request a Quote | Wisdo Tech",
-    description: "Request a custom quote for Website Development, Custom Software, or Digital Marketing.",
+    title: "Project Discovery & Quote | Wisdo Tech",
+    description: "Explore tailored software, web, and AI solutions for your business with Wisdo Tech's interactive project discovery experience.",
   },
 };
 
 export default function QuotePage() {
-  return (
-    <div className="flex flex-col min-h-screen">
-      <Navbar />
-      <main className="flex-grow">
-        <QuoteForm />
-      </main>
-      <Footer />
-    </div>
-  );
+  return <ProjectDiscovery />;
 }

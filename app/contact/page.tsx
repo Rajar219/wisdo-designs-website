@@ -2,14 +2,14 @@ import { Metadata } from "next";
 import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Wisdo Tech | Web Development Company Consultation",
-  description: "Get in touch with Wisdo Tech. Request a free consultation for Custom Software Development, Business Website Development, and Digital Marketing Services.",
+  title: "Contact Us",
+  description: "Get in touch with Wisdo Tech — Software & Web Solutions. Request a consultation for custom software development, business website development, and tailored digital solutions.",
   alternates: {
     canonical: "https://wisdodesigns.com/contact",
   },
   openGraph: {
-    title: "Contact Wisdo Tech | Web Development Company Consultation",
-    description: "Get in touch with Wisdo Tech. Request a free consultation for Custom Software Development, Business Website Development, and Digital Marketing Services.",
+    title: "Contact Us | Wisdo Tech",
+    description: "Get in touch with Wisdo Tech — Software & Web Solutions.",
     url: "https://wisdodesigns.com/contact",
     type: "website",
     images: [
@@ -17,14 +17,14 @@ export const metadata: Metadata = {
         url: "/logo-transparent.png",
         width: 1200,
         height: 630,
-        alt: "Wisdo Tech - Contact Us",
+        alt: "Wisdo Tech | Software & Web Solutions",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Wisdo Tech | Web Development Company Consultation",
-    description: "Get in touch with Wisdo Tech. Request a free consultation for Custom Software Development, Business Website Development, and Digital Marketing Services.",
+    title: "Contact Us | Wisdo Tech",
+    description: "Get in touch with Wisdo Tech — Software & Web Solutions.",
   },
 };
 

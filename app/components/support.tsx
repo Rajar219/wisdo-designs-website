@@ -1,4 +1,4 @@
-import { Wrench, ShieldCheck, FileText, Zap, PlusCircle, Server, TrendingUp, RefreshCw, CheckCircle2, ArrowRight } from "lucide-react";
+import { Wrench, ShieldCheck, FileText, Zap, PlusCircle, Server, TrendingUp, RefreshCw, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 
 const supportServices = [
@@ -35,13 +35,13 @@ const maintenancePlans = [
     popular: true
   },
   {
-    title: "Enterprise SLA",
-    desc: "Priority support and dedicated resources for mission-critical custom software and applications.",
+    title: "Comprehensive Support",
+    desc: "Priority support and direct communication for mission-critical custom software and business platforms.",
     features: [
       "Priority response times",
-      "Dedicated account manager",
-      "Major feature enhancements",
-      "Custom development hours"
+      "Direct technical communication",
+      "Feature enhancements",
+      "Dedicated development hours"
     ]
   }
 ];
@@ -57,7 +57,7 @@ export default function Support() {
             After-Launch Support
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6">
-            We Don't Stop at <span className="text-gradient">Launch</span>
+            We Don&apos;t Stop at <span className="text-gradient">Launch</span>
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-slate-500 font-light leading-relaxed">
             Deployment is just the beginning. We provide ongoing, reliable support to ensure your software and websites continue to operate at peak performance.
@@ -126,7 +126,7 @@ export default function Support() {
                 </div>
 
                 <Link
-                  href="/contact"
+                  href={`/quote?service=${encodeURIComponent(plan.title)}`}
                   className={`mt-auto w-full py-3.5 rounded-xl text-sm font-bold uppercase tracking-wide text-center transition-all duration-300 ${
                     plan.popular
                       ? "bg-slate-900 text-white hover:bg-emerald-600 shadow-md"

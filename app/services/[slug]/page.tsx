@@ -1,7 +1,7 @@
 import { servicesData } from "../data";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, CheckCircle2, MessageSquare, MonitorPlay, Cpu, AppWindow, Rocket } from "lucide-react";
+import { ArrowLeft, CheckCircle2, MessageSquare, MonitorPlay, Cpu, AppWindow, Rocket, LucideIcon } from "lucide-react";
 import { Metadata } from "next";
 import TrackedLink from "../../components/TrackedLink";
 
@@ -9,7 +9,7 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
-const iconMap: Record<string, any> = {
+const iconMap: Record<string, LucideIcon> = {
   MonitorPlay: MonitorPlay,
   Cpu: Cpu,
   AppWindow: AppWindow,
@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!service) {
     return {
-      title: "Service Not Found | Wisdo Tech",
+      title: "Service Not Found",
       description: "The requested service could not be found.",
     };
   }
@@ -135,7 +135,7 @@ export default async function ServiceDetailsPage({ params }: PageProps) {
                 ))}
               </ul>
               <TrackedLink
-                href={`/contact?service=${encodeURIComponent(service.title)}`}
+                href={`/quote?service=${encodeURIComponent(service.title)}`}
                 eventName="service_cta_click"
                 eventPayload={{ service: service.title, location: "service_detail" }}
                 className="w-full inline-flex items-center justify-center gap-2 bg-emerald-600 text-white py-3.5 rounded-xl font-bold text-sm uppercase tracking-wide hover:bg-emerald-700 transition-all shadow-md active:scale-95 shadow-emerald-600/20"

@@ -19,7 +19,7 @@ export const servicesData: ServiceData[] = [
   {
     slug: "website-development",
     title: "Website Development",
-    seoTitle: "Professional Website Development Services | Wisdo Tech",
+    seoTitle: "Website Development Services",
     description: "We build fast, secure, and search-optimized business websites that drive conversions and represent your brand perfectly across all devices.",
     iconName: "MonitorPlay",
     color: "from-emerald-600 to-teal-700",
@@ -49,19 +49,19 @@ export const servicesData: ServiceData[] = [
   {
     slug: "software-development",
     title: "Software Development",
-    seoTitle: "Custom Software Development Company | Wisdo Tech",
-    description: "Bespoke software systems, SaaS applications, and internal tools engineered from scratch to resolve your specific operational bottlenecks.",
+    seoTitle: "Custom Software Development",
+    description: "Bespoke software systems, business applications, and internal tools engineered from scratch to resolve your specific operational bottlenecks.",
     iconName: "Cpu",
     color: "from-slate-900 to-emerald-900",
     bg: "bg-emerald-50",
     sections: [
       {
         heading: "Bespoke Business Systems",
-        content: "Off-the-shelf software often forces you to change how you work. We build custom software that adapts to your unique workflows. From custom CRMs and ERPs to specialized inventory management, our solutions streamline your daily operations and eliminate manual data entry."
+        content: "Off-the-shelf software often forces you to change how you work. We build custom software that adapts to your unique workflows. From custom management portals to specialized POS and inventory software, our solutions streamline your daily operations and eliminate manual data entry."
       },
       {
         heading: "Web & Mobile Applications",
-        content: "We engineer powerful full-stack web applications and cross-platform mobile apps. Whether you need a customer-facing portal, an internal dashboard, or a complex SaaS product, our team utilizes modern frameworks like React and Next.js to deliver robust, scalable codebases."
+        content: "We engineer powerful full-stack web applications and cross-platform mobile apps. Whether you need a customer-facing portal, an internal dashboard, or a specialized business tool, we utilize modern frameworks like React and Next.js to deliver robust, scalable codebases."
       },
       {
         heading: "System Integration & Automation",
@@ -79,7 +79,7 @@ export const servicesData: ServiceData[] = [
   {
     slug: "designing",
     title: "Designing",
-    seoTitle: "UI/UX & Graphic Design Services | Wisdo Tech",
+    seoTitle: "UI/UX & Graphic Design Services",
     description: "Premium UI/UX design, brand identity, and graphic design services that elevate your digital presence and engage your target audience.",
     iconName: "AppWindow",
     color: "from-teal-500 to-emerald-600",
@@ -87,7 +87,7 @@ export const servicesData: ServiceData[] = [
     sections: [
       {
         heading: "User Interface (UI) & User Experience (UX)",
-        content: "Great software requires great design. Our UI/UX team focuses on creating intuitive, friction-less experiences that guide users exactly where they need to go. We design wireframes, interactive prototypes, and high-fidelity mockups that blend aesthetics with functionality."
+        content: "Great software requires great design. We focus on creating intuitive, friction-less experiences that guide users exactly where they need to go. We design wireframes, interactive prototypes, and high-fidelity mockups that blend aesthetics with functionality."
       },
       {
         heading: "Brand Identity & Logo Design",
@@ -109,7 +109,7 @@ export const servicesData: ServiceData[] = [
   {
     slug: "digital-marketing",
     title: "Digital Marketing",
-    seoTitle: "Digital Marketing & SEO Agency | Wisdo Tech",
+    seoTitle: "Digital Marketing & SEO Services",
     description: "Data-driven digital marketing, local SEO, and social media strategies designed to increase your visibility and generate qualified leads.",
     iconName: "Rocket",
     color: "from-orange-500 to-red-500",

@@ -3,13 +3,16 @@ export type AnalyticsEventName =
   | "contact_form_submit"
   | "quote_request"
   | "whatsapp_click"
-  | "service_cta_click";
+  | "service_cta_click"
+  | "project_discovery_view"
+  | "discovery_submit_whatsapp"
+  | "discovery_submit_email";
 
 /**
  * Sends event data to the analytics provider (e.g. GA4, Plausible, Mixpanel).
  * IMPORTANT: Never send PII (Personal Identifiable Information) like name, email, or phone.
  */
-export function trackEvent(eventName: AnalyticsEventName, payload?: Record<string, string | undefined>) {
+export function trackEvent(eventName: AnalyticsEventName, payload?: Record<string, string | number | boolean | undefined>) {
   if (typeof window !== "undefined") {
     // 1. Log to console for development verification
     console.log(`📊 [Analytics] Event: ${eventName}`, payload || {});

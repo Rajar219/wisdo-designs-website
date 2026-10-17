@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!project) {
     return {
-      title: "Project Not Found | Wisdo Tech",
+      title: "Project Not Found",
       description: "The requested case study could not be found.",
     };
   }
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       canonical: `https://wisdodesigns.com/portfolio/${project.slug}`,
     },
     openGraph: {
-      title: project.seoTitle,
+      title: `${project.seoTitle} | Wisdo Tech`,
       description: project.description,
       url: `https://wisdodesigns.com/portfolio/${project.slug}`,
       type: "article",
@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     twitter: {
       card: "summary_large_image",
-      title: project.seoTitle,
+      title: `${project.seoTitle} | Wisdo Tech`,
       description: project.description,
       images: [project.image],
     },
@@ -166,13 +166,13 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 Ready to build something similar? Our engineering team builds high-performance bespoke digital solutions tailored exactly to your operations.
               </p>
               <TrackedLink
-                href="/contact"
+                href="/quote"
                 eventName="service_cta_click"
                 eventPayload={{ location: "case_study_sidebar", project: project.title }}
                 className="w-full inline-flex items-center justify-center gap-2 bg-emerald-600 text-white py-3.5 rounded-xl font-bold text-sm uppercase tracking-wide hover:bg-emerald-700 transition-all shadow-md active:scale-95"
               >
                 <MessageSquare className="w-4 h-4" />
-                Get in Touch
+                Start Your Project
               </TrackedLink>
             </div>
 

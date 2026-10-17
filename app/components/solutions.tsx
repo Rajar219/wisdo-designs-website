@@ -291,7 +291,7 @@ export default function Solutions() {
             {/* Action Button */}
             <div className="relative z-10 pt-8 border-t border-slate-100 mt-auto">
               <Link 
-                href="/contact"
+                href="/quote"
                 className="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-wide hover:bg-emerald-600 transition-colors shadow-sm w-full sm:w-max justify-center group"
               >
                 <span>Start Your Project</span>

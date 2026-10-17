@@ -3,8 +3,8 @@ import { CheckCircle2, ArrowRight } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Thank You | Wisdo Tech",
-  description: "Thank you for reaching out to Wisdo Tech. We will get back to you shortly.",
+  title: "Thank You",
+  description: "Thank you for reaching out to Wisdo Tech — Software & Web Solutions. We will review your message and get back to you shortly.",
   robots: {
     index: false,
     follow: true,
@@ -25,7 +25,7 @@ export default function ThankYouPage() {
         </div>
         
         <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
-          Thank you for contacting Wisdo Tech.
+          Thank you for contacting WISDO TECH.
         </h1>
         
         <p className="text-slate-500 text-lg mb-8 leading-relaxed">

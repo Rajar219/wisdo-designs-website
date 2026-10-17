@@ -2,21 +2,21 @@ import { Shield } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Wisdo Tech",
-  description: "Privacy policy for Wisdo Tech detailing how we collect, protect, and handle client data and project details.",
+  title: "Privacy Policy",
+  description: "Privacy policy for Wisdo Tech — Software & Web Solutions detailing how we collect, protect, and handle client data and project details.",
   alternates: {
-    canonical: "https://wisdodesigns.com/privacy",
+    canonical: "https://wisdotech.in/privacy",
   },
   openGraph: {
     title: "Privacy Policy | Wisdo Tech",
-    description: "Privacy policy for Wisdo Tech detailing how we collect, protect, and handle client data and project details.",
-    url: "https://wisdodesigns.com/privacy",
+    description: "Privacy policy for Wisdo Tech — Software & Web Solutions detailing how we collect, protect, and handle client data and project details.",
+    url: "https://wisdotech.in/privacy",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Privacy Policy | Wisdo Tech",
-    description: "Privacy policy for Wisdo Tech detailing how we collect, protect, and handle client data and project details.",
+    description: "Privacy policy for Wisdo Tech — Software & Web Solutions detailing how we collect, protect, and handle client data and project details.",
   },
 };
 

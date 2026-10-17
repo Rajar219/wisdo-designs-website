@@ -10,20 +10,22 @@ import BlogPreview from "./components/blogPreview";
 import Faq from "./components/faq";
 import Trust from "./components/trust";
 import TrackedLink from "./components/TrackedLink";
-import { ArrowRight, ArrowUpRight, MessageCircle, Bot, Layers, Monitor, MonitorPlay, Rocket } from "lucide-react";
+import { ArrowRight, MessageCircle, Bot, Layers, Monitor, MonitorPlay, Rocket } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Wisdo Tech | Software Company & Web Development Experts",
-  description: "Wisdo Tech is a leading Software Company offering Custom Software Development, Business Website Development, and Digital Marketing Services.",
+  title: {
+    absolute: "Wisdo Tech | Software & Web Solutions",
+  },
+  description: "Software, websites, AI automation, and tailored technology solutions designed around your business needs.",
   alternates: {
     canonical: "https://wisdodesigns.com",
   },
   openGraph: {
-    title: "Wisdo Tech | Software Company & Web Development Experts",
-    description: "Wisdo Tech is a leading Software Company offering Custom Software Development, Business Website Development, and Digital Marketing Services.",
+    title: "Wisdo Tech | Software & Web Solutions",
+    description: "Software, websites, AI automation, and tailored technology solutions designed around your business needs.",
     url: "https://wisdodesigns.com",
     type: "website",
     images: [
@@ -31,14 +33,14 @@ export const metadata: Metadata = {
         url: "/logo-transparent.png",
         width: 1200,
         height: 630,
-        alt: "Wisdo Tech - Software Company & Web Development",
+        alt: "Wisdo Tech | Software & Web Solutions",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wisdo Tech | Software Company & Web Development Experts",
-    description: "Wisdo Tech is a leading Software Company offering Custom Software Development, Business Website Development, and Digital Marketing Services.",
+    title: "Wisdo Tech | Software & Web Solutions",
+    description: "Software, websites, AI automation, and tailored technology solutions designed around your business needs.",
   },
 };
 
@@ -84,15 +86,20 @@ export default function Home() {
           </h1>
 
           {/* Description — Pure White (#FFFFFF) with Clean Contrast & Zero Boxed Panel */}
-          <p className="text-xs xs:text-[13.5px] sm:text-sm text-white leading-[1.65] font-medium max-w-[280px] xs:max-w-[310px] sm:max-w-md mb-4.5 sm:mb-5 drop-shadow-[0_1px_3px_rgba(0,0,0,0.85)]">
-            Software development, website development, creative design and digital marketing solutions built around your business.
+          <p className="text-xs xs:text-[13.5px] sm:text-sm text-white leading-[1.65] font-medium max-w-[280px] xs:max-w-[310px] sm:max-w-md mb-2.5 sm:mb-3 drop-shadow-[0_1px_3px_rgba(0,0,0,0.85)]">
+            Software, websites, AI automation, and tailored technology solutions designed around your business needs.
+          </p>
+
+          {/* Concise Service Descriptor */}
+          <p className="text-[9.5px] xs:text-[10px] font-bold tracking-[0.14em] text-white uppercase mb-3.5 sm:mb-4 select-none drop-shadow-[0_1px_3px_rgba(0,0,0,0.85)]">
+            SOFTWARE &middot; WEB &middot; AI &amp; AUTOMATION &middot; CUSTOM DEVELOPMENT
           </p>
 
           {/* Futuristic Stacked Mobile CTA Buttons — Refined Glassmorphism Revealing Big W Behind */}
           <div className="flex flex-col gap-2.5 w-full">
             {/* Primary CTA: Refined Dark Glassmorphism with Subtle Emerald Edge Highlight & Elegant Arrow Interaction */}
             <Link
-              href="/contact"
+              href="/quote"
               className="group relative w-full h-12 xs:h-12.5 px-5 rounded-full bg-slate-950/90 hover:bg-slate-950 backdrop-blur-xl text-white font-bold tracking-wide inline-flex items-center justify-between border border-emerald-400/50 hover:border-emerald-400/75 shadow-[inset_0_1px_1px_rgba(255,255,255,0.12),0_4px_22px_rgba(5,150,105,0.22)] active:scale-[0.98] transition-all duration-300"
             >
               <span className="text-xs xs:text-sm font-bold text-white tracking-wide drop-shadow-2xs">
@@ -162,6 +169,13 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Brand Tagline in Supporting Content Area */}
+          <div className="w-full mt-3 text-center">
+            <p className="text-xs font-bold text-slate-800 tracking-tight">
+              Technology That Works for You.
+            </p>
+          </div>
+
         </div>
       </section>
 
@@ -204,14 +218,19 @@ export default function Home() {
             </h1>
 
             {/* Description */}
-            <p className="text-xl text-slate-700 leading-relaxed font-normal max-w-xl mb-8 text-left">
-              Software development, website development, creative design and digital marketing solutions built around your business.
+            <p className="text-xl text-slate-700 leading-relaxed font-normal max-w-xl mb-3 text-left">
+              Software, websites, AI automation, and tailored technology solutions designed around your business needs.
+            </p>
+
+            {/* Concise Service Descriptor */}
+            <p className="text-xs font-bold tracking-[0.18em] text-emerald-800 uppercase mb-8 text-left select-none">
+              SOFTWARE &middot; WEB &middot; AI &amp; AUTOMATION &middot; CUSTOM DEVELOPMENT
             </p>
 
             {/* Action Buttons — Approved Desktop CTAs */}
             <div className="flex flex-row gap-4 justify-start w-full">
               <Link
-                href="/contact"
+                href="/quote"
                 className="group relative flex items-center justify-center gap-2 bg-slate-900 text-white px-8 py-4 rounded-full overflow-hidden transition-all duration-300 shadow-md shadow-slate-900/10 hover:-translate-y-0.5 hover:shadow-emerald-500/25 active:scale-95"
               >
                 <span className="relative z-10 font-bold tracking-wide text-base">Start Your Project</span>
@@ -232,10 +251,13 @@ export default function Home() {
               </TrackedLink>
             </div>
 
-            {/* Supporting Tagline */}
+            {/* Supporting Content Area with Brand Tagline */}
             <div className="mt-7 pt-5 border-t border-slate-300/60 w-full max-w-xl">
-              <p className="text-sm font-semibold text-slate-600 text-left leading-relaxed">
-                From idea to launch — we help businesses build, improve and grow digitally.
+              <p className="text-base font-bold text-slate-900 text-left tracking-tight">
+                Technology That Works for You.
+              </p>
+              <p className="text-sm font-medium text-slate-600 text-left leading-relaxed mt-0.5">
+                From idea to launch — we help businesses build, improve, and grow with tailored software, websites, and intelligent digital tools.
               </p>
             </div>
           </div>

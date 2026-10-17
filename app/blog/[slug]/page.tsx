@@ -2,7 +2,7 @@ import { blogPosts } from "../data";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, Calendar, Clock, User, MessageSquare, Share2, Facebook, Twitter, Linkedin, Send, RefreshCw } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, MessageSquare, Share2, Facebook, Twitter, Linkedin, Send, RefreshCw } from "lucide-react";
 import { Metadata } from "next";
 import ArticleFaq from "../../components/articleFaq";
 import TrackedLink from "../../components/TrackedLink";
@@ -18,20 +18,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!post) {
     return {
-      title: "Post Not Found | Wisdo Tech",
+      title: "Post Not Found",
       description: "The requested blog article could not be found.",
     };
   }
 
   return {
-    title: `${post.title} | Wisdo Tech Blog`,
+    title: post.title,
     description: post.description,
     keywords: post.keywords,
     alternates: {
       canonical: `https://wisdodesigns.com/blog/${post.slug}`,
     },
     openGraph: {
-      title: post.title,
+      title: `${post.title} | Wisdo Tech`,
       description: post.description,
       url: `https://wisdodesigns.com/blog/${post.slug}`,
       type: "article",
@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
+      title: `${post.title} | Wisdo Tech`,
       description: post.description,
     },
   };
@@ -66,11 +66,11 @@ export default async function BlogPostReaderPage({ params }: PageProps) {
   let isoDate = "";
   try {
     isoDate = new Date(post.date).toISOString().split("T")[0];
-  } catch (e) {
+  } catch {
     isoDate = "2026-07-09";
   }
 
-  const schemas: any[] = [
+  const schemas: Record<string, unknown>[] = [
     {
       "@context": "https://schema.org",
       "@type": "BlogPosting",

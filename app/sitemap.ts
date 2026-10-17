@@ -16,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "/pricing", priority: 0.8, changeFrequency: "monthly" as const },
     { url: "/blog", priority: 0.8, changeFrequency: "weekly" as const },
     { url: "/contact", priority: 0.8, changeFrequency: "monthly" as const },
-    { url: "/careers", priority: 0.7, changeFrequency: "monthly" as const },
+    { url: "/quote", priority: 0.7, changeFrequency: "monthly" as const },
     { url: "/privacy", priority: 0.3, changeFrequency: "yearly" as const },
     { url: "/terms", priority: 0.3, changeFrequency: "yearly" as const },
   ];
@@ -33,7 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     let lastMod = new Date();
     try {
       lastMod = new Date(post.updatedDate || post.date);
-    } catch (e) {
+    } catch {
       // fallback to current time
     }
 

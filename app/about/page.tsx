@@ -4,14 +4,14 @@ import { Target, Zap, PenTool, LifeBuoy, CheckCircle2 } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Wisdo Tech | Software Company in India",
-  description: "Wisdo Tech is a Software Company specializing in Custom Software Development, Web Development, and Digital Marketing to help businesses grow.",
+  title: "About Us",
+  description: "Learn about Wisdo Tech — Software & Web Solutions. We build software, websites, and tailored technology solutions to meet your business needs.",
   alternates: {
     canonical: "https://wisdodesigns.com/about",
   },
   openGraph: {
-    title: "About Wisdo Tech | Software Company in India",
-    description: "Wisdo Tech is a Software Company specializing in Custom Software Development, Web Development, and Digital Marketing to help businesses grow.",
+    title: "About Us | Wisdo Tech",
+    description: "Learn about Wisdo Tech — Software & Web Solutions. We build software, websites, and tailored technology solutions to meet your business needs.",
     url: "https://wisdodesigns.com/about",
     type: "website",
     images: [
@@ -19,14 +19,14 @@ export const metadata: Metadata = {
         url: "/logo-transparent.png",
         width: 1200,
         height: 630,
-        alt: "Wisdo Tech - About Us",
+        alt: "Wisdo Tech | Software & Web Solutions",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Wisdo Tech | Software Company in India",
-    description: "Wisdo Tech is a Software Company specializing in Custom Software Development, Web Development, and Digital Marketing to help businesses grow.",
+    title: "About Us | Wisdo Tech",
+    description: "Learn about Wisdo Tech — Software & Web Solutions. We build software, websites, and tailored technology solutions to meet your business needs.",
   },
 };
 
@@ -61,7 +61,7 @@ export default function AboutPage() {
           {/* Main About Text */}
           <div className="text-left animate-fade-in-up">
             <span className="text-sm font-bold tracking-widest text-emerald-600 uppercase mb-4 block">
-              About Wisdo Tech
+              About WISDO TECH
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-8">
               Transforming Ideas Into <span className="text-gradient">Effective Solutions</span>
@@ -69,22 +69,22 @@ export default function AboutPage() {
             
             <div className="space-y-6 text-base sm:text-lg text-slate-600 leading-relaxed font-medium">
               <p>
-                WISDO Tech is a technology and digital solutions company focused on helping businesses establish, enhance and grow their presence in the digital world.
+                WISDO TECH is a growing software and web solutions brand focused on helping businesses establish, enhance, and scale their presence in the digital world.
               </p>
               <p>
-                We specialize in Web Development, Designing, Software Development, SEO and Digital Marketing, providing customized solutions based on the unique needs and objectives of our clients.
+                We specialize in website development, custom software development, UI/UX designing, and digital marketing, providing tailored solutions based on the unique needs and operational goals of our clients.
               </p>
               <p>
-                From creating modern and responsive websites and engaging designs to developing software solutions and improving online visibility through SEO and digital marketing, we combine technology, creativity and strategy to deliver meaningful digital solutions.
+                From creating modern, responsive websites and engaging brand designs to developing custom software tools and improving online visibility through search engine optimization, we combine technology, creativity, and strategy to deliver meaningful digital solutions.
               </p>
               <p>
-                At WISDO Tech, we believe that every business deserves a strong digital presence. Our goal is to transform ideas into effective digital solutions that help businesses connect, compete and grow.
+                At WISDO TECH, we believe every business deserves a dependable digital presence. Our goal is to transform ideas into practical, reliable technology solutions designed around real business needs.
               </p>
               
               <div className="p-6 bg-slate-50 border border-slate-100 rounded-2xl mt-8">
                 <h3 className="font-bold text-slate-900 mb-2">Our Team</h3>
                 <p className="text-slate-600 text-sm">
-                  We are a dedicated set of technical professionals who have joined hands together to deliver robust, scalable, and high-quality digital products for our clients.
+                  We are a dedicated team of technical professionals working together to deliver robust, scalable, and high-quality digital solutions for our clients.
                 </p>
               </div>
             </div>

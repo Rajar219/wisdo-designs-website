@@ -2,21 +2,21 @@ import { FileText } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Wisdo Tech",
-  description: "Terms of Service for Wisdo Tech detailing development contracts, project terms, and ownership guidelines.",
+  title: "Terms of Service",
+  description: "Terms of Service for Wisdo Tech — Software & Web Solutions detailing development terms, deliverables, and ownership guidelines.",
   alternates: {
     canonical: "https://wisdodesigns.com/terms",
   },
   openGraph: {
     title: "Terms of Service | Wisdo Tech",
-    description: "Terms of Service for Wisdo Tech detailing development contracts, project terms, and ownership guidelines.",
+    description: "Terms of Service for Wisdo Tech — Software & Web Solutions detailing development terms, deliverables, and ownership guidelines.",
     url: "https://wisdodesigns.com/terms",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Terms of Service | Wisdo Tech",
-    description: "Terms of Service for Wisdo Tech detailing development contracts, project terms, and ownership guidelines.",
+    description: "Terms of Service for Wisdo Tech — Software & Web Solutions detailing development terms, deliverables, and ownership guidelines.",
   },
 };
 
@@ -38,7 +38,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-xl font-bold text-slate-900 mb-3">1. Engagement of Services</h2>
             <p className="text-sm text-slate-500 font-light">
-              By engaging Wisdo Tech, you contract our agency to design, build, and deploy custom software products, websites, applications, and chatbot services according to a mutually agreed Statement of Work (SOW) or project quotation.
+              By engaging WISDO TECH, you contract our team to design, build, and deploy custom software products, websites, applications, and digital services according to a mutually agreed Statement of Work (SOW) or project quotation.
             </p>
           </section>
 

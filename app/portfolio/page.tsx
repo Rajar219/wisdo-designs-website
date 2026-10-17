@@ -5,14 +5,14 @@ import { ExternalLink, CheckCircle2, AlertCircle, MessageCircle } from "lucide-r
 import TrackedLink from "../components/TrackedLink";
 
 export const metadata: Metadata = {
-  title: "Our Work | Web Development Company Portfolio | Wisdo Tech",
-  description: "Explore the portfolio of Wisdo Tech, a leading Web Development Company. See our Custom Software Development and Business Website projects.",
+  title: "Case Studies & Portfolio",
+  description: "Explore real projects delivered by Wisdo Tech — Software & Web Solutions, including custom software development, business websites, and tailored digital solutions.",
   alternates: {
     canonical: "https://wisdodesigns.com/portfolio",
   },
   openGraph: {
-    title: "Our Work | Web Development Company Portfolio | Wisdo Tech",
-    description: "Explore the portfolio of Wisdo Tech, a leading Web Development Company. See our Custom Software Development and Business Website projects.",
+    title: "Case Studies & Portfolio | Wisdo Tech",
+    description: "Explore real projects delivered by Wisdo Tech — Software & Web Solutions.",
     url: "https://wisdodesigns.com/portfolio",
     type: "website",
     images: [
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
         url: "/logo-transparent.png",
         width: 1200,
         height: 630,
-        alt: "Wisdo Tech - Portfolio",
+        alt: "Wisdo Tech | Software & Web Solutions",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Our Work | Web Development Company Portfolio | Wisdo Tech",
-    description: "Explore the portfolio of Wisdo Tech, a leading Web Development Company. See our Custom Software Development and Business Website projects.",
+    title: "Case Studies & Portfolio | Wisdo Tech",
+    description: "Explore real projects delivered by Wisdo Tech — Software & Web Solutions.",
   },
 };
 
@@ -47,7 +47,7 @@ export default function PortfolioPage() {
             Project Portfolio
           </h1>
           <p className="text-base sm:text-lg lg:text-xl text-slate-500 leading-relaxed font-light max-w-2xl">
-            Real products designed, engineered, and shipped for local businesses and enterprises. No placeholders, just actual digital solutions.
+            Real products designed, engineered, and shipped for businesses and brands. No placeholders, just actual digital solutions.
           </p>
         </div>
 

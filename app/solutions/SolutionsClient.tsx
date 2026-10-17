@@ -291,7 +291,7 @@ export default function SolutionsClient() {
 
                 <div className="pt-10 border-t border-slate-200/60">
                   <TrackedLink 
-                    href={`/contact?service=${encodeURIComponent(
+                    href={`/quote?service=${encodeURIComponent(
                     solution.title.includes("Web") || solution.title.includes("E-commerce") ? "Website Development" :
                     solution.title.includes("Design") ? "Designing" :
                     solution.title.includes("Marketing") ? "Digital Marketing" :

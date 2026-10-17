@@ -4,13 +4,14 @@ export const contactSchema = z.object({
   botcheck: z.string().max(100).optional(), // Honeypot
   name: z.string().min(2, "Name is required (at least 2 characters)").max(100, "Name must be less than 100 characters"),
   businessName: z.string().max(150, "Business name must be less than 150 characters").optional(),
-  phone: z.string().min(10, "Valid phone number is required").max(20, "Phone number is too long"),
+  phone: z.string().min(7, "Valid phone number is required (at least 7 digits)").max(30, "Phone number is too long"),
   email: z.string().email("Valid email is required").max(100, "Email must be less than 100 characters"),
   serviceRequired: z.enum([
     "Software Development",
     "Website Development",
     "Designing",
     "Digital Marketing",
+    "Custom Technology Solutions",
     "Other"
   ], { message: "Service is required" }),
   budgetRange: z.string().max(100, "Budget range is too long").optional(),
@@ -46,3 +47,19 @@ export const quoteSchema = z.object({
 });
 
 export type QuoteFormData = z.infer<typeof quoteSchema>;
+
+export const discoverySchema = z.object({
+  botcheck: z.string().max(100).optional(),
+  name: z.string().min(2, "Name is required (at least 2 characters)").max(100, "Name must be less than 100 characters"),
+  phone: z.string().min(7, "Valid mobile / WhatsApp number is required").max(30, "Phone number is too long"),
+  organization: z.string().max(150, "Organization name must be less than 150 characters").optional(),
+  email: z.string().max(100, "Email must be less than 100 characters").optional(),
+  services: z.array(z.string()).min(1, "Please select at least one service or 'Not Sure Yet'"),
+  budget: z.string().max(100).optional(),
+  requirements: z.string().max(3000, "Objective must be less than 3000 characters").optional(),
+  additionalRequirements: z.string().max(2000, "Additional requirements must be less than 2000 characters").optional(),
+  source: z.string().max(150).optional(),
+  isStudent: z.boolean().optional(),
+});
+
+export type DiscoveryFormData = z.infer<typeof discoverySchema>;

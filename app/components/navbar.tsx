@@ -57,15 +57,7 @@ export default function Navbar() {
     }
   }, [isMobileMenuOpen]);
 
-  // Auto-expand parent section if current route matches
-  useEffect(() => {
-    if (pathname.startsWith("/services")) {
-      setExpandedMenus((prev) => ({ ...prev, services: true }));
-    }
-    if (pathname.startsWith("/solutions")) {
-      setExpandedMenus((prev) => ({ ...prev, solutions: true }));
-    }
-  }, [pathname]);
+
 
   const navItems = [
     {
@@ -143,14 +135,21 @@ export default function Navbar() {
     return pathname === item.href;
   };
 
-  const toggleSubmenu = (id: string, e?: React.MouseEvent) => {
+  const isMenuExpanded = (id: string, href: string) => {
+    if (expandedMenus[id] !== undefined) {
+      return expandedMenus[id];
+    }
+    return href !== "/" && pathname.startsWith(href);
+  };
+
+  const toggleSubmenu = (id: string, href: string, e?: React.MouseEvent) => {
     if (e) {
       e.preventDefault();
       e.stopPropagation();
     }
     setExpandedMenus((prev) => ({
       ...prev,
-      [id]: !prev[id],
+      [id]: !isMenuExpanded(id, href),
     }));
   };
 
@@ -379,7 +378,7 @@ export default function Navbar() {
 
             {/* CTA Button */}
             <Link
-              href="/contact"
+              href="/quote"
               className="group relative bg-slate-900 border border-slate-700/50 text-white px-7 py-2.5 rounded-full overflow-hidden transition-all duration-300 shadow-md shadow-slate-900/10 hover:shadow-emerald-500/25 hover:scale-105 font-medium text-center"
             >
               <span className="relative z-10 transition-colors group-hover:text-white">
@@ -484,7 +483,7 @@ export default function Navbar() {
                   type="button"
                   onClick={(e) => {
                     if (item.children) {
-                      toggleSubmenu(item.id, e);
+                      toggleSubmenu(item.id, item.href, e);
                     } else {
                       window.location.href = item.href;
                       setIsMobileMenuOpen(false);
@@ -520,7 +519,7 @@ export default function Navbar() {
               {navItems.map((item) => {
                 const isActive = isItemActive(item);
                 const hasChildren = Boolean(item.children && item.children.length > 0);
-                const isExpanded = expandedMenus[item.id] || false;
+                const isExpanded = isMenuExpanded(item.id, item.href);
 
                 return (
                   <div key={item.id} className="space-y-1">
@@ -550,7 +549,7 @@ export default function Navbar() {
                       {hasChildren ? (
                         <button
                           type="button"
-                          onClick={(e) => toggleSubmenu(item.id, e)}
+                          onClick={(e) => toggleSubmenu(item.id, item.href, e)}
                           aria-label={`Toggle ${item.label} submenu`}
                           aria-expanded={isExpanded}
                           className="w-7 h-7 rounded-lg flex items-center justify-center text-slate-500 hover:text-emerald-700 hover:bg-white/50 transition-colors shrink-0"
@@ -624,7 +623,7 @@ export default function Navbar() {
                   Bespoke software & digital experiences.
                 </p>
                 <Link
-                  href="/contact"
+                  href="/quote"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="mt-2 w-full h-7.5 xs:h-8 px-3 rounded-lg bg-white hover:bg-slate-50 text-slate-900 font-bold text-[10.5px] xs:text-[11px] inline-flex items-center justify-between shadow-2xs transition-colors"
                 >

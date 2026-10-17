@@ -1,75 +1,53 @@
-# Wisdo Designs 
+# WISDO TECH — Software & Web Solutions
 
-Official website for **Wisdo Designs**, a modern digital solutions and software development service focused on helping startups and businesses grow with scalable technology.
+Official website repository for **WISDO TECH — Software & Web Solutions**. Practical technology solutions designed around real business needs.
+
+**Slogan:** Trust Wisdom Innovation
 
 ## About the Project
 
-Wisdo Designs provides custom digital solutions including:
+WISDO TECH provides practical digital solutions including:
 
-* Business Websites
-* Mobile Application Development
+* Business Websites & Web Development
 * Custom Software & Business Applications
 * Retail Billing & POS Systems
-* Business Automation Systems
-* AI Chatbot Development
-* Digital Marketing
-* Brand Design & Marketing Creatives
+* Inventory Management Systems
+* UI/UX & Brand Design
+* Digital Marketing & SEO Services
 
-This website showcases our services, development process, and sample case studies for potential clients.
+This website showcases our services, development process, and verified client project case studies.
 
 ## Tech Stack
 
 This project is built using modern web technologies:
 
-* **Next.js**
+* **Next.js (App Router)**
 * **React**
 * **TypeScript**
 * **Tailwind CSS**
-* **Vercel (Deployment)**
 
 ## Project Structure
 
-app/ → Pages and routes
-components/ → Reusable UI components
-public/ → Images and assets
-styles/ → Global styles
-
-## Services Offered
-
-Wisdo Designs provides solutions for businesses like:
-
-* Real Estate Companies
-* Boutiques & Fashion Stores
-* Cafes & Restaurants
-* Hotels
-* Tourism Services
-* Retail Shops
-* Startups & SaaS Businesses
+* `app/` — App Router pages, metadata, and dynamic routes
+* `app/components/` — Reusable UI sections and components
+* `public/` — Optimized assets and project screenshots
 
 ## Features
 
-* Responsive mobile-first design
-* Premium UI/UX layout
-* Custom software solutions showcase
-* Case study previews
-* Contact form for business inquiries
-
-## Live Website
-
-The website is deployed on **Vercel**.
-
-Live URL:
-https://wisdo-designs-website.vercel.app
+* Responsive mobile-first layout with emerald-green & white visual identity
+* Clear and authentic service breakdowns with verified deliverables
+* Genuine case study showcases (NMS Dairy Farm, INZFYER, Saravanan Senior Advocate, Confusion Clothing)
+* Fast performance, technical SEO metadata, canonical URLs, and structured JSON-LD data
+* Standard security headers (X-Content-Type-Options, X-Frame-Options, Referrer-Policy, Permissions-Policy, HSTS)
 
 ## Contact
 
 For project inquiries or collaborations:
 
-📍 Chennai, India
-📧 [wisdotech1@gmail.com](mailto:wisdotech1@gmail.com)
+* 📍 Location: Chennai, India
+* 📧 Email: [wisdotech1@gmail.com](mailto:wisdotech1@gmail.com)
+* 💬 WhatsApp: +91 9787362199
 
-## 📜 License
+## License
 
-This project is for **Wisdo Designs business use**.
-
-© 2026 Wisdo Designs. All rights reserved.
+© 2026 WISDO TECH. All rights reserved.

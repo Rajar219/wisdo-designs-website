@@ -20,7 +20,7 @@ export const portfolioData: CaseStudy[] = [
   {
     slug: "nms-dairy-farm",
     title: "NMS Dairy Farm",
-    seoTitle: "NMS Dairy Farm Case Study | Business Website Development | Wisdo Tech",
+    seoTitle: "NMS Dairy Farm Case Study",
     description: "A modern dairy farm website showcasing fresh cow and buffalo milk, farm operations, and direct customer ordering, with completed custom domain integration and SEO setup.",
     category: "Business Website",
     status: "Live",
@@ -45,7 +45,7 @@ export const portfolioData: CaseStudy[] = [
   {
     slug: "inzfyer",
     title: "INZFYER",
-    seoTitle: "INZFYER Case Study | E-Commerce Website Development | Wisdo Tech",
+    seoTitle: "INZFYER Case Study",
     description: "A delightful boutique e-commerce platform for cute handmade plushies, aesthetic keychains, and artisanal gift sets delivered across India.",
     category: "E-Commerce Website",
     status: "Live",
@@ -70,7 +70,7 @@ export const portfolioData: CaseStudy[] = [
   {
     slug: "saravanan-senior-advocate",
     title: "Saravanan — Senior Advocate Website",
-    seoTitle: "Saravanan Senior Advocate Case Study | Legal Website Development | Wisdo Tech",
+    seoTitle: "Saravanan Senior Advocate Case Study",
     description: "An authoritative, dignified legal chamber website engineered for Advocate SARAVANAN.N, Supreme Court of India, featuring practice areas, chamber profile, and direct consultation channels.",
     category: "Legal Website / Professional Services",
     status: "Live",
@@ -95,7 +95,7 @@ export const portfolioData: CaseStudy[] = [
   {
     slug: "confusion-clothing",
     title: "Confusion Clothing",
-    seoTitle: "Confusion Clothing Case Study | Fashion E-Commerce Website | Wisdo Tech",
+    seoTitle: "Confusion Clothing Case Study",
     description: "A modern fashion e-commerce storefront built for a boutique clothing brand featuring responsive layout grids, category sorting, product filters, and a premium shopping experience.",
     category: "E-Commerce Website",
     status: "Live",

@@ -20,7 +20,7 @@ export default function Trust() {
         {/* Primary and Secondary CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full">
           <Link
-            href="/contact"
+            href="/quote"
             className="group w-full sm:w-auto relative inline-flex items-center justify-center gap-2 bg-white text-slate-900 px-8 py-4 rounded-xl sm:rounded-full overflow-hidden transition-all duration-300 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] hover:shadow-emerald-500/50 hover:-translate-y-1 hover:scale-105"
           >
             <span className="relative z-10 font-bold tracking-wide">Start Your Project</span>

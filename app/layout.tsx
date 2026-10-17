@@ -20,14 +20,15 @@ const orbitron = Orbitron({
 
 export const metadata: Metadata = {
   title: {
-    default: "Wisdo Tech | Digital Solutions for Growing Businesses",
+    default: "Wisdo Tech | Software & Web Solutions",
     template: "%s | Wisdo Tech",
   },
-  description: "Wisdo Tech is a professional Software Development and Website Design company. We provide Custom Software Development, Business Website Development, and Digital Marketing Services.",
+  description: "Software, websites, AI automation, and tailored technology solutions designed around your business needs.",
   keywords: [
     "Wisdo Tech",
-    "Software Company",
-    "Web Development Company",
+    "Software & Web Solutions",
+    "Software Development & Web Solutions",
+    "Digital Solutions for Businesses",
     "Custom Software Development",
     "Website Development",
     "Website Design",
@@ -51,8 +52,8 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Wisdo Tech | Digital Solutions for Growing Businesses",
-    description: "Wisdo Tech — Digital Solutions for Growing Businesses. We build software, websites and digital experiences that help businesses operate, connect with customers and grow.",
+    title: "Wisdo Tech | Software & Web Solutions",
+    description: "Software, websites, AI automation, and tailored technology solutions designed around your business needs.",
     url: "https://wisdodesigns.com",
     siteName: "Wisdo Tech",
     images: [
@@ -60,7 +61,7 @@ export const metadata: Metadata = {
         url: "/logo-transparent.png",
         width: 1200,
         height: 630,
-        alt: "Wisdo Tech - Digital Solutions for Growing Businesses",
+        alt: "Wisdo Tech | Software & Web Solutions",
       },
     ],
     locale: "en_US",
@@ -68,8 +69,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wisdo Tech | Digital Solutions for Growing Businesses",
-    description: "Wisdo Tech — Digital Solutions for Growing Businesses. We build software, websites and digital experiences that help businesses operate, connect with customers and grow.",
+    title: "Wisdo Tech | Software & Web Solutions",
+    description: "Software, websites, AI automation, and tailored technology solutions designed around your business needs.",
     images: ["/logo-transparent.png"],
   },
   verification: {
@@ -93,10 +94,13 @@ export default function RootLayout({
                 "@context": "https://schema.org",
                 "@type": "Organization",
                 "name": "Wisdo Tech",
+                "alternateName": "WISDO TECH — Software & Web Solutions",
+                "slogan": "Trust Wisdom Innovation",
                 "url": "https://wisdodesigns.com",
                 "logo": "https://wisdodesigns.com/logo-transparent.png",
                 "sameAs": [
-                  "https://instagram.com/wisdo_designs"
+                  "https://www.instagram.com/wisdo_tech_/",
+                  "https://www.linkedin.com/company/wisdo-designs/"
                 ],
                 "contactPoint": {
                   "@type": "ContactPoint",
@@ -110,7 +114,8 @@ export default function RootLayout({
               {
                 "@context": "https://schema.org",
                 "@type": "WebSite",
-                "name": "Wisdo Tech",
+                "name": "WISDO TECH",
+                "alternateName": "WISDO TECH — Software & Web Solutions",
                 "url": "https://wisdodesigns.com",
                 "potentialAction": {
                   "@type": "SearchAction",
@@ -121,8 +126,8 @@ export default function RootLayout({
               {
                 "@context": "https://schema.org",
                 "@type": "LocalBusiness",
-                "name": "Wisdo Tech",
-                "description": "Custom Software Development and Web Development Company providing Business Website Development, POS Software, and Digital Marketing Services.",
+                "name": "WISDO TECH",
+                "description": "Software & Web Solutions brand providing custom software development, business website development, POS systems, and digital marketing services.",
                 "image": "https://wisdodesigns.com/logo-transparent.png",
                 "@id": "https://wisdodesigns.com/#localbusiness",
                 "url": "https://wisdodesigns.com",

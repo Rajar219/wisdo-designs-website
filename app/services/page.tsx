@@ -4,14 +4,14 @@ import Link from "next/link";
 import TrackedLink from "../components/TrackedLink";
 
 export const metadata: Metadata = {
-  title: "Website Design & Digital Marketing Services | Wisdo Tech",
-  description: "Wisdo Tech provides professional Website Design, Custom Software Development, POS Solutions, and Digital Marketing Services for modern businesses.",
+  title: "Services",
+  description: "We build software, websites, and tailored technology solutions to meet your business needs, including custom software development, business websites, UI/UX design, and digital marketing.",
   alternates: {
     canonical: "https://wisdodesigns.com/services",
   },
   openGraph: {
-    title: "Website Design & Digital Marketing Services | Wisdo Tech",
-    description: "Wisdo Tech provides professional Website Design, Custom Software Development, POS Solutions, and Digital Marketing Services for modern businesses.",
+    title: "Services | Wisdo Tech",
+    description: "We build software, websites, and tailored technology solutions to meet your business needs.",
     url: "https://wisdodesigns.com/services",
     type: "website",
     images: [
@@ -19,14 +19,14 @@ export const metadata: Metadata = {
         url: "/logo-transparent.png",
         width: 1200,
         height: 630,
-        alt: "Wisdo Tech - Services",
+        alt: "Wisdo Tech | Software & Web Solutions",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Design & Digital Marketing Services | Wisdo Tech",
-    description: "Wisdo Tech provides professional Website Design, Custom Software Development, POS Solutions, and Digital Marketing Services for modern businesses.",
+    title: "Services | Wisdo Tech",
+    description: "We build software, websites, and tailored technology solutions to meet your business needs.",
   },
 };
 
@@ -231,7 +231,7 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20 animate-fade-in-up">
             <h2 className="text-sm font-bold tracking-widest text-emerald-600 uppercase mb-4">
-              Local & Global Impact
+              Industry Focus
             </h2>
             <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6">
               Industries We <span className="text-gradient">Serve</span>

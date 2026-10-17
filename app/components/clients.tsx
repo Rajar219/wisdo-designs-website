@@ -66,7 +66,7 @@ const developmentProjects: Project[] = [
   {
     client: "WISDO POS System",
     type: "Business Software",
-    problem: "Retail enterprises require reliable internal software to manage daily operations and inventory.",
+    problem: "Retail and local businesses require reliable internal software to manage daily billing, orders, and inventory.",
     solution: "Developing a custom Point of Sale (POS) and inventory management platform.",
     features: [
       "Live billing interfaces",
@@ -96,7 +96,7 @@ export default function ClientsSection() {
           </h2>
 
           <p className="text-base sm:text-lg lg:text-xl text-slate-500 leading-relaxed font-light">
-            Explore the bespoke digital solutions we've engineered for our clients. No concepts, just actual working products solving real business needs.
+            Explore real projects and digital solutions we&apos;ve engineered for our clients. No concepts, just actual working products solving real business needs.
           </p>
         </div>
 

@@ -33,12 +33,12 @@ export default function Faq() {
         <>
           At Wisdo Tech, we follow a structured, collaborative process starting from in-depth discovery, wireframing, and custom UI/UX design, to high-performance web engineering. Learn more about{" "}
           <Link href="/about" className="text-emerald-600 font-bold hover:underline">
-            our agency philosophy
+            our development approach
           </Link>{" "}
           or reach out to discuss your specific requirements.
         </>
       ),
-      plainTextAnswer: "At Wisdo Tech, we follow a structured, collaborative process starting from in-depth discovery, wireframing, and custom UI/UX design, to high-performance web engineering. Learn more about our agency philosophy or reach out to discuss your specific requirements."
+      plainTextAnswer: "At Wisdo Tech, we follow a structured, collaborative process starting from in-depth discovery, wireframing, and custom UI/UX design, to high-performance web engineering. Learn more about our development approach or reach out to discuss your specific requirements."
     },
     {
       question: "Can you build custom billing & POS software?",
@@ -54,21 +54,17 @@ export default function Faq() {
       plainTextAnswer: "Yes, we build tailor-made retail billing & POS systems, automated reservation portals, CRM systems, and custom workflow dashboards to streamline daily operations. Feel free to explore our business systems capabilities to see how we can assist you."
     },
     {
-      question: "Is your software development agency startup-friendly?",
+      question: "Are your software and web solutions startup-friendly?",
       answer: (
         <>
-          Absolutely. We partner with startups across India and globally to build custom solutions at competitive prices. You can check out{" "}
+          Absolutely. We partner with startups and small businesses across India to build custom solutions at competitive, transparent rates. You can check out{" "}
           <Link href="/pricing" className="text-emerald-600 font-bold hover:underline">
             our pricing plans
           </Link>{" "}
-          or view open roles on our{" "}
-          <Link href="/careers" className="text-emerald-600 font-bold hover:underline">
-            careers page
-          </Link>{" "}
-          if you are looking to join our growing engineering team.
+          or request a custom quote tailored to your exact roadmap.
         </>
       ),
-      plainTextAnswer: "Absolutely. We partner with startups across India and globally to build custom solutions at competitive prices. You can check out our pricing plans or view open roles on our careers page if you are looking to join our growing engineering team."
+      plainTextAnswer: "Absolutely. We partner with startups and small businesses across India to build custom solutions at competitive, transparent rates. You can check out our pricing plans or request a custom quote tailored to your exact roadmap."
     },
     {
       question: "How long does a website development project take?",

@@ -48,13 +48,13 @@ export default function BlogLandingPageClient({ posts }: BlogLandingPageClientPr
         {/* Minimalist Hero Header */}
         <div className="max-w-3xl mb-16 sm:mb-20 text-left border-l-4 border-emerald-600 pl-6 sm:pl-8">
           <span className="text-xs font-bold tracking-widest text-emerald-600 uppercase block mb-3">
-            Wisdo Tech Journal
+            WISDO TECH Journal
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-none mb-6">
             The Engineering Journal
           </h1>
           <p className="text-base sm:text-lg lg:text-xl text-slate-500 leading-relaxed font-light max-w-2xl">
-            Developer-driven tutorials, technical checklists, and systems engineering guides written by our core development team.
+            Practical guides, tutorials, and insights on web development, software solutions, and digital strategy for growing businesses.
           </p>
         </div>
 
@@ -252,7 +252,7 @@ export default function BlogLandingPageClient({ posts }: BlogLandingPageClientPr
             <div className="text-center py-20 bg-slate-50 rounded-3xl border border-slate-200/60 shadow-sm">
               <h3 className="text-xl font-bold text-slate-800 mb-2">No Articles Found</h3>
               <p className="text-slate-500 font-light max-w-sm mx-auto">
-                We couldn't find any articles matching your search criteria. Try selecting another category or typing different terms.
+                We couldn&apos;t find any articles matching your search criteria. Try selecting another category or typing different terms.
               </p>
             </div>
           )}

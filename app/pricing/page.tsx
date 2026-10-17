@@ -4,10 +4,21 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Pricing & Packages | Wisdo Tech",
-  description: "Transparent, flexible pricing for Website Development, Software Development, Designing, and Digital Marketing.",
+  title: "Pricing & Packages",
+  description: "Transparent, accessible pricing for website development, custom software, designing, and digital marketing from Wisdo Tech.",
   alternates: {
     canonical: "https://wisdodesigns.com/pricing",
+  },
+  openGraph: {
+    title: "Pricing & Packages | Wisdo Tech",
+    description: "Transparent, accessible pricing for website development, custom software, designing, and digital marketing from Wisdo Tech.",
+    url: "https://wisdodesigns.com/pricing",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pricing & Packages | Wisdo Tech",
+    description: "Transparent, accessible pricing for website development, custom software, designing, and digital marketing from Wisdo Tech.",
   },
 };
 
@@ -88,7 +99,7 @@ export default function PricingPage() {
           </h1>
 
           <p className="text-base sm:text-lg lg:text-2xl text-slate-500 leading-relaxed font-light max-w-3xl mx-auto mb-10">
-            We deliver top-tier engineering without bloated agency margins. We don't force fixed prices because every business is unique.
+            We deliver quality software and web development without inflated agency markups. We tailor quotes to each project because every business is unique.
           </p>
 
           {/* Special Offer Banner */}
@@ -144,7 +155,7 @@ export default function PricingPage() {
               </div>
 
               <Link
-                href={`/contact?service=${encodeURIComponent(service.name)}`}
+                href={`/quote?service=${encodeURIComponent(service.name)}`}
                 className={`w-full py-4 rounded-xl text-sm font-bold uppercase tracking-wide text-center transition-all duration-300 mt-auto ${
                   service.popular
                     ? "bg-slate-900 text-white hover:bg-emerald-600 shadow-md shadow-slate-900/10"

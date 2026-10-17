@@ -34,7 +34,7 @@ export default function Security() {
             Built With Security & Performance in Mind
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-slate-400 font-light leading-relaxed max-w-2xl mx-auto">
-            Engineered from the ground up by our in-house cyber security experts to ensure your data stays protected and your applications run blazingly fast.
+            Engineered with industry-standard security practices and performance optimizations to protect your data and keep your applications fast and reliable.
           </p>
         </div>
 

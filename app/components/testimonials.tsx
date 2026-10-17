@@ -35,7 +35,7 @@ export default function Testimonials() {
             Trusted by <span className="text-gradient">Businesses</span>
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-slate-500 font-light leading-relaxed">
-            See what our clients have to say about the digital solutions we've built for them.
+            See what our clients have to say about the digital solutions we&apos;ve built for them.
           </p>
         </div>
 
@@ -58,7 +58,7 @@ export default function Testimonials() {
               </div>
 
               <p className="text-lg text-slate-700 font-medium leading-relaxed italic mb-10 flex-grow relative z-10">
-                "{testimonial.text}"
+                &ldquo;{testimonial.text}&rdquo;
               </p>
 
               <div className="flex items-center gap-4 mt-auto pt-6 border-t border-slate-200/60">
